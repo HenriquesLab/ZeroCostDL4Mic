@@ -1,6 +1,6 @@
 # Deep learning - Colab deck
 
-This [**Google Collab**][1] repository intends to provide an easy toolbox for the training and implementation of common Deep Learning approaches to microscopy imaging.
+This [**Google Colab**][1] repository intends to provide an easy toolbox for the training and implementation of common Deep Learning approaches to microscopy imaging.
 
 This project is a collaboration between [**Romain Laine**][3], [**Guillaume Jacquemet**][2] and [**Ricardo Henriques**][4].
 
