@@ -1,4 +1,4 @@
-# Deep learning - Collab deck
+# Deep learning - Colab deck
 
 This [**Google Collab**][1] repository intends to provide an easy toolbox for the training and implementation of common Deep Learning approaches to microscopy imaging.
 
