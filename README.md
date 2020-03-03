@@ -1,6 +1,6 @@
 # ZeroCostDL4Mic: A Google Colab based no-cost toolbox to explore Deep-Learning in Microscopy
 
-_**Tl;dr**_: the [**wiki page**][wikiPage] of the this project has everything you need to get started.
+_**Tl;dr**_: this [**wiki page**][wikiPage] has everything you need to get started.
 
 ## What is this
 
