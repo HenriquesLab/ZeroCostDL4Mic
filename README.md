@@ -8,7 +8,7 @@ ZeroCostDL4Mic is a collection of self-explanatory Jupyter Notebooks for [**Goog
 
 ## Short video demonstration
 
-  [![Demonstration Video](https://img.youtube.com/vi/rHtRizyjhEU/0.jpg)](https://www.youtube.com/watch?v=rHtRizyjhEU)
+  [![Demonstration Video](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/VideoDemoScreenshot0.png)](https://www.youtube.com/watch?v=rHtRizyjhEU)
   
 ## Who is it for
 
@@ -26,4 +26,5 @@ While this project is lead by a collaboration between the [**Jacquemet**][6] and
   [5]: https://henriqueslab.github.io/
   [6]: https://cellmig.org/
   [7]: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ColabPaperFigure1_v4.png
+  [8]: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/VideoDemoScreenshot1.png
   [wikiPage]: https://github.com/HenriquesLab/DeepLearning_Collab/wiki
