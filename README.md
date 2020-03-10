@@ -10,7 +10,7 @@ ZeroCostDL4Mic is a collection of self-explanatory Jupyter Notebooks for [**Goog
 
 | Description of the ZeroCostDL4Mic notebooks | Running a ZeroCostDL4Mic notebook | Analysis of example data in ZeroCostDL4Mic |
 |:-:|:-:|:-:|
-| [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo1_Screenshot_DescriptionOfNotebook.png)](https://youtu.be/PUuQfP5SsqM) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo2_Screenshot_DemonstrationOfNotebook.png)](https://youtu.be/gSZc1DL-wXI) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/Screenshot_AnalysisOfExampleDataInZeroCostDL4Mic.png)](https://youtu.be/lC_d4xGYvi4) |
+| [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo1_Screenshot_DescriptionOfNotebook.png)](https://youtu.be/PUuQfP5SsqM) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/Screenshot_RunningAZeroCostDL4MicNotebook.png)](https://youtu.be/a0EIX1hx_F8) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/Screenshot_AnalysisOfExampleDataInZeroCostDL4Mic.png)](https://youtu.be/lC_d4xGYvi4) |
 
 ## Who is it for?
 
