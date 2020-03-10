@@ -8,7 +8,7 @@ ZeroCostDL4Mic is a collection of self-explanatory Jupyter Notebooks for [**Goog
 
 ## Want to see a short video demonstration?
 
-| How the ZeroCostDL4Mic Notebooks work | Demonstration of how to use a ZeroCostDL4Mic Notebook |
+| How the ZeroCostDL4Mic Notebooks work | Demonstration of how to use a ZeroCostDL4Mic Notebook | Example of Processed Data |
 |:-:|:-:|:-:|
 | [![Description of Notebooks](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo1_Screenshot_DescriptionOfNotebook.png)](https://www.youtube.com/watch?v=LTsf1PlcYS4) | [![Demonstration of Notebooks running](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo2_Screenshot_DemonstrationOfNotebook.png)](https://www.youtube.com/watch?v=gSZc1DL-wXI) | [![Example of Processed Data](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo3_Screenshot_ExampleOfProcessedData.png)](https://www.youtube.com/watch?v=_7Q3pE-mnKY) |
 
