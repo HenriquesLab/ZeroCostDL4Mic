@@ -9,9 +9,9 @@ ZeroCostDL4Mic is a collection of self-explanatory Jupyter Notebooks for [**Goog
 ## Want to see a short video demonstration?
 
 | How the ZeroCostDL4Mic Notebooks work | Demonstration of how to use a ZeroCostDL4Mic Notebook |
-|:-:|:-:|
-| [![Description of Notebooks](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo1_Screenshot_DescriptionOfNotebook.png)](https://www.youtube.com/watch?v=LTsf1PlcYS4) | [![Demonstration of Notebooks running](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo2_Screenshot_DemonstrationOfNotebook.png)](https://www.youtube.com/watch?v=gSZc1DL-wXI) |
-    
+|:-:|:-:|:-:|
+| [![Description of Notebooks](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo1_Screenshot_DescriptionOfNotebook.png)](https://www.youtube.com/watch?v=LTsf1PlcYS4) | [![Demonstration of Notebooks running](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo2_Screenshot_DemonstrationOfNotebook.png)](https://www.youtube.com/watch?v=gSZc1DL-wXI) | [![Example of Processed Data](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/SuppVideo3_Screenshot_ExampleOfProcessedData.png)](https://www.youtube.com/watch?v=_7Q3pE-mnKY) |
+
 ## Who is it for?
 
 Any researcher interested in microscopy, independent of their background training. **ZeroCostDL4Mi**c is designed for anyone with little or no coding expertise to quickly test, train and use popular Deep-Learning networks used to process microscopy data.
