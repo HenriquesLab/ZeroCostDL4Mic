@@ -18,7 +18,7 @@ Any researcher interested in microscopy, independent of their background trainin
 
 ## Acknowledgements
 
-While this project is developed as a collaboration between the [**Jacquemet**][6] and [**Henriques**][5] laboratories, there is a long list of contributors associated with the project acknowledged in a preprint soon to be released and in the [**wiki page**][wikiPage].
+While this project is developed as a collaboration lead by the [**Jacquemet**][6] and [**Henriques**][5] laboratories, there is a long list of contributors associated with the project acknowledged in a preprint soon to be released and in the [**wiki page**][wikiPage].
 
 
   [1]: https://colab.research.google.com/notebooks/intro.ipynb
