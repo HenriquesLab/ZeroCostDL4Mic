@@ -18,7 +18,7 @@ Any researcher interested in microscopy, independent of their background trainin
 
 ## Acknowledgements
 
-While this project is developed as a collaboration lead by the [**Jacquemet**][6] and [**Henriques**][5] laboratories, there is a long list of contributors associated with the project acknowledged in our [**preprint**](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1) soon to be released and in the [**wiki page**][wikiPage].
+While this project is developed as a collaboration lead by the [**Jacquemet**][6] and [**Henriques**][5] laboratories, there is a long list of contributors associated with the project acknowledged in our [**preprint**](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1) and in the [**wiki page**][wikiPage].
 
 ## How to cite this work
 
