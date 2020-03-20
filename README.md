@@ -18,8 +18,11 @@ Any researcher interested in microscopy, independent of their background trainin
 
 ## Acknowledgements
 
-While this project is developed as a collaboration lead by the [**Jacquemet**][6] and [**Henriques**][5] laboratories, there is a long list of contributors associated with the project acknowledged in a preprint soon to be released and in the [**wiki page**][wikiPage].
+While this project is developed as a collaboration lead by the [**Jacquemet**][6] and [**Henriques**][5] laboratories, there is a long list of contributors associated with the project acknowledged in our [**preprint**](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1) soon to be released and in the [**wiki page**][wikiPage].
 
+## How to cite this work
+
+Lucas von Chamier, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Romain F. Laine, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: [https://doi.org/10.1101/2020.03.20.000133](https://doi.org/10.1101/2020.03.20.000133)
 
   [1]: https://colab.research.google.com/notebooks/intro.ipynb
   [2]: https://twitter.com/guijacquemet
