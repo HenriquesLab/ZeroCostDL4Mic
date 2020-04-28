@@ -1,0 +1,25 @@
+ZeroCostDL4Mic
+
+bioRxiv preprint available here:
+https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1
+
+Latest releases available here:
+https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
+
+
+
+—————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.4.1
+
+Major changes:
+Hyperparameters fail-safes have been added to all notebooks.
+The implementation of SSIM from SciKit is now used. PSNR is now also calculated during quality control.
+In the 3D notebooks (including fnet), the quality assessment metrics are now calculated on a slice-by-slice basis and not from the maximum intensity projection anymore.
+In the CARE notebooks:
+- The new default batch_size is 16 (instead of 64 previously).
+In the Sartdist 2D notebook:
+- The new default patch_size is automatically defined as the size of the images to analyse.
+- Stardist grid_size is now modifiable as an advanced parameter.
+In the CARE 3D and Noise2VOID3D notebooks, the users can now modify the numbers of tile to use when performing the prediction.
+
++ minor modifications.
