@@ -9,6 +9,50 @@ https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
 
 
 —————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.5
+
+- We now provide "beta" notebooks. These notebooks are either new networks we are currently working on, or variations of the network provided as "Main" notebooks.
+
+Main notebooks:
+——————————————
+
+Major changes:
+
+- We now provide "beta" notebooks. These notebooks are either new networks we are currently working on or variations of the network provided
+
+In all the notebooks:
+- A new section has been added (3.2) to allow users to load a previously trained model to continue the training (transfer learning)
+- New GPU display using NVIDIA smi
+- The Learning rate is now available as an advanced parameter
+- Models can now be loaded using their folder path directly (section 5 and section 6)
+
+In the Unet notebook:
+- Major code review simplifying the underlying code, improved performance and reliability
+- The learning rate schedule has now been implemented (learning rate decreases when Val_loss plateau for 10 epochs)
+- Handling of images of different sizes and bit depth for training, QC and prediction
+- Best and last models are now saved
+- changed the Quality Control Section to calculate IoU score instead of SSIM and PSNR, this now includes an automatic threshold estimation
+- in section 6 the notebook now saves the original prediction of Unet AND a corresponding binary mask calculated using thresholding.
+
+In the Stardist 2D notebook:
+- gputools and edt are now installed to improve training performance
+
+In the Stardist 3D notebook:
+- gputools and edt are now installed to improve training performance
+- The users can now modify the numbers of tile to use when performing the prediction.
+
++ minor modifications and bug fixes
+
+Beta notebooks:
+————————————————
+
+- First BETA release of: Deep-STORM from Nehme E. Et al. Optica 2018! High density SMLM image reconstruction. Full Python workflow: from simulation of training data, patch generation, training and inference. Fully trainable and useable. 
+- A modified version of the Stardist 2D notebook which allows to use the trained model in the Stardist Fiji plugin is now available. This notebook uses Tensorflow 1.13.1 (instead of 1.15.2 in the main notebook) and CUDA 10.1. 
+
+
+
+
+—————————————————————————————————————————————————————————
 ZeroCostDL4Mic v1.4.1
 
 Major changes:
@@ -23,3 +67,6 @@ In the Sartdist 2D notebook:
 In the CARE 3D and Noise2VOID3D notebooks, the users can now modify the numbers of tile to use when performing the prediction.
 
 + minor modifications.
+
+
+
