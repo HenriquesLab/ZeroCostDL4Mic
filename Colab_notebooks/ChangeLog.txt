@@ -7,6 +7,35 @@ Latest releases available here:
 https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
 
 
+—————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.6
+
+Major changes:
+
+- A new section has been added (3.2) to allow users to use augmentations strategies to increase the size of their training data. 
+
+In the CARE 2D notebook
+- Displayed imaged are now normalised
+
+In the CARE 3D notebook
+- Displayed imaged are now normalised
+- Sliders are now available to look through the predicted stacks
+
+In the Stardist 2D notebook (including the beta notebook):
+- New pre-trained network are available
+
+In the Stardist 3D notebook:
+- Users can now specify the type of results that are exported during the prediction step
+- During the prediction step, when analysing stacks, the notebook can now create tracking files that can easily be used in Trackmate to track migrating cells
+
+In the U-net notebook:
+- Patch generation from training dataset, improving stability
+- Predictions is now peformed in patches and tiling
+- Limiting patch sizes to 512x512 maximum for stability
+
++ minor modifications and bug fixes
+
+
 
 —————————————————————————————————————————————————————————
 ZeroCostDL4Mic v1.5
