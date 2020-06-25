@@ -6,6 +6,51 @@ https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1
 Latest releases available here:
 https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
 
+—————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.7
+
+Major changes:
+
+- Creation of a "Tools" folder that contains code that can be used to complement our notebooks.
+- Release of four new beta notebooks (see below). 
+
+Main notebooks:
+——————————————
+
+- Stardist 2D
+Fixed the rotation issue of the tracking file
+
+- Fnet
+Bug fixes and code modification
+Implementation of widget to view predicted files in section 6.
+
++ minor modifications and bug fixes
+
+Beta notebooks:
+————————————————
+
+- First beta release of a 3D Unet notebook, based on Cicek et al. arXiv 2016 (https://arxiv.org/pdf/1606.06650.pdf). The notebook has all ZeroCostDL4Mic functionalities. This notebook was re-implemented by Daniel Krentzel. 
+
+- DeepSTORM: 
+    - new prediction implementation having localization list as output for further localization-based analysis
+    - a drift correction cell and a visualization cell are now included for final optimisation of data output
+    - automatic estimation of the L2_normalisation_factor used in the loss function, to take varying density and upsampling_factor into account
+    - automatic saving and loading of TIF files with metadata (mainly useful for pixel size)
+    - implementing an upsampling_factor of 16 as well as the 4 and 8 previously used
+
+- First beta release of a pix2pix notebook, based on Isola et al. arXiv 2016 (https://arxiv.org/pdf/1606.06650.pdf). The notebook has all ZeroCostDL4Mic functionalities. The original implementation and source code of pix2pix is available here: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix 
+
+- First beta release of a CycleGAN notebook, based on Zhu et al. arXiv 2017 (https://arxiv.org/abs/1703.10593). The notebook has all ZeroCostDL4Mic functionalities. The original implementation and source code of CycleGAN is available here: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+
+- First beta release of a YoloV2 notebook, based on Redmon & Farhadi 2017 (https://ieeexplore.ieee.org/document/8100173). The notebook has all ZeroCostDL4Mic functionalities. The implementation and source code of this YoloV2 notebook is available here: https://github.com/experiencor/keras-yolo2
+
+Tools:
+————————————————
+- First beta release of an Augmentor notebook, based on Bloice et al. Bioinformatics 2019 (https://academic.oup.com/bioinformatics/article-abstract/35/21/4522/5466454?redirectedFrom=fulltext). The original source code of Augmentor is available here: https://github.com/mdbloice/Augmentor
+
+- First release of a python script to automatically track nuclei (detected with our Stardist 2D notebook) using Trackmate (in Fiji). For more information see our wiki page. 
+
+
 
 —————————————————————————————————————————————————————————
 ZeroCostDL4Mic v1.6
