@@ -25,6 +25,8 @@ notebook:
       doi: https://doi.org/10.1038/s41592-018-0261-2
     authors:
       - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/wiki%20unet.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
