@@ -4,21 +4,19 @@ version: 0.2.0
 url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
 notebook:
-  - name: Vitessce Image Viewer
-    description: Use vitessce-image-viewer in Jupyter notebooks with ImJoy Jupyter Extension
-    cite:
+  - name: U-net (2D)
+    description: U-Net for segmentation
+    cite: 
+        text: 'Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting, detection, and morphometry. Nat Methods 16, 67–70 (2019).'
+        doi: https://doi.org/10.1038/s41592-018-0261-2
     authors:
-        - Wei OUYANG
+        - ZeroCostDL4Mic
     badges:
-        - label: Launch Binder
-        icon: https://mybinder.org/badge_logo.svg
-        url: https://mybinder.org/v2/gist/oeway/ebedc17c9ab1f6aa5eee181679d85b5f/master?filepath=vitessce-image-viewer-imjoy-demo.ipynb
-        - label: Powered by ImJoy
-        url: https://imjoy.io
-        icon: https://imjoy.io/static/badge/powered-by-imjoy-badge.svg
+        - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
     documentation: null
-    tags: [visualization, imjoy]
-    files:
-        - https://gist.githubusercontent.com/oeway/ebedc17c9ab1f6aa5eee181679d85b5f/raw/vitessce-image-viewer-imjoy-demo.ipynb
+    tags: [UNet, segmentation, ZeroCostDL4Mic]
+    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
 
 
