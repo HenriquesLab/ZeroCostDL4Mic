@@ -1,0 +1,52 @@
+config:
+  id: zero
+  name: ZeroCostDL4Mic
+  version: 0.1.0
+  tags:
+    - ZeroCostDL4Mic
+  logo: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/colab_logo.png
+  icon: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/colab_logo.png
+  splash_title: ZeroCostDL4Mic
+  splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in Microscopy
+  splash_feature_list: []
+  explore_button_text: Start Exploring
+  background_image: static/img/zoo-background.svg
+  resource_types:
+    - model
+    - notebook
+    - dataset
+  url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+
+dataset:
+  # see here for the format: https://bioimage.io/#/?show=contribute
+  # replace this with your actual dataset
+  - id: dummy-dataset
+    name: Dummy Zarr
+    description: A dummy zarr dataset
+    cite:
+    authors: []
+    documentation: null
+    tags: [zarr]
+    attachments:
+      files:
+        - https://gist.githubusercontent.com/manzt/d16dbac0ea3adc3c7b9b61f54fa1f78d/raw/95854058512862accb0182d4a02f86a55ad19139/
+        - https://gist.githubusercontent.com/manzt/d16dbac0ea3adc3c7b9b61f54fa1f78d/raw/95854058512862accb0182d4a02f86a55ad19139/
+
+notebook:
+  - id: unet-2d
+    name: U-net (2D)
+    description: U-Net for segmentation
+    cite:
+      text: "Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting, detection, and morphometry. Nat Methods 16, 67–70 (2019)."
+      doi: https://doi.org/10.1038/s41592-018-0261-2
+    authors:
+      - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/wiki%20unet.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
+    documentation: null
+    tags: [UNet, segmentation, ZeroCostDL4Mic]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
