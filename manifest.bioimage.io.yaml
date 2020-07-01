@@ -18,7 +18,8 @@ config:
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
 notebook:
-  - name: U-net (2D)
+  - id: unet-2d
+    name: U-net (2D)
     description: U-Net for segmentation
     cite:
       text: "Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting, detection, and morphometry. Nat Methods 16, 67–70 (2019)."
