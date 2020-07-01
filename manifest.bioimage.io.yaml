@@ -17,6 +17,21 @@ config:
     - dataset
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
+dataset:
+  # see here for the format: https://bioimage.io/#/?show=contribute
+  # replace this with your actual dataset
+  - id: dummy-dataset
+    name: Dummy Zarr
+    description: A dummy zarr dataset
+    cite:
+    authors: []
+    documentation: null
+    tags: [zarr]
+    attachments:
+      files:
+        - https://gist.githubusercontent.com/manzt/d16dbac0ea3adc3c7b9b61f54fa1f78d/raw/95854058512862accb0182d4a02f86a55ad19139/
+        - https://gist.githubusercontent.com/manzt/d16dbac0ea3adc3c7b9b61f54fa1f78d/raw/95854058512862accb0182d4a02f86a55ad19139/
+
 notebook:
   - id: unet-2d
     name: U-net (2D)
