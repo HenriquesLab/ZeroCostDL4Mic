@@ -1,6 +1,19 @@
+id: zero
 name: ZeroCostDL4Mic
-description: A collection for ZeroCostDL4Mic
-version: 0.2.0
+version: 0.1.0
+tags:
+- ZeroCostDL4Mic
+logo: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/colab_logo.png
+icon: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/colab_logo.png
+splash_title: ZeroCostDL4Mic
+splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in Microscopy
+splash_feature_list: []
+explore_button_text: Start Exploring
+background_image: static/img/zoo-background.svg
+resource_types:
+- model
+- notebook
+- dataset
 url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
 notebook:
