@@ -16,6 +16,7 @@ config:
     - model
     - notebook
     - dataset
+  default_type: notebook
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
 application:
