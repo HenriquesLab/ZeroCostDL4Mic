@@ -20,17 +20,14 @@ config:
 dataset:
   # see here for the format: https://bioimage.io/#/?show=contribute
   # replace this with your actual dataset
-  - id: dummy-dataset
-    name: Dummy Zarr
-    description: A dummy zarr dataset
-    cite:
+  - id: ZeroCostDL4Mic_2D_Unet_dataset
+    name: 2D Unet Segmentation Dataset
+    description: Segmentation Dataset from ISBI2012 segmentation challenge showing EM images of neuronal membranes and the associated segmentation maps
+    cite: Ignacio Arganda-Carreras, Srinivas C. Turaga, Daniel R. Berger, Dan Ciresan, Alessandro Giusti, Luca M. Gambardella, Jürgen Schmidhuber, Dmtry Laptev, Sarversh Dwivedi, Joachim M. Buhmann, Ting Liu, Mojtaba Seyedhosseini, Tolga Tasdizen, Lee Kamentsky, Radim Burget, Vaclav Uher, Xiao Tan, Chanming Sun, Tuan D. Pham, Eran Bas, Mustafa G. Uzunbas, Albert Cardona, Johannes Schindelin, and H. Sebastian Seung. Crowdsourcing the creation of image segmentation algorithms for connectomics. Frontiers in Neuroanatomy, vol. 9, no. 142, 2015.
     authors: []
     documentation: null
-    tags: [zarr]
-    attachments:
-      files:
-        - https://gist.githubusercontent.com/manzt/d16dbac0ea3adc3c7b9b61f54fa1f78d/raw/95854058512862accb0182d4a02f86a55ad19139/
-        - https://gist.githubusercontent.com/manzt/d16dbac0ea3adc3c7b9b61f54fa1f78d/raw/95854058512862accb0182d4a02f86a55ad19139/
+    tags: [UNet, segmentation, ZeroCostDL4Mic]
+    source: https://github.com/zhixuhao/unet/tree/master/data/membrane
 
 notebook:
   - id: unet-2d
