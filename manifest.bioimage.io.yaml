@@ -5,8 +5,8 @@ config:
   version: 1.7.1
   tags:
     - ZeroCostDL4Mic
-  logo: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
-  icon: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  logo: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
+  icon: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostLogo.png
   splash_title: ZeroCostDL4Mic
   splash_subtitle: A Google Colab based no-cost toolbox to explore Deep-Learning in Microscopy
   splash_feature_list: []
@@ -38,7 +38,7 @@ dataset:
     tags: [Stardist, segmentation, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3715492
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_Noise2VOID_2D_ZeroCostDL4Mic
     name: Noise2VOID (2D) example training and test dataset
@@ -52,7 +52,7 @@ dataset:
     tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3713315
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_Noise2VOID_3D_ZeroCostDL4Mic_3D
     name: Noise2VOID (3D) example training and test dataset
@@ -66,7 +66,7 @@ dataset:
     tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3713326
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_CARE_2D_ZeroCostDL4Mic
     name: CARE (2D) example training and test dataset
@@ -80,7 +80,7 @@ dataset:
     tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3713330
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_CARE_3D_ZeroCostDL4Mic
     name: CARE (3D) example training and test dataset
@@ -94,7 +94,7 @@ dataset:
     tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3713337
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_fnet_3D_ZeroCostDL4Mic
     name: Label-free prediction (fnet) example training and test dataset
@@ -108,7 +108,7 @@ dataset:
     tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3748967
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
 notebook:
   - id: Notebook_U-net_2D_ZeroCostDL4Mic
@@ -120,7 +120,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -140,7 +140,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -160,7 +160,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -181,7 +181,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -201,7 +201,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -222,7 +222,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -243,7 +243,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -264,7 +264,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -285,7 +285,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -306,7 +306,7 @@ notebook:
     authors:
       - ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
