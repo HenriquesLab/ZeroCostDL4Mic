@@ -26,15 +26,6 @@ application:
 dataset:
   # see here for the format: https://bioimage.io/#/?show=contribute
   # replace this with your actual dataset
-  - id: ZeroCostDL4Mic_2D_Unet_dataset
-    name: 2D Unet Segmentation Dataset
-    description: Segmentation Dataset from ISBI2012 segmentation challenge showing EM images of neuronal membranes and the associated segmentation maps
-    cite: Ignacio Arganda-Carreras, Srinivas C. Turaga, Daniel R. Berger, Dan Ciresan, Alessandro Giusti, Luca M. Gambardella, Jürgen Schmidhuber, Dmtry Laptev, Sarversh Dwivedi, Joachim M. Buhmann, Ting Liu, Mojtaba Seyedhosseini, Tolga Tasdizen, Lee Kamentsky, Radim Burget, Vaclav Uher, Xiao Tan, Chanming Sun, Tuan D. Pham, Eran Bas, Mustafa G. Uzunbas, Albert Cardona, Johannes Schindelin, and H. Sebastian Seung. Crowdsourcing the creation of image segmentation algorithms for connectomics. Frontiers in Neuroanatomy, vol. 9, no. 142, 2015.
-    authors: []
-    documentation: null
-    tags: [UNet, segmentation, ZeroCostDL4Mic]
-    source: https://github.com/zhixuhao/unet/tree/master/data/membrane
-
   - id: ZeroCostDL4Mic_2D_Stardist_dataset
     name: 2D Stardist example training and test dataset
     description: Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation
@@ -45,7 +36,35 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3715492
     tags: [Stardist, segmentation, ZeroCostDL4Mic]
-    source: https://github.com/zhixuhao/unet/tree/master/data/membrane
+    source: https://doi.org/10.5281/zenodo.3715492
+    covers:
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+
+  - id: ZeroCostDL4Mic_2D_Noise2Void
+    name: 2D Noise2Void example training and test dataset
+    description: Fluorescence microscopy (paxillin-GFP)
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors: [Aki Stubb, Guillaume Jacquemet, Johanna Ivaska]
+    documentation: >-
+      https://doi.org/10.5281/zenodo.3713315
+    tags: [Noise2Void, denoising, ZeroCostDL4Mic]
+    source: https://doi.org/10.5281/zenodo.3713315
+    covers:
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+
+  - id: ZeroCostDL4Mic_3D_Noise2Void
+    name: 3D Noise2Void example training and test dataset
+    description: Fluorescence microscopy (Lifeact-RFP)
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors: [Guillaume Jacqueme]
+    documentation: >-
+      https://doi.org/10.5281/zenodo.3713326
+    tags: [Noise2Void, denoising, ZeroCostDL4Mic]
+    source: https://doi.org/10.5281/zenodo.3713326
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
