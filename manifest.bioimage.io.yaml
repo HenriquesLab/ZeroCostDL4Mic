@@ -105,7 +105,7 @@ dataset:
     authors: [Christoph Spahn]
     documentation: >-
       https://doi.org/10.5281/zenodo.3748967
-    tags: [fnet, label-free, ZeroCostDL4Mic]
+    tags: [fnet, labelling, ZeroCostDL4Mic]
     source: https://doi.org/10.5281/zenodo.3748967
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -131,7 +131,7 @@ notebook:
     links:
       - Notebook Preview
 
-  - id: Stardist_2D_ZeroCostDL4Mic
+  - id: Notebook_Stardist_2D_ZeroCostDL4Mic
     name: Stardist (2D) - ZeroCostDL4Mic
     description: Stardist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) single images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -152,7 +152,7 @@ notebook:
       - Notebook Preview
       - Dataset_Stardist_2D_ZeroCostDL4Mic_2D
 
-  - id: Stardist_3D_ZeroCostDL4Mic
+  - id: Notebook_Stardist_3D_ZeroCostDL4Mic
     name: Stardist (3D) - ZeroCostDL4Mic
     description: Stardist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -172,7 +172,7 @@ notebook:
     links:
       - Notebook Preview
 
-  - id: Stardist_3D_ZeroCostDL4Mic
+  - id: Notebook_Stardist_3D_ZeroCostDL4Mic
     name: Stardist (3D) - ZeroCostDL4Mic
     description: Stardist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -192,7 +192,7 @@ notebook:
     links:
       - Notebook Preview
 
-  - id: Noise2VOID_2D_ZeroCostDL4Mic
+  - id: Notebook_Noise2VOID_2D_ZeroCostDL4Mic
     name: Noise2VOID (2D) - ZeroCostDL4Mic
     description: Noise2VOID 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -213,7 +213,7 @@ notebook:
       - Notebook Preview
       - Dataset_Noise2VOID_2D_ZeroCostDL4Mic
 
-  - id: Noise2VOID_3D_ZeroCostDL4Mic
+  - id: Notebook_Noise2VOID_3D_ZeroCostDL4Mic
     name: Noise2VOID (3D) - ZeroCostDL4Mic
     description: Noise2VOID 3D is deep-learning method that can be used to denoise 3D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -234,7 +234,7 @@ notebook:
       - Notebook Preview
       - Dataset_Noise2VOID_3D_ZeroCostDL4Mic
 
-  - id: CARE_2D_ZeroCostDL4Mic
+  - id: Notebook_CARE_2D_ZeroCostDL4Mic
     name: CARE (2D) - ZeroCostDL4Mic
     description: CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -254,3 +254,45 @@ notebook:
     links:
       - Notebook Preview
       - Dataset_CARE_2D_ZeroCostDL4Mic
+
+  - id: Notebook_CARE_3D_ZeroCostDL4Mic
+    name: CARE (3D) - ZeroCostDL4Mic
+    description: CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [CARE, denoising, ZeroCostDL4Mic]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      - Dataset_CARE_3D_ZeroCostDL4Mic
+
+  - id: Notebook_fnet_ZeroCostDL4Mic
+    name: Label-free Prediction - Fnet - ZeroCostDL4Mic
+    description: Label-free Prediction (Fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [fnet, labelling, ZeroCostDL4Mic]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      - Dataset_fnet_3D_ZeroCostDL4Mic
