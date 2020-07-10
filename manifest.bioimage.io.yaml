@@ -113,10 +113,10 @@ dataset:
 notebook:
   - id: Notebook_U-net_2D_ZeroCostDL4Mic
     name: U-net (2D) - ZeroCostDL4Mic
-    description: U-net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images.
+    description: U-net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note: visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
-      text: "Falk, T., Mai, D., Bensch, R. et al. U-Net: deep learning for cell counting, detection, and morphometry. Nat Methods 16, 67–70 (2019)."
-      doi: https://doi.org/10.1038/s41592-018-0261-2
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
     authors:
       - ZeroCostDL4Mic Team
     covers:
@@ -133,7 +133,7 @@ notebook:
 
   - id: Stardist_2D_ZeroCostDL4Mic
     name: Stardist (2D) - ZeroCostDL4Mic
-    description: Stardist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) single images or in stacks (xyz).
+    description: Stardist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) single images or in stacks (xyz). Note: visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
       doi: https://doi.org/10.1101/2020.03.20.000133
@@ -151,3 +151,23 @@ notebook:
     links:
       - Notebook Preview
       - Dataset_Stardist_2D_ZeroCostDL4Mic_2D
+
+  - id: Stardist_3D_ZeroCostDL4Mic
+    name: Stardist (3D) - ZeroCostDL4Mic
+    description: Stardist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note: visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Stardist_3D_ZeroCostDL4Mic.ipynb
+    documentation: null
+    tags: [Stardist, segmentation, ZeroCostDL4Mic]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
