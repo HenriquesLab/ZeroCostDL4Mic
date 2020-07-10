@@ -1,3 +1,4 @@
+format_version: 0.2.0
 config:
   id: zero
   name: ZeroCostDL4Mic
@@ -15,7 +16,12 @@ config:
     - model
     - notebook
     - dataset
+  default_type: notebook
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+
+application:
+  - id: Notebook Preview
+    source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 
 dataset:
   # see here for the format: https://bioimage.io/#/?show=contribute
@@ -46,4 +52,6 @@ notebook:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
     documentation: null
     tags: [UNet, segmentation, ZeroCostDL4Mic]
-    source: https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
+    links:
+      - Notebook Preview
