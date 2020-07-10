@@ -35,7 +35,7 @@ dataset:
     authors: [Johanna Jukkala, Guillaume Jacquemet]
     documentation: >-
       https://doi.org/10.5281/zenodo.3715492
-    tags: [Stardist, segmentation, ZeroCostDL4Mic]
+    tags: [Stardist, segmentation, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3715492
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -49,7 +49,7 @@ dataset:
     authors: [Aki Stubb, Guillaume Jacquemet, Johanna Ivaska]
     documentation: >-
       https://doi.org/10.5281/zenodo.3713315
-    tags: [Noise2VOID, denoising, ZeroCostDL4Mic]
+    tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3713315
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -63,7 +63,7 @@ dataset:
     authors: [Guillaume Jacqueme]
     documentation: >-
       https://doi.org/10.5281/zenodo.3713326
-    tags: [Noise2VOID, denoising, ZeroCostDL4Mic]
+    tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3713326
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -77,7 +77,7 @@ dataset:
     authors: [Guillaume Jacqueme]
     documentation: >-
       https://doi.org/10.5281/zenodo.3713330
-    tags: [CARE, denoising, ZeroCostDL4Mic]
+    tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3713330
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -91,7 +91,7 @@ dataset:
     authors: [Guillaume Jacqueme]
     documentation: >-
       https://doi.org/10.5281/zenodo.3713337
-    tags: [CARE, denoising, ZeroCostDL4Mic]
+    tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3713337
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -105,7 +105,7 @@ dataset:
     authors: [Christoph Spahn]
     documentation: >-
       https://doi.org/10.5281/zenodo.3748967
-    tags: [fnet, labelling, ZeroCostDL4Mic]
+    tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3748967
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/TrainingDataset_ShowOff_v3.png
@@ -126,7 +126,27 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-net_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [UNet, segmentation, ZeroCostDL4Mic]
+    tags: [UNet, segmentation, ZeroCostDL4Mic, 2D]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+
+  - id: Notebook_U-net_3D_ZeroCostDL4Mic
+    name: U-net (3D) - ZeroCostDL4Mic
+    description: The 3D U-Net was first introduced by Çiçek et al for learning dense volumetric segmentations from sparsely annotated ground-truth data building upon the original U-Net architecture by Ronneberger et al. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-net_3D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [UNet, segmentation, ZeroCostDL4Mic, 3D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -146,7 +166,7 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Stardist_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Stardist, segmentation, ZeroCostDL4Mic]
+    tags: [Stardist, segmentation, ZeroCostDL4Mic, 2D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -167,27 +187,7 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Stardist_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Stardist, segmentation, ZeroCostDL4Mic]
-    source: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-      - Notebook Preview
-
-  - id: Notebook_Stardist_3D_ZeroCostDL4Mic
-    name: Stardist (3D) - ZeroCostDL4Mic
-    description: Stardist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
-    cite:
-      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
-      doi: https://doi.org/10.1101/2020.03.20.000133
-    authors:
-      - ZeroCostDL4Mic Team
-    covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
-    badges:
-      - label: Open in Colab
-        icon: https://colab.research.google.com/assets/colab-badge.svg
-        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Stardist_3D_ZeroCostDL4Mic.ipynb
-    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Stardist, segmentation, ZeroCostDL4Mic]
+    tags: [Stardist, segmentation, ZeroCostDL4Mic, 3D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -207,7 +207,7 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2VOID_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Noise2VOID, denoising, ZeroCostDL4Mic]
+    tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -228,7 +228,7 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2VOID_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Noise2VOID, denoising, ZeroCostDL4Mic]
+    tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 3D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -249,7 +249,7 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CARE, denoising, ZeroCostDL4Mic]
+    tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -270,7 +270,7 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CARE, denoising, ZeroCostDL4Mic]
+    tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -291,8 +291,28 @@ notebook:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [fnet, labelling, ZeroCostDL4Mic]
+    tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
     source: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
       - Dataset_fnet_3D_ZeroCostDL4Mic
+
+  - id: Notebook_DeepSTORM_2D_ZeroCostDL4Mic
+    name: Deep-STORM 2D
+    description: Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/DeepSTORM_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [DeepSTORM, labelling, ZeroCostDL4Mic, 2D]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
