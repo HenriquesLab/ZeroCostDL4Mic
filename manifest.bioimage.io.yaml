@@ -298,7 +298,7 @@ notebook:
       - Dataset_fnet_3D_ZeroCostDL4Mic
 
   - id: Notebook_DeepSTORM_2D_ZeroCostDL4Mic
-    name: Deep-STORM 2D
+    name: Deep-STORM 2D - ZeroCostDL4Mic
     description: Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
