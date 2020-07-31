@@ -110,7 +110,7 @@ dataset:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
-- id: Dataset_DeepSTORM_ZeroCostDL4Mic
+  - id: Dataset_DeepSTORM_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - DeepSTORM training and example dataset
     description: Time-series of simulated, randomly distributed single-molecule localization (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition of Glial cells stained with phalloidin for actin (Example dataset). 
     cite:
@@ -125,7 +125,7 @@ dataset:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
-- id: Dataset_CycleGAN_ZeroCostDL4Mic
+  - id: Dataset_CycleGAN_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - CycleGAN example training and test dataset
     description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk and SRRF reconstructed images)
     cite:
@@ -140,7 +140,7 @@ dataset:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
-- id: Dataset_pix2pix_ZeroCostDL4Mic
+  - id: Dataset_pix2pix_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - pix2pix example training and test dataset
     description: Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA
     cite:
@@ -155,7 +155,7 @@ dataset:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
-- id: Dataset_YOLOv2_ZeroCostDL4Mic
+  - id: Dataset_YOLOv2_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - YoloV2 example training and test dataset
     description: 2D grayscale .png images with corresponding bounding box annotations in .xml  PASCAL Voc format. 
     cite:
