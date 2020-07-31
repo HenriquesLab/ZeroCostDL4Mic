@@ -38,7 +38,7 @@ dataset:
     tags: [Stardist, segmentation, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3715492
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
 
   - id: Dataset_Noise2VOID_2D_ZeroCostDL4Mic
     name: Noise2VOID (2D) example training and test dataset
@@ -52,7 +52,7 @@ dataset:
     tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3713315
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png
 
   - id: Dataset_Noise2VOID_3D_ZeroCostDL4Mic_3D
     name: Noise2VOID (3D) example training and test dataset
@@ -80,7 +80,7 @@ dataset:
     tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
     source: https://doi.org/10.5281/zenodo.3713330
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
 
   - id: Dataset_CARE_3D_ZeroCostDL4Mic
     name: CARE (3D) example training and test dataset
@@ -94,7 +94,7 @@ dataset:
     tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3713337
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
 
   - id: Dataset_fnet_3D_ZeroCostDL4Mic
     name: Label-free prediction (fnet) example training and test dataset
@@ -108,7 +108,7 @@ dataset:
     tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
     source: https://doi.org/10.5281/zenodo.3748967
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Fnet_exemplary_data_mitochondria.png
 
   - id: Dataset_DeepSTORM_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - DeepSTORM training and example dataset
@@ -138,7 +138,7 @@ dataset:
     source: https://doi.org/10.5281/zenodo.3941884
 
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/unpaired-image_translation.png
 
   - id: Dataset_pix2pix_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - pix2pix example training and test dataset
@@ -153,7 +153,7 @@ dataset:
     source: https://doi.org/10.5281/zenodo.3941889
 
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/paired-image_translation.png
 
   - id: Dataset_YOLOv2_ZeroCostDL4Mic
     name: ZeroCostDL4Mic - YoloV2 example training and test dataset
