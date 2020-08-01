@@ -27,7 +27,7 @@ dataset:
   # see here for the format: https://bioimage.io/#/?show=contribute
   # replace this with your actual dataset
   - id: Dataset_Stardist_2D_ZeroCostDL4Mic_2D
-    name: Stardist (2D) example training and test dataset
+    name: Stardist (2D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -41,7 +41,7 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
 
   - id: Dataset_Noise2VOID_2D_ZeroCostDL4Mic
-    name: Noise2VOID (2D) example training and test dataset
+    name: Noise2VOID (2D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (paxillin-GFP)
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -55,7 +55,7 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png
 
   - id: Dataset_Noise2VOID_3D_ZeroCostDL4Mic_3D
-    name: Noise2VOID (3D) example training and test dataset
+    name: Noise2VOID (3D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -69,7 +69,7 @@ dataset:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_CARE_2D_ZeroCostDL4Mic
-    name: CARE (2D) example training and test dataset
+    name: CARE (2D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -83,7 +83,7 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
 
   - id: Dataset_CARE_3D_ZeroCostDL4Mic
-    name: CARE (3D) example training and test dataset
+    name: CARE (3D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -97,7 +97,7 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
 
   - id: Dataset_fnet_3D_ZeroCostDL4Mic
-    name: Label-free prediction (fnet) example training and test dataset
+    name: Label-free prediction (fnet) example training and test dataset - ZeroCostDL4Mic
     description: Confocal microscopy data (TOM20 labeled with Alexa Fluor 594)
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -111,8 +111,8 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Fnet_exemplary_data_mitochondria.png
 
   - id: Dataset_DeepSTORM_ZeroCostDL4Mic
-    name: ZeroCostDL4Mic - DeepSTORM training and example dataset
-    description: Time-series of simulated, randomly distributed single-molecule localization (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition of Glial cells stained with phalloidin for actin (Example dataset). 
+    name: DeepSTORM training and example dataset - ZeroCostDL4Mic
+    description: Time-series of simulated, randomly distributed single-molecule localization (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition of Glial cells stained with phalloidin for actin (Example dataset).
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
       doi: https://doi.org/10.1101/2020.03.20.000133
@@ -126,7 +126,7 @@ dataset:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
   - id: Dataset_CycleGAN_ZeroCostDL4Mic
-    name: ZeroCostDL4Mic - CycleGAN example training and test dataset
+    name: CycleGAN example training and test dataset - ZeroCostDL4Mic
     description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk and SRRF reconstructed images)
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -141,7 +141,7 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/unpaired-image_translation.png
 
   - id: Dataset_pix2pix_ZeroCostDL4Mic
-    name: ZeroCostDL4Mic - pix2pix example training and test dataset
+    name: pix2pix example training and test dataset - ZeroCostDL4Mic
     description: Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
@@ -156,8 +156,8 @@ dataset:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/paired-image_translation.png
 
   - id: Dataset_YOLOv2_ZeroCostDL4Mic
-    name: ZeroCostDL4Mic - YoloV2 example training and test dataset
-    description: 2D grayscale .png images with corresponding bounding box annotations in .xml  PASCAL Voc format. 
+    name: YoloV2 example training and test dataset - ZeroCostDL4Mic
+    description: 2D grayscale .png images with corresponding bounding box annotations in .xml  PASCAL Voc format.
     cite:
       text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
       doi: https://doi.org/10.1101/2020.03.20.000133
@@ -169,8 +169,6 @@ dataset:
 
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
-
-
 
 notebook:
   - id: Notebook_U-net_2D_ZeroCostDL4Mic
@@ -388,3 +386,4 @@ notebook:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+      - Dataset_DeepSTORM_ZeroCostDL4Mic
