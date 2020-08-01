@@ -54,7 +54,7 @@ dataset:
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png
 
-  - id: Dataset_Noise2VOID_3D_ZeroCostDL4Mic_3D
+  - id: Dataset_Noise2VOID_3D_ZeroCostDL4Mic
     name: Noise2VOID (3D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
