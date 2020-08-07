@@ -19,12 +19,14 @@ Main notebooks:
 ——————————————
 
 - StarDist 2D, StarDist 3D, CARE 2D and CARE 3D notebooks now uses TensorFlow 2.2 (instead of TF 1.5.15)
+
 - YOLOv2 notebook: QC section now uses the same mAP function as the training, for better consistency of results; ground-truth labels and predicted labels in the QC section are exported to the QC folder as csv files which holde the bounding box coordinates and class labels; Display of prediction results now more consistent with display of GT labels; Updated Augmentation Section, now between 2-8 times augmentation of dataset possible; Additional csv file with predicted bounding box coordinates in a format suitable for use in imageJ as Results Table is now exported to the user's results folder in the Prediction section; Added 'training_times' as hyperparameter for improved tuning of model training; Tracking of mAP during training implemented; After training, model with best validation performance, best mAP score and the last model weights are saved to allow easier performance comparison by the user; Updated explanation of parameters and QC section.
 
 - 3D U-Net:
     1. Added ability to train network on non-binary targets
     2. Added ability to choose loss, metrics and optimizer
     3. Fixed data generator bug leading to erroneous generator length when choosing random_crop
+    4. Added support for using the imgaug library and creating custom augmentation pipelines
 
 + minor modifications and bug fixes
 
