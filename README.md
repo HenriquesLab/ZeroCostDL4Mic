@@ -18,13 +18,13 @@ Any researcher interested in microscopy, independent of their background trainin
 
 ## Acknowledgements
 
-This project initiated as a collaboration between the [**Jacquemet**][6] and [**Henriques**][5] laboratories, considerably expanding with the help of laboratories spread across the planet. There is a long list of contributors associated with the project acknowledged in our [**preprint**](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v2) and the [**wiki page**][wikiPageContributors].
+This project initiated as a collaboration between the [**Jacquemet**][6] and [**Henriques**][5] laboratories, considerably expanding with the help of laboratories spread across the planet. There is a long list of contributors associated with the project acknowledged in our [**preprint**](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v3) and the [**wiki page**][wikiPageContributors].
 
 ## How to cite this work
 
 _Lucas von Chamier,  Romain F. Laine, Johanna Jukkala,  Christoph Spahn, Daniel Krentzel, Elias Nehme,  Martina Lerche, Sara Hernández-pérez,  Pieta Mattila,  Eleni Karinou,  Séamus Holden, Ahmet Can Solak,  Alexander Krull,  Tim-Oliver Buchholz,  Martin L Jones,  Loic Alain Royer,  Christophe Leterrier, Yoav Shechtman,  Florian Jug,  Mike Heilemann,  Guillaume Jacquemet,  Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: [https://doi.org/10.1101/2020.03.20.000133](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v3)_
 
-[![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/preprintScreenshot.jpg)](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1)
+[![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/preprintScreenshot.jpg)](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v3)
 
   [1]: https://colab.research.google.com/notebooks/intro.ipynb
   [2]: https://twitter.com/guijacquemet
