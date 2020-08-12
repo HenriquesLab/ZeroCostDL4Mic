@@ -22,7 +22,7 @@ This project initiated as a collaboration between the [**Jacquemet**][6] and [**
 
 ## How to cite this work
 
-_Lucas von Chamier, Johanna Jukkala, Christoph Spahn, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Seamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Florian Jug, Loïc Alain Royer, Mike Heilemann, Romain F. Laine, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy. bioRxiv, 2020. DOI: [https://doi.org/10.1101/2020.03.20.000133](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1)_
+_Lucas von Chamier,  Romain F. Laine, Johanna Jukkala,  Christoph Spahn, Daniel Krentzel, Elias Nehme,  Martina Lerche, Sara Hernández-pérez,  Pieta Mattila,  Eleni Karinou,  Séamus Holden, Ahmet Can Solak,  Alexander Krull,  Tim-Oliver Buchholz,  Martin L Jones,  Loic Alain Royer,  Christophe Leterrier, Yoav Shechtman,  Florian Jug,  Mike Heilemann,  Guillaume Jacquemet,  Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: [https://doi.org/10.1101/2020.03.20.000133](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v3)_
 
 [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/preprintScreenshot.jpg)](https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1)
 
