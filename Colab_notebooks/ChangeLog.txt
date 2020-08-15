@@ -8,6 +8,28 @@ https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
 
 
 —————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.10
+
+
+Major changes:
+
+- New beta notebook : DenoiSeg 2D
+
+- StarDist 2D, StarDist 3D, CARE 2D and CARE 3D notebooks now back to TensorFlow 1.5 (instead of TF 2.2, issues with TF 2.3)
+
+- Deep-STORM now runs on TensorFlow 2.3
+
+- Models trained using StarDist 2D, CARE 2D, CARE 3D, DenoiSeg 2D, Noise2Void 2D and 3D notebooks can be used in Fiji via their respective plugin
+
+
+—————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.9
+
+Minor aesthetic bug fixes (titles and section naming mostly).
+
+
+
+—————————————————————————————————————————————————————————
 ZeroCostDL4Mic v1.8
 
 Major changes:
