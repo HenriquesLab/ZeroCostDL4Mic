@@ -452,4 +452,26 @@ notebook:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+
+  - id: Notebook_DenoiSeg_2D_ZeroCostDL4Mic
+    name: DenoiSeg (2D) - ZeroCostDL4Mic
+    description: DenoiSeg 2D is deep-learning method that can be used to jointly denoise and segment 2D microscopy images. The benefits of using DenoiSeg (compared to other Deep Learning-based segmentation methods) are more prononced when only a few annotated images are available. However, the denoising part requires many images to perform well. All the noisy images don't need to be labeled to train DenoiSeg. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [CycleGAN, ZeroCostDL4Mic, 2D]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      
       
