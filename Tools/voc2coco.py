@@ -27,8 +27,8 @@ def get_annpaths(ann_dir_path: str = None,
 
     # If use annotaion ids list
     ext_with_dot = '.' + ext if ext != '' else ''
-    with open(ann_ids_path, 'r') as f:
-        ann_ids = f.read().split()
+    with open(ann_ids_path, 'r') as f:        
+        ann_ids = f.read().splitlines()
     ann_paths = [os.path.join(ann_dir_path, aid+ext_with_dot) for aid in ann_ids]
     return ann_paths
 
