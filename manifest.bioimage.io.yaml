@@ -188,7 +188,7 @@ dataset:
     source: https://zenodo.org/record/4034976
 
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/StarDist_trainingfluo_trackmate.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
 
 
   - id: Dataset_StarDist_brightfield_ZeroCostDL4Mic
@@ -208,7 +208,7 @@ dataset:
     source: https://zenodo.org/record/4034929
 
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/StarDist_trainingTcells_trackmate.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
 
   - id: Dataset_StarDist_brightfield2_ZeroCostDL4Mic
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
@@ -227,7 +227,7 @@ dataset:
     source: https://zenodo.org/record/4034939
 
     covers:
-      - https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/StarDist_trainingflo_trackmate.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
 
 
 
