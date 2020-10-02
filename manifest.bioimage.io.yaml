@@ -170,6 +170,67 @@ dataset:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/TrainingDataset_ShowOff_v3.png
 
+
+  - id: Dataset_StarDist_Fluo_ZeroCostDL4Mic
+    name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
+    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual segmentation
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    cite:
+      text: "Elnaz Fazeli, Nathan H. Roy, Gautier Follain, Romain F. Laine, Lucas von Chamier, Pekka E. Hänninen, John E. Eriksson, Jean-Yves Tinevez, Guillaume Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.09.22.306233"
+      doi: https://doi.org/10.1101/2020.09.22.306233
+
+    authors: [Guillaume Jacquemet]
+    documentation: >-
+      https://doi.org/10.5281/zenodo.3941884
+    tags: [StarDist, ZeroCostDL4Mic]
+    source: https://zenodo.org/record/4034976
+
+    covers:
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/StarDist_trainingfluo_trackmate.png
+
+
+  - id: Dataset_StarDist_brightfield_ZeroCostDL4Mic
+    name: Combining StarDist and TrackMate example 2 - T cell dataset
+    description: Paired brightfield images of migrating T cells and corresponding masks
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    cite:
+      text: "Elnaz Fazeli, Nathan H. Roy, Gautier Follain, Romain F. Laine, Lucas von Chamier, Pekka E. Hänninen, John E. Eriksson, Jean-Yves Tinevez, Guillaume Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.09.22.306233"
+      doi: https://doi.org/10.1101/2020.09.22.306233
+
+    authors: [Nathan H. Roy, Guillaume Jacquemet]
+    documentation: >-
+      https://doi.org/10.5281/zenodo.3941884
+    tags: [StarDist, ZeroCostDL4Mic]
+    source: https://zenodo.org/record/4034929
+
+    covers:
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/StarDist_trainingTcells_trackmate.png
+
+  - id: Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+    name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
+    description: Paired brightfield images of cancer cells and corresponding masks
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    cite:
+      text: "Elnaz Fazeli, Nathan H. Roy, Gautier Follain, Romain F. Laine, Lucas von Chamier, Pekka E. Hänninen, John E. Eriksson, Jean-Yves Tinevez, Guillaume Jacquemet. Automated cell tracking using StarDist and TrackMate. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.09.22.306233"
+      doi: https://doi.org/10.1101/2020.09.22.306233
+
+    authors: [Gautier Follain, Guillaume Jacquemet]
+    documentation: >-
+      https://doi.org/10.5281/zenodo.3941884
+    tags: [StarDist, ZeroCostDL4Mic]
+    source: https://zenodo.org/record/4034939
+
+    covers:
+      - https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/StarDist_trainingflo_trackmate.png
+
+
+
 notebook:
   - id: Notebook_U-Net_2D_ZeroCostDL4Mic
     name: U-Net (2D) - ZeroCostDL4Mic
@@ -234,6 +295,9 @@ notebook:
     links:
       - Notebook Preview
       - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
 
   - id: Notebook_StarDist_3D_ZeroCostDL4Mic
     name: StarDist (3D) - ZeroCostDL4Mic
