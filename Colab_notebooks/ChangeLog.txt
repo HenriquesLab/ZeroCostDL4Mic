@@ -1,10 +1,31 @@
-ZeroCostDL4Mic
+----------- ZeroCostDL4Mic -----------
 
 bioRxiv preprint available here:
-https://www.biorxiv.org/content/10.1101/2020.03.20.000133v1
+https://www.biorxiv.org/content/10.1101/2020.03.20.000133v4
+
 
 Latest releases available here:
 https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
+
+
+—————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.11
+
+
+Major changes:
+
+- Addition of Training and Quality Control report PDF export to all official release notebooks
+- Addition of Automatic Version Control to all notebooks, checking whether the user is using the latest release of the notebooks
+- Introduction of a failsafe to avoid overwriting an existing model folder, upon starting a new training session
+- Automatic export of the requirements.txt file, necessary for running the notebooks locally
+
+- U-Net 2D: Improved data loading avoiding extensive usage of RAM when creating patches
+
+- fnet: added validation-split as training parameter
+
+- Beta notebooks: U-Net 2D and Deep-STORM versions of the notebooks allowing model export towards DeepImageJ (thanks, Esti!!!!). NOTE: Deep-STORM DeepImageJ notebook was downgraded to TF1.x for compatibility.
+https://www.biorxiv.org/content/10.1101/799270v2
+
 
 
 —————————————————————————————————————————————————————————
