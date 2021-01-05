@@ -8,9 +8,9 @@ ZeroCostDL4Mic is a collection of self-explanatory Jupyter Notebooks for [**Goog
 
 ## Want to see a short video demonstration?
 
-| Running a ZeroCostDL4Mic notebook | Example data in ZeroCostDL4Mic | Romain's talk @ Aurox conference |
-|:-:|:-:|:-:|
-| [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZeroCostDL4Mic_SuppVideo1_Running_a_notebook.jpg)](https://youtu.be/TrDuidvO85s) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.jpg)](https://youtu.be/KauKEr0Kkkc) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ScreenShot_AuroxTalk_resized.jpg)](https://youtu.be/rCEbYOnNJp0) |
+| Running a ZeroCostDL4Mic notebook | Example data in ZeroCostDL4Mic | Romain's talk @ Aurox conference | Talk @ SPAOM |
+|:-:|:-:|:-:|:-:|
+| [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZeroCostDL4Mic_SuppVideo1_Running_a_notebook.jpg)](https://youtu.be/TrDuidvO85s) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.jpg)](https://youtu.be/KauKEr0Kkkc) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ScreenShot_AuroxTalk_resized.jpg)](https://youtu.be/rCEbYOnNJp0) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZDL4_SPAOM.jpg)](https://www.youtube.com/watch?v=ozffChqtgJw) |
 
 ## Who is it for?
 
