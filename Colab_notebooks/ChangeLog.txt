@@ -9,6 +9,18 @@ https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
 
 
 —————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.12
+
+Major changes:
+
+- PDF export of training session is now done before the training starts, so records are kept in case training fails to finalise.
+- StarDist 2D is now compatible with RGB image input
+- Beta notebooks: new notebooks available: SplineDist and 3D-RCAN. SplineDist also includes compatibility with RGB input.
+
++ general minor notebook optimisations.
+
+
+—————————————————————————————————————————————————————————
 ZeroCostDL4Mic v1.11
 
 
