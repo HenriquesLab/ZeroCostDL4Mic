@@ -530,10 +530,10 @@ notebook:
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
-        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_2D_ZeroCostDL4Mic.ipynb
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [CycleGAN, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_2D_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
