@@ -603,5 +603,26 @@ notebook:
       - Notebook Preview
       - Dataset_CARE_3D_ZeroCostDL4Mic
 
+  - id: Notebook_SplineDist_2D_ZeroCostDL4Mic
+    name: SplineDist (2D) - ZeroCostDL4Mic
+    description: SplineDist is a neural network inspired by StarDist, capable of performing image instance segmentation. Unlike StarDist, SplineDist uses cubic splines to describe the contour of each object and therefore can potentially segment objects of any shapes. This version is only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - Romain F. Laine and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/blob/master/Wiki_files/SplineDist_overlay_cropped.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [SplineDist, StarDist, segmentation, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+
       
       
