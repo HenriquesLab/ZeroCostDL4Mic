@@ -612,7 +612,7 @@ notebook:
     authors:
       - Romain F. Laine and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/SplineDist_overlay_cropped.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
