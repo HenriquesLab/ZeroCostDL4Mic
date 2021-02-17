@@ -160,7 +160,6 @@ ipython-sql==0.3.9
 ipywidgets==7.6.3
 itsdangerous==1.1.0
 jax==0.2.9
-jaxlib==0.1.60+cuda101
 jdcal==1.4.1
 jedi==0.18.0
 jieba==0.42.1
