@@ -6,7 +6,7 @@ fpdf
 memory_profiler
 numpy
 matplotlib
-urllib
+urllib3
 os
 random
 shutil 
