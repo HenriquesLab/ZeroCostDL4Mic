@@ -1,5 +1,5 @@
 keras==2.2.5
-tensorflow==1.x
+tensorflow==1.15.2
 n2v
 wget
 fpdf
