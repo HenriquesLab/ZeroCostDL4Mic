@@ -9,6 +9,6 @@ matplotlib
 tifffile
 pandas
 scipy
-skimage
+scikit-image
 sklearn
 astropy
