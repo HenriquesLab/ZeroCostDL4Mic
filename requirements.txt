@@ -348,7 +348,6 @@ srsly==1.0.5
 stable-baselines==2.2.1
 statsmodels==0.10.2
 sympy==1.1.1
-tables==3.4.4
 tabulate==0.8.7
 tblib==1.7.0
 tensor2tensor==1.14.1
