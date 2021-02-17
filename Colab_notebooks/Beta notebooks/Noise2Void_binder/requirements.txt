@@ -362,7 +362,7 @@ tblib==1.7.0
 tensor2tensor==1.14.1
 tensorboard==1.15.0
 tensorboard-plugin-wit==1.8.0
-tensorflow==1.15.2
+tensorflow==2.4.0
 tensorflow-datasets==4.0.1
 tensorflow-estimator==1.15.1
 tensorflow-gan==2.0.0
