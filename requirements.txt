@@ -7,7 +7,6 @@ memory_profiler
 numpy
 matplotlib
 urllib3
-os
 random
 shutil 
 zipfile
