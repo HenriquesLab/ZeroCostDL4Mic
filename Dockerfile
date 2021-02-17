@@ -1,1 +1,1 @@
-FROM ctr26/gpu-jupyter
+FROM bioimagearchive/gpu-jupyter
