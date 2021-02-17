@@ -72,7 +72,6 @@ earthengine-api==0.1.238
 easydict==1.9
 ecos==2.0.7.post1
 editdistance==0.5.3
-en-core-web-sm==2.2.5
 entrypoints==0.3
 ephem==3.7.7.1
 et-xmlfile==1.0.1
