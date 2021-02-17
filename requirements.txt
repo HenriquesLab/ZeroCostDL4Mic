@@ -324,7 +324,6 @@ ruamel.yaml.clib==0.2.2
 scikit-image==0.16.2
 scikit-learn==0.22.2.post1
 scipy==1.4.1
-screen-resolution-extra==0.0.0
 scs==2.1.2
 seaborn==0.11.1
 semantic-version==2.8.4
