@@ -28,7 +28,7 @@ jobs:
           pip install -r requirements.txt
       - name: Compile manifest file
         run: |
-          wget https://raw.githubusercontent.com/bioimage-io/bioimage-io-models/master/src/compile_model_manifest.py
+          wget https://raw.githubusercontent.com/bioimage-io/bioimage-io-models/master/utils/compile_model_manifest.py
           python compile_model_manifest.py
 
       - name: Save build output
