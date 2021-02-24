@@ -56,6 +56,6 @@ USER ${USER}
 
 # RUN conda install pip --yes
 
-COPY --chown=${NB_USER}:${NB_USER} . .
+COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
