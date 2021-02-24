@@ -1,7 +1,7 @@
 # FROM tensorflow/tensorflow:latest-gpu-jupyter
 # # FROM nvidia/cuda:11.2.1-base-ubuntu20.04
 
-FROM python:3.7-slim-buster
+FROM python:3.7-slim
 
 # --- Cuda
 RUN apt-get update && apt-get install -y --no-install-recommends \
