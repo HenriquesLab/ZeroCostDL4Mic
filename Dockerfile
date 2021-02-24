@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu-jupyter
+FROM tensorflow/tensorflow:1.15.5-gpu-jupyter
 # # FROM nvidia/cuda:11.2.1-base-ubuntu20.04
 
 # FROM python:3.7-slim-buster
