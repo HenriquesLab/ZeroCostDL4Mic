@@ -623,6 +623,101 @@ notebook:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
 
+  - id: Notebook_YOLOv2_ZeroCostDL4Mic
+    name: YOLOv2 - ZeroCostDL4Mic
+    description: YOLOv2 is an object detection network developed by Redmon & Farhadi, which identifies objects in images and draws bounding boxes around them. 
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - Lucas von Chamier and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [YOLOv2, object detection, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      - Dataset_YOLOv2_ZeroCostDL4Mic      
+
+  - id: Notebook_Detectron2_ZeroCostDL4Mic
+    name: Detectron2 - ZeroCostDL4Mic
+    description: Detectron2 is an object detection network developed by Facebook AI Research, which identifies objects in images and draws bounding boxes around them. 
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [Detectron2, object detection, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      - Dataset_YOLOv2_ZeroCostDL4Mic
+
+  - id: Notebook_DRMIME_ZeroCostDL4Mic
+    name: DRMIME - ZeroCostDL4Mic
+    description: DRMIME is an network that can be used to register microscopy images (affine and perspective registration). 
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [DRMIME, image registration, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
       
+  - id: Notebook_Cellpose_2D_ZeroCostDL4Mic
+    name: Cellpose (2D) - ZeroCostDL4Mic
+    description: Cellpose is a generalist algorithm for cellular segmentation. 
+    cite:
+      text: "Lucas von Chamier, Romain F. Laine, Johanna Jukkala, Christoph Spahn, Daniel Krentzel, Elias Nehme, Martina Lerche, Sara Hernández-pérez, Pieta Mattila, Eleni Karinou, Séamus Holden, Ahmet Can Solak, Alexander Krull, Tim-Oliver Buchholz, Martin L Jones, Loic Alain Royer, Christophe Leterrier, Yoav Shechtman, Florian Jug, Mike Heilemann, Guillaume Jacquemet, Ricardo Henriques. ZeroCostDL4Mic: an open platform to use Deep-Learning in Microscopy. bioRxiv, 2020. DOI: https://doi.org/10.1101/2020.03.20.000133"
+      doi: https://doi.org/10.1101/2020.03.20.000133
+    authors:
+      - Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [Cellpose, Segmentation, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+  
+
+
       
