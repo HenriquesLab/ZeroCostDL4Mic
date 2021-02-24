@@ -1,5 +1,8 @@
 FROM tensorflow/tensorflow:latest-gpu-jupyter
 
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 # create user with a home directory
 ARG NB_USER
@@ -14,4 +17,3 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-COPY . .
