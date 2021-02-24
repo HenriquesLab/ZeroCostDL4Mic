@@ -1,5 +1,5 @@
-keras==2.2.5
-tensorflow==1.15.2
+keras
+# tensorflow==1.15.2
 n2v
 wget
 fpdf
@@ -12,4 +12,4 @@ scipy
 scikit-image
 sklearn
 astropy
-h5py==2.10.0
+h5py
