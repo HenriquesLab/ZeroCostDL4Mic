@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu-jupyter
+FROM tensorflow/tensorflow:1.15.5-gpu-jupyter
 
 # --- Jupyter
 
