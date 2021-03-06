@@ -3,7 +3,7 @@ fpdf==1.7.2
 gast==0.3.3
 google==2.0.3
 h5py==2.10.0
-httplib2==0.17.4
+httplib2==0.19.0
 image==1.5.33
 imageio==2.4.1
 joblib==1.0.1
