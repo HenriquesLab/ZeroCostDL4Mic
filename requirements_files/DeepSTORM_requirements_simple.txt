@@ -6,7 +6,7 @@ pandas==1.1.5
 matplotlib==3.2.2
 h5py==2.10.0
 scikit-learn==0.22.2.post1
-Pillow==7.0.0
+Pillow==8.1.1
 astropy
 fpdf==1.7.2
 ipywidgets==7.6.3
