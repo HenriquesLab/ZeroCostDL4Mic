@@ -48,10 +48,10 @@ def run():
       # Check for file name pattern
       if containString not in filename:
         continue
-      process(srcDir, dstDir, root, filename, keepDirectories)
+      process(srcDir, dstDir, root, filename)# , keepDirectories)
 
 
-def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
+def process(srcDir, dstDir, currentDir, fileName): #, keepDirectories):
   print "Processing:"
      
   # Opening the image
@@ -103,7 +103,7 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
 # Configure detector - We use the Strings for the keys
   settings.detectorFactory = DownsampleLogDetectorFactory()
   settings.detectorSettings = {
-  DetectorKeys.KEY_RADIUS: 2.,
+  DetectorKeys.KEY_RADIUS: Pixel_calibration, # 2.,
   DetectorKeys.KEY_DOWNSAMPLE_FACTOR: 2,
   DetectorKeys.KEY_THRESHOLD : 1.,}
 		
@@ -118,6 +118,9 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
   settings.trackerFactory = SparseLAPTrackerFactory()
   settings.trackerSettings = LAPUtils.getDefaultLAPSettingsMap() # almost good enough
   settings.trackerSettings['LINKING_MAX_DISTANCE'] = LINKING_MAX_DISTANCE
+  settings.trackerSettings['ALLOW_GAP_CLOSING'] = ALLOW_GAP_CLOSING
+  settings.trackerSettings['GAP_CLOSING_MAX_DISTANCE'] = GAP_CLOSING_MAX_DISTANCE
+  settings.trackerSettings['MAX_FRAME_GAP'] = MAX_FRAME_GAP
   settings.trackerSettings['ALLOW_TRACK_SPLITTING'] = ALLOW_TRACK_SPLITTING
   settings.trackerSettings['SPLITTING_MAX_DISTANCE'] = SPLITTING_MAX_DISTANCE
   settings.trackerSettings['ALLOW_TRACK_MERGING'] = ALLOW_TRACK_MERGING
@@ -207,26 +210,32 @@ gd = GenericDialog("Tracking settings")
 gd.addNumericField("Pixel_calibration (micron)", 0.63, 0)
 gd.addNumericField("Time Frame (s)", 300, 1)
 gd.addNumericField("LINKING_MAX_DISTANCE", 20, 1)
+gd.addCheckbox("ALLOW_GAP_CLOSING", False)
+gd.addNumericField("GAP_CLOSING_MAX_DISTANCE", 20, 1)
+gd.addNumericField("MAX_FRAME_GAP", 20, 0)
 gd.addCheckbox("ALLOW_TRACK_SPLITTING", True)
 gd.addNumericField("SPLITTING_MAX_DISTANCE", 20, 1)
 gd.addCheckbox("ALLOW_TRACK_MERGING", False)
 gd.addNumericField("MERGING_MAX_DISTANCE", 20, 1)
 gd.addStringField("File_extension", ".tif")
 gd.addStringField("File_name_contains", "")
-gd.addCheckbox("Keep directory structure when saving", True)
+# gd.addCheckbox("Keep directory structure when saving", True)
 gd.addCheckbox("Show tracks", False)  
 gd.showDialog()
 
 Pixel_calibration = gd.getNextNumber()
 Time_interval = gd.getNextNumber()
 LINKING_MAX_DISTANCE = gd.getNextNumber()
+ALLOW_GAP_CLOSING = gd.getNextBoolean()
+GAP_CLOSING_MAX_DISTANCE = gd.getNextNumber()
+MAX_FRAME_GAP = int(gd.getNextNumber())
 ALLOW_TRACK_SPLITTING = gd.getNextBoolean()
 SPLITTING_MAX_DISTANCE = gd.getNextNumber()
 ALLOW_TRACK_MERGING = gd.getNextBoolean()
 MERGING_MAX_DISTANCE = gd.getNextNumber()  
 ext = gd.getNextString()
 containString = gd.getNextString()
-keepDirectories = gd.getNextBoolean()
+# keepDirectories = gd.getNextBoolean()
 showtracks = gd.getNextBoolean()
 
 #print(LINKING_MAX_DISTANCE)
