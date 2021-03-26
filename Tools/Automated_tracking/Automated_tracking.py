@@ -17,6 +17,7 @@ import shutil
 import os
 import fiji.plugin.trackmate.features.track.TrackDurationAnalyzer as TrackDurationAnalyzer
 import fiji.plugin.trackmate.features.track.TrackSpeedStatisticsAnalyzer as TrackSpeedStatisticsAnalyzer
+import fiji.plugin.trackmate.features.track.TrackBranchingAnalyzer as TrackBranchingAnalyzer
 
 import os
 from ij import IJ, ImagePlus
@@ -136,6 +137,7 @@ def process(srcDir, dstDir, currentDir, fileName): #, keepDirectories):
     
   settings.addTrackAnalyzer(TrackDurationAnalyzer())
   settings.addTrackAnalyzer(TrackSpeedStatisticsAnalyzer())
+  settings.addTrackAnalyzer(TrackBranchingAnalyzer())
 
   filter2 = FeatureFilter('TRACK_DISPLACEMENT', 10, True)
   settings.addTrackFilter(filter2)
