@@ -1,3 +1,6 @@
+
+#Version 2
+
 from fiji.plugin.trackmate import Model
 from ij import WindowManager
 from fiji.plugin.trackmate import Settings
@@ -25,7 +28,6 @@ from ij.measure import Calibration
 
 import java.io.File as File
 import java.util.ArrayList as ArrayList
-
 
 
 def run():
@@ -61,13 +63,13 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
     
 
   #Here we make sure the calibration are correct
-  units = "micron"
-  TimeUnit = "sec"
+  units = "pixel"
+  TimeUnit = "unit"
 
   newCal = Calibration()
-  newCal.pixelWidth = Pixel_calibration
-  newCal.pixelHeight = Pixel_calibration
-  newCal.frameInterval = Time_interval
+  newCal.pixelWidth = 1
+  newCal.pixelHeight = 1
+  newCal.frameInterval = 1
   
   newCal.setXUnit(units)
   newCal.setYUnit(units)
@@ -82,7 +84,6 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
 
 
   
-  #imp.setDimensions(dim[2], dim[4], dim[3] )
   
  
 
@@ -122,6 +123,8 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
   settings.trackerSettings['SPLITTING_MAX_DISTANCE'] = SPLITTING_MAX_DISTANCE
   settings.trackerSettings['ALLOW_TRACK_MERGING'] = ALLOW_TRACK_MERGING
   settings.trackerSettings['MERGING_MAX_DISTANCE'] = MERGING_MAX_DISTANCE
+  settings.trackerSettings['GAP_CLOSING_MAX_DISTANCE'] = GAP_CLOSING_MAX_DISTANCE
+  settings.trackerSettings['MAX_FRAME_GAP'] = MAX_FRAME_GAP
 
    
 # Configure track analyzers - Later on we want to filter out tracks 
@@ -171,7 +174,7 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
         
   with open(dstDir+fileName+'tracks_properties.csv', "w") as file:
   	writer1 = csv.writer(file)
-  	writer1.writerow(["track #","TRACK_MEAN_SPEED", "TRACK_MAX_SPEED", "NUMBER_SPLITS", "TRACK_DURATION", "TRACK_DISPLACEMENT" ])
+  	writer1.writerow(["track #","TRACK_MEAN_SPEED (micrometer.secs)", "TRACK_MAX_SPEED (micrometer.secs)", "NUMBER_SPLITS", "TRACK_DURATION (secs)", "TRACK_DISPLACEMENT (micrometer)" ])
 
   	with open(dstDir+fileName+'spots_properties.csv', "w") as trackfile:
   		writer2 = csv.writer(trackfile)
@@ -181,11 +184,11 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
   		for id in model.getTrackModel().trackIDs(True):
    
    	 # Fetch the track feature from the feature model.
-  			v = fm.getTrackFeature(id, 'TRACK_MEAN_SPEED')
-  			ms = fm.getTrackFeature(id, 'TRACK_MAX_SPEED')
+  			v = (fm.getTrackFeature(id, 'TRACK_MEAN_SPEED') * Pixel_calibration) / Time_interval 
+  			ms = (fm.getTrackFeature(id, 'TRACK_MAX_SPEED') * Pixel_calibration) / Time_interval 
   			s = fm.getTrackFeature(id, 'NUMBER_SPLITS')
-  			d = fm.getTrackFeature(id, 'TRACK_DURATION')
-  			e = fm.getTrackFeature(id, 'TRACK_DISPLACEMENT')
+  			d = fm.getTrackFeature(id, 'TRACK_DURATION') * Time_interval
+  			e = fm.getTrackFeature(id, 'TRACK_DISPLACEMENT') * Pixel_calibration
   			model.getLogger().log('')
   			model.getLogger().log('Track ' + str(id) + ': mean velocity = ' + str(v) + ' ' + model.getSpaceUnits() + '/' + model.getTimeUnits())
        
@@ -206,11 +209,13 @@ def process(srcDir, dstDir, currentDir, fileName, keepDirectories):
 gd = GenericDialog("Tracking settings")
 gd.addNumericField("Pixel_calibration (micron)", 0.63, 0)
 gd.addNumericField("Time Frame (s)", 300, 1)
-gd.addNumericField("LINKING_MAX_DISTANCE", 20, 1)
+gd.addNumericField("LINKING_MAX_DISTANCE (pixel)", 20, 1)
+gd.addNumericField("GAP_CLOSING_MAX_DISTANCE (pixel)", 20, 1)
+gd.addNumericField("MAX_FRAME_GAP", 1, 1)
 gd.addCheckbox("ALLOW_TRACK_SPLITTING", True)
-gd.addNumericField("SPLITTING_MAX_DISTANCE", 20, 1)
+gd.addNumericField("SPLITTING_MAX_DISTANCE (pixel)", 20, 1)
 gd.addCheckbox("ALLOW_TRACK_MERGING", False)
-gd.addNumericField("MERGING_MAX_DISTANCE", 20, 1)
+gd.addNumericField("MERGING_MAX_DISTANCE (pixel)", 20, 1)
 gd.addStringField("File_extension", ".tif")
 gd.addStringField("File_name_contains", "")
 gd.addCheckbox("Keep directory structure when saving", True)
@@ -220,6 +225,8 @@ gd.showDialog()
 Pixel_calibration = gd.getNextNumber()
 Time_interval = gd.getNextNumber()
 LINKING_MAX_DISTANCE = gd.getNextNumber()
+GAP_CLOSING_MAX_DISTANCE = gd.getNextNumber()
+MAX_FRAME_GAP = int(gd.getNextNumber())
 ALLOW_TRACK_SPLITTING = gd.getNextBoolean()
 SPLITTING_MAX_DISTANCE = gd.getNextNumber()
 ALLOW_TRACK_MERGING = gd.getNextBoolean()
