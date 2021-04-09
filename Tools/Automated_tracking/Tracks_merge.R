@@ -21,7 +21,7 @@ Track_results <- list.files(path = DIR,     # Identify all csv files in folder
   lapply(read_csv, col_types = cols(.default = "c")) %>%                                            # Store all files in list
   bind_rows                                                       # Combine data sets into one data set 
 
-write.csv(Track_results, file=paste(DIR, "track_Results.csv", sep=""), row.names = T)
+write.csv(Track_results, file=file.path(DIR, "track_Results.csv"), row.names = T)
 
 #Merge the full tracks
 
@@ -38,13 +38,12 @@ for (fileName in fileNames) {
   MaxValue <- max(Values$"Tracking ID", na.rm = TRUE)
   #dp <- filter(Values, Values$"Tracking ID" == 1)
   #write.csv(dp, file=paste(DIROUT_single_IN,p,"_", 1, ".csv", sep=""), row.names = F)
-
-
+  
+  
   i = 0
   repeat {
     dp <- filter(Values, Values$"Tracking ID" == i)
-    j = i +1
-    write.csv(dp, file=paste(DIROUT_single_IN,p,"_", i, ".csv", sep=""), row.names = F)
+    write.csv(dp, file=file.path(DIROUT_single_IN,paste(p,"_", i, ".csv", sep="")), row.names = F)
     i = i +1
     if (i == MaxValue +1) {
       break
@@ -65,7 +64,7 @@ for (fileName in fileNames) {
   NumberofRow <- nrow(individual_tracks)
   vec <- rep(c(p), times = NumberofRow)
   individual_tracks$Track_number <- vec
-  write.csv(individual_tracks, file=paste(DIROUT_merge,name,"_", ".csv", sep=""), row.names = F)
+  write.csv(individual_tracks, file=file.path(DIROUT_merge,paste(name,"_", ".csv", sep="")), row.names = F)
   p = p+1
   
 }
@@ -73,11 +72,11 @@ for (fileName in fileNames) {
 
 # Merge all the files
 Track_merge <- list.files(path = DIROUT_merge,     # Identify all csv files in folder
-                            pattern = ".csv", full.names = TRUE) %>% 
+                          pattern = ".csv", full.names = TRUE) %>% 
   lapply(read_csv, col_types = cols(.default = "c")) %>%                                            # Store all files in list
   bind_rows                                                       # Combine data sets into one data set 
 
-write.csv(Track_merge, file=paste(DIR, "track_Merge.csv", sep=""), row.names = T)
+write.csv(Track_merge, file=file.path(DIR, "track_Merge.csv"), row.names = T)
 
 
 
