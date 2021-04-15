@@ -24,7 +24,9 @@ This project initiated as a collaboration between the [**Jacquemet**][6] and [**
 
 ## How to cite this work
 
-_Lucas von Chamier,  Romain F. Laine, Johanna Jukkala,  Christoph Spahn, Daniel Krentzel, Elias Nehme,  Martina Lerche, Sara Hernández-pérez,  Pieta Mattila,  Eleni Karinou,  Séamus Holden, Ahmet Can Solak,  Alexander Krull,  Tim-Oliver Buchholz,  Martin L Jones,  Loic Alain Royer,  Christophe Leterrier, Yoav Shechtman,  Florian Jug,  Mike Heilemann,  Guillaume Jacquemet,  Ricardo Henriques. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nature Communications, 2021. DOI: [https://doi.org/10.1038/s41467-021-22518-0](https://www.nature.com/articles/s41467-021-22518-0)_
+_Lucas von Chamier,  Romain F. Laine, Johanna Jukkala,  Christoph Spahn, Daniel Krentzel, Elias Nehme,  Martina Lerche, Sara Hernández-pérez,  Pieta Mattila,  Eleni Karinou,  Séamus Holden, Ahmet Can Solak,  Alexander Krull,  Tim-Oliver Buchholz,  Martin L Jones,  Loic Alain Royer,  Christophe Leterrier, Yoav Shechtman,  Florian Jug,  Mike Heilemann,  Guillaume Jacquemet,  Ricardo Henriques. 
+**Democratising deep learning for microscopy with ZeroCostDL4Mic. Nature Communications, 2021.** 
+DOI: [https://doi.org/10.1038/s41467-021-22518-0](https://www.nature.com/articles/s41467-021-22518-0)_
 
 [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/NatComms_paper.png)](https://www.nature.com/articles/s41467-021-22518-0)
 
