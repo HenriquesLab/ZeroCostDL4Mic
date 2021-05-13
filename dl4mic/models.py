@@ -8,6 +8,8 @@ from enum import Enum
 import pandas as pd
 from . import checks
 from . import utils
+from . import prepare
+
 from collections.abc import Mapping
 
 # from .utils import get_h5_path
@@ -194,7 +196,7 @@ class DL4MicModel(Mapping):
         else:
             pass
 
-    def report(self, time_start=None):
+    def report(self, X_train=None, X_test=None, time_start=None, show_image=False):
 
         report_args = [
             "model_name",
@@ -220,6 +222,8 @@ class DL4MicModel(Mapping):
 
         report_config = {key: self.dl4mic_model_config[key] for key in report_args}
         report_config.update(extra_args)
+        if show_image:
+            prepare.setup_complete(X_train=X_train,X_test=X_test)
 
         return reporting.pdf_export(**report_config)
 

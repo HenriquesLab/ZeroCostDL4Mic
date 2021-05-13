@@ -16,7 +16,7 @@ model_config = {
     "number_of_steps": 100,
     "percentage_validation": 10,
     # "image_patches"=,
-    "loss_function":"mse",
+    "loss_function": "mse",
     "batch_size": 128,
     "patch_size": 64,
     "Training_source": None,
@@ -100,11 +100,6 @@ def test_N2V():
         train_learning_rate=dl4mic_model["initial_learning_rate"],
     )
 
-    # dl4mic_model.gleen_config(config)
-
-    # print(dl4mic_model.get_config_df())
-    # @utils.dl4mic
-    # model = N2V(config=config, **dl4mic_model)
     model = N2V(
         config=config,
         name=dl4mic_model["model_name"],
@@ -116,7 +111,7 @@ def test_N2V():
     print("Setup done.")
     print(config)
     dl4mic_model.check_model_params()
-    pdf = dl4mic_model.report()
+    pdf = dl4mic_model.report(X_train=X, X_test=X_val, show_image=True)
 
 
 test_N2V()
