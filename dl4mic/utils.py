@@ -44,14 +44,14 @@ def get_h5_path(pretrained_model_path,Weights_choice):
     )
     return h5_file_path
 
-def download_model(pretrained_model_path,pretrained_model_choice,pretrained_model_name,Weights_choice):
+def download_model(pretrained_model_path,pretrained_model_choice,pretrained_model_name,Weights_choice,output_folder):
     # params.Pretrained_model_choice.Model_from_file
 
     if pretrained_model_choice == "Model_from_file":
         h5_file_path = os.path.join(pretrained_model_path, "weights_"+Weights_choice+".h5")
     if pretrained_model_choice == "Model_name":
         # pretrained_model_name = "Model_name"
-        pretrained_model_path = "/content/"+pretrained_model_name
+        pretrained_model_path = os.path.join(output_folder,pretrained_model_name)
         print("Downloading the model")
         if os.path.exists(pretrained_model_path):
             shutil.rmtree(pretrained_model_path)
@@ -61,6 +61,7 @@ def download_model(pretrained_model_path,pretrained_model_choice,pretrained_mode
         wget.download("", pretrained_model_path)    
         wget.download("", pretrained_model_path)
         h5_file_path = os.path.join(pretrained_model_path, "weights_"+Weights_choice+".h5")
+    return h5_file_path
 
 def load_model(h5_file_path,pretrained_model_path,Weights_choice,initial_learning_rate):
 # If the model path contains a pretrain model, we load the training rate, 
@@ -97,3 +98,32 @@ def load_model(h5_file_path,pretrained_model_path,Weights_choice,initial_learnin
             print(bcolors.WARNING+'WARNING: The learning rate cannot be identified from the pretrained network. Default learning rate of '+str(initial_learning_rate)+' will be used instead')
             bestLearningRate = initial_learning_rate
             lastLearningRate = initial_learning_rate
+    return {"bestLearningRate":bestLearningRate,
+            "lastLearningRate":bestLearningRate}
+
+
+import inspect
+import functools
+
+def dl4mic(f):
+    """Make function ignore unmatched kwargs.
+    
+    If the function already has the catch all **kwargs, do nothing.
+    """
+    if any(param.kind == inspect.Parameter.VAR_KEYWORD for param in inspect.signature(f).parameters.values()):
+        return f
+    #
+    @functools.wraps(f)
+    def inner(*args,**kwargs):
+        # For each keyword arguments recognised by f,
+        # take their binding from **kwargs received
+        filtered_kwargs = {
+            name:kwargs[name]
+            for name,param in inspect.signature(f).parameters.items() if (
+                param.kind is inspect.Parameter.KEYWORD_ONLY or
+                param.kind is inspect.Parameter.POSITIONAL_OR_KEYWORD
+            ) and
+            name in kwargs
+        }
+        return f(*args,**filtered_kwargs)
+    return inner

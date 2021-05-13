@@ -69,6 +69,8 @@ def check_data(image):
     return len_dims
 
 def get_random_image(Training_source):
-    random_choice = random.choice(os.listdir(Training_source))
-    image = imread(Training_source+"/"+random_choice)
-    return image
+    random_choice = get_random_image_path(Training_source)
+    return imread(os.path.join(Training_source,random_choice))
+
+def get_random_image_path(Training_source):
+    return random.choice(os.listdir(Training_source))

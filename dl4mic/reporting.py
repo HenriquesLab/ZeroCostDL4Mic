@@ -29,7 +29,7 @@ from pip._internal.operations.freeze import freeze
 import subprocess
 from datetime import datetime
 
-from . import time_elapsed
+from . import utils 
 
 def pdf_export(
     model_name,
@@ -45,16 +45,20 @@ def pdf_export(
     patch_size,
     Training_source,
     number_of_epochs,
-    time_start,
     Use_Default_Advanced_Parameters,
+    time_start=None,
+    example_image=None,
     trained=False,
     augmentation=False,
-    pretrained_model=False,
+    pretrained_model=False
 ):
     class MyFPDF(FPDF, HTMLMixin):
         pass
 
-    hour, mins, sec = time_elapsed(time_start)
+    if time_start != None:
+        hour, mins, sec = utils.time_elapsed(time_start)
+    else:
+        hour, mins, sec = [0]*3
 
     pdf = MyFPDF()
     pdf.add_page()
@@ -118,6 +122,9 @@ def pdf_export(
     gpu_name = subprocess.run("nvidia-smi", stdout=subprocess.PIPE, shell=True)
     gpu_name = gpu_name.stdout.decode("utf-8")
     gpu_name = gpu_name[gpu_name.find("Tesla") : gpu_name.find("Tesla") + 10]
+    # if gpu_name == None:
+    gpu_name = "CPU"
+
     # print(cuda_version[cuda_version.find(', V')+3:-1])
     # print(gpu_name)
 
@@ -126,7 +133,7 @@ def pdf_export(
 
     text = (
         "The "
-        + Network
+        + str(Network)
         + " model was trained from scratch for "
         + str(number_of_epochs)
         + " epochs on "
@@ -140,23 +147,23 @@ def pdf_export(
         + ")) with a batch size of "
         + str(batch_size)
         + " and a "
-        + loss_function
+        + str(loss_function)
         + " loss function, using the "
-        + Network
+        + str(Network)
         + " ZeroCostDL4Mic notebook (v "
-        + Notebook_version
+        + str(Notebook_version)
         + ") (von Chamier & Laine et al., 2020). Key python packages used include tensorflow (v "
-        + version_numbers[0]
+        + str(version_numbers[0])
         + "), Keras (v "
-        + version_numbers[2]
+        + str(version_numbers[2])
         + "), csbdeep (v "
-        + version_numbers[3]
+        + str(version_numbers[3])
         + "), numpy (v "
-        + version_numbers[1]
+        + str(version_numbers[1])
         + "), cuda (v "
-        + cuda_version
+        + str(cuda_version)
         + "). The training was accelerated using a "
-        + gpu_name
+        + str(gpu_name)
         + "GPU."
     )
 
@@ -284,15 +291,16 @@ def pdf_export(
     pdf.ln(1)
     pdf.cell(60, 5, txt="Example Training Image", ln=1)
     pdf.ln(1)
-    exp_size = io.imread("/content/TrainingDataExample_N2V2D.png").shape
-    pdf.image(
-        "/content/TrainingDataExample_N2V2D.png",
-        x=11,
-        y=None,
-        w=round(exp_size[1] / 8),
-        h=round(exp_size[0] / 8),
-    )
-    pdf.ln(1)
+    if example_image != None:
+        exp_size = example_image.shape
+        pdf.image(
+        example_image,
+            x=11,
+            y=None,
+            w=round(exp_size[1] / 8),
+            h=round(exp_size[0] / 8),
+        )
+        pdf.ln(1)
     ref_1 = 'References:\n - ZeroCostDL4Mic: von Chamier, Lucas & Laine, Romain, et al. "ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy." BioRxiv (2020).'
     pdf.multi_cell(190, 5, txt=ref_1, align="L")
     # ref_2 = '- Noise2Void: Krull, Alexander, Tim-Oliver Buchholz, and Florian Jug. "Noise2void-learning denoising from single noisy images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.'
@@ -305,6 +313,7 @@ def pdf_export(
     pdf.output(
         model_path + "/" + model_name + "/" + model_name + "_training_report.pdf"
     )
+    return pdf
 
 
 def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
