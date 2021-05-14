@@ -333,8 +333,9 @@ class DL4MicModel(Mapping):
 
         Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
         Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
+        Data_type = self.dl4mic_model_config["Data_type"]
 
-        return assess.full(Prediction_model_path,Prediction_model_name)
+        return assess.full(Prediction_model_path,Prediction_model_name,Data_type)
     
     def save_model(self):
         pass
