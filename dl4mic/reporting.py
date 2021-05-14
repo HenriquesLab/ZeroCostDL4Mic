@@ -1,4 +1,3 @@
-
 import numpy as np
 from matplotlib import pyplot as plt
 import urllib
@@ -29,7 +28,8 @@ from pip._internal.operations.freeze import freeze
 import subprocess
 from datetime import datetime
 
-from . import utils 
+from . import utils
+
 
 def pdf_export(
     model_name,
@@ -50,7 +50,7 @@ def pdf_export(
     example_image=None,
     trained=False,
     augmentation=False,
-    pretrained_model=False
+    pretrained_model=False,
 ):
     class MyFPDF(FPDF, HTMLMixin):
         pass
@@ -58,7 +58,7 @@ def pdf_export(
     if time_start != None:
         hour, mins, sec = utils.time_elapsed(time_start)
     else:
-        hour, mins, sec = [0]*3
+        hour, mins, sec = [0] * 3
 
     pdf = MyFPDF()
     pdf.add_page()
@@ -294,7 +294,7 @@ def pdf_export(
     if example_image != None:
         exp_size = example_image.shape
         pdf.image(
-        example_image,
+            example_image,
             x=11,
             y=None,
             w=round(exp_size[1] / 8),
@@ -310,9 +310,7 @@ def pdf_export(
     pdf.set_font("Arial", size=11, style="B")
     pdf.multi_cell(190, 5, txt=reminder, align="C")
 
-    pdf.output(
-        model_path + "/" + model_name + "/" + model_name + "_training_report.pdf"
-    )
+    pdf.output(os.path.join(model_path, model_name) + "_training_report.pdf")
     return pdf
 
 
@@ -349,12 +347,12 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
     pdf.ln(2)
     pdf.cell(190, 5, txt="Development of Training Losses", ln=1, align="L")
     pdf.ln(1)
-    exp_size = io.imread(
-        full_QC_model_path + "/Quality Control/lossCurvePlots.png"
-    ).shape
-    if os.path.exists(full_QC_model_path + "/Quality Control/lossCurvePlots.png"):
+    if os.path.exists(os.path.join(full_QC_model_path, "lossCurvePlots.png")):
+        exp_size = io.imread(
+            os.path.join(full_QC_model_path, "lossCurvePlots.png")
+        ).shape
         pdf.image(
-            full_QC_model_path + "/Quality Control/lossCurvePlots.png",
+            os.path.join(full_QC_model_path, "lossCurvePlots.png"),
             x=11,
             y=None,
             w=round(exp_size[1] / 8),
@@ -374,16 +372,20 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
     pdf.ln(3)
     pdf.cell(80, 5, txt="Example Quality Control Visualisation", ln=1)
     pdf.ln(1)
-    exp_size = io.imread(
-        full_QC_model_path + "/Quality Control/QC_example_data.png"
-    ).shape
-    pdf.image(
-        full_QC_model_path + "/Quality Control/QC_example_data.png",
-        x=16,
-        y=None,
-        w=round(exp_size[1] / 10),
-        h=round(exp_size[0] / 10),
-    )
+    try:
+        exp_size = io.imread(
+            os.path.join(full_QC_model_path, "QC_example_data.png")
+        ).shape
+        pdf.image(
+            os.path.join(full_QC_model_path, "QC_example_data.png"),
+            x=16,
+            y=None,
+            w=round(exp_size[1] / 10),
+            h=round(exp_size[0] / 10),
+        )
+    except FileNotFoundError:
+        print("Not QC example image found")
+
     pdf.ln(1)
     pdf.set_font("")
     pdf.set_font("Arial", size=11, style="B")
@@ -397,67 +399,69 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
   <body>
   <font size="7" face="Courier New" >
   <table width=94% style="margin-left:0px;">"""
-    with open(
-        full_QC_model_path + "/Quality Control/QC_metrics_" + QC_model_name + ".csv",
-        "r",
-    ) as csvfile:
-        metrics = csv.reader(csvfile)
-        header = next(metrics)
-        image = header[0]
-        mSSIM_PvsGT = header[1]
-        mSSIM_SvsGT = header[2]
-        NRMSE_PvsGT = header[3]
-        NRMSE_SvsGT = header[4]
-        PSNR_PvsGT = header[5]
-        PSNR_SvsGT = header[6]
-        header = """
-    <tr>
-    <th width = 10% align="left">{0}</th>
-    <th width = 15% align="left">{1}</th>
-    <th width = 15% align="center">{2}</th>
-    <th width = 15% align="left">{3}</th>
-    <th width = 15% align="center">{4}</th>
-    <th width = 15% align="left">{5}</th>
-    <th width = 15% align="center">{6}</th>
-    </tr>""".format(
-            image,
-            mSSIM_PvsGT,
-            mSSIM_SvsGT,
-            NRMSE_PvsGT,
-            NRMSE_SvsGT,
-            PSNR_PvsGT,
-            PSNR_SvsGT,
-        )
-        html = html + header
-        for row in metrics:
-            image = row[0]
-            mSSIM_PvsGT = row[1]
-            mSSIM_SvsGT = row[2]
-            NRMSE_PvsGT = row[3]
-            NRMSE_SvsGT = row[4]
-            PSNR_PvsGT = row[5]
-            PSNR_SvsGT = row[6]
-            cells = """
+    try:
+        with open(
+            os.path.join(full_QC_model_path, "QC_metrics_" + QC_model_name + ".csv"),
+            "r",
+        ) as csvfile:
+            metrics = csv.reader(csvfile)
+            header = next(metrics)
+            image = header[0]
+            mSSIM_PvsGT = header[1]
+            mSSIM_SvsGT = header[2]
+            NRMSE_PvsGT = header[3]
+            NRMSE_SvsGT = header[4]
+            PSNR_PvsGT = header[5]
+            PSNR_SvsGT = header[6]
+            header = """
         <tr>
-          <td width = 10% align="left">{0}</td>
-          <td width = 15% align="center">{1}</td>
-          <td width = 15% align="center">{2}</td>
-          <td width = 15% align="center">{3}</td>
-          <td width = 15% align="center">{4}</td>
-          <td width = 15% align="center">{5}</td>
-          <td width = 15% align="center">{6}</td>
+        <th width = 10% align="left">{0}</th>
+        <th width = 15% align="left">{1}</th>
+        <th width = 15% align="center">{2}</th>
+        <th width = 15% align="left">{3}</th>
+        <th width = 15% align="center">{4}</th>
+        <th width = 15% align="left">{5}</th>
+        <th width = 15% align="center">{6}</th>
         </tr>""".format(
                 image,
-                str(round(float(mSSIM_PvsGT), 3)),
-                str(round(float(mSSIM_SvsGT), 3)),
-                str(round(float(NRMSE_PvsGT), 3)),
-                str(round(float(NRMSE_SvsGT), 3)),
-                str(round(float(PSNR_PvsGT), 3)),
-                str(round(float(PSNR_SvsGT), 3)),
+                mSSIM_PvsGT,
+                mSSIM_SvsGT,
+                NRMSE_PvsGT,
+                NRMSE_SvsGT,
+                PSNR_PvsGT,
+                PSNR_SvsGT,
             )
-            html = html + cells
-        html = html + """</body></table>"""
-
+            html = html + header
+            for row in metrics:
+                image = row[0]
+                mSSIM_PvsGT = row[1]
+                mSSIM_SvsGT = row[2]
+                NRMSE_PvsGT = row[3]
+                NRMSE_SvsGT = row[4]
+                PSNR_PvsGT = row[5]
+                PSNR_SvsGT = row[6]
+                cells = """
+            <tr>
+            <td width = 10% align="left">{0}</td>
+            <td width = 15% align="center">{1}</td>
+            <td width = 15% align="center">{2}</td>
+            <td width = 15% align="center">{3}</td>
+            <td width = 15% align="center">{4}</td>
+            <td width = 15% align="center">{5}</td>
+            <td width = 15% align="center">{6}</td>
+            </tr>""".format(
+                    image,
+                    str(round(float(mSSIM_PvsGT), 3)),
+                    str(round(float(mSSIM_SvsGT), 3)),
+                    str(round(float(NRMSE_PvsGT), 3)),
+                    str(round(float(NRMSE_SvsGT), 3)),
+                    str(round(float(PSNR_PvsGT), 3)),
+                    str(round(float(PSNR_SvsGT), 3)),
+                )
+                html = html + cells
+            html = html + """</body></table>"""
+    except FileNotFoundError:
+        print("No qc csv found")
     pdf.write_html(html)
 
     pdf.ln(1)
@@ -473,6 +477,4 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
     pdf.set_font("Arial", size=11, style="B")
     pdf.multi_cell(190, 5, txt=reminder, align="C")
 
-    pdf.output(
-        full_QC_model_path + "/Quality Control/" + QC_model_name + "_QC_report.pdf"
-    )
+    pdf.output(os.path.join(full_QC_model_path, QC_model_name + "_QC_report.pdf"))

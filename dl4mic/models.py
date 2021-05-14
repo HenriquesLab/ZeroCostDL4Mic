@@ -1,3 +1,4 @@
+from dl4mic import quality
 import os, random
 from tifffile import imread, imsave
 import matplotlib.pyplot as plt
@@ -56,10 +57,14 @@ class DL4MicModel(Mapping):
         "pretrained_model": False,
         "Pretrained_model_choice": params.Pretrained_model_choice.MODEL_NAME,
         "Weights_choice": params.Weights_choice.BEST,
+        # "QC_model_path": os.path.join(".dl4mic", "qc"),
+        "QC_model_path": "",
+        "QC_model_name": None,
     }
 
     def __init__(self, model_config={}):
         self.output_folder = os.path.join(self.base_out_folder, self.model_name)
+
         Path(self.output_folder).mkdir(parents=True, exist_ok=True)
 
         self.dl4mic_model_config["model_path"] = os.path.join(
@@ -83,7 +88,12 @@ class DL4MicModel(Mapping):
         return len(self.dl4mic_model_config)
 
     def __getitem__(self, arg):
+        # return getattr(self,arg) #Move away from bloody dict
         return self.dl4mic_model_config[arg]
+
+    def __setitem__(self, key, value):
+        self.dl4mic_model_config[key] = value
+        # return
 
     def model_specifics(self):
         pass
@@ -177,11 +187,12 @@ class DL4MicModel(Mapping):
     def load_pretrained_model(self):
         if self.dl4mic_model_config["Use_pretrained_model"]:
 
-            self.h5_file_path = utils.download_model(
+            self.dl4mic_model_config["h5_file_path"] = utils.download_model(
                 self.dl4mic_model_config["pretrained_model_path"],
                 self.dl4mic_model_config["pretrained_model_choice"],
                 self.dl4mic_model_config["pretrained_model_name"],
                 self.dl4mic_model_config["Weights_choice"],
+                self.dl4mic_model_config["model_path"],
             )
 
             learning_rates_dict = utils.load_model(
@@ -192,11 +203,11 @@ class DL4MicModel(Mapping):
             )
 
             self.append_config(learning_rates_dict)
-            return self.h5_file_path
+            return self.dl4mic_model_config["h5_file_path"]
         else:
             pass
 
-    def report(self, X_train=None, X_test=None, time_start=None, show_image=False):
+    def report(self, time_start=None, trained=None, show_image=False):
 
         report_args = [
             "model_name",
@@ -214,25 +225,191 @@ class DL4MicModel(Mapping):
             "number_of_epochs",
             # "time_start",
             "Use_Default_Advanced_Parameters",
-            "trained",
+            # "trained",
             "augmentation",
             "pretrained_model",
         ]
-        extra_args = {"time_start": time_start, "example_image": self.example_image}
+        extra_args = {
+            "time_start": time_start,
+            "example_image": self.example_image,
+            "trained": trained,
+        }
 
         report_config = {key: self.dl4mic_model_config[key] for key in report_args}
         report_config.update(extra_args)
-        if show_image:
-            prepare.setup_complete(X_train=X_train,X_test=X_test)
 
         return reporting.pdf_export(**report_config)
 
+    def pre_report(
+        self,
+        X_train=None,
+        X_test=None,
+        time_start=None,
+        trained=False,
+        show_image=False,
+    ):
+        if show_image:
+            prepare.setup_complete(X_train=X_train, X_test=X_test)
+        return self.report(time_start=time_start, trained=None, show_image=False)
 
-class N2V(DL4MicModel):
+    def post_report(
+        self, X_train=None, X_test=None, time_start=None, trained=True, show_image=False
+    ):
+        return self.report(
+            time_start=time_start, trained=trained, show_image=show_image
+        )
+
+    # def quality_stock(self):
+    #     # Path(self.dl4mic_model_config["QC_model_path"]).mkdir(parents=True, exist_ok=True)
+
+    #     return quality.quality_sequence(
+    #         model_path,
+    #         model_name,
+    #         QC_model_name,
+    #         QC_model_path,
+    #         ref_str,
+    #         network,
+    #         Use_the_current_trained_model,
+    #         Source_QC_folder,
+    #         Target_QC_folder,
+    #     )
+    def quality_extra(self, **kwargs):
+        pass
+
+    def quality(self, history=None):
+
+        model_path = self.dl4mic_model_config["model_path"]
+        model_name = self.dl4mic_model_config["model_name"]
+
+
+        if self.dl4mic_model_config["QC_model_name"] is None:
+            self.dl4mic_model_config["QC_model_name"] = model_name
+
+        if self.dl4mic_model_config["QC_model_path"] is None:
+            self.dl4mic_model_config["QC_model_path"] = model_path
+
+        QC_model_name = self.dl4mic_model_config["QC_model_name"]
+        QC_model_path = self.dl4mic_model_config["QC_model_path"]
+
+        ref_str = self.dl4mic_model_config["ref_str"]
+        network = self.dl4mic_model_config["network"]
+        Use_the_current_trained_model = self.dl4mic_model_config[
+            "Use_the_current_trained_model"
+        ]
+        Source_QC_folder = self.dl4mic_model_config["Source_QC_folder"]
+        Target_QC_folder = self.dl4mic_model_config["Target_QC_folder"]
+        self.QC_dir = QC_model_path + QC_model_name
+        Path(self.QC_dir).mkdir(parents=True, exist_ok=True)
+
+        # return self.quality_stock()
+        # def quality(self):
+
+        if history != None:
+            self.quality_extra(history=history)
+
+        return quality.quality_sequence(
+            model_path,
+            model_name,
+            QC_model_name,
+            QC_model_path,
+            ref_str,
+            network,
+            Use_the_current_trained_model,
+            Source_QC_folder,
+            Target_QC_folder,
+        )
+
+    def save_model(self):
+        pass
+
+    # def quality_tf(self, model, model_path, model_name,QC_model_name,QC_model_path):
+    #     df = self.get_history_df_from_model_tf(model)
+    #     quality.df_to_csv(df, model_path, model_name)
+    #     quality.display_training_errors(model, QC_model_name, QC_model_path)
+
+    #     return df
+    # model_path = self.dl4mic_model_config["model_path"]
+    # model_name = self.dl4mic_model_config["model_name"]
+
+    # QC_model_name = self.dl4mic_model_config["QC_model_name"]
+    # QC_model_path = self.dl4mic_model_config["QC_model_path"]
+
+    # Source_QC_folder = self.dl4mic_model_config["Source_QC_folder"]
+    # Target_QC_folder = self.dl4mic_model_config["Target_QC_folder"]
+    # def quality_sequence(self,model_path,model_name,QC_model_name,QC_model_path):
+
+    #     Use_the_current_trained_model = self.dl4mic_model_config[
+    #         "Use_the_current_trained_model"
+    #     ]
+    #     # quality_tf(self, model, model_path, model_name)
+    #     quality.quality_folder_reset(model_path, model_name)
+    #     quality.qc_model_checks(
+    #         QC_model_name,
+    #         QC_model_path,
+    #         model_name,
+    #         model_path,
+    #         Use_the_current_trained_model,
+    #     )
+
+    #     reporting.qc_pdf_export()
+    # self.post_report()
+
+    # def get_history_df_from_model_tf(self, model):
+    #     history = model.history
+    #     return pd.DataFrame(history.history)
+
+
+class DL4MicModelTF(DL4MicModel):
+    def save_model(self, model, X_val):
+        patch_size = self.dl4mic_model_config["patch_size"]
+        model.export_TF(
+            name=self.model_name,
+            description=self.description,
+            authors=self.authors,
+            test_img=X_val[0, ..., 0],
+            axes="YX",
+            patch_shape=(patch_size, patch_size),
+        )
+        print(
+            "Your model has been sucessfully exported and can now also be used in the CSBdeep Fiji plugin"
+        )
+
+    def history_to_df(history):
+        return pd.DataFrame(history.history)
+
+    def quality_checks(self, history):
+        pass
+
+    # def quality(self, history):
+    #     if self.dl4mic_model_config["Use_the_current_trained_model"]:
+    #         self.dl4mic_model_config["QC_model_path"] = self.dl4mic_model_config[
+    #             "model_path"
+    #         ]
+    #         self.dl4mic_model_config["QC_model_name"] = self.dl4mic_model_config[
+    #             "model_name"
+    #         ]
+    #     # model = self.dl4mic_model_config[""
+
+    #     model_path = self.dl4mic_model_config["model_path"]
+    #     model_name = self.dl4mic_model_config["model_name"]
+    #     QC_model_name = self.dl4mic_model_config["QC_model_name"]
+    #     QC_model_path = self.dl4mic_model_config["QC_model_path"]
+
+    #     qc_folder = os.path.join(model_path, model_name, "Quality Control")
+
+    #     quality.quality_tf(
+    #         history, model_path, model_name, QC_model_name, QC_model_path
+    #     )
+
+    # return self.quality_stock()
+
+
+class N2V(DL4MicModelTF):
     # import N2V
     # config=None
     # self.dl4mic_model_config={}
-    model_name = "N2V"
+    network = "Noise2Void"
+    model_name = "n2v"
     description = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
     authors = ["You"]
     ref_str = '- Noise2Void: Krull, Alexander, Tim-Oliver Buchholz, and Florian Jug. "Noise2void-learning denoising from single noisy images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.'
@@ -265,6 +442,7 @@ class N2V(DL4MicModel):
             "description": self.description,
             "authors": self.authors,
             "ref_str": self.ref_str,
+            "network": self.network,
         }
         self.dl4mic_model_config.update(specifics)
 
@@ -294,6 +472,20 @@ class N2V(DL4MicModel):
             int(shape_of_Xdata / self.dl4mic_model_config["batch_size"]) + 1
         )
         return self.dl4mic_model_config["number_of_steps"]
+
+    def save_model(model):
+        pass
+
+    def quality_extra(self, history):
+        # history = self.dl4mic_model_config["history"]
+        model_path = self.dl4mic_model_config["model_path"]
+        model_name = self.dl4mic_model_config["model_name"]
+        QC_model_name = self.dl4mic_model_config["QC_model_name"]
+        QC_model_path = self.dl4mic_model_config["QC_model_path"]
+
+        quality.quality_tf(
+            history, model_path, model_name, QC_model_name, QC_model_path
+        )
 
 
 # class N2V():
