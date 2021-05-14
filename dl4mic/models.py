@@ -29,6 +29,7 @@ class params:
         SINGLE_IMAGES = "Single_Images"
         STACKS = "Stacks"
 
+
 class DL4MicModel(Mapping):
 
     base_out_folder = ".dl4mic"
@@ -175,16 +176,15 @@ class DL4MicModel(Mapping):
         output_folder = self.output_folder
         patch_size = self.dl4mic_model_config["patch_size"]
 
-
         # checks.check_data(image)
 
         # filename = os.path.join(self.output_folder, "TrainingDataExample.png")
         # if show_image:
-            # checks.display_image(image, filename)
+        # checks.display_image(image, filename)
 
         # checks.check_image_dims(image, self.dl4mic_model_config["patch_size"])
-        
-        return checks.full(Training_source,output_folder,patch_size,show_image)
+
+        return checks.full(Training_source, output_folder, patch_size, show_image)
 
     def data_augmentation(self):
         pass
@@ -211,6 +211,9 @@ class DL4MicModel(Mapping):
             return self.dl4mic_model_config["h5_file_path"]
         else:
             pass
+
+    def reporting(self):
+        pass
 
     def report(self, time_start=None, trained=None, show_image=False):
 
@@ -286,7 +289,6 @@ class DL4MicModel(Mapping):
         model_path = self.dl4mic_model_config["model_path"]
         model_name = self.dl4mic_model_config["model_name"]
 
-
         if self.dl4mic_model_config["QC_model_name"] is None:
             self.dl4mic_model_config["QC_model_name"] = model_name
 
@@ -323,22 +325,70 @@ class DL4MicModel(Mapping):
             Source_QC_folder,
             Target_QC_folder,
         )
+
     def predict(self):
 
         Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
         Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
 
-        return predict.full(Prediction_model_path,Prediction_model_name)
+        return predict.full(Prediction_model_path, Prediction_model_name)
+
     def assess(self):
 
         Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
         Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
         Data_type = self.dl4mic_model_config["Data_type"]
 
-        return assess.full(Prediction_model_path,Prediction_model_name,Data_type)
-    
+        return assess.full(Prediction_model_path, Prediction_model_name, Data_type)
+
     def save_model(self):
         pass
+
+    def pre_training(self, X):
+        
+
+        # if data_checks.__name__ == self.__class__
+        self.data_checks()
+        # self.data_checks_specific() #Be smarter with class inheritence
+
+        self.data_augmentation()
+        # self.data_augmentation_specific()
+
+        self.gleen_data(X)
+        self.split_data(X)
+        self.check_model_params()
+        pdf = self.pre_report(
+            X_train=self.dl4mic_model_config["X_train"],
+            X_test=self.dl4mic_model_config["X_test"],
+            show_image=False,
+        )
+        self.pre_training_specific()
+        self.check_model_params()
+        return pdf
+
+
+    def pre_training_specific(self):
+        pass
+
+    def post_training(self,history=None,show_image=False):
+        self.post_training_specific()
+        self.quality(history)
+        pdf = self.post_report(show_image)
+        self.predict()
+        self.assess()
+        return pdf
+
+    def post_training_specific(self):
+        pass
+
+    def split_data(self, Xdata):
+        threshold = self.dl4mic_model_config["threshold"]
+        X = Xdata[threshold:]
+        X_val = Xdata[:threshold]
+        self.dl4mic_model_config["X_train"] = X
+        self.dl4mic_model_config["X_test"] = X_val
+        return X,X_val
+
 
     # def quality_tf(self, model, model_path, model_name,QC_model_name,QC_model_path):
     #     df = self.get_history_df_from_model_tf(model)
@@ -472,8 +522,9 @@ class N2V(DL4MicModelTF):
         self.get_threshold(self.dl4mic_model_config["shape_of_Xdata"])
         self.get_image_patches(self.dl4mic_model_config["shape_of_Xdata"])
         if self.dl4mic_model_config["Use_Default_Advanced_Parameters"]:
-            self.dl4mic_model_config(self.dl4mic_model_config["shape_of_Xdata"])
-
+            self.dl4mic_model_config["number_of_steps"] = self.get_default_steps(self.dl4mic_model_config["shape_of_Xdata"])
+            
+           
     def get_threshold(self, shape_of_Xdata):
         self.dl4mic_model_config["threshold"] = int(
             shape_of_Xdata[0]
@@ -487,7 +538,7 @@ class N2V(DL4MicModelTF):
 
     def get_default_steps(self, shape_of_Xdata):
         self.dl4mic_model_config["number_of_steps"] = (
-            int(shape_of_Xdata / self.dl4mic_model_config["batch_size"]) + 1
+            int(shape_of_Xdata[0] / self.dl4mic_model_config["batch_size"]) + 1
         )
         return self.dl4mic_model_config["number_of_steps"]
 
