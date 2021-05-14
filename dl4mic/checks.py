@@ -10,6 +10,15 @@ import pandas as pd
 from . import models
 from . import bcolors
 
+def full(Training_source,output_folder,patch_size,show_image):
+    image = get_random_image(Training_source)
+    check_data(image)
+    filename = os.path.join(output_folder, "TrainingDataExample.png")
+    # if show_image:
+    display_image(image, filename,show_image)
+    check_image_dims(image,patch_size)
+    return image
+
 def check_image_dims(image,patch_size):
     # This will open a randomly chosen dataset input image
     x = image
@@ -26,7 +35,7 @@ def check_image_dims(image,patch_size):
 
     return patch_size
 
-def display_image(image,filename=None):
+def display_image(image,filename=None,show_images=False):
 
     # '/content/TrainingDataExample_N2V2D.png'
     norm = simple_norm(image, percent = 99)
@@ -38,7 +47,10 @@ def display_image(image,filename=None):
     plt.axis('off')
     if filename != None:
         plt.savefig(filename,bbox_inches='tight',pad_inches=0)
-    plt.show()
+    if show_images:
+        plt.show()
+    else:
+        plt.close()
 
 def check_model_exists(h5_file_path):
     if not os.path.exists(h5_file_path):

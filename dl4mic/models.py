@@ -1,4 +1,4 @@
-from dl4mic import quality
+from . import predict, quality, checks, utils, prepare, reporting, assess
 import os, random
 from tifffile import imread, imsave
 import matplotlib.pyplot as plt
@@ -7,15 +7,12 @@ import wget
 import shutil
 from enum import Enum
 import pandas as pd
-from . import checks
-from . import utils
-from . import prepare
+
 
 from collections.abc import Mapping
 
 # from .utils import get_h5_path
 from pathlib import Path
-from . import reporting
 
 
 class params:
@@ -28,6 +25,9 @@ class params:
         MODEL_NAME = "Model_name"
         MODEL_FROM_FILE = "Model_from_file"
 
+    class Data_type(Enum):
+        SINGLE_IMAGES = "Single_Images"
+        STACKS = "Stacks"
 
 class DL4MicModel(Mapping):
 
@@ -169,17 +169,22 @@ class DL4MicModel(Mapping):
     def data_checks(self, show_image=False):
         # checks.check_for_prexisiting_model()
 
-        image = checks.get_random_image(self.dl4mic_model_config["Training_source"])
+        # image = checks.get_random_image(self.dl4mic_model_config[""])
+        # Training_source = self.dl4mic_model_config["Training_source"]
+        Training_source = self.dl4mic_model_config["Training_source"]
+        output_folder = self.output_folder
+        patch_size = self.dl4mic_model_config["patch_size"]
 
-        checks.check_data(image)
 
-        filename = os.path.join(self.output_folder, "TrainingDataExample.png")
-        if show_image:
-            checks.display_image(image, filename)
+        # checks.check_data(image)
 
-        checks.check_image_dims(image, self.dl4mic_model_config["patch_size"])
+        # filename = os.path.join(self.output_folder, "TrainingDataExample.png")
+        # if show_image:
+            # checks.display_image(image, filename)
 
-        return image
+        # checks.check_image_dims(image, self.dl4mic_model_config["patch_size"])
+        
+        return checks.full(Training_source,output_folder,patch_size,show_image)
 
     def data_augmentation(self):
         pass
@@ -307,7 +312,7 @@ class DL4MicModel(Mapping):
         if history != None:
             self.quality_extra(history=history)
 
-        return quality.quality_sequence(
+        return quality.full(
             model_path,
             model_name,
             QC_model_name,
@@ -318,7 +323,19 @@ class DL4MicModel(Mapping):
             Source_QC_folder,
             Target_QC_folder,
         )
+    def predict(self):
 
+        Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
+        Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
+
+        return predict.full(Prediction_model_path,Prediction_model_name)
+    def assess(self):
+
+        Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
+        Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
+
+        return assess.full(Prediction_model_path,Prediction_model_name)
+    
     def save_model(self):
         pass
 

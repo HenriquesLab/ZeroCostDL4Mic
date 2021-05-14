@@ -74,7 +74,7 @@ def inspect_loss(model, QC_model_name, QC_model_path):
 # def make_dir_at_file(file):
 
 # plot of training errors vs. epoch number
-def display_training_errors(QC_model_name, QC_model_path):
+def display_training_errors(QC_model_name, QC_model_path,show_images=False):
     # Pandas surely?
     lossDataFromCSV = []
     vallossDataFromCSV = []
@@ -115,7 +115,10 @@ def display_training_errors(QC_model_name, QC_model_path):
             QC_model_path, QC_model_name, "lossCurvePlots.png"
         )
         plt.savefig(loss_curve_path)
-        plt.show()
+        if show_images:
+            plt.show()
+        else:
+            plt.close()
 
     # Source_QC_folder = ""  # @param{type:"string"}
     # Target_QC_folder = ""  # @param{type:"string"}
@@ -706,7 +709,7 @@ def get_history_df_from_model_tf(history):
     return pd.DataFrame(history)
 
 
-def quality_sequence(
+def full(
     model_path,
     model_name,
     QC_model_name,
