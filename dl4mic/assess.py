@@ -1,4 +1,5 @@
 import matplotlib as plt
+from tifffile.tifffile import imread
 from . models import params
 import random
 import os
