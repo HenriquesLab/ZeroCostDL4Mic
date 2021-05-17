@@ -223,7 +223,7 @@ def test_N2V_short(model_config):
     tf.disable_v2_behavior()
     tf.__version__ = 1.14
 
-    model = n2v_get_model(dl4mic_model, Xdata)
+    model = dl4mic_model.get_model()
     threshold = dl4mic_model["threshold"]
 
     X = Xdata[threshold:]
@@ -235,6 +235,11 @@ def test_N2V_short(model_config):
     pdf_post = dl4mic_model.post_report(history)
 
 
+# def test_N2V_short(model_config):
+@pytest.mark.parametrize("model_config", model_configs)
+def test_N2V_very_short(model_config):
+    models.N2V(model_config).run()
+    
 def n2v_get_model(dl4mic_model, Xdata):
 
     ################ N2V ######################

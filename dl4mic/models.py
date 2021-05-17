@@ -7,6 +7,7 @@ import wget
 import shutil
 from enum import Enum
 import pandas as pd
+import time
 
 
 from collections.abc import Mapping
@@ -166,7 +167,7 @@ class DL4MicModel(Mapping):
                 self.dl4mic_model_config["patch_size"],
             ),
         )
-
+    
     def data_checks(self, show_image=False):
         # checks.check_for_prexisiting_model()
 
@@ -342,6 +343,12 @@ class DL4MicModel(Mapping):
         return assess.full(Prediction_model_path, Prediction_model_name, Data_type)
 
     def save_model(self):
+        pass
+
+    def get_model(self,**kwargs):
+        pass
+
+    def run(self,config):
         pass
 
     def pre_training(self, X):
@@ -555,6 +562,97 @@ class N2V(DL4MicModelTF):
         quality.quality_tf(
             history, model_path, model_name, QC_model_name, QC_model_path
         )
+
+    def get_model(self):
+
+        dl4mic_model = self.dl4mic_model_config
+        # def n2v_get_model(dl4mic_model, Xdata):
+
+            ################ N2V ######################
+
+        from n2v.models import N2VConfig, N2V
+        from csbdeep.utils import plot_history
+        from n2v.utils.n2v_utils import manipulate_val_data
+        from n2v.internals.N2V_DataGenerator import N2V_DataGenerator
+        from csbdeep.io import save_tiff_imagej_compatible
+
+        threshold = dl4mic_model["threshold"]
+        image_patches = dl4mic_model["image_patches"]
+        shape_of_Xdata = dl4mic_model["shape_of_Xdata"]
+
+        print(shape_of_Xdata[0], "patches created.")
+        print(
+            dl4mic_model["threshold"],
+            "patch images for validation (",
+            dl4mic_model["percentage_validation"],
+            "%).",
+        )
+        print(image_patches - threshold, "patch images for training.")
+
+        config = N2VConfig(
+            dl4mic_model["X_train"],
+            unet_kern_size=3,
+            train_steps_per_epoch=dl4mic_model["number_of_steps"],
+            train_epochs=dl4mic_model["number_of_epochs"],
+            train_loss=dl4mic_model["loss_function"],
+            batch_norm=True,
+            train_batch_size=dl4mic_model["batch_size"],
+            n2v_perc_pix=0.198,
+            n2v_manipulator="uniform_withCP",
+            n2v_neighborhood_radius=5,
+            train_learning_rate=dl4mic_model["initial_learning_rate"],
+        )
+
+        model = N2V(
+            config=config,
+            name=dl4mic_model["model_name"],
+            basedir="tests",
+        )
+
+        print("Setup done.")
+        print(config)
+        return model
+
+    def run(self):
+            # import os
+
+        os.environ["KERAS_BACKEND"] = "tensorflow"
+
+        from n2v.internals.N2V_DataGenerator import N2V_DataGenerator
+
+        dl4mic_model = self.dl4mic_model_config
+
+        datagen = N2V_DataGenerator()
+        imgs = datagen.load_imgs_from_directory(directory=dl4mic_model["Training_source"])
+
+        Xdata = datagen.generate_patches_from_list(
+            imgs,
+            shape=(dl4mic_model["patch_size"], dl4mic_model["patch_size"]),
+            augment=dl4mic_model["Use_Data_augmentation"],
+        )
+
+        self.pre_training(Xdata)
+
+        dl4mic_model["start"] = time.time()
+
+        # TF1 Hack
+        import tensorflow.compat.v1 as tf
+
+        tf.disable_v2_behavior()
+        tf.__version__ = 1.14
+
+        model = self.get_model()
+        threshold = dl4mic_model["threshold"]
+
+        X = Xdata[threshold:]
+        X_val = Xdata[:threshold]
+
+        history = model.train(X, X_val)
+        print("Training done.")
+
+        pdf_post = self.post_report(history)
+        return self
+
 
 
 # class N2V():
