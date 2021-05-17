@@ -20,3 +20,4 @@ def check_folder(Prediction_model_path, Prediction_model_name):
         print(
             "Please make sure you provide a valid model path and model name before proceeding further."
         )
+

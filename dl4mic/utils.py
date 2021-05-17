@@ -8,6 +8,19 @@ import shutil
 import inspect
 import functools
 
+# def test_tf_gpu():
+#     if tf.test.gpu_device_name() == "":
+#         print("You do not have GPU access.")
+#         print("Did you change your runtime ?")
+#         print(
+#             "If the runtime setting is correct then Google did not allocate a GPU for your session"
+#         )
+#         print("Expect slow performance. To access GPU try reconnecting later")
+#     else:
+#         print("You have GPU access")
+#         # !nvidia-smi
+
+
 
 def info_about_model(Use_pretrained_model, h5_file_path):
     # Display info about the pretrained model to be loaded (or not)
