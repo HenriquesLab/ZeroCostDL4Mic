@@ -31,21 +31,6 @@ from pip._internal.operations.freeze import freeze
 import subprocess
 from datetime import datetime
 
-
-
-# def test_tf_gpu():
-#     if tf.test.gpu_device_name() == "":
-#         print("You do not have GPU access.")
-#         print("Did you change your runtime ?")
-#         print(
-#             "If the runtime setting is correct then Google did not allocate a GPU for your session"
-#         )
-#         print("Expect slow performance. To access GPU try reconnecting later")
-#     else:
-#         print("You have GPU access")
-#         # !nvidia-smi
-
-
 class bcolors:
     WARNING = "\033[31m"
 
@@ -55,16 +40,14 @@ R = "\033[31m"  # red
 
 ref_1 = 'References:\n - ZeroCostDL4Mic: von Chamier, Lucas & Laine, Romain, et al. "ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy." BioRxiv (2020).'
 
+
+from . import models
+
+
 # def __main__():
 #     read_latest_notebook_version()
 
 
-# if (Use_Default_Advanced_Parameters): 
-#   print("Default advanced parameters enabled")
-#   # number_of_steps is defined in the following cell in this case
-#   batch_size = 128
-#   percentage_validation = 10
-#   initial_learning_rate = 0.0004
 
 
 
