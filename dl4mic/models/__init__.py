@@ -1,3 +1,4 @@
+import numpy as np
 from .. import predict, quality, checks, utils, prepare, reporting, assess
 import os, random
 from tifffile import imread, imsave
@@ -13,6 +14,7 @@ from collections.abc import Mapping
 
 # from .utils import get_h5_path
 from pathlib import Path
+from dataclasses import dataclass
 
 
 class params:
@@ -64,75 +66,90 @@ class params:
 #   batch_size = 128
 #   percentage_validation = 10
 #   initial_learning_rate = 0.0004
+@dataclass
+class DL4MicModelParams():
+    X_train: np.array = None
+    X_test: np.array = None
+    example_image: np.array = None
+    model: str = "dl4mic"
+    image_patches: int = 100
+    ref_str: str = "ref"
+    loss_function: str = "loss"
+    pretrained_model_choice: bool = False
+    Use_pretrained_model : bool = False
+    Use_the_current_trained_model : bool = False
+    Use_Data_augmentation: bool = False
+    Notebook_version: float = 1.12
+    initial_learning_rate: float = 0.0004
+    number_of_steps: int = 100
+    percentage_validation: int = 10
+    batch_size: int = 128
+    patch_size:  int = 64
+    number_of_epochs: int = 100
+    Use_Default_Advanced_Parameters: bool = False
+    trained: bool = False
+    augmentation: bool = False
+    pretrained_model: bool = False
+    Pretrained_model_choice: str = params.Pretrained_model_choice.MODEL_NAME
+    Weights_choice: str = params.Weights_choice.BEST
+    base_out_folder: str = ".dl4mic"
+    QC_model_path: str = os.path.join(base_out_folder, "qc")
+    Training_source: str =  os.path.join(base_out_folder, "training")
+    model_path: str = base_out_folder
+    model_name: str = "temp"
+    pretrained_model_path : str = os.path.join(base_out_folder, "model")
+    pretrained_model_name: str = "model"
+    Source_QC_folder: str = QC_model_path
+    Target_QC_folder: str = QC_model_path
+    Prediction_model_folder: str = os.path.join(base_out_folder, "pred")
+    Prediction_model_name: str = "pred"
+    Prediction_model_path: str = Prediction_model_folder
+    QC_model_name: str = "qc"
+    Data_folder: str = os.path.join(base_out_folder, "pred")
+    Data_type : str = ""
+    ref_aug: str = str('- Augmentor: Bloice, Marcus D., Christof Stocker, and Andreas Holzinger. "Augmentor: an image augmentation library for machine learning." arXiv preprint arXiv:1708.04680 (2017).')
 
+    # def __init__(self,model_config={}):
+    #     super().__init__(model_config)
 
-class DL4MicModel(Mapping):
-
-    base_out_folder = ".dl4mic"
-    model_name = "temp"
-    example_image = None
-
-    full_config = {}
-    dl4mic_model_config = {
-        # "model":"N2V",
-        "model_name": None,
-        "model_path": None,
-        "ref_str": None,
-        "ref_aug" : '- Augmentor: Bloice, Marcus D., Christof Stocker, and Andreas Holzinger. "Augmentor: an image augmentation library for machine learning." arXiv preprint arXiv:1708.04680 (2017).',
-        "Notebook_version": 1.12,
-        "initial_learning_rate": 0.0004,
-        "number_of_steps": 100,
-        "percentage_validation": 10,
-        "image_patches": None,
-        "loss_function": None,
-        "batch_size": 128,
-        "patch_size": 64,
-        "Training_source": None,
-        "number_of_epochs": 100,
-        "Use_Default_Advanced_Parameters": False,
-        "trained": False,
-        "augmentation": False,
-        "pretrained_model": False,
-        "Pretrained_model_choice": params.Pretrained_model_choice.MODEL_NAME,
-        "Weights_choice": params.Weights_choice.BEST,
-        # "QC_model_path": os.path.join(".dl4mic", "qc"),
-        "QC_model_path": "",
-        "QC_model_name": None,
-    }
-
+class DL4MicModel(DL4MicModelParams):
     def __init__(self, model_config={}):
+        super().__init__(**model_config)
+        self.init()
         self.output_folder = os.path.join(self.base_out_folder, self.model_name)
 
         Path(self.output_folder).mkdir(parents=True, exist_ok=True)
 
-        self.dl4mic_model_config["model_path"] = os.path.join(
-            self.base_out_folder, self.model_name, "model"
-        )
+        self.model_path = os.path.join(self.base_out_folder, self.model_name, "model")
 
-        self.dl4mic_model_config.update(model_config)
+        # self.dl4mic_model_config.update(model_config)
 
-        Path(self.dl4mic_model_config["model_path"]).mkdir(parents=True, exist_ok=True)
+        Path(self.model_path).mkdir(parents=True, exist_ok=True)
 
         self.model_specifics()
         self.interface()
 
+    def init(self):
+        pass
+
     def model_specifics(self):
         pass
+
     def import_checks(self):
         pass
 
     def __iter__(self):
-        return iter(self.dl4mic_model_config)
+        return iter(self.__dict__)
 
     def __len__(self):
-        return len(self.dl4mic_model_config)
+        return len(self.__dict__)
 
     def __getitem__(self, arg):
         # return getattr(self,arg) #Move away from bloody dict
-        return self.dl4mic_model_config[arg]
+        return getattr(self, arg)
 
     def __setitem__(self, key, value):
-        self.dl4mic_model_config[key] = value
+        setattr(self, key, value)
         # return
 
     def model_specifics(self):
@@ -155,45 +172,42 @@ class DL4MicModel(Mapping):
         pass
 
     def get_ref(self):
-        return self.dl4mic_model_config["ref_str"]
+        return self.ref_str
 
-    def __repr__(self):
-        self.dl4mic_model_config
+    # def __repr__(self):
+    #     self.dl4mic_model_config
 
     def append_config(self, config_dict):
-        self.dl4mic_model_config.update(config_dict)
+        self.__dict__.update(config_dict)
         # return self.dl4mic_model_config
 
     def get_config(self):
-        return self.dl4mic_model_config
+        return self.__dict__
 
     def get_config_df(self):
-        return pd.DataFrame(self.dl4mic_model_config)
+        return pd.DataFrame(self.__dict__)
 
     # def data_checks(self):
-    #     self.dl4mic_model_config["patch_size"] = checks.check_image_dims(
-    #         self.dl4mic_model_config["patch_size"], self.dl4mic_model_config["Training_source"]
+    #     self.patch_size = checks.check_image_dims(
+    #         self.patch_size, self.Training_source
     #     )
 
     def get_h5_path(self):
-        h5_file_path = utils.get_h5_path(
-            self.dl4mic_model_config, self.dl4mic_model_config["Weights_choice"]
-        )
-        h5_file_path
-        self.dl4mic_model_config["h5_file_path"] = h5_file_path
+        h5_file_path = utils.get_h5_path(self.pretrained_model_path, self.Weights_choice)
+        self.h5_file_path = h5_file_path
         return h5_file_path
 
     def use_pretrained_model(self):
         pass
 
     def get_model_params(self):
-        return self.full_config[self.model_params]
+        return self[self.model_params]
 
     def get_config_params(self):
-        return self.full_config[self.model_config]
+        return self[self.model_config]
 
     def model_export_tf(self, model, X_val):
-        patch_size = self.dl4mic_model_config["batch_size"]
+        patch_size = self.batch_size
         model.export_TF(
             name=self.model_name,
             description=self.model_description,
@@ -201,19 +215,19 @@ class DL4MicModel(Mapping):
             test_img=X_val[0, ..., 0],
             axes="YX",
             patch_shape=(
-                self.dl4mic_model_config["patch_size"],
-                self.dl4mic_model_config["patch_size"],
+                self.patch_size,
+                self.patch_size,
             ),
         )
 
     def data_checks(self, show_image=False):
         # checks.check_for_prexisiting_model()
 
-        # image = checks.get_random_image(self.dl4mic_model_config[""])
-        # Training_source = self.dl4mic_model_config["Training_source"]
-        Training_source = self.dl4mic_model_config["Training_source"]
+        # image = checks.get_random_image(self.)
+        # Training_source = self.Training_source
+        Training_source = self.Training_source
         output_folder = self.output_folder
-        patch_size = self.dl4mic_model_config["patch_size"]
+        patch_size = self.patch_size
 
         # checks.check_data(image)
 
@@ -221,7 +235,7 @@ class DL4MicModel(Mapping):
         # if show_image:
         # checks.display_image(image, filename)
 
-        # checks.check_image_dims(image, self.dl4mic_model_config["patch_size"])
+        # checks.check_image_dims(image, self.patch_size)
 
         return checks.full(Training_source, output_folder, patch_size, show_image)
 
@@ -229,25 +243,25 @@ class DL4MicModel(Mapping):
         pass
 
     def load_pretrained_model(self):
-        if self.dl4mic_model_config["Use_pretrained_model"]:
+        if self.Use_pretrained_model:
 
-            self.dl4mic_model_config["h5_file_path"] = utils.download_model(
-                self.dl4mic_model_config["pretrained_model_path"],
-                self.dl4mic_model_config["pretrained_model_choice"],
-                self.dl4mic_model_config["pretrained_model_name"],
-                self.dl4mic_model_config["Weights_choice"],
-                self.dl4mic_model_config["model_path"],
+            self.h5_file_path = utils.download_model(
+                self.pretrained_model_path,
+                self.pretrained_model_choice,
+                self.pretrained_model_name,
+                self.Weights_choice,
+                self.model_path,
             )
 
             learning_rates_dict = utils.load_model(
-                self.dl4mic_model_config["h5_file_path"],
-                self.dl4mic_model_config["pretrained_model_path"],
-                self.dl4mic_model_config["Weights_choice"],
-                self.dl4mic_model_config["initial_learning_rate"],
+                self.h5_file_path,
+                self.pretrained_model_path,
+                self.Weights_choice,
+                self.initial_learning_rate,
             )
 
             self.append_config(learning_rates_dict)
-            return self.dl4mic_model_config["h5_file_path"]
+            return self.h5_file_path
         else:
             pass
 
@@ -283,7 +297,7 @@ class DL4MicModel(Mapping):
             "trained": trained,
         }
 
-        report_config = {key: self.dl4mic_model_config[key] for key in report_args}
+        report_config = {key: self[key] for key in report_args}
         report_config.update(extra_args)
 
         return reporting.pdf_export(**report_config)
@@ -308,7 +322,7 @@ class DL4MicModel(Mapping):
         )
 
     # def quality_stock(self):
-    #     # Path(self.dl4mic_model_config["QC_model_path"]).mkdir(parents=True, exist_ok=True)
+    #     # Path(self.QC_model_path).mkdir(parents=True, exist_ok=True)
 
     #     return quality.quality_sequence(
     #         model_path,
@@ -326,25 +340,23 @@ class DL4MicModel(Mapping):
 
     def quality(self, history=None):
 
-        model_path = self.dl4mic_model_config["model_path"]
-        model_name = self.dl4mic_model_config["model_name"]
+        model_path = self.model_path
+        model_name = self.model_name
 
-        if self.dl4mic_model_config["QC_model_name"] is None:
-            self.dl4mic_model_config["QC_model_name"] = model_name
+        if self.QC_model_name is None:
+            self.QC_model_name = model_name
 
-        if self.dl4mic_model_config["QC_model_path"] is None:
-            self.dl4mic_model_config["QC_model_path"] = model_path
+        if self.QC_model_path is None:
+            self.QC_model_path = model_path
 
-        QC_model_name = self.dl4mic_model_config["QC_model_name"]
-        QC_model_path = self.dl4mic_model_config["QC_model_path"]
+        QC_model_name = self.QC_model_name
+        QC_model_path = self.QC_model_path
 
-        ref_str = self.dl4mic_model_config["ref_str"]
-        network = self.dl4mic_model_config["network"]
-        Use_the_current_trained_model = self.dl4mic_model_config[
-            "Use_the_current_trained_model"
-        ]
-        Source_QC_folder = self.dl4mic_model_config["Source_QC_folder"]
-        Target_QC_folder = self.dl4mic_model_config["Target_QC_folder"]
+        ref_str = self.ref_str
+        network = self.network
+        Use_the_current_trained_model = self.Use_the_current_trained_model
+        Source_QC_folder = self.Source_QC_folder
+        Target_QC_folder = self.Target_QC_folder
         self.QC_dir = QC_model_path + QC_model_name
         Path(self.QC_dir).mkdir(parents=True, exist_ok=True)
 
@@ -368,16 +380,16 @@ class DL4MicModel(Mapping):
 
     def predict(self):
 
-        Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
-        Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
+        Prediction_model_path = self.Prediction_model_path
+        Prediction_model_name = self.Prediction_model_name
 
         return predict.full(Prediction_model_path, Prediction_model_name)
 
     def assess(self):
 
-        Prediction_model_path = self.dl4mic_model_config["Prediction_model_path"]
-        Prediction_model_name = self.dl4mic_model_config["Prediction_model_name"]
-        Data_type = self.dl4mic_model_config["Data_type"]
+        Prediction_model_path = self.Prediction_model_path
+        Prediction_model_name = self.Prediction_model_name
+        Data_type = self.Data_type
 
         return assess.full(Prediction_model_path, Prediction_model_name, Data_type)
 
@@ -403,8 +415,8 @@ class DL4MicModel(Mapping):
         self.split_data(X)
         self.check_model_params()
         pdf = self.pre_report(
-            X_train=self.dl4mic_model_config["X_train"],
-            X_test=self.dl4mic_model_config["X_test"],
+            X_train=self.X_train,
+            X_test=self.X_test,
             show_image=False,
         )
         self.pre_training_specific()
@@ -426,15 +438,15 @@ class DL4MicModel(Mapping):
         pass
 
     def split_data(self, Xdata):
-        threshold = self.dl4mic_model_config["threshold"]
+        threshold = self.threshold
         X = Xdata[threshold:]
         X_val = Xdata[:threshold]
-        self.dl4mic_model_config["X_train"] = X
-        self.dl4mic_model_config["X_test"] = X_val
+        self.X_train = X
+        self.X_test = X_val
         return X, X_val
-    
+
     # def default_augment(self):
-    #     Use_Default_Augmentation_Parameters = self.dl4mic_model_config["Use_Default_Augmentation_Parameters"]
+    #     Use_Default_Augmentation_Parameters = self.Use_Default_Augmentation_Parameters
 
     #     if Use_Default_Augmentation_Parameters:
     #         rotate_90_degrees = 0.5
@@ -469,21 +481,20 @@ class DL4MicModel(Mapping):
     #             skew_image = 0.5
     #             skew_image_magnitude = 0.6
 
-
     # def quality_tf(self, model, model_path, model_name,QC_model_name,QC_model_path):
     #     df = self.get_history_df_from_model_tf(model)
     #     quality.df_to_csv(df, model_path, model_name)
     #     quality.display_training_errors(model, QC_model_name, QC_model_path)
 
     #     return df
-    # model_path = self.dl4mic_model_config["model_path"]
-    # model_name = self.dl4mic_model_config["model_name"]
+    # model_path = self.model_path
+    # model_name = self.model_name
 
-    # QC_model_name = self.dl4mic_model_config["QC_model_name"]
-    # QC_model_path = self.dl4mic_model_config["QC_model_path"]
+    # QC_model_name = self.QC_model_name
+    # QC_model_path = self.QC_model_path
 
-    # Source_QC_folder = self.dl4mic_model_config["Source_QC_folder"]
-    # Target_QC_folder = self.dl4mic_model_config["Target_QC_folder"]
+    # Source_QC_folder = self.Source_QC_folder
+    # Target_QC_folder = self.Target_QC_folder
     # def quality_sequence(self,model_path,model_name,QC_model_name,QC_model_path):
 
     #     Use_the_current_trained_model = self.dl4mic_model_config[
@@ -506,10 +517,9 @@ class DL4MicModel(Mapping):
     #     history = model.history
     #     return pd.DataFrame(history.history)
 
-
 class DL4MicModelTF(DL4MicModel):
     def save_model(self, model, X_val):
-        patch_size = self.dl4mic_model_config["patch_size"]
+        patch_size = self.patch_size
         model.export_TF(
             name=self.model_name,
             description=self.description,
@@ -529,19 +539,19 @@ class DL4MicModelTF(DL4MicModel):
         pass
 
     # def quality(self, history):
-    #     if self.dl4mic_model_config["Use_the_current_trained_model"]:
-    #         self.dl4mic_model_config["QC_model_path"] = self.dl4mic_model_config[
+    #     if self.Use_the_current_trained_model:
+    #         self.QC_model_path = self.dl4mic_model_config[
     #             "model_path"
     #         ]
-    #         self.dl4mic_model_config["QC_model_name"] = self.dl4mic_model_config[
+    #         self.QC_model_name = self.dl4mic_model_config[
     #             "model_name"
     #         ]
-    #     # model = self.dl4mic_model_config[""
+    #     # model = self."
 
-    #     model_path = self.dl4mic_model_config["model_path"]
-    #     model_name = self.dl4mic_model_config["model_name"]
-    #     QC_model_name = self.dl4mic_model_config["QC_model_name"]
-    #     QC_model_path = self.dl4mic_model_config["QC_model_path"]
+    #     model_path = self.model_path
+    #     model_name = self.model_name
+    #     QC_model_name = self.QC_model_name
+    #     QC_model_path = self.QC_model_path
 
     #     qc_folder = os.path.join(model_path, model_name, "Quality Control")
 
@@ -586,15 +596,15 @@ from .CARE import CARE
 #         self.model_specifics()
 
 #     def set_model_config(self):
-#         self.model_config = ["train_steps_per_epoch","train_epochs","train_batch_size"]
+#         self.model_config = ["train_steps_per_epoch","train_epochs","train_batch_size
 #     def set_model_params(self):
-#         self.model_params = ["model_name","model_path"]
+#         self.model_params = ["model_name","model_path
 
 #     # def __init__():
 #     # datagen = N2V_DataGenerator()
 #     # return
 #     def get_ref(self):
-#         return self.dl4mic_model_config["ref_str"]
+#         return self.ref_str
 
 #     def __getitem__(self, arg):
 #         return self.dl4mic_model_config[arg]
@@ -612,14 +622,14 @@ from .CARE import CARE
 #         return self.dl4mic_model_config
 
 #     def data_checks(self):
-#         self.dl4mic_model_config["patch_size"] = checks.check_image_dims(
-#             self.dl4mic_model_config["patch_size"], self.dl4mic_model_config["Training_source"]
+#         self.patch_size = checks.check_image_dims(
+#             self.patch_size, self.Training_source
 #         )
 
 #     def get_h5_path(self):
-#         self.dl4mic_model_config["h5_file_path"] = os.path.join(
-#             self.dl4mic_model_config["pretrained_model_path"],
-#             "weights_" + self.dl4mic_model_config["Weights_choice"] + ".h5",
+#         self.h5_file_path = os.path.join(
+#             self.pretrained_model_path,
+#             "weights_" + self.Weights_choice + ".h5",
 #         )
 
 #     def use_pretrained_model(self):
@@ -628,11 +638,11 @@ from .CARE import CARE
 #     def interface(self):
 #         self.full_config = self.dl4mic_model_config
 #         interface_dict = {
-#             "name":self.dl4mic_model_config["model_name"],
-#             "basedir": self.dl4mic_model_config["model_path"],
-#             "train_steps_per_epoch":self.dl4mic_model_config["number_of_steps"],
-#             "train_epochs":self.dl4mic_model_config["number_of_epochs"],
-#             "train_batch_size":self.dl4mic_model_config["batch_size"],
+#             "name":self.model_name,
+#             "basedir": self.model_path,
+#             "train_steps_per_epoch":self.number_of_steps,
+#             "train_epochs":self.number_of_epochs,
+#             "train_batch_size":self.batch_size,
 #         }
 #         self.N2V_config.update(interface_dict)
 
@@ -641,19 +651,19 @@ from .CARE import CARE
 
 #     def get_config_params(self):
 #         return self.full_config[self.model_config]
-#         # self.N2V_config["name"] = self.dl4mic_model_config["model_name"]
-#         # self.N2V_config["basedir"] = self.dl4mic_model_config["model_path"]
-#         # self.N2V_config["basedir"] = self.dl4mic_model_config["model_path"]
+#         # self.N2V_config["name = self.model_name
+#         # self.N2V_config["basedir = self.model_path
+#         # self.N2V_config["basedir = self.model_path
 #     def model_export_tf(self,model,X_val):
-#         patch_size = self.dl4mic_model_config["batch_size"]
+#         patch_size = self.batch_size
 #         model.export_TF(
 #                 name=self.model_name,
 #                 description=self.model_description,
 #                 authors=self.authors,
 #                 test_img=X_val[0,...,0], axes='YX',
-#                 patch_shape=(self.dl4mic_model_config["patch_size"],
-#                              self.dl4mic_model_config["patch_size"]))
+#                 patch_shape=(self.patch_size,
+#                              self.patch_size))
 #     def model_specifics(self):
 #         self.model_name = "N2V"
 #         self.description = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
-#         self.authors = ["You"]
+#         self.authors = ["You

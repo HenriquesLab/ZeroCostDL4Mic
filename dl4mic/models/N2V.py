@@ -23,12 +23,14 @@ class N2V(models.DL4MicModelTF):
 
     # import N2V
     # config=None
+    # super().__init__(**model_config)
     # self.dl4mic_model_config={}
-    network = "Noise2Void"
-    model_name = "n2v"
-    description = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
-    authors = ["You"]
-    ref_str = '- Noise2Void: Krull, Alexander, Tim-Oliver Buchholz, and Florian Jug. "Noise2void-learning denoising from single noisy images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.'
+    def init(self):
+        self.network = "Noise2Void"
+        self.model_name = "n2v"
+        self.description = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
+        self.authors = ["You"]
+        self.ref_str = '- Noise2Void: Krull, Alexander, Tim-Oliver Buchholz, and Florian Jug. "Noise2void-learning denoising from single noisy images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.'
 
     def set_model_config(self):
         self.model_config = [
@@ -43,63 +45,56 @@ class N2V(models.DL4MicModelTF):
     def interface(self):
         # self.full_config = self.dl4mic_model_config
         interface_dict = {
-            "name": self.dl4mic_model_config["model_name"],
-            "basedir": self.dl4mic_model_config["model_path"],
-            "train_steps_per_epoch": self.dl4mic_model_config["number_of_steps"],
-            "train_epochs": self.dl4mic_model_config["number_of_epochs"],
-            "train_batch_size": self.dl4mic_model_config["batch_size"],
-            "directory": self.dl4mic_model_config["Training_source"],
+            "name": self.model_name,
+            "basedir": self.model_path,
+            "train_steps_per_epoch": self.number_of_steps,
+            "train_epochs": self.number_of_epochs,
+            "train_batch_size": self.batch_size,
+            "directory": self.Training_source,
         }
-        self.dl4mic_model_config.update(interface_dict)
+        self.append_config(interface_dict)
 
     def model_specifics(self):
-        specifics = {
-            "model_name": self.model_name,
-            "description": self.description,
-            "authors": self.authors,
-            "ref_str": self.ref_str,
-            "network": self.network,
-        }
-        self.dl4mic_model_config.update(specifics)
-
+        pass
+    
     def gleen_data(self, Xdata):
         shape_of_Xdata = Xdata.shape
 
-        self.dl4mic_model_config["shape_of_Xdata"] = shape_of_Xdata
+        self.shape_of_Xdata = shape_of_Xdata
 
-        self.get_threshold(self.dl4mic_model_config["shape_of_Xdata"])
-        self.get_image_patches(self.dl4mic_model_config["shape_of_Xdata"])
-        if self.dl4mic_model_config["Use_Default_Advanced_Parameters"]:
-            self.dl4mic_model_config["number_of_steps"] = self.get_default_steps(
-                self.dl4mic_model_config["shape_of_Xdata"]
+        self.get_threshold(self.shape_of_Xdata)
+        self.get_image_patches(self.shape_of_Xdata)
+        if self.Use_Default_Advanced_Parameters:
+            self.number_of_steps = self.get_default_steps(
+                self.shape_of_Xdata
             )
 
     def get_threshold(self, shape_of_Xdata):
-        self.dl4mic_model_config["threshold"] = int(
+        self.threshold = int(
             shape_of_Xdata[0]
-            * (self.dl4mic_model_config["percentage_validation"] / 100)
+            * (self.percentage_validation / 100)
         )
-        return self.dl4mic_model_config["threshold"]
+        return self.threshold
 
     def get_image_patches(self, shape_of_Xdata):
-        self.dl4mic_model_config["image_patches"] = int(shape_of_Xdata[0])
-        return self.dl4mic_model_config["image_patches"]
+        self.image_patches = int(shape_of_Xdata[0])
+        return self.image_patches
 
     def get_default_steps(self, shape_of_Xdata):
-        self.dl4mic_model_config["number_of_steps"] = (
-            int(shape_of_Xdata[0] / self.dl4mic_model_config["batch_size"]) + 1
+        self.number_of_steps = (
+            int(shape_of_Xdata[0] / self.batch_size) + 1
         )
-        return self.dl4mic_model_config["number_of_steps"]
+        return self.number_of_steps
 
     def save_model(model):
         pass
 
     def quality_extra(self, history):
-        # history = self.dl4mic_model_config["history"]
-        model_path = self.dl4mic_model_config["model_path"]
-        model_name = self.dl4mic_model_config["model_name"]
-        QC_model_name = self.dl4mic_model_config["QC_model_name"]
-        QC_model_path = self.dl4mic_model_config["QC_model_path"]
+        # history = self.history
+        model_path = self.model_path
+        model_name = self.model_name
+        QC_model_name = self.QC_model_name
+        QC_model_path = self.QC_model_path
 
         quality.quality_tf(
             history, model_path, model_name, QC_model_name, QC_model_path
@@ -107,7 +102,7 @@ class N2V(models.DL4MicModelTF):
 
     def get_model(self):
 
-        dl4mic_model = self.dl4mic_model_config
+        # dl4mic_model = self.dl4mic_model_config
         # def n2v_get_model(dl4mic_model, Xdata):
 
         ################ N2V ######################
@@ -118,36 +113,36 @@ class N2V(models.DL4MicModelTF):
         from n2v.internals.N2V_DataGenerator import N2V_DataGenerator
         from csbdeep.io import save_tiff_imagej_compatible
 
-        threshold = dl4mic_model["threshold"]
-        image_patches = dl4mic_model["image_patches"]
-        shape_of_Xdata = dl4mic_model["shape_of_Xdata"]
+        threshold = self.threshold
+        image_patches = self.image_patches
+        shape_of_Xdata = self.shape_of_Xdata
 
         print(shape_of_Xdata[0], "patches created.")
         print(
-            dl4mic_model["threshold"],
+            self.threshold,
             "patch images for validation (",
-            dl4mic_model["percentage_validation"],
+            self.percentage_validation,
             "%).",
         )
         print(image_patches - threshold, "patch images for training.")
 
         config = N2VConfig(
-            dl4mic_model["X_train"],
+            self.X_train,
             unet_kern_size=3,
-            train_steps_per_epoch=dl4mic_model["number_of_steps"],
-            train_epochs=dl4mic_model["number_of_epochs"],
-            train_loss=dl4mic_model["loss_function"],
+            train_steps_per_epoch=self.number_of_steps,
+            train_epochs=self.number_of_epochs,
+            train_loss=self.loss_function,
             batch_norm=True,
-            train_batch_size=dl4mic_model["batch_size"],
+            train_batch_size=self.batch_size,
             n2v_perc_pix=0.198,
             n2v_manipulator="uniform_withCP",
             n2v_neighborhood_radius=5,
-            train_learning_rate=dl4mic_model["initial_learning_rate"],
+            train_learning_rate=self.initial_learning_rate,
         )
 
         model = N2V(
             config=config,
-            name=dl4mic_model["model_name"],
+            name=self.model_name,
             basedir="tests",
         )
 
@@ -162,22 +157,22 @@ class N2V(models.DL4MicModelTF):
 
         from n2v.internals.N2V_DataGenerator import N2V_DataGenerator
 
-        dl4mic_model = self.dl4mic_model_config
+        # dl4mic_model = self.dl4mic_model_config
 
         datagen = N2V_DataGenerator()
         imgs = datagen.load_imgs_from_directory(
-            directory=dl4mic_model["Training_source"]
+            directory=self.Training_source
         )
 
         Xdata = datagen.generate_patches_from_list(
             imgs,
-            shape=(dl4mic_model["patch_size"], dl4mic_model["patch_size"]),
-            augment=dl4mic_model["Use_Data_augmentation"],
+            shape=(self.patch_size, self.patch_size),
+            augment=self.Use_Data_augmentation,
         )
 
         self.pre_training(Xdata)
 
-        dl4mic_model["start"] = time.time()
+        self.start = time.time()
 
         # TF1 Hack
         import tensorflow.compat.v1 as tf
@@ -186,7 +181,7 @@ class N2V(models.DL4MicModelTF):
         tf.__version__ = 1.14
 
         model = self.get_model()
-        threshold = dl4mic_model["threshold"]
+        threshold = self.threshold
 
         X = Xdata[threshold:]
         X_val = Xdata[:threshold]
