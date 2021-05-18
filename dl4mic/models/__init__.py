@@ -78,6 +78,7 @@ class DL4MicModel(Mapping):
         "model_name": None,
         "model_path": None,
         "ref_str": None,
+        "ref_aug" : '- Augmentor: Bloice, Marcus D., Christof Stocker, and Andreas Holzinger. "Augmentor: an image augmentation library for machine learning." arXiv preprint arXiv:1708.04680 (2017).',
         "Notebook_version": 1.12,
         "initial_learning_rate": 0.0004,
         "number_of_steps": 100,
@@ -116,6 +117,8 @@ class DL4MicModel(Mapping):
         self.interface()
 
     def model_specifics(self):
+        pass
+    def import_checks(self):
         pass
 
     def __iter__(self):
@@ -257,6 +260,7 @@ class DL4MicModel(Mapping):
             "model_name",
             "model_path",
             "ref_str",
+            "ref_aug",
             "Notebook_version",
             "initial_learning_rate",
             "number_of_steps",
@@ -428,6 +432,43 @@ class DL4MicModel(Mapping):
         self.dl4mic_model_config["X_train"] = X
         self.dl4mic_model_config["X_test"] = X_val
         return X, X_val
+    
+    # def default_augment(self):
+    #     Use_Default_Augmentation_Parameters = self.dl4mic_model_config["Use_Default_Augmentation_Parameters"]
+
+    #     if Use_Default_Augmentation_Parameters:
+    #         rotate_90_degrees = 0.5
+    #         rotate_270_degrees = 0.5
+    #         flip_left_right = 0.5
+    #         flip_top_bottom = 0.5
+
+    #         if not Multiply_dataset_by >5:
+    #             random_zoom = 0
+    #             random_zoom_magnification = 0.9
+    #             random_distortion = 0
+    #             image_shear = 0
+    #             max_image_shear = 10
+    #             skew_image = 0
+    #             skew_image_magnitude = 0
+
+    #         if Multiply_dataset_by >5:
+    #             random_zoom = 0.1
+    #             random_zoom_magnification = 0.9
+    #             random_distortion = 0.5
+    #             image_shear = 0.2
+    #             max_image_shear = 5
+    #             skew_image = 0.2
+    #             skew_image_magnitude = 0.4
+
+    #         if Multiply_dataset_by >25:
+    #             random_zoom = 0.5
+    #             random_zoom_magnification = 0.8
+    #             random_distortion = 0.5
+    #             image_shear = 0.5
+    #             max_image_shear = 20
+    #             skew_image = 0.5
+    #             skew_image_magnitude = 0.6
+
 
     # def quality_tf(self, model, model_path, model_name,QC_model_name,QC_model_path):
     #     df = self.get_history_df_from_model_tf(model)
@@ -512,6 +553,7 @@ class DL4MicModelTF(DL4MicModel):
 
 
 from .N2V import N2V
+from .CARE import CARE
 
 
 # class N2V():

@@ -35,6 +35,7 @@ def pdf_export(
     model_name,
     model_path,
     ref_str,
+    ref_aug,
     Notebook_version,
     initial_learning_rate,
     number_of_steps,
@@ -303,8 +304,10 @@ def pdf_export(
         pdf.ln(1)
     ref_1 = 'References:\n - ZeroCostDL4Mic: von Chamier, Lucas & Laine, Romain, et al. "ZeroCostDL4Mic: an open platform to simplify access and use of Deep-Learning in Microscopy." BioRxiv (2020).'
     pdf.multi_cell(190, 5, txt=ref_1, align="L")
-    # ref_2 = '- Noise2Void: Krull, Alexander, Tim-Oliver Buchholz, and Florian Jug. "Noise2void-learning denoising from single noisy images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.'
+    ref_2 = ref_str
     pdf.multi_cell(190, 5, txt=ref_str, align="L")
+    if augmentation:
+        pdf.multi_cell(190, 5, txt=ref_aug, align="L")
     pdf.ln(3)
     reminder = "Important:\nRemember to perform the quality control step on all newly trained models\nPlease consider depositing your training dataset on Zenodo"
     pdf.set_font("Arial", size=11, style="B")
