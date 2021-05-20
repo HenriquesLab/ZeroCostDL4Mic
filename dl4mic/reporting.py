@@ -129,7 +129,9 @@ def pdf_export(
     # print(cuda_version[cuda_version.find(', V')+3:-1])
     # print(gpu_name)
 
-    shape = io.imread(Training_source + "/" + os.listdir(Training_source)[0]).shape
+    shape = io.imread(
+        os.path.join(Training_source, os.listdir(Training_source)[0])
+    ).shape
     dataset_size = len(os.listdir(Training_source))
 
     text = (
@@ -276,7 +278,7 @@ def pdf_export(
     pdf.set_font("Arial", size=10, style="B")
     pdf.cell(28, 5, txt="Training_source:", align="L", ln=0)
     pdf.set_font("")
-    pdf.multi_cell(170, 5, txt=Training_source, align="L")
+    pdf.multi_cell(170, 5, txt=str(Training_source), align="L")
     # pdf.set_font('')
     # pdf.set_font('Arial', size = 10, style = 'B')
     # pdf.cell(28, 5, txt= 'Training_target:', align = 'L', ln=0)
@@ -288,7 +290,7 @@ def pdf_export(
     pdf.set_font("Arial", size=10, style="B")
     pdf.cell(21, 5, txt="Model Path:", align="L", ln=0)
     pdf.set_font("")
-    pdf.multi_cell(170, 5, txt=model_path + "/" + model_name, align="L")
+    pdf.multi_cell(170, 5, txt=str(model_path) + "/" + str(model_name), align="L")
     pdf.ln(1)
     pdf.cell(60, 5, txt="Example Training Image", ln=1)
     pdf.ln(1)
