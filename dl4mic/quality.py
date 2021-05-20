@@ -1,6 +1,6 @@
 from . import reporting
 from glob import glob
-import io
+# import io
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
@@ -13,6 +13,7 @@ import csv
 from skimage.metrics import structural_similarity
 import numexpr
 from skimage.metrics import peak_signal_noise_ratio as psnr
+from skimage import io
 
 
 # qc_folder = "Quality Control"
