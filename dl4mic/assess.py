@@ -12,8 +12,10 @@ def full(Data_folder, Result_folder, Data_type):
 
 
 def display_random_image(Data_folder, Result_folder, Data_type):
-    if Data_folder is not None:
-        random_choice = random.choice(os.listdir(Data_folder))
+    try:
+        # if Data_folder is not None:
+        file_list = os.listdir(Data_folder)
+        random_choice = random.choice(file_list)
         x = imread(os.path.join(Data_folder,random_choice))
 
         os.chdir(Result_folder)
@@ -44,3 +46,7 @@ def display_random_image(Data_folder, Result_folder, Data_type):
             plt.title("Predicted output")
             plt.axis("off")
             plt.show()
+    except FileExistsError:
+        print("Couldn't find a random image")
+    except IndexError:
+        print("Couldn't find a random image")

@@ -284,271 +284,275 @@ def create_qc_csv(QC_model_path, QC_model_name, Source_QC_folder, Target_QC_fold
         )
 
         # Let's loop through the provided dataset in the QC folders
+        try:
+            for i in os.listdir(Source_QC_folder):
+                if not os.path.isdir(os.path.join(Source_QC_folder, i)):
+                    print("Running QC on: " + i)
+                    # -------------------------------- Target test data (Ground truth) --------------------------------
+                    test_GT = io.imread(os.path.join(Target_QC_folder, i))
 
-        for i in os.listdir(Source_QC_folder):
-            if not os.path.isdir(os.path.join(Source_QC_folder, i)):
-                print("Running QC on: " + i)
-                # -------------------------------- Target test data (Ground truth) --------------------------------
-                test_GT = io.imread(os.path.join(Target_QC_folder, i))
+                    # -------------------------------- Source test data --------------------------------
+                    test_source = io.imread(os.path.join(Source_QC_folder, i))
 
-                # -------------------------------- Source test data --------------------------------
-                test_source = io.imread(os.path.join(Source_QC_folder, i))
-
-                # Normalize the images wrt each other by minimizing the MSE between GT and Source image
-                test_GT_norm, test_source_norm = norm_minmse(
-                    test_GT, test_source, normalize_gt=True
-                )
-
-                # -------------------------------- Prediction --------------------------------
-                test_prediction = io.imread(
-                    os.path.join(
-                        QC_model_path,
-                        QC_model_name,
-                        "Prediction",
-                        i,
+                    # Normalize the images wrt each other by minimizing the MSE between GT and Source image
+                    test_GT_norm, test_source_norm = norm_minmse(
+                        test_GT, test_source, normalize_gt=True
                     )
+
+                    # -------------------------------- Prediction --------------------------------
+                    test_prediction = io.imread(
+                        os.path.join(
+                            QC_model_path,
+                            QC_model_name,
+                            "Prediction",
+                            i,
+                        )
+                    )
+
+                    # Normalize the images wrt each other by minimizing the MSE between GT and prediction
+                    test_GT_norm, test_prediction_norm = norm_minmse(
+                        test_GT, test_prediction, normalize_gt=True
+                    )
+
+                    # -------------------------------- Calculate the metric maps and save them --------------------------------
+
+                    # Calculate the SSIM maps
+                    index_SSIM_GTvsPrediction, img_SSIM_GTvsPrediction = ssim(
+                        test_GT_norm, test_prediction_norm
+                    )
+                    index_SSIM_GTvsSource, img_SSIM_GTvsSource = ssim(
+                        test_GT_norm, test_source_norm
+                    )
+
+                    # Save ssim_maps
+                    img_SSIM_GTvsPrediction_32bit = np.float32(img_SSIM_GTvsPrediction)
+                    io.imsave(
+                        os.path.join(
+                            QC_model_path,
+                            QC_model_name,
+                            "SSIM_GTvsPrediction_",
+                            i,
+                        ),
+                        img_SSIM_GTvsPrediction_32bit,
+                    )
+
+                    img_SSIM_GTvsSource_32bit = np.float32(img_SSIM_GTvsSource)
+                    io.imsave(
+                        os.path.join(
+                            QC_model_path,
+                            QC_model_name,
+                            "SSIM_GTvsSource_",
+                            i,
+                        ),
+                        img_SSIM_GTvsSource_32bit,
+                    )
+
+                    # Calculate the Root Squared Error (RSE) maps
+                    img_RSE_GTvsPrediction = np.sqrt(
+                        np.square(test_GT_norm - test_prediction_norm)
+                    )
+                    img_RSE_GTvsSource = np.sqrt(np.square(test_GT_norm - test_source_norm))
+
+                    # Save SE maps
+                    img_RSE_GTvsPrediction_32bit = np.float32(img_RSE_GTvsPrediction)
+                    img_RSE_GTvsSource_32bit = np.float32(img_RSE_GTvsSource)
+                    io.imsave(
+                        os.path.join(
+                            QC_model_path,
+                            QC_model_name,
+                            "RSE_GTvsPrediction_",
+                            i,
+                        ),
+                        img_RSE_GTvsPrediction_32bit,
+                    )
+                    io.imsave(
+                        os.path.join(
+                            QC_model_path,
+                            QC_model_name,
+                            # "Quality Control",
+                            "RSE_GTvsSource_",
+                            i,
+                        ),
+                        img_RSE_GTvsSource_32bit,
+                    )
+
+                    # -------------------------------- Calculate the RSE metrics and save them --------------------------------
+
+                    # Normalised Root Mean Squared Error (here it's valid to take the mean of the image)
+                    NRMSE_GTvsPrediction = np.sqrt(np.mean(img_RSE_GTvsPrediction))
+                    NRMSE_GTvsSource = np.sqrt(np.mean(img_RSE_GTvsSource))
+
+                    # We can also measure the peak signal to noise ratio between the images
+                    PSNR_GTvsPrediction = psnr(
+                        test_GT_norm, test_prediction_norm, data_range=1.0
+                    )
+                    PSNR_GTvsSource = psnr(test_GT_norm, test_source_norm, data_range=1.0)
+
+                    writer.writerow(
+                        [
+                            i,
+                            str(index_SSIM_GTvsPrediction),
+                            str(index_SSIM_GTvsSource),
+                            str(NRMSE_GTvsPrediction),
+                            str(NRMSE_GTvsSource),
+                            str(PSNR_GTvsPrediction),
+                            str(PSNR_GTvsSource),
+                        ]
+                    )
+
+                # error_mapping_report(
+                #         Target_QC_folder,
+                #         Source_QC_folder,
+                #         QC_model_path,
+                #         QC_model_name,
+                #         img_SSIM_GTvsPrediction,
+                #         index_SSIM_GTvsSource,
+                #         img_SSIM_GTvsSource,
+                #         index_SSIM_GTvsPrediction,
+                #         NRMSE_GTvsSource,
+                #         PSNR_GTvsSource,
+                #         img_RSE_GTvsSource,
+                #         NRMSE_GTvsPrediction,
+                #         PSNR_GTvsPrediction,
+                #         img_RSE_GTvsPrediction,
+                #     )
+
+            full_QC_model_path = os.path.join(QC_model_path, QC_model_name)
+            # All data is now processed saved
+            Test_FileList = os.listdir(
+                Source_QC_folder
+            )  # this assumes, as it should, that both source and target are named the same
+            if len(Test_FileList)==0:
+                print("No files in QC_folder")
+            else:
+                plt.figure(figsize=(15, 15))
+                # Currently only displays the last computed set, from memory
+                # Target (Ground-truth)
+                plt.subplot(3, 3, 1)
+                plt.axis("off")
+                img_GT = io.imread(os.path.join(Target_QC_folder, Test_FileList[-1]))
+                plt.imshow(img_GT)
+                plt.title("Target", fontsize=15)
+
+                # Source
+                plt.subplot(3, 3, 2)
+                plt.axis("off")
+                img_Source = io.imread(os.path.join(Source_QC_folder, Test_FileList[-1]))
+                plt.imshow(img_Source)
+                plt.title("Source", fontsize=15)
+
+                # Prediction
+                plt.subplot(3, 3, 3)
+                plt.axis("off")
+                img_Prediction_path = os.path.join(
+                    QC_model_path,
+                    QC_model_name,
+                    # "Quality Control",
+                    "Prediction", Test_FileList[-1]
                 )
-
-                # Normalize the images wrt each other by minimizing the MSE between GT and prediction
-                test_GT_norm, test_prediction_norm = norm_minmse(
-                    test_GT, test_prediction, normalize_gt=True
+                img_Prediction = io.imread(
+                    img_Prediction_path,
                 )
+                plt.imshow(img_Prediction)
+                plt.title("Prediction", fontsize=15)
 
-                # -------------------------------- Calculate the metric maps and save them --------------------------------
+                # Setting up colours
+                cmap = plt.cm.CMRmap
 
-                # Calculate the SSIM maps
-                index_SSIM_GTvsPrediction, img_SSIM_GTvsPrediction = ssim(
-                    test_GT_norm, test_prediction_norm
+                # SSIM between GT and Source
+                plt.subplot(3, 3, 5)
+                # plt.axis('off')
+                plt.tick_params(
+                    axis="both",  # changes apply to the x-axis and y-axis
+                    which="both",  # both major and minor ticks are affected
+                    bottom=False,  # ticks along the bottom edge are off
+                    top=False,  # ticks along the top edge are off
+                    left=False,  # ticks along the left edge are off
+                    right=False,  # ticks along the right edge are off
+                    labelbottom=False,
+                    labelleft=False,
                 )
-                index_SSIM_GTvsSource, img_SSIM_GTvsSource = ssim(
-                    test_GT_norm, test_source_norm
+                imSSIM_GTvsSource = plt.imshow(img_SSIM_GTvsSource, cmap=cmap, vmin=0, vmax=1)
+                plt.colorbar(imSSIM_GTvsSource, fraction=0.046, pad=0.04)
+                plt.title("Target vs. Source", fontsize=15)
+                plt.xlabel("mSSIM: " + str(round(index_SSIM_GTvsSource, 3)), fontsize=14)
+                plt.ylabel("SSIM maps", fontsize=20, rotation=0, labelpad=75)
+
+                # SSIM between GT and Prediction
+                plt.subplot(3, 3, 6)
+                # plt.axis('off')
+                plt.tick_params(
+                    axis="both",  # changes apply to the x-axis and y-axis
+                    which="both",  # both major and minor ticks are affected
+                    bottom=False,  # ticks along the bottom edge are off
+                    top=False,  # ticks along the top edge are off
+                    left=False,  # ticks along the left edge are off
+                    right=False,  # ticks along the right edge are off
+                    labelbottom=False,
+                    labelleft=False,
                 )
-
-                # Save ssim_maps
-                img_SSIM_GTvsPrediction_32bit = np.float32(img_SSIM_GTvsPrediction)
-                io.imsave(
-                    os.path.join(
-                        QC_model_path,
-                        QC_model_name,
-                        "SSIM_GTvsPrediction_",
-                        i,
-                    ),
-                    img_SSIM_GTvsPrediction_32bit,
+                imSSIM_GTvsPrediction = plt.imshow(
+                    img_SSIM_GTvsPrediction, cmap=cmap, vmin=0, vmax=1
                 )
+                plt.colorbar(imSSIM_GTvsPrediction, fraction=0.046, pad=0.04)
+                plt.title("Target vs. Prediction", fontsize=15)
+                plt.xlabel("mSSIM: " + str(round(index_SSIM_GTvsPrediction, 3)), fontsize=14)
 
-                img_SSIM_GTvsSource_32bit = np.float32(img_SSIM_GTvsSource)
-                io.imsave(
-                    os.path.join(
-                        QC_model_path,
-                        QC_model_name,
-                        "SSIM_GTvsSource_",
-                        i,
-                    ),
-                    img_SSIM_GTvsSource_32bit,
+                # Root Squared Error between GT and Source
+                plt.subplot(3, 3, 8)
+                # plt.axis('off')
+                plt.tick_params(
+                    axis="both",  # changes apply to the x-axis and y-axis
+                    which="both",  # both major and minor ticks are affected
+                    bottom=False,  # ticks along the bottom edge are off
+                    top=False,  # ticks along the top edge are off
+                    left=False,  # ticks along the left edge are off
+                    right=False,  # ticks along the right edge are off
+                    labelbottom=False,
+                    labelleft=False,
                 )
-
-                # Calculate the Root Squared Error (RSE) maps
-                img_RSE_GTvsPrediction = np.sqrt(
-                    np.square(test_GT_norm - test_prediction_norm)
+                imRSE_GTvsSource = plt.imshow(img_RSE_GTvsSource, cmap=cmap, vmin=0, vmax=1)
+                plt.colorbar(imRSE_GTvsSource, fraction=0.046, pad=0.04)
+                plt.title("Target vs. Source", fontsize=15)
+                plt.xlabel(
+                    "NRMSE: "
+                    + str(round(NRMSE_GTvsSource, 3))
+                    + ", PSNR: "
+                    + str(round(PSNR_GTvsSource, 3)),
+                    fontsize=14,
                 )
-                img_RSE_GTvsSource = np.sqrt(np.square(test_GT_norm - test_source_norm))
+                # plt.title('Target vs. Source PSNR: '+str(round(PSNR_GTvsSource,3)))
+                plt.ylabel("RSE maps", fontsize=20, rotation=0, labelpad=75)
 
-                # Save SE maps
-                img_RSE_GTvsPrediction_32bit = np.float32(img_RSE_GTvsPrediction)
-                img_RSE_GTvsSource_32bit = np.float32(img_RSE_GTvsSource)
-                io.imsave(
-                    os.path.join(
-                        QC_model_path,
-                        QC_model_name,
-                        "RSE_GTvsPrediction_",
-                        i,
-                    ),
-                    img_RSE_GTvsPrediction_32bit,
+                # Root Squared Error between GT and Prediction
+                plt.subplot(3, 3, 9)
+                # plt.axis('off')
+                plt.tick_params(
+                    axis="both",  # changes apply to the x-axis and y-axis
+                    which="both",  # both major and minor ticks are affected
+                    bottom=False,  # ticks along the bottom edge are off
+                    top=False,  # ticks along the top edge are off
+                    left=False,  # ticks along the left edge are off
+                    right=False,  # ticks along the right edge are off
+                    labelbottom=False,
+                    labelleft=False,
                 )
-                io.imsave(
-                    os.path.join(
-                        QC_model_path,
-                        QC_model_name,
-                        # "Quality Control",
-                        "RSE_GTvsSource_",
-                        i,
-                    ),
-                    img_RSE_GTvsSource_32bit,
+                imRSE_GTvsPrediction = plt.imshow(img_RSE_GTvsPrediction, cmap=cmap, vmin=0, vmax=1)
+                plt.colorbar(imRSE_GTvsPrediction, fraction=0.046, pad=0.04)
+                plt.title("Target vs. Prediction", fontsize=15)
+                plt.xlabel(
+                    "NRMSE: "
+                    + str(round(NRMSE_GTvsPrediction, 3))
+                    + ", PSNR: "
+                    + str(round(PSNR_GTvsPrediction, 3)),
+                    fontsize=14,
                 )
-
-                # -------------------------------- Calculate the RSE metrics and save them --------------------------------
-
-                # Normalised Root Mean Squared Error (here it's valid to take the mean of the image)
-                NRMSE_GTvsPrediction = np.sqrt(np.mean(img_RSE_GTvsPrediction))
-                NRMSE_GTvsSource = np.sqrt(np.mean(img_RSE_GTvsSource))
-
-                # We can also measure the peak signal to noise ratio between the images
-                PSNR_GTvsPrediction = psnr(
-                    test_GT_norm, test_prediction_norm, data_range=1.0
+                QC_example_data_path = os.path.join(
+                    QC_model_path, QC_model_name, "QC_example_data.png"
                 )
-                PSNR_GTvsSource = psnr(test_GT_norm, test_source_norm, data_range=1.0)
-
-                writer.writerow(
-                    [
-                        i,
-                        str(index_SSIM_GTvsPrediction),
-                        str(index_SSIM_GTvsSource),
-                        str(NRMSE_GTvsPrediction),
-                        str(NRMSE_GTvsSource),
-                        str(PSNR_GTvsPrediction),
-                        str(PSNR_GTvsSource),
-                    ]
-                )
-
-            # error_mapping_report(
-            #         Target_QC_folder,
-            #         Source_QC_folder,
-            #         QC_model_path,
-            #         QC_model_name,
-            #         img_SSIM_GTvsPrediction,
-            #         index_SSIM_GTvsSource,
-            #         img_SSIM_GTvsSource,
-            #         index_SSIM_GTvsPrediction,
-            #         NRMSE_GTvsSource,
-            #         PSNR_GTvsSource,
-            #         img_RSE_GTvsSource,
-            #         NRMSE_GTvsPrediction,
-            #         PSNR_GTvsPrediction,
-            #         img_RSE_GTvsPrediction,
-            #     )
-
-    full_QC_model_path = os.join(QC_model_path, QC_model_name)
-    # All data is now processed saved
-    Test_FileList = os.listdir(
-        Source_QC_folder
-    )  # this assumes, as it should, that both source and target are named the same
-
-    plt.figure(figsize=(15, 15))
-    # Currently only displays the last computed set, from memory
-    # Target (Ground-truth)
-    plt.subplot(3, 3, 1)
-    plt.axis("off")
-    img_GT = io.imread(os.path.join(Target_QC_folder, Test_FileList[-1]))
-    plt.imshow(img_GT)
-    plt.title("Target", fontsize=15)
-
-    # Source
-    plt.subplot(3, 3, 2)
-    plt.axis("off")
-    img_Source = io.imread(os.path.join(Source_QC_folder, Test_FileList[-1]))
-    plt.imshow(img_Source)
-    plt.title("Source", fontsize=15)
-
-    # Prediction
-    plt.subplot(3, 3, 3)
-    plt.axis("off")
-    img_Prediction_path = os.path.join(
-        QC_model_path,
-        QC_model_name,
-        # "Quality Control",
-        "Prediction", Test_FileList[-1]
-    )
-    img_Prediction = io.imread(
-        img_Prediction_path,
-    )
-    plt.imshow(img_Prediction)
-    plt.title("Prediction", fontsize=15)
-
-    # Setting up colours
-    cmap = plt.cm.CMRmap
-
-    # SSIM between GT and Source
-    plt.subplot(3, 3, 5)
-    # plt.axis('off')
-    plt.tick_params(
-        axis="both",  # changes apply to the x-axis and y-axis
-        which="both",  # both major and minor ticks are affected
-        bottom=False,  # ticks along the bottom edge are off
-        top=False,  # ticks along the top edge are off
-        left=False,  # ticks along the left edge are off
-        right=False,  # ticks along the right edge are off
-        labelbottom=False,
-        labelleft=False,
-    )
-    imSSIM_GTvsSource = plt.imshow(img_SSIM_GTvsSource, cmap=cmap, vmin=0, vmax=1)
-    plt.colorbar(imSSIM_GTvsSource, fraction=0.046, pad=0.04)
-    plt.title("Target vs. Source", fontsize=15)
-    plt.xlabel("mSSIM: " + str(round(index_SSIM_GTvsSource, 3)), fontsize=14)
-    plt.ylabel("SSIM maps", fontsize=20, rotation=0, labelpad=75)
-
-    # SSIM between GT and Prediction
-    plt.subplot(3, 3, 6)
-    # plt.axis('off')
-    plt.tick_params(
-        axis="both",  # changes apply to the x-axis and y-axis
-        which="both",  # both major and minor ticks are affected
-        bottom=False,  # ticks along the bottom edge are off
-        top=False,  # ticks along the top edge are off
-        left=False,  # ticks along the left edge are off
-        right=False,  # ticks along the right edge are off
-        labelbottom=False,
-        labelleft=False,
-    )
-    imSSIM_GTvsPrediction = plt.imshow(
-        img_SSIM_GTvsPrediction, cmap=cmap, vmin=0, vmax=1
-    )
-    plt.colorbar(imSSIM_GTvsPrediction, fraction=0.046, pad=0.04)
-    plt.title("Target vs. Prediction", fontsize=15)
-    plt.xlabel("mSSIM: " + str(round(index_SSIM_GTvsPrediction, 3)), fontsize=14)
-
-    # Root Squared Error between GT and Source
-    plt.subplot(3, 3, 8)
-    # plt.axis('off')
-    plt.tick_params(
-        axis="both",  # changes apply to the x-axis and y-axis
-        which="both",  # both major and minor ticks are affected
-        bottom=False,  # ticks along the bottom edge are off
-        top=False,  # ticks along the top edge are off
-        left=False,  # ticks along the left edge are off
-        right=False,  # ticks along the right edge are off
-        labelbottom=False,
-        labelleft=False,
-    )
-    imRSE_GTvsSource = plt.imshow(img_RSE_GTvsSource, cmap=cmap, vmin=0, vmax=1)
-    plt.colorbar(imRSE_GTvsSource, fraction=0.046, pad=0.04)
-    plt.title("Target vs. Source", fontsize=15)
-    plt.xlabel(
-        "NRMSE: "
-        + str(round(NRMSE_GTvsSource, 3))
-        + ", PSNR: "
-        + str(round(PSNR_GTvsSource, 3)),
-        fontsize=14,
-    )
-    # plt.title('Target vs. Source PSNR: '+str(round(PSNR_GTvsSource,3)))
-    plt.ylabel("RSE maps", fontsize=20, rotation=0, labelpad=75)
-
-    # Root Squared Error between GT and Prediction
-    plt.subplot(3, 3, 9)
-    # plt.axis('off')
-    plt.tick_params(
-        axis="both",  # changes apply to the x-axis and y-axis
-        which="both",  # both major and minor ticks are affected
-        bottom=False,  # ticks along the bottom edge are off
-        top=False,  # ticks along the top edge are off
-        left=False,  # ticks along the left edge are off
-        right=False,  # ticks along the right edge are off
-        labelbottom=False,
-        labelleft=False,
-    )
-    imRSE_GTvsPrediction = plt.imshow(img_RSE_GTvsPrediction, cmap=cmap, vmin=0, vmax=1)
-    plt.colorbar(imRSE_GTvsPrediction, fraction=0.046, pad=0.04)
-    plt.title("Target vs. Prediction", fontsize=15)
-    plt.xlabel(
-        "NRMSE: "
-        + str(round(NRMSE_GTvsPrediction, 3))
-        + ", PSNR: "
-        + str(round(PSNR_GTvsPrediction, 3)),
-        fontsize=14,
-    )
-    QC_example_data_path = os.path.join(
-        QC_model_path, QC_model_name, "QC_example_data.png"
-    )
-    plt.savefig(QC_example_data_path, bbox_inches="tight", pad_inches=0)
+                plt.savefig(QC_example_data_path, bbox_inches="tight", pad_inches=0)
+        except FileNotFoundError:
+            print("No prediction example")
 
 
 def error_mapping_report(
@@ -567,7 +571,7 @@ def error_mapping_report(
     PSNR_GTvsPrediction,
     img_RSE_GTvsPrediction,
 ):
-    full_QC_model_path = os.join(QC_model_path, QC_model_name)
+    full_QC_model_path = os.path.join(QC_model_path, QC_model_name)
     # All data is now processed saved
     Test_FileList = os.listdir(
         Source_QC_folder

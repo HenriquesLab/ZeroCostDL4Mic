@@ -51,7 +51,7 @@ def pdf_export(
     example_image=None,
     trained=False,
     augmentation=False,
-    pretrained_model=False,
+    Use_pretrained_model=False,
 ):
     class MyFPDF(FPDF, HTMLMixin):
         pass
@@ -170,7 +170,7 @@ def pdf_export(
         + "GPU."
     )
 
-    if pretrained_model:
+    if Use_pretrained_model:
         text = (
             "The "
             + Network

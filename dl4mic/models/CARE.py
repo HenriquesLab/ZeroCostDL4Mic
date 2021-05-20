@@ -49,7 +49,7 @@ default_params = {
     "Use_Default_Advanced_Parameters": True,
     "trained": False,
     "augmentation": False,
-    "pretrained_model": False,
+    # "pretrained_model": False,
     "Pretrained_model_choice": models.params.Pretrained_model_choice.MODEL_NAME,
     "Weights_choice": models.params.Weights_choice.BEST,
     # "QC_model_path": os.path.join(".dl4mic", "qc"),
@@ -125,9 +125,9 @@ class CARE(models.DL4MicModelTF):
         self.model = get_care_model(
             self.config,
             self.model_name,
-            self.model_path,
+            self.folders.model_path,
             self.Use_pretrained_model,
-            self.h5_file_path,
+            self.folders.h5_file_path,
         )
 
     def train_model(self):
@@ -137,7 +137,7 @@ class CARE(models.DL4MicModelTF):
             self.X_test,
             self.Y_test,
             self.model,
-            self.model_path,
+            self.folders.model_path,
             self.model_name,
         )
 

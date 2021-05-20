@@ -52,7 +52,7 @@ class params:
             "Use_Default_Advanced_Parameters": False,
             "trained": False,
             "augmentation": False,
-            "pretrained_model": False,
+            # "pretrained_model": False,
             "Pretrained_model_choice": params.Pretrained_model_choice.MODEL_NAME,
             "Weights_choice": params.Weights_choice.BEST,
             # "QC_model_path": os.path.join(".dl4mic", "qc"),
@@ -87,7 +87,7 @@ class DictLike(object):
 
 @dataclass
 class Folders(DataClassDictMixin,DictLike):
-    model_name: str
+    # model_name: str
     base_out_folder: str = ".dl4mic"
     output_folder: str = base_out_folder
     QC_model_path: str = None
@@ -98,17 +98,18 @@ class Folders(DataClassDictMixin,DictLike):
     Source_QC_folder: str = None
     Target_QC_folder: str = None
     Prediction_model_folder: str = None
+    Prediction_model_path: str = None
     Data_folder: str = None
     h5_file_path: str = None
 
     def __post_init__(self):
-        output_folder: str = os.path.join(self.base_out_folder, self.model_name)
         defaults = {
             "QC_model_path" : "qc",
             "Training_source" : "training",
             "Training_target": "target",
             "model_path" : "model",
             "pretrained_model_path" : "pretrained_model",
+            "Prediction_model_path" : "prediction_model",
             "Source_QC_folder": "qc_source",
             "Target_QC_folder": "qc_target",
             "Prediction_model_folder": "pred",
@@ -117,7 +118,9 @@ class Folders(DataClassDictMixin,DictLike):
         }
         for key in defaults:
             if self[key] is None:
-                self[key] = os.path.join(output_folder, defaults[key])
+                self[key] = Path(os.path.join(self.output_folder, defaults[key]))
+                self[key].mkdir(parents=True, exist_ok=True)
+
 
         # self.QC_model_path = os.path.join(output_folder, "qc")
         # self.Training_source = os.path.join(output_folder, "training")
@@ -150,8 +153,8 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
     # X_train: np.array = None
     # X_test: np.array = None
     # example_image: np.array = None
-    # model_name: str = "temp"
     folders: Folders
+    model_name: str = "temp"
     model: str = "dl4mic"
     image_patches: int = 100
     ref_str: str = "ref"
@@ -171,7 +174,7 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
     Use_Default_Advanced_Parameters: bool = False
     trained: bool = False
     augmentation: bool = False
-    pretrained_model: bool = False
+    # pretrained_model: bool = False
     Pretrained_model_choice: str = params.Pretrained_model_choice.MODEL_NAME
     Weights_choice: str = params.Weights_choice.BEST
     base_out_folder: str = ".dl4mic"
@@ -193,6 +196,15 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
     )
     bestLearningRate: float = initial_learning_rate
     lastLearningRate: float = initial_learning_rate
+        
+
+    def __post_init__(self):
+        # pass
+        self.folders.output_folder = os.path.join(self.base_out_folder,self.model_name)
+        self.folders.QC_dir = Path(os.path.join(self.QC_model_path,self.QC_model_name))
+        self.folders.__post__init__()
+        # self.folders.output_folder = self.output_folder
+
     # def __init__(self,*args,**kwargs):
     #     super().__init__()
     #     from_dict(self,kwargs)
@@ -223,6 +235,14 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
 # DL4MicModelParams = from_dict(data_class=B, data=data)
 
 class DL4MicModel(DL4MicModelParams):
+    # @dataclass
+    class data(DictLike):
+        example_image: np.array = None
+        X_train: np.array = None
+        Y_train: np.array = None
+        X_test: np.array = None
+        Y_test: np.array = None
+
     def __post_init__(self):
         # super().__init__(**model_config)
         self.init()
@@ -239,7 +259,7 @@ class DL4MicModel(DL4MicModelParams):
 
         # folder_dict = {k: self.__dict__[k] for k in self.folder_list}
         # folder_dict = self.folders.__dict__
-        self.append_config(utils.make_folders(self.folders.__dict_))
+        self.append_config(utils.make_folders(self.folders.__dict__))
 
     def init(self):
         pass
@@ -305,11 +325,10 @@ class DL4MicModel(DL4MicModelParams):
     #     )
 
     def get_h5_path(self):
-        h5_file_path = utils.get_h5_path(
+        self.h5_file_path = utils.get_h5_path(
             self.pretrained_model_path, self.Weights_choice
         )
-        self.h5_file_path = h5_file_path
-        return h5_file_path
+        return self.h5_file_path
 
     def use_pretrained_model(self):
         pass
@@ -339,8 +358,8 @@ class DL4MicModel(DL4MicModelParams):
 
         # image = checks.get_random_image(self.)
         # Training_source = self.Training_source
-        Training_source = self.Training_source
-        output_folder = self.output_folder
+        Training_source = self.folders.Training_source
+        output_folder = self.folders.output_folder
         patch_size = self.patch_size
 
         # checks.check_data(image)
@@ -403,11 +422,11 @@ class DL4MicModel(DL4MicModelParams):
             "Use_Default_Advanced_Parameters",
             # "trained",
             "augmentation",
-            "pretrained_model",
+            "Use_pretrained_model",
         ]
         extra_args = {
             "time_start": time_start,
-            "example_image": self.example_image,
+            "example_image": self.data.example_image,
             "trained": trained,
         }
 
@@ -471,8 +490,8 @@ class DL4MicModel(DL4MicModelParams):
         Use_the_current_trained_model = self.Use_the_current_trained_model
         Source_QC_folder = self.Source_QC_folder
         Target_QC_folder = self.Target_QC_folder
-        self.QC_dir = QC_model_path + QC_model_name
-        Path(self.QC_dir).mkdir(parents=True, exist_ok=True)
+        # self.QC_dir = Path(os.path.join(QC_model_path,QC_model_name))
+        # self.QC_dir.mkdir(parents=True, exist_ok=True)
 
         # return self.quality_stock()
         # def quality(self):
@@ -494,7 +513,7 @@ class DL4MicModel(DL4MicModelParams):
 
     def predict(self):
 
-        Prediction_model_path = self.Prediction_model_path
+        Prediction_model_path = self.folders.Prediction_model_path
         Prediction_model_name = self.Prediction_model_name
 
         return predict.full(Prediction_model_path, Prediction_model_name)
