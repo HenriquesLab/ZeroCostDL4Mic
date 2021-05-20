@@ -7,6 +7,7 @@ import shutil
 
 import inspect
 import functools
+from pathlib import Path
 
 # def test_tf_gpu():
 #     if tf.test.gpu_device_name() == "":
@@ -194,3 +195,11 @@ def dl4mic(f):
         return f(*args, **filtered_kwargs)
 
     return inner
+
+
+def make_folders(folders_dict):
+    for key in folders_dict:
+        if folders_dict[key] is not None:
+            folders_dict[key] = Path(folders_dict[key])
+            folders_dict[key].parent.mkdir(parents=True, exist_ok=True)
+    return folders_dict

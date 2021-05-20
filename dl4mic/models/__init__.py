@@ -9,7 +9,8 @@ import shutil
 from enum import Enum
 import pandas as pd
 import time
-
+# from dacite import from_dict
+from mashumaro import DataClassDictMixin
 from collections.abc import Mapping
 
 # from .utils import get_h5_path
@@ -66,78 +67,9 @@ class params:
 #   batch_size = 128
 #   percentage_validation = 10
 #   initial_learning_rate = 0.0004
-@dataclass
-class DL4MicModelParams():
-    X_train: np.array = None
-    X_test: np.array = None
-    example_image: np.array = None
-    model: str = "dl4mic"
-    image_patches: int = 100
-    ref_str: str = "ref"
-    loss_function: str = "loss"
-    pretrained_model_choice: bool = False
-    Use_pretrained_model : bool = False
-    Use_the_current_trained_model : bool = False
-    Use_Data_augmentation: bool = False
-    Notebook_version: float = 1.12
-    initial_learning_rate: float = 0.0004
-    number_of_steps: int = 100
-    percentage_validation: int = 10
-    batch_size: int = 128
-    patch_size:  int = 64
-    number_of_epochs: int = 100
-    Use_Default_Advanced_Parameters: bool = False
-    trained: bool = False
-    augmentation: bool = False
-    pretrained_model: bool = False
-    Pretrained_model_choice: str = params.Pretrained_model_choice.MODEL_NAME
-    Weights_choice: str = params.Weights_choice.BEST
-    base_out_folder: str = ".dl4mic"
-    QC_model_path: str = os.path.join(base_out_folder, "qc")
-    Training_source: str =  os.path.join(base_out_folder, "training")
-    model_path: str = base_out_folder
-    model_name: str = "temp"
-    pretrained_model_path : str = os.path.join(base_out_folder, "model")
-    pretrained_model_name: str = "model"
-    Source_QC_folder: str = QC_model_path
-    Target_QC_folder: str = QC_model_path
-    Prediction_model_folder: str = os.path.join(base_out_folder, "pred")
-    Prediction_model_name: str = "pred"
-    Prediction_model_path: str = Prediction_model_folder
-    QC_model_name: str = "qc"
-    Data_folder: str = os.path.join(base_out_folder, "pred")
-    Data_type : str = ""
-    ref_aug: str = str('- Augmentor: Bloice, Marcus D., Christof Stocker, and Andreas Holzinger. "Augmentor: an image augmentation library for machine learning." arXiv preprint arXiv:1708.04680 (2017).')
 
-    # def __init__(self,model_config={}):
-    #     super().__init__(model_config)
 
-class DL4MicModel(DL4MicModelParams):
-    def __init__(self, model_config={}):
-        super().__init__(**model_config)
-        self.init()
-        self.output_folder = os.path.join(self.base_out_folder, self.model_name)
-
-        Path(self.output_folder).mkdir(parents=True, exist_ok=True)
-
-        self.model_path = os.path.join(self.base_out_folder, self.model_name, "model")
-
-        # self.dl4mic_model_config.update(model_config)
-
-        Path(self.model_path).mkdir(parents=True, exist_ok=True)
-
-        self.model_specifics()
-        self.interface()
-
-    def init(self):
-        pass
-
-    def model_specifics(self):
-        pass
-
-    def import_checks(self):
-        pass
-
+class DictLike(object):
     def __iter__(self):
         return iter(self.__dict__)
 
@@ -151,6 +83,186 @@ class DL4MicModel(DL4MicModelParams):
     def __setitem__(self, key, value):
         setattr(self, key, value)
         # return
+    pass
+
+@dataclass
+class Folders(DataClassDictMixin,DictLike):
+    model_name: str
+    base_out_folder: str = ".dl4mic"
+    output_folder: str = base_out_folder
+    QC_model_path: str = None
+    Training_source: str = None
+    Training_target: str = None
+    model_path: str = None
+    pretrained_model_path: str = None
+    Source_QC_folder: str = None
+    Target_QC_folder: str = None
+    Prediction_model_folder: str = None
+    Data_folder: str = None
+    h5_file_path: str = None
+
+    def __post_init__(self):
+        output_folder: str = os.path.join(self.base_out_folder, self.model_name)
+        defaults = {
+            "QC_model_path" : "qc",
+            "Training_source" : "training",
+            "Training_target": "target",
+            "model_path" : "model",
+            "pretrained_model_path" : "pretrained_model",
+            "Source_QC_folder": "qc_source",
+            "Target_QC_folder": "qc_target",
+            "Prediction_model_folder": "pred",
+            "Data_folder": "data",
+            "h5_file_path": "weights",
+        }
+        for key in defaults:
+            if self[key] is None:
+                self[key] = os.path.join(output_folder, defaults[key])
+
+        # self.QC_model_path = os.path.join(output_folder, "qc")
+        # self.Training_source = os.path.join(output_folder, "training")
+        # self.Training_target= os.path.join(output_folder, "target")
+        # self.model_path = os.path.join(output_folder, "model")
+        # self.pretrained_model_path = os.path.join(output_folder, "pretrained_model")
+        # self.Source_QC_folder = os.path.join(output_folder, "qc_source")
+        # self.Target_QC_folder = os.path.join(output_folder, "qc_target")
+        # self.Prediction_model_folder = os.path.join(output_folder, "pred")
+        # self.Data_folder = os.path.join(output_folder, "data")
+        # self.h5_file_path = os.path.join(output_folder, "weights")
+
+    #     # self.model_name = model_name
+    #     self.output_folder = os.path.join(self.base_out_folder, self.model_name)
+    #     self.QC_model_path = os.path.join(self.output_folder, "qc")
+    #     self.Training_source = os.path.join(self.output_folder, "training")
+    #     self.Training_target = os.path.join(self.output_folder, "target")
+    #     self.model_path = os.path.join(self.output_folder, "model")
+    #     self.pretrained_model_path = os.path.join(self.output_folder, "pretrained_model")
+    #     self.Source_QC_folder = os.path.join(self.output_folder, "qc_source")
+    #     self.Target_QC_folder = os.path.join(self.output_folder, "qc_target")
+    #     self.Prediction_model_folder = os.path.join(self.output_folder, "pred")
+    #     self.Data_folder = os.path.join(self.output_folder, "data")
+    #     self.h5_file_path = os.path.join(self.output_folder, "weights")
+
+@dataclass
+class DL4MicModelParams(DataClassDictMixin,DictLike):
+    # folders: dataclass
+    # folders.base_out_folder: str = ".dl4mic"
+    # X_train: np.array = None
+    # X_test: np.array = None
+    # example_image: np.array = None
+    # model_name: str = "temp"
+    folders: Folders
+    model: str = "dl4mic"
+    image_patches: int = 100
+    ref_str: str = "ref"
+    loss_function: str = "loss"
+    pretrained_model_choice: bool = False
+    Use_pretrained_model: bool = False
+    Use_the_current_trained_model: bool = False
+    Use_Data_augmentation: bool = False
+    Notebook_version: float = 1.12
+    initial_learning_rate: float = 0.0004
+    number_of_steps: int = 100
+    number_of_patches: int = 100
+    percentage_validation: int = 10
+    batch_size: int = 128
+    patch_size: int = 64
+    number_of_epochs: int = 100
+    Use_Default_Advanced_Parameters: bool = False
+    trained: bool = False
+    augmentation: bool = False
+    pretrained_model: bool = False
+    Pretrained_model_choice: str = params.Pretrained_model_choice.MODEL_NAME
+    Weights_choice: str = params.Weights_choice.BEST
+    base_out_folder: str = ".dl4mic"
+    # QC_model_path: str = os.path.join(base_out_folder, "qc")
+    # Training_source: str = os.path.join(base_out_folder, "training")
+    # Training_target: str = os.path.join(base_out_folder, "target")
+    # model_path: str = base_out_folder
+    # pretrained_model_path: str = os.path.join(base_out_folder, "model")
+    pretrained_model_name: str = "model"
+    Source_QC_folder: str = None
+    Target_QC_folder: str = None
+    # Prediction_model_folder: str = os.path.join(base_out_folder, "pred")
+    Prediction_model_name: str = "pred"
+    # Prediction_model_path: str = Prediction_model_folder
+    QC_model_name: str = None
+    Data_type: str = ""
+    ref_aug: str = str(
+        '- Augmentor: Bloice, Marcus D., Christof Stocker, and Andreas Holzinger. "Augmentor: an image augmentation library for machine learning." arXiv preprint arXiv:1708.04680 (2017).'
+    )
+    bestLearningRate: float = initial_learning_rate
+    lastLearningRate: float = initial_learning_rate
+    # def __init__(self,*args,**kwargs):
+    #     super().__init__()
+    #     from_dict(self,kwargs)
+    # super().__init__(**model_config)
+    # h5_file_path: str = None
+    # output_folder: str = os.path.join(base_out_folder, model_name)
+    # folders : object = Folders(model_name)
+
+
+    # folder_list: list = [
+    #         "base_out_folder",
+    #         "QC_model_path",
+    #         "Training_source",
+    #         "Training_target",
+    #         "model_path",
+    #         "pretrained_model_path",
+    #         "pretrained_model_name",
+    #         "Source_QC_folder",
+    #         "Target_QC_folder",
+    #         "Prediction_model_folder",
+    #         "Prediction_model_path",
+    #         "Data_folder",
+    #         "output_folder"
+    #     ]
+    # def __init__(self,model_config={}):
+    #     super().__init__(model_config)
+
+# DL4MicModelParams = from_dict(data_class=B, data=data)
+
+class DL4MicModel(DL4MicModelParams):
+    def __post_init__(self):
+        # super().__init__(**model_config)
+        self.init()
+        self.paths_and_dirs()
+        self.model_specifics()
+        # self.dl4mic_model_config.update(model_config)
+
+        self.interface()
+
+    def paths_and_dirs(self):
+        # self.output_folder = os.path.join(self.base_out_folder, self.model_name)
+
+        # Path(self.output_folder).mkdir(parents=True, exist_ok=True)
+
+        # folder_dict = {k: self.__dict__[k] for k in self.folder_list}
+        # folder_dict = self.folders.__dict__
+        self.append_config(utils.make_folders(self.folders.__dict_))
+
+    def init(self):
+        pass
+
+    def model_specifics(self):
+        pass
+
+    def import_checks(self):
+        pass
+
+    # def __iter__(self):
+    #     return iter(self.__dict__)
+
+    # def __len__(self):
+    #     return len(self.__dict__)
+
+    # def __getitem__(self, arg):
+    #     # return getattr(self,arg) #Move away from bloody dict
+    #     return getattr(self, arg)
+
+    # def __setitem__(self, key, value):
+    #     setattr(self, key, value)
+    #     # return
 
     def model_specifics(self):
         pass
@@ -193,7 +305,9 @@ class DL4MicModel(DL4MicModelParams):
     #     )
 
     def get_h5_path(self):
-        h5_file_path = utils.get_h5_path(self.pretrained_model_path, self.Weights_choice)
+        h5_file_path = utils.get_h5_path(
+            self.pretrained_model_path, self.Weights_choice
+        )
         self.h5_file_path = h5_file_path
         return h5_file_path
 
@@ -516,6 +630,7 @@ class DL4MicModel(DL4MicModelParams):
     # def get_history_df_from_model_tf(self, model):
     #     history = model.history
     #     return pd.DataFrame(history.history)
+
 
 class DL4MicModelTF(DL4MicModel):
     def save_model(self, model, X_val):
