@@ -12,35 +12,35 @@ def full(Data_folder, Result_folder, Data_type):
 
 
 def display_random_image(Data_folder, Result_folder, Data_type):
+    if Data_folder is not None:
+        random_choice = random.choice(os.listdir(Data_folder))
+        x = imread(os.path.join(Data_folder,random_choice))
 
-    random_choice = random.choice(os.listdir(Data_folder))
-    x = imread(os.path.join(Data_folder,random_choice))
+        os.chdir(Result_folder)
+        y = imread(os.path.join(Result_folder,random_choice))
 
-    os.chdir(Result_folder)
-    y = imread(os.path.join(Result_folder,random_choice))
+        if Data_type == models.params.Data_type.SINGLE_IMAGES:
 
-    if Data_type == models.params.Data_type.SINGLE_IMAGES:
+            f = plt.figure(figsize=(16, 8))
+            plt.subplot(1, 2, 1)
+            plt.imshow(x, interpolation="nearest")
+            plt.title("Input")
+            plt.axis("off")
+            plt.subplot(1, 2, 2)
+            plt.imshow(y, interpolation="nearest")
+            plt.title("Predicted output")
+            plt.axis("off")
+            plt.show()
 
-        f = plt.figure(figsize=(16, 8))
-        plt.subplot(1, 2, 1)
-        plt.imshow(x, interpolation="nearest")
-        plt.title("Input")
-        plt.axis("off")
-        plt.subplot(1, 2, 2)
-        plt.imshow(y, interpolation="nearest")
-        plt.title("Predicted output")
-        plt.axis("off")
-        plt.show()
+        if Data_type == models.params.Data_type.STACKS:
 
-    if Data_type == models.params.Data_type.STACKS:
-
-        f = plt.figure(figsize=(16, 8))
-        plt.subplot(1, 2, 1)
-        plt.imshow(x[1], interpolation="nearest")
-        plt.title("Input")
-        plt.axis("off")
-        plt.subplot(1, 2, 2)
-        plt.imshow(y[1], interpolation="nearest")
-        plt.title("Predicted output")
-        plt.axis("off")
-        plt.show()
+            f = plt.figure(figsize=(16, 8))
+            plt.subplot(1, 2, 1)
+            plt.imshow(x[1], interpolation="nearest")
+            plt.title("Input")
+            plt.axis("off")
+            plt.subplot(1, 2, 2)
+            plt.imshow(y[1], interpolation="nearest")
+            plt.title("Predicted output")
+            plt.axis("off")
+            plt.show()
