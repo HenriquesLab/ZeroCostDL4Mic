@@ -187,23 +187,23 @@ def pdf_export(
             + ")) with a batch size of "
             + str(batch_size)
             + " and a "
-            + loss_function
+            + str(loss_function)
             + " loss function, using the "
-            + Network
+            + str(Network)
             + " ZeroCostDL4Mic notebook (v "
-            + Notebook_version[0]
+            + str(Notebook_version)
             + ") (von Chamier & Laine et al., 2020). The model was re-trained from a pretrained model. Key python packages used include tensorflow (v "
-            + version_numbers[0]
+            + str(version_numbers[0])
             + "), Keras (v "
-            + version_numbers[2]
+            + str(version_numbers[2])
             + "), csbdeep (v "
-            + version_numbers[3]
+            + str(version_numbers[3])
             + "), numpy (v "
-            + version_numbers[1]
+            + str(version_numbers[1])
             + "), cuda (v "
-            + cuda_version
+            + str(cuda_version)
             + "). The training was accelerated using a "
-            + gpu_name
+            + str(gpu_name)
             + "GPU."
         )
 

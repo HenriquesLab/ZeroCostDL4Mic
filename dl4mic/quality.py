@@ -30,12 +30,16 @@ def quality_folder_reset(QC_model_path, QC_model_name):
 
 def df_to_csv(df, QC_model_path, QC_model_name):
     # lossDataCSVpath = os.path.join(model_path+'/'+model_name+'/Quality Control/','training_evaluation.csv')
+    try:
+        lossDataCSVpath = os.path.join(
+            QC_model_path, QC_model_name, "training_evaluation.csv"
+        )
+        df.to_csv(lossDataCSVpath)
+        return lossDataCSVpath
+    except FileNotFoundError:
+        print("Couldn't find training_evaluation")
+        return None
 
-    lossDataCSVpath = os.path.join(
-        QC_model_path, QC_model_name, "training_evaluation.csv"
-    )
-    df.to_csv(lossDataCSVpath)
-    return lossDataCSVpath
 
     # with open(lossDataCSVpath, 'w') as f:
     #     writer = csv.writer(f)
@@ -68,8 +72,8 @@ def qc_model_checks(
     return full_QC_model_path
 
 
-def inspect_loss(model, QC_model_name, QC_model_path):
-    return display_training_errors(model, QC_model_name, QC_model_path)
+def inspect_loss(QC_model_name, QC_model_path, show_images=False):
+    return display_training_errors(QC_model_name, QC_model_path,show_images=show_images)
 
 
 # def make_dir_at_file(file):
@@ -86,41 +90,42 @@ def display_training_errors(QC_model_name, QC_model_path,show_images=False):
 
     Path(qd_training_eval_csv).parent.mkdir(parents=True, exist_ok=True)
     print(Path(qd_training_eval_csv).parent)
+    try:
+        with open(qd_training_eval_csv, "r") as csvfile:
+            csvRead = csv.reader(csvfile, delimiter=",")
+            next(csvRead)
+            for row in csvRead:
+                lossDataFromCSV.append(float(row[0]))
+                vallossDataFromCSV.append(float(row[1]))
 
-    with open(qd_training_eval_csv, "r") as csvfile:
-        csvRead = csv.reader(csvfile, delimiter=",")
-        next(csvRead)
-        for row in csvRead:
-            lossDataFromCSV.append(float(row[0]))
-            vallossDataFromCSV.append(float(row[1]))
+            epochNumber = range(len(lossDataFromCSV))
+            plt.figure(figsize=(15, 10))
 
-        epochNumber = range(len(lossDataFromCSV))
-        plt.figure(figsize=(15, 10))
+            plt.subplot(2, 1, 1)
+            plt.plot(epochNumber, lossDataFromCSV, label="Training loss")
+            plt.plot(epochNumber, vallossDataFromCSV, label="Validation loss")
+            plt.title("Training loss and validation loss vs. epoch number (linear scale)")
+            plt.ylabel("Loss")
+            plt.xlabel("Epoch number")
+            plt.legend()
 
-        plt.subplot(2, 1, 1)
-        plt.plot(epochNumber, lossDataFromCSV, label="Training loss")
-        plt.plot(epochNumber, vallossDataFromCSV, label="Validation loss")
-        plt.title("Training loss and validation loss vs. epoch number (linear scale)")
-        plt.ylabel("Loss")
-        plt.xlabel("Epoch number")
-        plt.legend()
-
-        plt.subplot(2, 1, 2)
-        plt.semilogy(epochNumber, lossDataFromCSV, label="Training loss")
-        plt.semilogy(epochNumber, vallossDataFromCSV, label="Validation loss")
-        plt.title("Training loss and validation loss vs. epoch number (log scale)")
-        plt.ylabel("Loss")
-        plt.xlabel("Epoch number")
-        plt.legend()
-        loss_curve_path = os.path.join(
-            QC_model_path, QC_model_name, "lossCurvePlots.png"
-        )
-        plt.savefig(loss_curve_path)
-        if show_images:
-            plt.show()
-        else:
-            plt.close()
-
+            plt.subplot(2, 1, 2)
+            plt.semilogy(epochNumber, lossDataFromCSV, label="Training loss")
+            plt.semilogy(epochNumber, vallossDataFromCSV, label="Validation loss")
+            plt.title("Training loss and validation loss vs. epoch number (log scale)")
+            plt.ylabel("Loss")
+            plt.xlabel("Epoch number")
+            plt.legend()
+            loss_curve_path = os.path.join(
+                QC_model_path, QC_model_name, "lossCurvePlots.png"
+            )
+            plt.savefig(loss_curve_path)
+            if show_images:
+                plt.show()
+            else:
+                plt.close()
+    except FileNotFoundError:
+        print("CSV not found")
     # Source_QC_folder = ""  # @param{type:"string"}
     # Target_QC_folder = ""  # @param{type:"string"}
 
@@ -705,7 +710,10 @@ def error_mapping_report(
 def quality_tf(history, model_path, model_name, QC_model_name, QC_model_path):
     df = get_history_df_from_model_tf(history)
     df_to_csv(df, model_path, model_name)
-    display_training_errors(model_name, model_path)
+    try:
+        display_training_errors(model_name, model_path)
+    except FileNotFoundError:
+        print("Couldn't find loss csv")
 
     return df
 
@@ -723,7 +731,8 @@ def full(
     network,
     Use_the_current_trained_model=True,
     Source_QC_folder=None,
-    Target_QC_folder=None
+    Target_QC_folder=None,
+    show_images=False
 ):
     full_QC_model_path = os.path.join(QC_model_path, QC_model_name)
     # quality_tf(self, model, model_path, model_name)
@@ -735,6 +744,7 @@ def full(
         model_path,
         Use_the_current_trained_model,
     )
+    inspect_loss(QC_model_name, QC_model_path, show_images=show_images)
     if Source_QC_folder is not None:
         create_qc_csv(QC_model_path, QC_model_name, Source_QC_folder, Target_QC_folder)
     reporting.qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, network)

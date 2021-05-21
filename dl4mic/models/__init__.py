@@ -471,25 +471,25 @@ class DL4MicModel(DL4MicModelParams):
     def quality_extra(self, **kwargs):
         pass
 
-    def quality(self, history=None):
+    def quality(self, history=None,show_images=False):
 
-        model_path = self.model_path
-        model_name = self.model_name
+        # model_path = self.model_path
+        # model_name = self.model_name
 
-        if self.QC_model_name is None:
-            self.QC_model_name = model_name
+        # if self.QC_model_name is None:
+        #     self.QC_model_name = model_name
 
-        if self.QC_model_path is None:
-            self.QC_model_path = model_path
+        # if self.QC_model_path is None:
+        #     self.QC_model_path = model_path
 
-        QC_model_name = self.QC_model_name
-        QC_model_path = self.QC_model_path
+        # QC_model_name = self.QC_model_name
+        # QC_model_path = self.QC_model_path
 
-        ref_str = self.ref_str
-        network = self.network
-        Use_the_current_trained_model = self.Use_the_current_trained_model
-        Source_QC_folder = self.Source_QC_folder
-        Target_QC_folder = self.Target_QC_folder
+        # ref_str = self.ref_str
+        # network = self.network
+        # Use_the_current_trained_model = self.Use_the_current_trained_model
+        # Source_QC_folder = self.Source_QC_folder
+        # Target_QC_folder = self.Target_QC_folder
         # self.QC_dir = Path(os.path.join(QC_model_path,QC_model_name))
         # self.QC_dir.mkdir(parents=True, exist_ok=True)
 
@@ -500,15 +500,16 @@ class DL4MicModel(DL4MicModelParams):
             self.quality_extra(history=history)
 
         return quality.full(
-            model_path,
-            model_name,
-            QC_model_name,
-            QC_model_path,
-            ref_str,
-            network,
-            Use_the_current_trained_model,
-            Source_QC_folder,
-            Target_QC_folder,
+             self.model_path,
+             self.model_name,
+             self.QC_model_name,
+             self.QC_model_path,
+             self.ref_str,
+             self.network,
+             self.Use_the_current_trained_model,
+             self.Source_QC_folder,
+             self.Target_QC_folder,
+            show_images=show_images
         )
 
     def predict(self):

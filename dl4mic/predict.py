@@ -13,8 +13,10 @@ def check_folder(Prediction_model_path, Prediction_model_name):
     # full_Prediction_model_path = (
     #     Prediction_model_path + "/" + Prediction_model_name + "/"
     # )
-    try: 
-        full_Prediction_model_path = os.path.join(Prediction_model_path,Prediction_model_name)
+    try:
+        full_Prediction_model_path = os.path.join(
+            Prediction_model_path, Prediction_model_name
+        )
     except TypeError:
         print("Bad or empty model path or name")
         return
@@ -27,4 +29,3 @@ def check_folder(Prediction_model_path, Prediction_model_name):
             "Please make sure you provide a valid model path and model name before proceeding further."
         )
     return
-
