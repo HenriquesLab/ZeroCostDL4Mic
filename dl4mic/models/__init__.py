@@ -9,17 +9,15 @@ import shutil
 from enum import Enum
 import pandas as pd
 import time
-# from dacite import from_dict
+
 from mashumaro import DataClassDictMixin
 from collections.abc import Mapping
 
-# from .utils import get_h5_path
 from pathlib import Path
 from dataclasses import dataclass
 
 
 class params:
-    # class Weights_choice(Enum):
     class Weights_choice(Enum):
         BEST = "best"
         LAST = "last"
@@ -32,33 +30,34 @@ class params:
         SINGLE_IMAGES = "Single_Images"
         STACKS = "Stacks"
 
-    def get_defaults():
-        # default_params():
-        return {
-            # "model":"N2V",
-            "model_name": None,
-            "model_path": None,
-            "ref_str": None,
-            "Notebook_version": 1.12,
-            "initial_learning_rate": 0.0004,
-            "number_of_steps": 100,
-            "percentage_validation": 10,
-            "image_patches": None,
-            "loss_function": None,
-            "batch_size": 128,
-            "patch_size": 64,
-            "Training_source": None,
-            "number_of_epochs": 100,
-            "Use_Default_Advanced_Parameters": False,
-            "trained": False,
-            "augmentation": False,
-            # "pretrained_model": False,
-            "Pretrained_model_choice": params.Pretrained_model_choice.MODEL_NAME,
-            "Weights_choice": params.Weights_choice.BEST,
-            # "QC_model_path": os.path.join(".dl4mic", "qc"),
-            "QC_model_path": "",
-            "QC_model_name": None,
-        }
+    # Defaults should be loaded in per submodule
+    # def get_defaults():
+    #     # default_params():
+    #     return {
+    #         # "model":"N2V",
+    #         "model_name": None,
+    #         "model_path": None,
+    #         "ref_str": None,
+    #         "Notebook_version": 1.12,
+    #         "initial_learning_rate": 0.0004,
+    #         "number_of_steps": 100,
+    #         "percentage_validation": 10,
+    #         "image_patches": None,
+    #         "loss_function": None,
+    #         "batch_size": 128,
+    #         "patch_size": 64,
+    #         "Training_source": None,
+    #         "number_of_epochs": 100,
+    #         "Use_Default_Advanced_Parameters": False,
+    #         "trained": False,
+    #         "augmentation": False,
+    #         # "pretrained_model": False,
+    #         "Pretrained_model_choice": params.Pretrained_model_choice.MODEL_NAME,
+    #         "Weights_choice": params.Weights_choice.BEST,
+    #         # "QC_model_path": os.path.join(".dl4mic", "qc"),
+    #         "QC_model_path": "",
+    #         "QC_model_name": None,
+    #     }
 
 
 # if (Use_Default_Advanced_Parameters):
@@ -83,10 +82,17 @@ class DictLike(object):
     def __setitem__(self, key, value):
         setattr(self, key, value)
         # return
+
     pass
 
+
 @dataclass
-class Folders(DataClassDictMixin,DictLike):
+class Folders(DataClassDictMixin, DictLike):
+    """
+    Extends DataClassDictMixin and DictLike (probably better alternative
+    availiable) so that it can be initialised with a dict easy
+    """
+
     # model_name: str
     base_out_folder: str = ".dl4mic"
     output_folder: str = base_out_folder
@@ -104,12 +110,12 @@ class Folders(DataClassDictMixin,DictLike):
 
     def __post_init__(self):
         defaults = {
-            "QC_model_path" : "qc",
-            "Training_source" : "training",
+            "QC_model_path": "qc",
+            "Training_source": "training",
             "Training_target": "target",
-            "model_path" : "model",
-            "pretrained_model_path" : "pretrained_model",
-            "Prediction_model_path" : "prediction_model",
+            "model_path": "model",
+            "pretrained_model_path": "pretrained_model",
+            "Prediction_model_path": "prediction_model",
             "Source_QC_folder": "qc_source",
             "Target_QC_folder": "qc_target",
             "Prediction_model_folder": "pred",
@@ -120,7 +126,6 @@ class Folders(DataClassDictMixin,DictLike):
             if self[key] is None:
                 self[key] = Path(os.path.join(self.output_folder, defaults[key]))
                 self[key].mkdir(parents=True, exist_ok=True)
-
 
         # self.QC_model_path = os.path.join(output_folder, "qc")
         # self.Training_source = os.path.join(output_folder, "training")
@@ -146,14 +151,16 @@ class Folders(DataClassDictMixin,DictLike):
     #     self.Data_folder = os.path.join(self.output_folder, "data")
     #     self.h5_file_path = os.path.join(self.output_folder, "weights")
 
+
 @dataclass
-class DL4MicModelParams(DataClassDictMixin,DictLike):
+class DL4MicModelParams(DataClassDictMixin, DictLike):
     # folders: dataclass
     # folders.base_out_folder: str = ".dl4mic"
     # X_train: np.array = None
     # X_test: np.array = None
     # example_image: np.array = None
-    folders: Folders
+    # TODO make all of these None type and then default in submodule
+    folders: Folders = Folders()
     model_name: str = "temp"
     model: str = "dl4mic"
     image_patches: int = 100
@@ -192,16 +199,18 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
     QC_model_name: str = None
     Data_type: str = ""
     ref_aug: str = str(
-        '- Augmentor: Bloice, Marcus D., Christof Stocker, and Andreas Holzinger. "Augmentor: an image augmentation library for machine learning." arXiv preprint arXiv:1708.04680 (2017).'
+        '- Augmentor: Bloice, Marcus D., Christof Stocker,'
+        'and Andreas Holzinger. "Augmentor: an image augmentation '
+        'library for machine learning." arXiv '
+        'preprint arXiv:1708.04680 (2017).'
     )
     bestLearningRate: float = initial_learning_rate
     lastLearningRate: float = initial_learning_rate
-        
 
     def __post_init__(self):
         # pass
-        self.folders.output_folder = os.path.join(self.base_out_folder,self.model_name)
-        self.folders.QC_dir = Path(os.path.join(self.QC_model_path,self.QC_model_name))
+        self.folders.output_folder = os.path.join(self.base_out_folder, self.model_name)
+        self.folders.QC_dir = Path(os.path.join(self.QC_model_path, self.QC_model_name))
         self.folders.__post__init__()
         # self.folders.output_folder = self.output_folder
 
@@ -212,7 +221,6 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
     # h5_file_path: str = None
     # output_folder: str = os.path.join(base_out_folder, model_name)
     # folders : object = Folders(model_name)
-
 
     # folder_list: list = [
     #         "base_out_folder",
@@ -232,7 +240,9 @@ class DL4MicModelParams(DataClassDictMixin,DictLike):
     # def __init__(self,model_config={}):
     #     super().__init__(model_config)
 
+
 # DL4MicModelParams = from_dict(data_class=B, data=data)
+
 
 class DL4MicModel(DL4MicModelParams):
     # @dataclass
@@ -242,7 +252,9 @@ class DL4MicModel(DL4MicModelParams):
         Y_train: np.array = None
         X_test: np.array = None
         Y_test: np.array = None
-
+        time_start: float = None
+        trained: bool = False
+        history: np.array = None
     def __post_init__(self):
         # super().__init__(**model_config)
         self.init()
@@ -402,38 +414,62 @@ class DL4MicModel(DL4MicModelParams):
         pass
 
     def report(self, time_start=None, trained=None, show_image=False):
+        # report_args = [
+        #     "model_name",
+        #     "model_path",
+        #     "ref_str",
+        #     "ref_aug",
+        #     "Notebook_version",
+        #     "initial_learning_rate",
+        #     "number_of_steps",
+        #     "percentage_validation",
+        #     "image_patches",
+        #     "loss_function",
+        #     "batch_size",
+        #     "patch_size",
+        #     "Training_source",
+        #     "number_of_epochs",
+        #     # "time_start",
+        #     "Use_Default_Advanced_Parameters",
+        #     # "trained",
+        #     "augmentation",
+        #     "Use_pretrained_model",
+        # ]
+        # extra_args = {
+        #     "time_start": time_start,
+        #     "example_image": self.data.example_image,
+        #     "trained": trained,
+        # }
 
-        report_args = [
-            "model_name",
-            "model_path",
-            "ref_str",
-            "ref_aug",
-            "Notebook_version",
-            "initial_learning_rate",
-            "number_of_steps",
-            "percentage_validation",
-            "image_patches",
-            "loss_function",
-            "batch_size",
-            "patch_size",
-            "Training_source",
-            "number_of_epochs",
-            # "time_start",
-            "Use_Default_Advanced_Parameters",
-            # "trained",
-            "augmentation",
-            "Use_pretrained_model",
-        ]
-        extra_args = {
-            "time_start": time_start,
-            "example_image": self.data.example_image,
-            "trained": trained,
-        }
+        # report_config = {key: self[key] for key in report_args}
+        # report_config.update(extra_args)
 
-        report_config = {key: self[key] for key in report_args}
-        report_config.update(extra_args)
+        # # return reporting.pdf_export(**report_config)
+        self.data.trained = trained
+        self.data.time_start = time_start
 
-        return reporting.pdf_export(**report_config)
+        return reporting.pdf_export(
+            self.model_name,
+            self.model_path,
+            self.ref_str,
+            self.ref_aug,
+            self.Notebook_version,
+            self.initial_learning_rate,
+            self.number_of_steps,
+            self.percentage_validation,
+            self.image_patches,
+            self.loss_function,
+            self.batch_size,
+            self.patch_size,
+            self.Training_source,
+            self.number_of_epochs,
+            self.Use_Default_Advanced_Parameters,
+            self.data.time_start,
+            self.data.example_image,
+            self.data.trained,
+            self.augmentation,
+            self.Use_pretrained_model,
+        )
 
     def pre_report(
         self,
@@ -471,7 +507,7 @@ class DL4MicModel(DL4MicModelParams):
     def quality_extra(self, **kwargs):
         pass
 
-    def quality(self, history=None,show_images=False):
+    def quality(self, history=None, show_images=False):
 
         # model_path = self.model_path
         # model_name = self.model_name
@@ -500,16 +536,16 @@ class DL4MicModel(DL4MicModelParams):
             self.quality_extra(history=history)
 
         return quality.full(
-             self.model_path,
-             self.model_name,
-             self.QC_model_name,
-             self.QC_model_path,
-             self.ref_str,
-             self.network,
-             self.Use_the_current_trained_model,
-             self.Source_QC_folder,
-             self.Target_QC_folder,
-            show_images=show_images
+            self.model_path,
+            self.model_name,
+            self.QC_model_name,
+            self.QC_model_path,
+            self.ref_str,
+            self.network,
+            self.Use_the_current_trained_model,
+            self.Source_QC_folder,
+            self.Target_QC_folder,
+            show_images=show_images,
         )
 
     def predict(self):
@@ -696,6 +732,12 @@ class DL4MicModelTF(DL4MicModel):
 
     # return self.quality_stock()
 
+
+"""
+TODO
+Fix loading of modules, unsure if the load when the 
+class is loaded or if the init needs to happen first?
+"""
 
 from .N2V import N2V
 from .CARE import CARE

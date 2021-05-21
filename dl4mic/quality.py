@@ -747,4 +747,4 @@ def full(
     inspect_loss(QC_model_name, QC_model_path, show_images=show_images)
     if Source_QC_folder is not None:
         create_qc_csv(QC_model_path, QC_model_name, Source_QC_folder, Target_QC_folder)
-    reporting.qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, network)
+    reporting.qc_pdf_export(QC_model_name, QC_model_path, ref_str, network)

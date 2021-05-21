@@ -319,7 +319,7 @@ def pdf_export(
     return pdf
 
 
-def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
+def qc_pdf_export(QC_model_name, QC_model_path, ref_str, Network):
     class MyFPDF(FPDF, HTMLMixin):
         pass
 
@@ -352,12 +352,12 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
     pdf.ln(2)
     pdf.cell(190, 5, txt="Development of Training Losses", ln=1, align="L")
     pdf.ln(1)
-    if os.path.exists(os.path.join(full_QC_model_path, "lossCurvePlots.png")):
+    if os.path.exists(os.path.join(QC_model_path, "lossCurvePlots.png")):
         exp_size = io.imread(
-            os.path.join(full_QC_model_path, "lossCurvePlots.png")
+            os.path.join(QC_model_path, "lossCurvePlots.png")
         ).shape
         pdf.image(
-            os.path.join(full_QC_model_path, "lossCurvePlots.png"),
+            os.path.join(QC_model_path, "lossCurvePlots.png"),
             x=11,
             y=None,
             w=round(exp_size[1] / 8),
@@ -379,10 +379,10 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
     pdf.ln(1)
     try:
         exp_size = io.imread(
-            os.path.join(full_QC_model_path, "QC_example_data.png")
+            os.path.join(QC_model_path, "QC_example_data.png")
         ).shape
         pdf.image(
-            os.path.join(full_QC_model_path, "QC_example_data.png"),
+            os.path.join(QC_model_path, "QC_example_data.png"),
             x=16,
             y=None,
             w=round(exp_size[1] / 10),
@@ -406,7 +406,7 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
   <table width=94% style="margin-left:0px;">"""
     try:
         with open(
-            os.path.join(full_QC_model_path, "QC_metrics_" + QC_model_name + ".csv"),
+            os.path.join(QC_model_path, "QC_metrics_" + QC_model_name + ".csv"),
             "r",
         ) as csvfile:
             metrics = csv.reader(csvfile)
@@ -482,4 +482,4 @@ def qc_pdf_export(QC_model_name, full_QC_model_path, ref_str, Network):
     pdf.set_font("Arial", size=11, style="B")
     pdf.multi_cell(190, 5, txt=reminder, align="C")
 
-    pdf.output(os.path.join(full_QC_model_path, QC_model_name + "_QC_report.pdf"))
+    pdf.output(os.path.join(QC_model_path, QC_model_name + "_QC_report.pdf"))
