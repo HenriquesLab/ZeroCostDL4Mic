@@ -17,6 +17,7 @@ astropy = "^4.2.1"
 fpdf = "^1.7.2"
 wget = "^3.2"
 h5py = "2.10.0"
+mashumaro = "^2.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
