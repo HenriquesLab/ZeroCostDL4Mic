@@ -18,6 +18,7 @@ from .. import models
 
 from typing import List
 
+
 # def __init__(self):
 #     return self.N2V
 # defaults = {
@@ -45,8 +46,8 @@ from typing import List
 
 
 class N2V(models.DL4MicModelTF):
-    model_name: str = None
-    model_path: str = None
+    # model_name: str = None
+    # model_path: str = None
     ref_str = '- Noise2Void: Krull, Alexander, Tim-Oliver Buchholz, and Florian Jug. "Noise2void-learning denoising from single noisy images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2019.'
     initial_learning_rate: float = 0.0004
     number_of_steps: int = 100
@@ -66,7 +67,8 @@ class N2V(models.DL4MicModelTF):
     network: str = "Noise2Void"
     model_name: str = "n2v"
     description: str = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
-    authors: List[str] = ["You"]
+    # authors: List[str] = ["You"]
+
     # import N2V
     # config=None
     # super().__init__(**model_config)

@@ -16,6 +16,7 @@ from collections.abc import Mapping
 from pathlib import Path
 from dataclasses import dataclass
 
+from typing import List
 
 class params:
     class Weights_choice(Enum):
@@ -107,6 +108,7 @@ class Folders(DataClassDictMixin, DictLike):
     Prediction_model_path: str = None
     Data_folder: str = None
     h5_file_path: str = None
+    Saving_path: str = None
 
     def __post_init__(self):
         defaults = {
@@ -121,6 +123,7 @@ class Folders(DataClassDictMixin, DictLike):
             "Prediction_model_folder": "pred",
             "Data_folder": "data",
             "h5_file_path": "weights",
+            "Saving_path": "augment"
         }
         for key in defaults:
             if self[key] is None:
@@ -160,8 +163,10 @@ class DL4MicModelParams(DataClassDictMixin, DictLike):
     # X_test: np.array = None
     # example_image: np.array = None
     # TODO make all of these None type and then default in submodule
-    folders: Folders = Folders()
+    # May have solved this?
+    # folders: Folders = Folders()
     model_name: str = "temp"
+    folders: Folders = Folders()
     model: str = "dl4mic"
     image_patches: int = 100
     ref_str: str = "ref"
@@ -204,8 +209,23 @@ class DL4MicModelParams(DataClassDictMixin, DictLike):
         'library for machine learning." arXiv '
         'preprint arXiv:1708.04680 (2017).'
     )
+
     bestLearningRate: float = initial_learning_rate
     lastLearningRate: float = initial_learning_rate
+    Multiply_dataset_by: int = 2
+    Save_augmented_images: bool = False
+    Use_Default_Augmentation_Parameters: bool = True
+    rotate_90_degrees: str = 0.5
+    rotate_270_degrees: str = 0.5
+    flip_left_right: str = 0.5
+    flip_top_bottom: str = 0.5
+    random_zoom: str = 0
+    random_zoom_magnification: str = 0.9
+    random_distortion: str = 0
+    image_shear: str = 0
+    max_image_shear: str = 10
+    skew_image: str = 0
+    skew_image_magnitude: str = 0
 
     def __post_init__(self):
         # pass
@@ -245,6 +265,7 @@ class DL4MicModelParams(DataClassDictMixin, DictLike):
 
 
 class DL4MicModel(DL4MicModelParams):
+
     # @dataclass
     class data(DictLike):
         example_image: np.array = None
@@ -274,7 +295,84 @@ class DL4MicModel(DL4MicModelParams):
         self.append_config(utils.make_folders(self.folders.__dict__))
 
     def init(self):
+        self.authors =  ["You"]
         pass
+
+    def step_3(self):
+        self.step_3_1()
+        self.step_3_2()
+        pass
+    def step_3_1(self):
+        self.checks()
+        pass
+    def step_3_2(self):
+        '''
+        Data augmentation
+        '''
+        self.augmentation()
+        pass
+    def step_3_3(self):
+        '''
+        Load pretrained model
+        '''
+        self.load_pretrained_model()
+        pass
+
+
+    def step_4(self):
+        '''
+        Train the network
+        '''
+        self.step_4_1()
+        self.step_4_2()
+        pass
+    def step_4_1(self):
+        '''
+        Prepare the training data and model for training
+        '''
+        self.prepare()
+    def step_4_2(self):
+        '''
+        Start Training
+        '''
+        self.train_model()
+        pass
+
+    def step_5(self):
+        '''
+        Evaluate your model
+        '''
+        self.step_5_1()
+        self.step_5_2()
+        pass
+    def step_5_1(self):
+        '''
+        Inspection of the loss function
+        '''
+        pass
+    def step_5_2(self):
+        '''
+        Error mapping and quality metrics estimation
+        '''
+        self.quality()
+
+    def step_6(self):
+        '''
+        Using the trained model
+        '''
+        self.step_6_1()
+        self.step_6_2()
+    def step_6_1(self):
+        '''
+        Generate prediction(s) from unseen dataset
+        '''
+        self.predict()
+    def step_6_2(self):
+        '''
+        Assess predicted output
+        '''
+        self.assess()
+
 
     def model_specifics(self):
         pass
@@ -344,7 +442,8 @@ class DL4MicModel(DL4MicModelParams):
 
     def use_pretrained_model(self):
         pass
-
+    def train_model():
+        pass
     def get_model_params(self):
         return self[self.model_params]
 
@@ -409,7 +508,18 @@ class DL4MicModel(DL4MicModelParams):
             return self.h5_file_path
         else:
             pass
+    def prepare(self):
+        pass
 
+    def train(self):
+        pass  
+
+    def augment(self):
+        pass
+
+    def checks(self):
+        pass
+    
     def reporting(self):
         pass
 
@@ -481,7 +591,8 @@ class DL4MicModel(DL4MicModelParams):
     ):
         if show_image:
             prepare.setup_complete(X_train=X_train, X_test=X_test)
-        return self.report(time_start=time_start, trained=None, show_image=False)
+        # return self.report(time_start=time_start, trained=None, show_image=False)
+        return self.report(time_start=time_start, trained=trained, show_image=False)
 
     def post_report(
         self, X_train=None, X_test=None, time_start=None, trained=True, show_image=False

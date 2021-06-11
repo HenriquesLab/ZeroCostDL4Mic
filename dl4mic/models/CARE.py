@@ -10,6 +10,8 @@ import csv
 import pandas as pd
 from .. import models
 
+
+
 # ------- Variable specific to CARE -------
 from csbdeep.utils import (
     download_and_extract_zip_file,
@@ -25,66 +27,99 @@ from csbdeep.io import load_training_data, save_tiff_imagej_compatible
 from csbdeep import data
 import csbdeep.models
 
+from typing import List
+
 # def __init__(self):
 #     return self.N2V
 
 # from models import params
 
-default_params = {
-    "model": "CARE",
-    "model_name": None,
-    "model_path": None,
-    "ref_str": None,
-    "Notebook_version": 1.12,
-    "initial_learning_rate": 0.0004,
-    "number_of_steps": 400,
-    "number_of_patches": 100,
-    "percentage_validation": 10,
-    "image_patches": None,
-    "loss_function": None,
-    "batch_size": 16,
-    "patch_size": 80,
-    "Training_source": None,
-    "number_of_epochs": 100,
-    "Use_Default_Advanced_Parameters": True,
-    "trained": False,
-    "augmentation": False,
-    # "pretrained_model": False,
-    "Pretrained_model_choice": models.params.Pretrained_model_choice.MODEL_NAME,
-    "Weights_choice": models.params.Weights_choice.BEST,
-    # "QC_model_path": os.path.join(".dl4mic", "qc"),
-    "QC_model_path": "",
-    "QC_model_name": None,
-    "Multiply_dataset_by": 2,
-    "Save_augmented_images": False,
-    "Saving_path": "",
-    "Use_Default_Augmentation_Parameters": True,
-    "rotate_90_degrees": 0.5,
-    "rotate_270_degrees": 0.5,
-    "flip_left_right": 0.5,
-    "flip_top_bottom": 0.5,
-    "random_zoom": 0,
-    "random_zoom_magnification": 0.9,
-    "random_distortion": 0,
-    "image_shear": 0,
-    "max_image_shear": 10,
-    "skew_image": 0,
-    "skew_image_magnitude": 0,
-}
+# default_params = {
+#     "model": "CARE",
+#     "model_name": None,
+#     "model_path": None,
+#     "ref_str": None,
+#     "Notebook_version": 1.12,
+#     "initial_learning_rate": 0.0004,
+#     "number_of_steps": 400,
+#     "number_of_patches": 100,
+#     "percentage_validation": 10,
+#     "image_patches": None,
+#     "loss_function": None,
+#     "batch_size": 16,
+#     "patch_size": 80,
+#     "Training_source": None,
+#     "number_of_epochs": 100,
+#     "Use_Default_Advanced_Parameters": True,
+#     "trained": False,
+#     "augmentation": False,
+#     # "pretrained_model": False,
+#     "Pretrained_model_choice": models.params.Pretrained_model_choice.MODEL_NAME,
+#     "Weights_choice": models.params.Weights_choice.BEST,
+#     # "QC_model_path": os.path.join(".dl4mic", "qc"),
+#     "QC_model_path": "",
+#     "QC_model_name": None,
+#     "Multiply_dataset_by": 2,
+#     "Save_augmented_images": False,
+#     "Saving_path": "",
+#     "Use_Default_Augmentation_Parameters": True,
+#     "rotate_90_degrees": 0.5,
+#     "rotate_270_degrees": 0.5,
+#     "flip_left_right": 0.5,
+#     "flip_top_bottom": 0.5,
+#     "random_zoom": 0,
+#     "random_zoom_magnification": 0.9,
+#     "random_distortion": 0,
+#     "image_shear": 0,
+#     "max_image_shear": 10,
+#     "skew_image": 0,
+#     "skew_image_magnitude": 0,
+# }
 
 
 class CARE(models.DL4MicModelTF):
+
+    # model: str ="CARE"
+    # model_name: str = None
+    # model_path: str = None
+    # Notebook_version": 1.12,
+    initial_learning_rate: float = 0.0004
+    number_of_steps : float = 400
+    number_of_patches: float = 100
+    percentage_validation: int = 10
+    # image_patches": None,
+    # loss_function": None,
+    batch_size: int = 16
+    patch_size: int = 80
+    # Training_source": None,
+    number_of_epochs: int = 100
+    Use_Default_Advanced_Parameters: bool = True
+    # trained": False,
+    # augmentation": False,
+    #  "pretrained_model": False,
+    Pretrained_model_choice: str = models.params.Pretrained_model_choice.MODEL_NAME
+    Weights_choice: str = models.params.Weights_choice.BEST
+    model_name: str = "care"
+    network: str = "CARE 2D"
+    description: str = "CARE 2D trained using ZeroCostDL4Mic."
+    ref_str: str = '- CARE: Weigert, Martin, et al. "Content-aware image restoration: pushing the limits of fluorescence microscopy." Nature methods 15.12 (2018): 1090-1097.'
+    # authors: List[str] = ["You"]
+
+    #  "QC_model_path": os.path.join(".dl4mic", "qc"),
+    # QC_model_path": "",
+    # QC_model_name": None,
+
 
     # import N2V
     # config=None
     # self.dl4mic_model_config={}
 
-    def init(self):
-        self.network = "CARE 2D"
-        self.model_name = "CARE"
-        self.description = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
-        self.authors = ["You"]
-        self.ref_str = '- CARE: Weigert, Martin, et al. "Content-aware image restoration: pushing the limits of fluorescence microscopy." Nature methods 15.12 (2018): 1090-1097.'
+    # def init(self):
+    #     self.network = "CARE 2D"
+    #     self.model_name = "CARE"
+    #     self.description = "Noise2Void 2D trained using ZeroCostDL4Mic.'"
+    #     self.authors = ["You"]
+    #     self.ref_str = '- CARE: Weigert, Martin, et al. "Content-aware image restoration: pushing the limits of fluorescence microscopy." Nature methods 15.12 (2018): 1090-1097.'
 
     def get_data(self):
         (self.X_train, self.Y_train), (self.X_test, self.Y_test), self.axes = get_data(
