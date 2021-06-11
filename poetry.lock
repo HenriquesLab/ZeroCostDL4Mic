@@ -1,10 +1,10 @@
 [[package]]
-category = "main"
-description = "Astronomy and astrophysics core library"
 name = "astropy"
+version = "4.2.1"
+description = "Astronomy and astrophysics core library"
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "4.2.1"
 
 [package.dependencies]
 numpy = ">=1.17"
@@ -16,44 +16,50 @@ docs = ["sphinx", "sphinx-astropy (>=1.3)", "pytest", "PyYAML (>=3.13)", "scipy 
 test = ["pytest-astropy (>=0.8)", "pytest-xdist", "objgraph", "ipython", "coverage", "skyfield (>=1.20)", "sgp4 (>=2.3)"]
 
 [[package]]
-category = "dev"
-description = "Atomic file writes."
-marker = "sys_platform == \"win32\""
 name = "atomicwrites"
+version = "1.4.0"
+description = "Atomic file writes."
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.4.0"
 
 [[package]]
-category = "dev"
-description = "Classes Without Boilerplate"
 name = "attrs"
+version = "21.2.0"
+description = "Classes Without Boilerplate"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "21.2.0"
 
 [package.extras]
-dev = ["coverage (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit"]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit"]
 docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
-tests = ["coverage (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["coverage (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
+tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins", "zope.interface"]
+tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
 
 [[package]]
-category = "dev"
-description = "Cross-platform colored terminal text."
-marker = "sys_platform == \"win32\""
-name = "colorama"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.4.4"
-
-[[package]]
-category = "dev"
-description = "CSBDeep - a toolbox for Content-aware Image Restoration (CARE)"
-name = "csbdeep"
+name = "cached-property"
+version = "1.5.2"
+description = "A decorator for caching properties in classes."
+category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "colorama"
+version = "0.4.4"
+description = "Cross-platform colored terminal text."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "csbdeep"
 version = "0.5.2"
+description = "CSBDeep - a toolbox for Content-aware Image Restoration (CARE)"
+category = "dev"
+optional = false
+python-versions = "*"
 
 [package.dependencies]
 h5py = "*"
@@ -66,51 +72,55 @@ tifffile = "*"
 tqdm = "*"
 
 [[package]]
-category = "main"
-description = "Composable style cycles"
 name = "cycler"
+version = "0.10.0"
+description = "Composable style cycles"
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.10.0"
 
 [package.dependencies]
 six = "*"
 
 [[package]]
-category = "main"
-description = "Decorators for Humans"
 name = "decorator"
+version = "4.4.2"
+description = "Decorators for Humans"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*"
-version = "4.4.2"
 
 [[package]]
-category = "main"
-description = "Simple PDF generation for Python"
 name = "fpdf"
-optional = false
-python-versions = "*"
 version = "1.7.2"
-
-[[package]]
+description = "Simple PDF generation for Python"
 category = "main"
-description = "Read and write HDF5 files from Python"
-name = "h5py"
 optional = false
 python-versions = "*"
-version = "2.10.0"
-
-[package.dependencies]
-numpy = ">=1.7"
-six = "*"
 
 [[package]]
-category = "dev"
-description = "Image transformation, compression, and decompression codecs"
-name = "imagecodecs"
+name = "h5py"
+version = "3.2.1"
+description = "Read and write HDF5 files from Python"
+category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.dependencies]
+cached-property = {version = "*", markers = "python_version < \"3.8\""}
+numpy = [
+    {version = ">=1.14.5", markers = "python_version == \"3.7\""},
+    {version = ">=1.17.5", markers = "python_version == \"3.8\""},
+    {version = ">=1.19.3", markers = "python_version >= \"3.9\""},
+]
+
+[[package]]
+name = "imagecodecs"
 version = "2021.4.28"
+description = "Image transformation, compression, and decompression codecs"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
 
 [package.dependencies]
 numpy = ">=1.15.1"
@@ -119,12 +129,12 @@ numpy = ">=1.15.1"
 all = ["matplotlib (>=3.2)", "tifffile (>=2021.1.11)", "numcodecs"]
 
 [[package]]
-category = "main"
-description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
 name = "imageio"
+version = "2.9.0"
+description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "2.9.0"
 
 [package.dependencies]
 numpy = "*"
@@ -138,48 +148,44 @@ gdal = ["gdal"]
 itk = ["itk"]
 
 [[package]]
-category = "dev"
-description = "Read metadata from Python packages"
-marker = "python_version < \"3.8\""
 name = "importlib-metadata"
+version = "4.0.1"
+description = "Read metadata from Python packages"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "4.0.1"
 
 [package.dependencies]
+typing-extensions = {version = ">=3.6.4", markers = "python_version < \"3.8\""}
 zipp = ">=0.5"
-
-[package.dependencies.typing-extensions]
-python = "<3.8"
-version = ">=3.6.4"
 
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pep517", "pyfakefs", "flufl.flake8", "pytest-black (>=0.3.7)", "pytest-mypy", "importlib-resources (>=1.3)"]
 
 [[package]]
-category = "dev"
-description = "iniconfig: brain-dead simple config-ini parsing"
 name = "iniconfig"
+version = "1.1.1"
+description = "iniconfig: brain-dead simple config-ini parsing"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "1.1.1"
 
 [[package]]
-category = "main"
-description = "Lightweight pipelining with Python functions"
 name = "joblib"
+version = "1.0.1"
+description = "Lightweight pipelining with Python functions"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "1.0.1"
 
 [[package]]
-category = "dev"
-description = "Deep Learning for humans"
 name = "keras"
+version = "2.2.5"
+description = "Deep Learning for humans"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "2.2.5"
 
 [package.dependencies]
 h5py = "*"
@@ -195,12 +201,12 @@ tests = ["pytest", "pytest-pep8", "pytest-xdist", "flaky", "pytest-cov", "pandas
 visualize = ["pydot (>=1.2.4)"]
 
 [[package]]
-category = "dev"
-description = "Reference implementations of popular deep learning models"
 name = "keras-applications"
+version = "1.0.8"
+description = "Reference implementations of popular deep learning models"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "1.0.8"
 
 [package.dependencies]
 h5py = "*"
@@ -210,12 +216,12 @@ numpy = ">=1.9.1"
 tests = ["pytest", "pytest-pep8", "pytest-xdist", "pytest-cov"]
 
 [[package]]
-category = "dev"
-description = "Easy data preprocessing and data augmentation for deep learning models"
 name = "keras-preprocessing"
+version = "1.1.2"
+description = "Easy data preprocessing and data augmentation for deep learning models"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "1.1.2"
 
 [package.dependencies]
 numpy = ">=1.9.1"
@@ -227,20 +233,20 @@ pep8 = ["flake8"]
 tests = ["pandas", "pillow", "tensorflow", "keras", "pytest", "pytest-xdist", "pytest-cov"]
 
 [[package]]
-category = "main"
-description = "A fast implementation of the Cassowary constraint solver"
 name = "kiwisolver"
+version = "1.3.1"
+description = "A fast implementation of the Cassowary constraint solver"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "1.3.1"
 
 [[package]]
-category = "main"
-description = "Fast serialization framework on top of dataclasses"
 name = "mashumaro"
+version = "2.5"
+description = "Fast serialization framework on top of dataclasses"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "2.5"
 
 [package.dependencies]
 msgpack = ">=0.5.6"
@@ -248,12 +254,12 @@ pyyaml = ">=3.13"
 typing_extensions = "*"
 
 [[package]]
-category = "main"
-description = "Python plotting package"
 name = "matplotlib"
+version = "3.4.2"
+description = "Python plotting package"
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "3.4.2"
 
 [package.dependencies]
 cycler = ">=0.10"
@@ -264,28 +270,28 @@ pyparsing = ">=2.2.1"
 python-dateutil = ">=2.7"
 
 [[package]]
-category = "main"
-description = "MessagePack (de)serializer."
 name = "msgpack"
+version = "1.0.2"
+description = "MessagePack (de)serializer."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.0.2"
 
 [[package]]
-category = "dev"
-description = "Noise2Void allows the training of a denoising CNN from individual noisy images. This implementationextends CSBDeep."
 name = "n2v"
+version = "0.2.1"
+description = "Noise2Void allows the training of a denoising CNN from individual noisy images. This implementationextends CSBDeep."
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.2.1"
 
 [package.dependencies]
-Pillow = "*"
 csbdeep = ">=0.4.0,<0.6.0"
 imagecodecs = ">=2020.2.18"
 keras = ">=2.2.4,<2.3.0"
 matplotlib = "*"
 numpy = "*"
+Pillow = "*"
 "ruamel.yaml" = ">=0.16.10"
 scipy = "*"
 six = "*"
@@ -293,12 +299,12 @@ tifffile = ">=2020.5.11"
 tqdm = "*"
 
 [[package]]
-category = "main"
-description = "Python package for creating and manipulating graphs and networks"
 name = "networkx"
+version = "2.5.1"
+description = "Python package for creating and manipulating graphs and networks"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "2.5.1"
 
 [package.dependencies]
 decorator = ">=4.3,<5"
@@ -317,31 +323,42 @@ pyyaml = ["pyyaml"]
 scipy = ["scipy"]
 
 [[package]]
+name = "numexpr"
+version = "2.7.3"
+description = "Fast numerical expression evaluator for NumPy"
 category = "main"
-description = "NumPy is the fundamental package for array computing with Python."
-name = "numpy"
 optional = false
-python-versions = ">=3.7"
-version = "1.20.3"
+python-versions = "*"
+
+[package.dependencies]
+numpy = ">=1.7"
 
 [[package]]
-category = "dev"
-description = "Core utilities for Python packages"
+name = "numpy"
+version = "1.20.3"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "packaging"
+version = "20.9"
+description = "Core utilities for Python packages"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "20.9"
 
 [package.dependencies]
 pyparsing = ">=2.0.2"
 
 [[package]]
-category = "main"
-description = "Powerful data structures for data analysis, time series, and statistics"
 name = "pandas"
+version = "1.2.4"
+description = "Powerful data structures for data analysis, time series, and statistics"
+category = "main"
 optional = false
 python-versions = ">=3.7.1"
-version = "1.2.4"
 
 [package.dependencies]
 numpy = ">=1.16.5"
@@ -352,44 +369,42 @@ pytz = ">=2017.3"
 test = ["pytest (>=5.0.1)", "pytest-xdist", "hypothesis (>=3.58)"]
 
 [[package]]
-category = "main"
-description = "Python Imaging Library (Fork)"
 name = "pillow"
+version = "8.2.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "8.2.0"
 
 [[package]]
-category = "dev"
-description = "plugin and hook calling mechanisms for python"
 name = "pluggy"
+version = "0.13.1"
+description = "plugin and hook calling mechanisms for python"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.13.1"
 
 [package.dependencies]
-[package.dependencies.importlib-metadata]
-python = "<3.8"
-version = ">=0.12"
+importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
 
 [package.extras]
 dev = ["pre-commit", "tox"]
 
 [[package]]
-category = "dev"
-description = "library with cross-python path, ini-parsing, io, code, log facilities"
 name = "py"
+version = "1.10.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.10.0"
 
 [[package]]
-category = "main"
-description = "Python bindings for ERFA"
 name = "pyerfa"
+version = "1.7.3"
+description = "Python bindings for ERFA"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "1.7.3"
 
 [package.dependencies]
 numpy = ">=1.16"
@@ -399,133 +414,127 @@ docs = ["sphinx-astropy (>=1.3)"]
 test = ["pytest", "pytest-doctestplus (>=0.7)"]
 
 [[package]]
-category = "main"
-description = "Python parsing module"
 name = "pyparsing"
+version = "2.4.7"
+description = "Python parsing module"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "2.4.7"
 
 [[package]]
-category = "dev"
-description = "pytest: simple powerful testing with Python"
 name = "pytest"
+version = "6.2.4"
+description = "pytest: simple powerful testing with Python"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "6.2.4"
 
 [package.dependencies]
-atomicwrites = ">=1.0"
+atomicwrites = {version = ">=1.0", markers = "sys_platform == \"win32\""}
 attrs = ">=19.2.0"
-colorama = "*"
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
 iniconfig = "*"
 packaging = "*"
 pluggy = ">=0.12,<1.0.0a1"
 py = ">=1.8.2"
 toml = "*"
 
-[package.dependencies.importlib-metadata]
-python = "<3.8"
-version = ">=0.12"
-
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
-category = "main"
-description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
+version = "2.8.1"
+description = "Extensions to the standard Python datetime module"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-version = "2.8.1"
 
 [package.dependencies]
 six = ">=1.5"
 
 [[package]]
-category = "main"
-description = "World timezone definitions, modern and historical"
 name = "pytz"
+version = "2021.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2021.1"
 
 [[package]]
-category = "main"
-description = "PyWavelets, wavelet transform module"
 name = "pywavelets"
+version = "1.1.1"
+description = "PyWavelets, wavelet transform module"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.1.1"
 
 [package.dependencies]
 numpy = ">=1.13.3"
 
 [[package]]
-category = "main"
-description = "YAML parser and emitter for Python"
 name = "pyyaml"
+version = "5.4.1"
+description = "YAML parser and emitter for Python"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
-version = "5.4.1"
 
 [[package]]
-category = "dev"
-description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
 name = "ruamel.yaml"
+version = "0.17.4"
+description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
+category = "dev"
 optional = false
 python-versions = ">=3"
-version = "0.17.4"
 
 [package.dependencies]
-[package.dependencies."ruamel.yaml.clib"]
-python = "<3.10"
-version = ">=0.1.2"
+"ruamel.yaml.clib" = {version = ">=0.1.2", markers = "platform_python_implementation == \"CPython\" and python_version < \"3.10\""}
 
 [package.extras]
 docs = ["ryd"]
 jinja2 = ["ruamel.yaml.jinja2 (>=0.2)"]
 
 [[package]]
-category = "dev"
-description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
-marker = "platform_python_implementation == \"CPython\" and python_version < \"3.10\""
 name = "ruamel.yaml.clib"
+version = "0.2.2"
+description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
+category = "dev"
 optional = false
 python-versions = "*"
-version = "0.2.2"
 
 [[package]]
-category = "main"
-description = "Image processing in Python"
 name = "scikit-image"
+version = "0.18.1"
+description = "Image processing in Python"
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "0.18.1"
 
 [package.dependencies]
-PyWavelets = ">=1.1.1"
 imageio = ">=2.3.0"
 matplotlib = ">=2.0.0,<3.0.0 || >3.0.0"
 networkx = ">=2.0"
 numpy = ">=1.16.5"
 pillow = ">=4.3.0,<7.1.0 || >7.1.0,<7.1.1 || >7.1.1"
+PyWavelets = ">=1.1.1"
 scipy = ">=1.0.1"
 tifffile = ">=2019.7.26"
 
 [package.extras]
 data = ["pooch (>=1.3.0)"]
-docs = ["sphinx (>=1.8,<=2.4.4)", "sphinx-gallery (>=0.7.0,<0.8.0 || >0.8.0)", "numpydoc (>=1.0)", "sphinx-copybutton", "pytest-runner", "scikit-learn", "matplotlib (>=3.0.1)", "dask (>=0.15.0,<2.17.0 || >2.17.0)", "cloudpickle (>=0.2.1)", "pandas (>=0.23.0)", "seaborn (>=0.7.1)", "pooch (>=1.3.0)", "tifffile (>=2020.5.30)", "myst-parser", "ipywidgets", "plotly (>=4.10.0)"]
-optional = ["simpleitk", "astropy (>=3.1.2)", "qtpy", "pyamg", "dask (>=1.0.0,<2.17.0 || >2.17.0)", "cloudpickle (>=0.2.1)", "pooch (>=1.3.0)"]
+docs = ["sphinx (>=1.8,<=2.4.4)", "sphinx-gallery (>=0.7.0,!=0.8.0)", "numpydoc (>=1.0)", "sphinx-copybutton", "pytest-runner", "scikit-learn", "matplotlib (>=3.0.1)", "dask[array] (>=0.15.0,!=2.17.0)", "cloudpickle (>=0.2.1)", "pandas (>=0.23.0)", "seaborn (>=0.7.1)", "pooch (>=1.3.0)", "tifffile (>=2020.5.30)", "myst-parser", "ipywidgets", "plotly (>=4.10.0)"]
+optional = ["simpleitk", "astropy (>=3.1.2)", "qtpy", "pyamg", "dask[array] (>=1.0.0,!=2.17.0)", "cloudpickle (>=0.2.1)", "pooch (>=1.3.0)"]
 test = ["pytest (>=5.2.0)", "pytest-cov (>=2.7.0)", "pytest-localserver", "pytest-faulthandler", "flake8", "codecov", "pooch (>=1.3.0)"]
 
 [[package]]
-category = "main"
-description = "A set of python modules for machine learning and data mining"
 name = "scikit-learn"
+version = "0.24.2"
+description = "A set of python modules for machine learning and data mining"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.24.2"
 
 [package.dependencies]
 joblib = ">=0.11"
@@ -540,31 +549,31 @@ examples = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)"
 tests = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "pytest (>=5.0.1)", "pytest-cov (>=2.9.0)", "flake8 (>=3.8.2)", "mypy (>=0.770)", "pyamg (>=4.0.0)"]
 
 [[package]]
-category = "main"
-description = "SciPy: Scientific Library for Python"
 name = "scipy"
+version = "1.6.3"
+description = "SciPy: Scientific Library for Python"
+category = "main"
 optional = false
 python-versions = ">=3.7,<3.10"
-version = "1.6.3"
 
 [package.dependencies]
 numpy = ">=1.16.5,<1.23.0"
 
 [[package]]
-category = "main"
-description = "Python 2 and 3 compatibility utilities"
 name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "1.16.0"
 
 [[package]]
-category = "dev"
-description = "Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs."
 name = "theano"
+version = "1.0.5"
+description = "Optimizing compiler for evaluating mathematical expressions on CPUs and GPUs."
+category = "dev"
 optional = false
 python-versions = "*"
-version = "1.0.5"
 
 [package.dependencies]
 numpy = ">=1.9.1"
@@ -576,20 +585,20 @@ doc = ["Sphinx (>=0.5.1)", "pygments"]
 test = ["nose (>=1.3.0)", "parameterized", "flake8"]
 
 [[package]]
-category = "main"
-description = "threadpoolctl"
 name = "threadpoolctl"
+version = "2.1.0"
+description = "threadpoolctl"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "2.1.0"
 
 [[package]]
-category = "main"
-description = "Read and write TIFF files"
 name = "tifffile"
+version = "2021.4.8"
+description = "Read and write TIFF files"
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "2021.4.8"
 
 [package.dependencies]
 numpy = ">=1.15.1"
@@ -598,20 +607,20 @@ numpy = ">=1.15.1"
 all = ["imagecodecs (>=2021.3.31)", "matplotlib (>=3.2)", "lxml"]
 
 [[package]]
-category = "dev"
-description = "Python Library for Tom's Obvious, Minimal Language"
 name = "toml"
+version = "0.10.2"
+description = "Python Library for Tom's Obvious, Minimal Language"
+category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "0.10.2"
 
 [[package]]
-category = "dev"
-description = "Fast, Extensible Progress Meter"
 name = "tqdm"
+version = "4.60.0"
+description = "Fast, Extensible Progress Meter"
+category = "dev"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
-version = "4.60.0"
 
 [package.extras]
 dev = ["py-make (>=0.1.0)", "twine", "wheel"]
@@ -619,38 +628,37 @@ notebook = ["ipywidgets (>=6)"]
 telegram = ["requests"]
 
 [[package]]
-category = "main"
-description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
-optional = false
-python-versions = "*"
 version = "3.10.0.0"
-
-[[package]]
+description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "main"
-description = "pure python download utility"
-name = "wget"
 optional = false
 python-versions = "*"
-version = "3.2"
 
 [[package]]
-category = "dev"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-marker = "python_version < \"3.8\""
+name = "wget"
+version = "3.2"
+description = "pure python download utility"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "zipp"
+version = "3.4.1"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
-version = "3.4.1"
 
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "pytest-enabler", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "b30769cf383448ba3668b32ccf7cf6f820a7a072909e3f83daf6dc87344251cd"
-lock-version = "1.0"
+lock-version = "1.1"
 python-versions = ">=3.7.1,<3.10"
+content-hash = "baf20e85f14681f3a3debd7719a2b7b496429db5c24a3c6cb28d71b0c5a7bef1"
 
 [metadata.files]
 astropy = [
@@ -679,6 +687,10 @@ attrs = [
     {file = "attrs-21.2.0-py2.py3-none-any.whl", hash = "sha256:149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1"},
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
 ]
+cached-property = [
+    {file = "cached-property-1.5.2.tar.gz", hash = "sha256:9fa5755838eecbb2d234c3aa390bd80fbd3ac6b6869109bfc1b499f7bd89a130"},
+    {file = "cached_property-1.5.2-py2.py3-none-any.whl", hash = "sha256:df4f613cf7ad9a588cc381aaf4a512d26265ecebd5eb9e1ba12f1319eb85a6a0"},
+]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
@@ -701,35 +713,16 @@ fpdf = [
     {file = "fpdf-1.7.2.win32.exe", hash = "sha256:0a94eb783ee933e32a44ad949a1aa6c3ca6fb35b608db53f8b216aec52fc1fb5"},
 ]
 h5py = [
-    {file = "h5py-2.10.0-cp27-cp27m-macosx_10_6_intel.whl", hash = "sha256:ecf4d0b56ee394a0984de15bceeb97cbe1fe485f1ac205121293fc44dcf3f31f"},
-    {file = "h5py-2.10.0-cp27-cp27m-manylinux1_i686.whl", hash = "sha256:86868dc07b9cc8cb7627372a2e6636cdc7a53b7e2854ad020c9e9d8a4d3fd0f5"},
-    {file = "h5py-2.10.0-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:aac4b57097ac29089f179bbc2a6e14102dd210618e94d77ee4831c65f82f17c0"},
-    {file = "h5py-2.10.0-cp27-cp27m-win32.whl", hash = "sha256:7be5754a159236e95bd196419485343e2b5875e806fe68919e087b6351f40a70"},
-    {file = "h5py-2.10.0-cp27-cp27m-win_amd64.whl", hash = "sha256:13c87efa24768a5e24e360a40e0bc4c49bcb7ce1bb13a3a7f9902cec302ccd36"},
-    {file = "h5py-2.10.0-cp27-cp27mu-manylinux1_i686.whl", hash = "sha256:79b23f47c6524d61f899254f5cd5e486e19868f1823298bc0c29d345c2447172"},
-    {file = "h5py-2.10.0-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:cbf28ae4b5af0f05aa6e7551cee304f1d317dbed1eb7ac1d827cee2f1ef97a99"},
-    {file = "h5py-2.10.0-cp34-cp34m-manylinux1_i686.whl", hash = "sha256:c0d4b04bbf96c47b6d360cd06939e72def512b20a18a8547fa4af810258355d5"},
-    {file = "h5py-2.10.0-cp34-cp34m-manylinux1_x86_64.whl", hash = "sha256:549ad124df27c056b2e255ea1c44d30fb7a17d17676d03096ad5cd85edb32dc1"},
-    {file = "h5py-2.10.0-cp35-cp35m-macosx_10_6_intel.whl", hash = "sha256:a5f82cd4938ff8761d9760af3274acf55afc3c91c649c50ab18fcff5510a14a5"},
-    {file = "h5py-2.10.0-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:3dad1730b6470fad853ef56d755d06bb916ee68a3d8272b3bab0c1ddf83bb99e"},
-    {file = "h5py-2.10.0-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:063947eaed5f271679ed4ffa36bb96f57bc14f44dd4336a827d9a02702e6ce6b"},
-    {file = "h5py-2.10.0-cp35-cp35m-win32.whl", hash = "sha256:c54a2c0dd4957776ace7f95879d81582298c5daf89e77fb8bee7378f132951de"},
-    {file = "h5py-2.10.0-cp35-cp35m-win_amd64.whl", hash = "sha256:6998be619c695910cb0effe5eb15d3a511d3d1a5d217d4bd0bebad1151ec2262"},
-    {file = "h5py-2.10.0-cp36-cp36m-macosx_10_6_intel.whl", hash = "sha256:ff7d241f866b718e4584fa95f520cb19405220c501bd3a53ee11871ba5166ea2"},
-    {file = "h5py-2.10.0-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:54817b696e87eb9e403e42643305f142cd8b940fe9b3b490bbf98c3b8a894cf4"},
-    {file = "h5py-2.10.0-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:d3c59549f90a891691991c17f8e58c8544060fdf3ccdea267100fa5f561ff62f"},
-    {file = "h5py-2.10.0-cp36-cp36m-win32.whl", hash = "sha256:d7ae7a0576b06cb8e8a1c265a8bc4b73d05fdee6429bffc9a26a6eb531e79d72"},
-    {file = "h5py-2.10.0-cp36-cp36m-win_amd64.whl", hash = "sha256:bffbc48331b4a801d2f4b7dac8a72609f0b10e6e516e5c480a3e3241e091c878"},
-    {file = "h5py-2.10.0-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:51ae56894c6c93159086ffa2c94b5b3388c0400548ab26555c143e7cfa05b8e5"},
-    {file = "h5py-2.10.0-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:16ead3c57141101e3296ebeed79c9c143c32bdd0e82a61a2fc67e8e6d493e9d1"},
-    {file = "h5py-2.10.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:f0e25bb91e7a02efccb50aba6591d3fe2c725479e34769802fcdd4076abfa917"},
-    {file = "h5py-2.10.0-cp37-cp37m-win32.whl", hash = "sha256:f23951a53d18398ef1344c186fb04b26163ca6ce449ebd23404b153fd111ded9"},
-    {file = "h5py-2.10.0-cp37-cp37m-win_amd64.whl", hash = "sha256:8bb1d2de101f39743f91512a9750fb6c351c032e5cd3204b4487383e34da7f75"},
-    {file = "h5py-2.10.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:64f74da4a1dd0d2042e7d04cf8294e04ddad686f8eba9bb79e517ae582f6668d"},
-    {file = "h5py-2.10.0-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:d35f7a3a6cefec82bfdad2785e78359a0e6a5fbb3f605dd5623ce88082ccd681"},
-    {file = "h5py-2.10.0-cp38-cp38-win32.whl", hash = "sha256:6ef7ab1089e3ef53ca099038f3c0a94d03e3560e6aff0e9d6c64c55fb13fc681"},
-    {file = "h5py-2.10.0-cp38-cp38-win_amd64.whl", hash = "sha256:769e141512b54dee14ec76ed354fcacfc7d97fea5a7646b709f7400cf1838630"},
-    {file = "h5py-2.10.0.tar.gz", hash = "sha256:84412798925dc870ffd7107f045d7659e60f5d46d1c70c700375248bf6bf512d"},
+    {file = "h5py-3.2.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:6766104ed13ff40b3b7bfd49f13fced5274103ee9af53667e7a97c5236b14741"},
+    {file = "h5py-3.2.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:4160cb0d35a83c6fb9f1cad65e826dfaeb044e001549ea78003573fb6bee4042"},
+    {file = "h5py-3.2.1-cp37-cp37m-win_amd64.whl", hash = "sha256:fdabe99139a9c5e1a416b7ed38c89505f8501b376d54496e1bb737cb33df61cf"},
+    {file = "h5py-3.2.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:d8467fa56356ad2efad2b5986326e71d4d74505de6f6c7bb46dbba09b37459ac"},
+    {file = "h5py-3.2.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:a6632ac11167bbad1a8fc5c82508b97ab8c12bdfe4b659254b6f7f63d3c76744"},
+    {file = "h5py-3.2.1-cp38-cp38-win_amd64.whl", hash = "sha256:90ee8a00aca5c4e0bbd821c1f6118cb9a814c15dcfdb03572c615a4431166480"},
+    {file = "h5py-3.2.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:25294f2690c4813475f566663a21ef1c1b11ef892b26d46454bf0a59e507d5aa"},
+    {file = "h5py-3.2.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:d791b710d3e54c4d2c32cb881b183db5674ceb03bf6a0c1f3fb3cf50d8997e0a"},
+    {file = "h5py-3.2.1-cp39-cp39-win_amd64.whl", hash = "sha256:7c5b5f18c96fb63399280a724734fd91e1781c6b60e385e439ad8e654a294ba4"},
+    {file = "h5py-3.2.1.tar.gz", hash = "sha256:89474be911bfcdb34cbf0d98b8ec48b578c27a89fdb1ae4ee7513f1ef8d9249e"},
 ]
 imagecodecs = [
     {file = "imagecodecs-2021.4.28-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:e053aebb2f614b8cf0b0e8fe0cade13e212a418391cf284d55bdb79812b61426"},
@@ -872,6 +865,46 @@ n2v = [
 networkx = [
     {file = "networkx-2.5.1-py3-none-any.whl", hash = "sha256:0635858ed7e989f4c574c2328380b452df892ae85084144c73d8cd819f0c4e06"},
     {file = "networkx-2.5.1.tar.gz", hash = "sha256:109cd585cac41297f71103c3c42ac6ef7379f29788eb54cb751be5a663bb235a"},
+]
+numexpr = [
+    {file = "numexpr-2.7.3-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:74df157ab4577bfc83c14f4e39d14781b06ade5406d3efef049f90c88d8c28ea"},
+    {file = "numexpr-2.7.3-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:99472731bc1111f5d73285dd2a4c228b5bfb176f785a567872e0fbfec6584f2b"},
+    {file = "numexpr-2.7.3-cp27-cp27m-manylinux2010_x86_64.whl", hash = "sha256:24cdb8c0e93f31387a4c2ddd09a687874c006e6139fd68bcf77b96e51d17cb01"},
+    {file = "numexpr-2.7.3-cp27-cp27m-win32.whl", hash = "sha256:c9218aeb76717768f617362b72a87e9219da95ba7cdec0732ccecc4a4719124c"},
+    {file = "numexpr-2.7.3-cp27-cp27m-win_amd64.whl", hash = "sha256:97753d17d1ea39e082b1907b99b6cb63cac7d1dfa512d2ff5079eb7bfab1ea88"},
+    {file = "numexpr-2.7.3-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:0732c9989bff8568ee78fa461f3698166d4ac79363860be22ff49eae1dcd15e7"},
+    {file = "numexpr-2.7.3-cp27-cp27mu-manylinux2010_x86_64.whl", hash = "sha256:c978c49bd9dded6a4ba6b3501e3a34e3aba9312cbb7d800bed7ac6fcd2d5949d"},
+    {file = "numexpr-2.7.3-cp35-cp35m-macosx_10_9_x86_64.whl", hash = "sha256:602df9b5c500d0a887dc96b4cfd16fb60ae7ef39ccd6f013f4df2ee11ae70553"},
+    {file = "numexpr-2.7.3-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:f9df0a74d39616fd011071c5850418f244bac414f24ed55c00dcf3c5385e8374"},
+    {file = "numexpr-2.7.3-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:eeeb6325df6cf3f3ab7d9dbabf3bc03ac88b7e2f2aed21419c31e23c3048dce1"},
+    {file = "numexpr-2.7.3-cp35-cp35m-manylinux2014_aarch64.whl", hash = "sha256:5223a519f48754dd350723d9fbcadbcd0476881bc954a281a09a6538ecabfc27"},
+    {file = "numexpr-2.7.3-cp35-cp35m-win32.whl", hash = "sha256:785065819ce98e3d3dd853794244e0de190d7ba36ab42c8fd79e0e9cd40de7af"},
+    {file = "numexpr-2.7.3-cp35-cp35m-win_amd64.whl", hash = "sha256:23718ac5f2ebae995f5899509624781b375da568f2b645b5d1fd6dbb17f41a56"},
+    {file = "numexpr-2.7.3-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:3daa55515ee3cb40bf5ab8263c0c13fff8d484d64d107a9c414e8ca151dc08a6"},
+    {file = "numexpr-2.7.3-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:a3f1cec8657bd3920869a2ea27f98d68ac3000334f366d844a9670ae671fe4bd"},
+    {file = "numexpr-2.7.3-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:d423441593a952ac56d1f774068b81fb22f514fb68873c066578345a6af74c0d"},
+    {file = "numexpr-2.7.3-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:90ea6d5813e1906bb203ef220a600b30d83e75aea2607a7e7037cceae9e93346"},
+    {file = "numexpr-2.7.3-cp36-cp36m-win32.whl", hash = "sha256:8b76bcca930cbf0db0fe98b6a51d6286dff77d525dad670cb7750e29a138d434"},
+    {file = "numexpr-2.7.3-cp36-cp36m-win_amd64.whl", hash = "sha256:833a363c86266424349467b53f4060f77aaa7ec03c1e6f38c54e69c65ceebf30"},
+    {file = "numexpr-2.7.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:618259287b8b81a352a7d088ad03fe3b393a842ccb45f0b3cfc6a712d41b7595"},
+    {file = "numexpr-2.7.3-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:51277a530a353e0f94665b44615249d7e7075f0c73f78d4743da632fc44bc648"},
+    {file = "numexpr-2.7.3-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:5f4122bd58aa4e4891814c2f72bd47b1cdb202c9d863ea96c5394dffb72a16e2"},
+    {file = "numexpr-2.7.3-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:b0a9124a66a61b05ea84b832358d6aa5561c30e69b4dcaea819b296f4f025f89"},
+    {file = "numexpr-2.7.3-cp37-cp37m-win32.whl", hash = "sha256:e985026e64350dd59fd91a09bc364edf706d58b12e01362ddfa63829878bd434"},
+    {file = "numexpr-2.7.3-cp37-cp37m-win_amd64.whl", hash = "sha256:e000570a6a704c594832ff4fc45f18864b721b7b444a185b365dbb03d3fe3abb"},
+    {file = "numexpr-2.7.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:4527a0a7b04f858a73c348c9c4ce8441b7a54965db74a32ba808c51d9d53b7cd"},
+    {file = "numexpr-2.7.3-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:dc707486b1f3dda18a39bc4d06a0a09d3c0ea47bd6b99fdb98adb26d1277253f"},
+    {file = "numexpr-2.7.3-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:5d6dbf050a9b8ebff0b7706ebeaf1cd57d64ef4dfe61aef3790851b481daf6b5"},
+    {file = "numexpr-2.7.3-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:aae4ce158da53ebc47df053de90fed9d0d51fa0df8cc481abc8a901ea4f0cec7"},
+    {file = "numexpr-2.7.3-cp38-cp38-win32.whl", hash = "sha256:dfdca3d1f4c83fa8fd3ee7573110efd13e838543896641b89367622ec6a67eb4"},
+    {file = "numexpr-2.7.3-cp38-cp38-win_amd64.whl", hash = "sha256:d14ae09318ad86579e35aacf1596c83d5db1139cd68615967ee23605e11f5d82"},
+    {file = "numexpr-2.7.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:a8e0e48d72391543b68d0471fac2e31c614efdce4036e2a0a8a182fde1edb0e0"},
+    {file = "numexpr-2.7.3-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:05b97b19e864a5d1a0b106933b1637233a2444fd375685bead264a818f847ef2"},
+    {file = "numexpr-2.7.3-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:7ab40e2b438f4ea2ea8234c63639cdf5072cdb29d0ac521307854efe0281a567"},
+    {file = "numexpr-2.7.3-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:8fc23a49f4266c24a23310c0cb92ff54c4b4f535635f90372b3a2d5cb1f83329"},
+    {file = "numexpr-2.7.3-cp39-cp39-win32.whl", hash = "sha256:2e14b44a79030fbe25f16393162a4d21ced14056fac49ff73856f661a78db731"},
+    {file = "numexpr-2.7.3-cp39-cp39-win_amd64.whl", hash = "sha256:c2605e5665b0d7362e0d2b92683387c12e15c7440daf702a7637f7502a967810"},
+    {file = "numexpr-2.7.3.tar.gz", hash = "sha256:43616529f9b7d1afc83386f943dc66c4da5e052f00217ba7e3ad8dd1b5f3a825"},
 ]
 numpy = [
     {file = "numpy-1.20.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:70eb5808127284c4e5c9e836208e09d685a7978b6a216db85960b1a112eeace8"},
