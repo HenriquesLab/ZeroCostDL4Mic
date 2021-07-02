@@ -42,6 +42,6 @@ tifffile==2021.2.26
 toolz==0.11.1
 tqdm==4.41.1
 uritemplate==3.0.1
-urllib3==1.24.3
+urllib3==1.26.5
 wget==3.2
 wrapt==1.12.1
