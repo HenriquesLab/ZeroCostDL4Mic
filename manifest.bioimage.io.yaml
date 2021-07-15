@@ -574,7 +574,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_Fiji_export.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
-    source: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_Fiji_export.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_Fiji_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -617,7 +617,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-    source: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview      
@@ -659,8 +659,8 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [colab, notebook, SplineDist, StarDist, segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -685,7 +685,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -707,7 +707,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -729,7 +729,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -750,7 +750,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -775,7 +775,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -820,7 +820,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -841,7 +841,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
     tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
