@@ -14,9 +14,9 @@ config:
   background_image: static/img/zoo-background.svg
   resource_types:
     - model
-    - notebook
+    - application
     - dataset
-  default_type: notebook
+  default_type: application
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
 dataset:
