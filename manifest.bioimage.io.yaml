@@ -19,10 +19,6 @@ config:
   default_type: notebook
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
 
-application:
-  - id: Notebook Preview
-    source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
-
 dataset:
   # see here for the format: https://bioimage.io/#/?show=contribute
   # replace this with your actual dataset
@@ -231,6 +227,9 @@ dataset:
 
 
 application:
+  - id: Notebook Preview
+    source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
+
   - id: Notebook_U-Net_2D_ZeroCostDL4Mic
     name: U-Net (2D) - ZeroCostDL4Mic
     description: U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
@@ -246,7 +245,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [U-Net, segmentation, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -267,7 +266,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [U-Net, segmentation, ZeroCostDL4Mic, 3D]
+    tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -288,7 +287,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -313,7 +312,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [StarDist, segmentation, ZeroCostDL4Mic, 3D]
+    tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -334,7 +333,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -356,7 +355,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Noise2Void, denoising, ZeroCostDL4Mic, 3D]
+    tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -378,7 +377,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -400,7 +399,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
+    tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -422,7 +421,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
+    tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -444,7 +443,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [fnet, labelling, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -466,7 +465,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -488,7 +487,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [pix2pix, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -510,7 +509,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CycleGAN, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -532,7 +531,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Augmentor, Data Augmentation, ZeroCostDL4Mic]
+    tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -553,7 +552,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CycleGAN, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -574,7 +573,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_Fiji_export.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
+    tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
     source: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_Fiji_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -596,7 +595,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
+    tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -617,7 +616,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
+    tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
     source: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -638,7 +637,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
+    tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -660,7 +659,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [SplineDist, StarDist, segmentation, ZeroCostDL4Mic]
+    tags: [colab, notebook, SplineDist, StarDist, segmentation, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -685,7 +684,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [YOLOv2, object detection, ZeroCostDL4Mic]
+    tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -707,7 +706,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Detectron2, object detection, ZeroCostDL4Mic]
+    tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -729,7 +728,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [DRMIME, image registration, ZeroCostDL4Mic]
+    tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -750,7 +749,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Cellpose, Segmentation, ZeroCostDL4Mic]
+    tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -775,7 +774,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [RetinaNet, object detection, ZeroCostDL4Mic]
+    tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -797,7 +796,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [DecoNoising, denoising, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -820,7 +819,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Cellpose, Segmentation, ZeroCostDL4Mic]
+    tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -841,7 +840,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [MaskRCNN, object detection, ZeroCostDL4Mic]
+    tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -862,7 +861,7 @@ application:
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [Quality Control, ZeroCostDL4Mic]
+    tags: [colab, notebook, Quality Control, ZeroCostDL4Mic]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
