@@ -1,13 +1,15 @@
 name: torch
 channels:
   - pytorch
-  - conda-forge
+  # - conda-forge
   - defaults
   - hcc
+  - anaconda
 dependencies:
   - python
   - ipython
+  - pytorch
   - cudatoolkit=10.2
   - cuda-driver
-  - pytorch
   - torchvision
+  - numpy
