@@ -1,7 +1,5 @@
 #!/bin/bash
 set -ex
-mkdir "/content"
-ln -s "/home/${USER}/" "/content"
 # jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn \
 #                              @eddienko/jupyterlab-colabinspired-theme-light \
 #                              imjoy-jupyter-extension \
@@ -23,7 +21,7 @@ jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn \
                 # @jupyterlab/git \
                 # @jupyterlab/apputils \
                 # @jupyterlab/celltags \
-
+jupyter labextension enable
 # rm /opt/anaconda3/share/jupyter/lab/settings
 
 # conda install -c conda-forge jupyterlab-snippets
