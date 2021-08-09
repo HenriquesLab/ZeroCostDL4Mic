@@ -1,0 +1,139 @@
+# FROM ubuntu:focal-20210713
+# SHELL ["/bin/bash", "-c"]
+
+# # install the notebook package
+# # RUN pip install --no-cache --upgrade pip && \
+# #     pip install --no-cache notebook
+
+# # create user with a home directory
+# ARG NB_USER
+# ARG NB_UID
+# ENV USER ${NB_USER}
+# ENV HOME /home/${NB_USER}
+
+# RUN adduser --disabled-password \
+#     --gecos "Default user" \
+#     --uid ${NB_UID} \
+#     ${NB_USER}
+# WORKDIR ${HOME}
+# COPY --chown=${NB_UID}:${NB_UID} . . 
+
+# RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+# RUN  apt-get update \
+#   && apt-get install --no-install-recommends -y -q wget rclone curl time apt-utils dialog
+
+# ARG MINIFORGE_NAME=Miniforge3
+# ARG MINIFORGE_VERSION=4.10.3-3
+# ARG TINI_VERSION=v0.18.0
+# ARG TARGETPLATFORM
+
+# ENV CONDA_DIR=/opt/conda
+# ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+# ENV PATH=${CONDA_DIR}/bin:${PATH}
+
+# # 1. Install just enough for conda to work
+# # 2. Keep $HOME clean (no .wget-hsts file), since HSTS isn't useful in this context
+# # 3. Install miniforge from GitHub releases
+# # 4. Apply some cleanup tips from https://jcrist.github.io/conda-docker-tips.html
+# #    Particularly, we remove pyc and a files. The default install has no js, we can skip that
+# # 5. Activate base by default when running as any *non-root* user as well
+# #    Good security practice requires running most workloads as non-root
+# #    This makes sure any non-root users created also have base activated
+# #    for their interactive shells.
+# # 6. Activate base by default when running as root as well
+# #    The root user is already created, so won't pick up changes to /etc/skel
+
+
+# RUN apt-get update > /dev/null && \
+#     apt-get install --no-install-recommends --yes -q \
+#         wget bzip2 ca-certificates \
+#         git > /dev/null && \
+#     apt-get clean && \
+#     rm -rf /var/lib/apt/lists/* && \
+#     TARGETARCH="$(echo ${TARGETPLATFORM} | cut -d / -f 2)"; case ${TARGETARCH} in "ppc64le") TARGETARCH="ppc64el" ;; *) ;; esac ; \
+#     wget --no-hsts --quiet https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${TARGETARCH} -O /usr/local/bin/tini && \
+#     chmod +x /usr/local/bin/tini && \
+#     wget --no-hsts --quiet https://github.com/conda-forge/miniforge/releases/download/${MINIFORGE_VERSION}/${MINIFORGE_NAME}-${MINIFORGE_VERSION}-Linux-$(uname -m).sh -O /tmp/miniforge.sh && \
+#     /bin/bash /tmp/miniforge.sh -b -p ${CONDA_DIR} && \
+#     rm /tmp/miniforge.sh && \
+#     conda clean -tipsy && \
+#     find ${CONDA_DIR} -follow -type f -name '*.a' -delete && \
+#     find ${CONDA_DIR} -follow -type f -name '*.pyc' -delete && \
+#     conda clean -afy && \
+#     echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> /etc/skel/.bashrc && \
+#     echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> ~/.bashrc
+
+# # ENTRYPOINT ["tini", "--"]
+# # CMD [ "/bin/bash" ]
+
+# USER ${USER}
+ARG BASE_IMAGE=debian:buster-slim
+FROM $BASE_IMAGE
+SHELL ["/bin/bash", "-c"]
+
+# Mutli-stage build to keep final image small. Otherwise end up with
+# curl and openssl installed
+# FROM --platform=$BUILDPLATFORM debian:buster-slim AS stage1
+ARG VERSION=0.13.1
+RUN apt-get update && apt-get install -y \
+    bzip2 \
+    ca-certificates \
+    curl \
+    && rm -rf /var/lib/{apt,dpkg,cache,log}
+ARG TARGETARCH
+RUN [ $TARGETARCH = 'arm64' ] && export ARCH='aarch64' || export ARCH='64' && \
+    curl -L https://micromamba.snakepit.net/api/micromamba/linux-$ARCH/$VERSION | \
+    tar -xj -C /tmp bin/micromamba
+
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV ENV_NAME="base"
+ENV MAMBA_ROOT_PREFIX="/opt/conda"
+
+# Setting $BASH_ENV and the SHELL command will not result in .bashrc being sourced when
+# you supply the program to run as an argument to the "docker run" command.
+# Manually add directory for micromamba installed executables to PATH as a workaround.
+ENV PATH "$MAMBA_ROOT_PREFIX/bin:$PATH"
+
+# Use bash in Dockerfile RUN commands and make sure bashrc is sourced when
+# executing commands with /bin/bash -c
+# Needed to have the micromamba activate command configured etc.
+
+# COPY --from=stage1 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+# COPY --from=stage1 /tmp/bin/micromamba /bin/micromamba
+# COPY entrypoint.sh /bin/entrypoint.sh
+
+# RUN useradd -ms /bin/bash micromamba && \
+#     mkdir -p "$MAMBA_ROOT_PREFIX" && \
+#     chmod -R a+rwx "$MAMBA_ROOT_PREFIX" "/home" && \
+#     export ENV_NAME="$ENV_NAME"
+
+
+ARG NB_USER
+ARG NB_UID
+ENV USER ${NB_USER}
+ENV HOME /home/${NB_USER}
+ENV COLAB /content
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+WORKDIR ${HOME}
+
+# RUN mkdir ${COLAB}
+RUN ln -s /home/${USER}/ /${COLAB}
+# RUN ln -s /home/${USER} /${COLAB}
+
+WORKDIR ${COLAB}
+RUN cd ${COLAB}
+
+COPY --chown=${USER}:${USER} . .
+ENV PATH="${MAMBA_ROOT_PREFIX}/envs/${ENV_NAME}/bin:$PATH"
+ENV BASH_ENV="${HOME}/.bashrc"
+RUN micromamba shell init -s bash -p "$MAMBA_ROOT_PREFIX" > /dev/null
+RUN echo "micromamba activate $ENV_NAME" >> "$BASH_ENV"
+
+RUN micromamba env update --file ${HOME}/.binder/environment.yml
+ 
