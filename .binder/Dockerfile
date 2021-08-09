@@ -224,7 +224,7 @@ COPY --chown=${USER}:${USER} .binder/environment.yml ${REPO_DIR}/.binder/environ
 
 COPY --chown=${USER}:${USER} . ${REPO_DIR}
 
-# RUN chmod +x "${REPO_DIR}/.binder/postBuild" && "${REPO_DIR}/.binder/postBuild"
+RUN chmod +x "${REPO_DIR}/.binder/postBuildAdmin" && "${REPO_DIR}/.binder/postBuildAdmin"
 
 USER ${NB_USER}
 
@@ -243,7 +243,7 @@ LABEL repo2docker.version="2021.01.0"
 
 USER ${NB_USER}
 
-# RUN chmod +x .binder/postBuild
+RUN chmod +x .binder/postBuild && "${REPO_DIR}/.binder/postBuild"
  
 RUN chmod +x "${REPO_DIR}/.binder/start"
 ENV R2D_ENTRYPOINT "${REPO_DIR}/.binder/start"
