@@ -8,12 +8,11 @@ dependencies:
   - pip
   - python
   - jupyter
-  - jupyterlab=2.2.0
+  - jupyterlab
   # - jupyterlab-extensions
   - nodejs
   # - cuda-driver
-  - pip:
-    - jupyterlab-git
+  # - pip:
   #   - -r file:requirements.txt
 # jupyterlab_play_cell_button
 # jlab-enhanced-cell-toolbar
