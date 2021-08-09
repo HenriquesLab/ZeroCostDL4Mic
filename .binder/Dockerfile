@@ -243,7 +243,7 @@ LABEL repo2docker.version="2021.01.0"
 
 USER ${NB_USER}
 
-# RUN chmod +x .binder/postBuild
+RUN chmod +x .binder/postBuild
  
 RUN chmod +x "${REPO_DIR}/.binder/start"
 ENV R2D_ENTRYPOINT "${REPO_DIR}/.binder/start"
