@@ -16,7 +16,9 @@ jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn \
                 @epi2melabs/jupyterlab-play-cell-button \
                 @epi2melabs/jupyterlab-code-cell-collapser \
                 jupyterlab-execute-time \
-                @jupyterlab/google-drive
+                @jupyterlab/google-drive \
+                @jupyter-widgets/jupyterlab-manager
+
                 # dask-labextension \
                 # @jupyterlab/git \
                 # @jupyterlab/apputils \

@@ -9,6 +9,11 @@ dependencies:
   - python
   - jupyter
   - jupyterlab=2.2.0
+  - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - cudatoolkit
+  - jupyterlab_widgets
+  - ipyfilechooser
   # - jupyterlab-extensions
   - nodejs
   # - cuda-driver
