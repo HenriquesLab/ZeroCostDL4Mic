@@ -1,7 +1,9 @@
 #!/bin/bash
 set -ex
-mkdir "/content"
-ln -s "/home/${USER}/" "/content"
+# mkdir "/content"
+ln -sfT "/home/${USER}" "/content"
+# ln -s "/home/${USER}/" "/"
+# mv "/${USER}" "/content"
 # jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn \
 #                              @eddienko/jupyterlab-colabinspired-theme-light \
 #                              imjoy-jupyter-extension \

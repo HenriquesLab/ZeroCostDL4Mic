@@ -18,7 +18,6 @@ httplib2
 nodejs
 imageio
 joblib
-
 llvmlite
 multiprocess
 numba
@@ -35,8 +34,8 @@ scipy
 six
 sortedcontainers
 tblib
-# tensorboard
-# tensorflow
+tensorboard
+tensorflow
 termcolor
 tifffile
 toolz
@@ -44,3 +43,9 @@ tqdm
 uritemplate
 urllib3
 wrapt
+ipyfilechooser
+opencv-python
+ipywidgets
+jupyterlab_widgets
+pandas
+tabulate
