@@ -1,19 +1,30 @@
-# name: base
+# name: cuda
 channels:
-  - conda-forge
+  - nvidia
   - anaconda
+  - conda-forge
   # - hcc
 dependencies:
   # - beakerx
   - pip
-  - python
+  - python=3.7
+  - ipython
+  - cxx-compiler
   - jupyter
   - jupyterlab=2.2.0
   - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
-  - cudatoolkit
   - opencv
   - jupyterlab_widgets
+  - cudatoolkit-dev
+  - cudnn
+  - nvcc_linux-64
+  - nccl
+  - cmake
+  - nvidia-ml
+  # - cuda-tools
+  # - cudatoolkit
+  # - tensorflow-gpu
   # - jupyterlab-extensions
   - nodejs
   # - cuda-driver

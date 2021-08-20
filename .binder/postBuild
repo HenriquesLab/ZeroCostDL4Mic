@@ -26,3 +26,14 @@ jupyter labextension enable
 # rm /opt/anaconda3/share/jupyter/lab/settings
 
 # conda install -c conda-forge jupyterlab-snippets
+
+
+# jupyter serverextension enable --py jupyter_http_over_ws
+
+function lib_installed() { /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep $1; }
+function check() { lib_installed $1 && echo "$1 is installed" || echo "ERROR: $1 is NOT installed"; }
+check libcuda
+check libcudart
+
+nvcc -V
+# nvidia-smi

@@ -12,3 +12,10 @@ ln -sfT "/home/${USER}" "/content"
 # rm /opt/anaconda3/share/jupyter/lab/settings
 
 # conda install -c conda-forge jupyterlab-snippets
+
+# export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:/usr/local/cuda/lib64:/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
+
+# ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1 \
+#     && echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/z-cuda-stubs.conf \
+#     && ldconfig
+
