@@ -1,52 +1,52 @@
-# astropy
-# astunparse
-# certifi
-# chardet
-# cloudpickle
-# configparser
-# csbdeep
-# dask
-# dill
-# h5py
-# wget
-# flatbuffers
-# idna
-# fpdf
-# gast
-# google
-# httplib2
-# nodejs
-# imageio
-# joblib
-# llvmlite
-# multiprocess
-# numba
-# numpy
-# oauth2client
-# py
-# pyasn1
-# pydot
-# requests
-# rsa
-# scikit-image
-# scikit-learn
-# scipy
-# six
-# sortedcontainers
-# tblib
-# tensorboard
+astropy
+astunparse
+certifi
+chardet
+cloudpickle
+configparser
+csbdeep
+dask
+dill
+h5py
+wget
+flatbuffers
+idna
+fpdf
+gast
+google
+httplib2
+nodejs
+imageio
+joblib
+llvmlite
+multiprocess
+numba
+numpy
+oauth2client
+py
+pyasn1
+pydot
+requests
+rsa
+scikit-image
+scikit-learn
+scipy
+six
+sortedcontainers
+tblib
+tensorboard
 torch
 tensorflow-gpu
-# termcolor
-# tifffile
-# toolz
-# tqdm
-# uritemplate
-# urllib3
-# wrapt
-# ipyfilechooser
-# opencv-python
-# ipywidgets
-# jupyterlab_widgets
-# pandas
-# tabulate
+termcolor
+tifffile
+toolz
+tqdm
+uritemplate
+urllib3
+wrapt
+ipyfilechooser
+opencv-python
+ipywidgets
+jupyterlab_widgets
+pandas
+tabulate
