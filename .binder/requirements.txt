@@ -35,8 +35,8 @@ six
 sortedcontainers
 tblib
 tensorboard
-torch
-tensorflow-gpu
+# torch
+# tensorflow==2.3
 termcolor
 tifffile
 toolz

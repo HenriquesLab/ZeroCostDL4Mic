@@ -4,11 +4,14 @@ set -e
 #!/bin/bash
 
 # Allow drivers installed by the nvidia-driver-installer to be located
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/nvidia/lib64
+# export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/nvidia/lib64
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$CONDA_PREFIX/lib64
+
 # Also, utilities like `nvidia-smi` are installed here
 export PATH=${PATH}:/usr/local/nvidia/bin
 
 # exec "$@"
 #exec /opt/conda/bin/python -m "$@"
 # exec conda run "$@"
+python -c "import tensorflow as tf; tf.test.gpu_device_name()"
 exec "$@"

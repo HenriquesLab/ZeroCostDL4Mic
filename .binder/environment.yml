@@ -16,8 +16,11 @@ dependencies:
   - jupyter_nbextensions_configurator
   - opencv
   - jupyterlab_widgets
-  - cudatoolkit-dev
-  - cudnn
+  - cudatoolkit-dev=10
+  - cudnn=7.6
+  - bazel=3.7
+  - cupti
+  - gcc_linux-64=7.3
   - nvcc_linux-64
   - nccl
   - cmake
