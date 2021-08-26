@@ -1,62 +1,46 @@
 
-# FROM buildpack-deps:bionic
-# FROM nvidia/container-toolkit:1.6.0-ubuntu18.04
-# FROM datmo/buildpack-deps:gpu
-# FROM floydhub/buildpack-deps:cuda10.0-cudnn7-1.0
-FROM nvidia/cuda:11.4.1-base-ubuntu18.04
-# packaging dependencies
-# ENV DEBIAN_FRONTEND=noninteractive
+FROM buildpack-deps:bionic
 
-# https://github.com/tensorflow/tensorflow/issues/36974
+# RUN set -eux; \
+# 	apt-get update; \
+# 	apt-get install -y --no-install-recommends \
+# 		ca-certificates \
+# 		curl \
+# 		netbase \
+# 		wget \
+# # https://bugs.debian.org/929417
+# 		tzdata \
+# 	; \
+# 	rm -rf /var/lib/apt/lists/*
 
-
-# ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:/usr/local/cuda/lib64:/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
-
-# RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1 \
-#     && echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/z-cuda-stubs.conf \
-#     && ldconfig
-
-
-RUN set -eux; \
-	apt-get update; \
-	apt-get install -y --no-install-recommends \
-		ca-certificates \
-		curl \
-		netbase \
-		wget \
-# https://bugs.debian.org/929417
-		tzdata \
-	; \
-	rm -rf /var/lib/apt/lists/*
-
-RUN set -ex; \
-	if ! command -v gpg > /dev/null; then \
-		apt-get update; \
-		apt-get install -y --no-install-recommends \
-			gnupg \
-			dirmngr \
-		; \
-		rm -rf /var/lib/apt/lists/*; \
-	fi
+# RUN set -ex; \
+# 	if ! command -v gpg > /dev/null; then \
+# 		apt-get update; \
+# 		apt-get install -y --no-install-recommends \
+# 			gnupg \
+# 			dirmngr \
+# 		; \
+# 		rm -rf /var/lib/apt/lists/*; \
+# 	fi
     
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        dh-make \
-        fakeroot \
-        build-essential \
-        devscripts \
-        lsb-release && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#         dh-make \
+#         fakeroot \
+#         build-essential \
+#         devscripts \
+#         lsb-release && \
+#     rm -rf /var/lib/apt/lists/*
 
-# procps is very common in build systems, and is a reasonably small package
-RUN apt-get update && apt-get install -y --no-install-recommends \
-		bzr \
-		git \
-		mercurial \
-		openssh-client \
-		subversion \
-		\
-		procps \
-	&& rm -rf /var/lib/apt/lists/*
+# # procps is very common in build systems, and is a reasonably small package
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+# 		bzr \
+# 		git \
+# 		mercurial \
+# 		openssh-client \
+# 		subversion \
+# 		\
+# 		procps \
+# 	&& rm -rf /var/lib/apt/lists/*
 
 # RUN nvidia-smi
 # # packaging
@@ -125,49 +109,49 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # 	&& rm -rf /var/lib/apt/lists/*
 
 
-RUN set -ex; \
-	apt-get update; \
-	apt-get install -y --no-install-recommends \
-		autoconf \
-		automake \
-		bzip2 \
-		dpkg-dev \
-		file \
-		g++ \
-		gcc \
-		imagemagick \
-		libbz2-dev \
-		libc6-dev \
-		libcurl4-openssl-dev \
-		libdb-dev \
-		libevent-dev \
-		libffi-dev \
-		libgdbm-dev \
-		libglib2.0-dev \
-		libgmp-dev \
-		libjpeg-dev \
-		libkrb5-dev \
-		liblzma-dev \
-		libmagickcore-dev \
-		libmagickwand-dev \
-		libmaxminddb-dev \
-		libncurses5-dev \
-		libncursesw5-dev \
-		libpng-dev \
-		libpq-dev \
-		libreadline-dev \
-		libsqlite3-dev \
-		libssl-dev \
-		libtool \
-		libwebp-dev \
-		libxml2-dev \
-		libxslt-dev \
-		libyaml-dev \
-		make \
-		patch \
-		unzip \
-		xz-utils \
-		zlib1g-dev
+# RUN set -ex; \
+# 	apt-get update; \
+# 	apt-get install -y --no-install-recommends \
+# 		autoconf \
+# 		automake \
+# 		bzip2 \
+# 		dpkg-dev \
+# 		file \
+# 		g++ \
+# 		gcc \
+# 		imagemagick \
+# 		libbz2-dev \
+# 		libc6-dev \
+# 		libcurl4-openssl-dev \
+# 		libdb-dev \
+# 		libevent-dev \
+# 		libffi-dev \
+# 		libgdbm-dev \
+# 		libglib2.0-dev \
+# 		libgmp-dev \
+# 		libjpeg-dev \
+# 		libkrb5-dev \
+# 		liblzma-dev \
+# 		libmagickcore-dev \
+# 		libmagickwand-dev \
+# 		libmaxminddb-dev \
+# 		libncurses5-dev \
+# 		libncursesw5-dev \
+# 		libpng-dev \
+# 		libpq-dev \
+# 		libreadline-dev \
+# 		libsqlite3-dev \
+# 		libssl-dev \
+# 		libtool \
+# 		libwebp-dev \
+# 		libxml2-dev \
+# 		libxslt-dev \
+# 		libyaml-dev \
+# 		make \
+# 		patch \
+# 		unzip \
+# 		xz-utils \
+# 		zlib1g-dev
 # # https://lists.debian.org/debian-devel-announce/2016/09/msg00000.html
 # 		$( \
 # # if we use just "apt-cache show" here, it returns zero because "Can't select versions from package 'libmysqlclient-dev' as it is purely virtual", hence the pipe to grep
