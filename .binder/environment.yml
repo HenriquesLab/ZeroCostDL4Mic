@@ -32,8 +32,11 @@ dependencies:
   - nodejs
   # - cuda-driver
   - pip:
+    - tensorflow==2.3
     - jupyterlab-git
     - -r file:requirements.txt
 # jupyterlab_play_cell_button
 # jlab-enhanced-cell-toolbar
 # imjoy-jupyter-extension
+
+

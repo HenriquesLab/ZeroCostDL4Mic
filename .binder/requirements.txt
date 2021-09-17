@@ -36,7 +36,6 @@ sortedcontainers
 tblib
 tensorboard
 # torch
-tensorflow==2.3
 termcolor
 tifffile
 toolz
