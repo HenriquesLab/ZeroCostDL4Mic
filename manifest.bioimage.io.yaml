@@ -182,6 +182,7 @@ dataset:
       https://doi.org/10.5281/zenodo.3941884
     tags: [StarDist, ZeroCostDL4Mic]
     source: https://zenodo.org/record/4034976
+    download_url: https://zenodo.org/record/4034976
 
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
@@ -202,6 +203,7 @@ dataset:
       https://doi.org/10.5281/zenodo.3941884
     tags: [StarDist, ZeroCostDL4Mic]
     source: https://zenodo.org/record/4034929
+    download_url: https://zenodo.org/record/4034929
 
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
@@ -221,6 +223,7 @@ dataset:
       https://doi.org/10.5281/zenodo.3941884
     tags: [StarDist, ZeroCostDL4Mic]
     source: https://zenodo.org/record/4034939
+    download_url: https://zenodo.org/record/4034939
 
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
