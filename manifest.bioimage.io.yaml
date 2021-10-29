@@ -626,6 +626,27 @@ application:
     links:
       - Notebook Preview
 
+  - id: Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
+    name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
+    description: U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
+    cite:
+      text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
+      doi: https://doi.org/10.1038/s41467-021-22518-0
+    authors:
+      - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
+    covers:
+      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel, ZeroCostDL4Mic, 2D]
+    source: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+
       
   - id: Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
     name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
