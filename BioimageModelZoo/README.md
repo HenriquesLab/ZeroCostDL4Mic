@@ -7,6 +7,8 @@ Any researcher interested in microscopy, independent of their background trainin
 
 Our [**wiki page**][wikiPage] has everything you need to get started.
 
+This project initiated as a collaboration between the [**Jacquemet**][6] and [**Henriques**][5] laboratories, considerably expanding with the help of laboratories spread across the planet. There is a long list of contributors associated with the project acknowledged in our [**wiki page**][wikiPageContributors].
+
 
   [1]: https://colab.research.google.com/notebooks/intro.ipynb
   [2]: https://twitter.com/guijacquemet
