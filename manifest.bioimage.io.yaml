@@ -70,7 +70,7 @@ dataset:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
-    authors: [Guillaume Jacqueme]
+    authors: [Guillaume Jacquemet]
     documentation: >-
       https://doi.org/10.5281/zenodo.3713330
     tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
@@ -84,7 +84,7 @@ dataset:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
-    authors: [Guillaume Jacqueme]
+    authors: [Guillaume Jacquemet]
     documentation: >-
       https://doi.org/10.5281/zenodo.3713337
     tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
@@ -178,7 +178,7 @@ dataset:
 
     authors: [Guillaume Jacquemet]
     documentation: >-
-      https://doi.org/10.5281/zenodo.3941884
+      https://zenodo.org/record/4034976
     tags: [StarDist, ZeroCostDL4Mic]
     source: https://zenodo.org/record/4034976
     download_url: https://zenodo.org/record/4034976
@@ -198,7 +198,7 @@ dataset:
 
     authors: [Nathan H. Roy, Guillaume Jacquemet]
     documentation: >-
-      https://doi.org/10.5281/zenodo.3941884
+      https://zenodo.org/record/4034929
     tags: [StarDist, ZeroCostDL4Mic]
     source: https://zenodo.org/record/4034929
     download_url: https://zenodo.org/record/4034929
@@ -217,13 +217,50 @@ dataset:
 
     authors: [Gautier Follain, Guillaume Jacquemet]
     documentation: >-
-      https://doi.org/10.5281/zenodo.3941884
+      https://zenodo.org/record/4034939
     tags: [StarDist, ZeroCostDL4Mic]
     source: https://zenodo.org/record/4034939
     download_url: https://zenodo.org/record/4034939
 
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
+
+
+  - id: Dataset_StarDist_fluo2_ZeroCostDL4Mic
+    name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
+    description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual segmentation
+    cite:
+      - text: "Moreno-Layseca P, Jäntti NZ, Godbole R, Sommer C, Jacquemet G, Al-Akhrass H, Conway JRW, Kronqvist P, Kallionpää RE, Oliveira-Ferrer L, Cervero P, Linder S, Aepfelbacher M, Zauber H, Rae J, Parton RG, Disanza A, Scita G, Mayor S, Selbach M, Veltel S, Ivaska J. Cargo-specific recruitment in clathrin- and dynamin-independent endocytosis. Nat Cell Biol. 2021 Oct;23(10):1073-1084. doi: 10.1038/s41556-021-00767-x. Epub 2021 Oct 6. PMID: 34616024."
+        doi: https://doi.org/10.1038/s41556-021-00767-x
+
+    authors: [Hussein Al-Akhrass, Johanna Ivaska, Guillaume Jacquemet]
+    documentation: >-
+      https://zenodo.org/record/4811213
+    tags: [StarDist, ZeroCostDL4Mic]
+    source: https://zenodo.org/record/4811213
+    download_url: https://zenodo.org/record/4811213
+
+    covers:
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png
+
+
+  - id: Dataset_Noisy_Nuclei_ZeroCostDL4Mic
+    name: Noisy nuclei dataset. 
+    description: This dataset contains a denoising training and test dataset for deep learning applications. The training dataset comprises 20 paired matching noisy and high signal-to-noise images. The test dataset contains five paired matching noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA) images acquired using a spinning disk confocal microscope with a 20x 0.8 NA objective.
+    cite:
+      - text: "Laine RF, Arganda-Carreras I, Henriques R, Jacquemet G. Avoiding a replication crisis in deep-learning-based bioimage analysis. Nat Methods. 2021 Oct;18(10):1136-1144. doi: 10.1038/s41592-021-01284-3. PMID: 34608322; PMCID: PMC7611896.
+"
+        doi: https://doi.org/10.1038/s41592-021-01284-3
+
+    authors: [Guillaume Jacquemet]
+    documentation: >-
+      https://zenodo.org/record/5750174
+    tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
+    source: https://zenodo.org/record/5750174
+    download_url: https://zenodo.org/record/5750174
+
+    covers:
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png
 
 
 application:
@@ -239,7 +276,8 @@ application:
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -260,7 +298,8 @@ application:
     authors:
       - Daniel Krentzel and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -281,7 +320,11 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png          
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png        
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png    
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -296,6 +339,7 @@ application:
       - Dataset_StarDist_Fluo_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
 
   - id: Notebook_StarDist_3D_ZeroCostDL4Mic
     name: StarDist (3D) - ZeroCostDL4Mic
@@ -306,7 +350,7 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/StarDist_3D.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -327,13 +371,16 @@ application:
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_2D_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V2D_notebook_3.png    
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
-    tags: [colab, notebook, Noise2VOID, denoising, ZeroCostDL4Mic, 2D]
+    tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
@@ -349,7 +396,10 @@ application:
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_notebook_2.png    
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -371,7 +421,10 @@ application:
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/CARE2D_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/CARE2D_notebook_2.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/CARE2D_notebook_3.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -393,7 +446,8 @@ application:
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_CARE_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -415,7 +469,8 @@ application:
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/fnet_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -437,7 +492,8 @@ application:
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/fnet_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -459,7 +515,10 @@ application:
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook_2.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -481,7 +540,9 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/pix2pix_notebook_2.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/pix2pix_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -503,7 +564,9 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cycleGAN_notebook.png    
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -524,8 +587,9 @@ application:
         doi: https://doi.org/10.1038/s41467-021-22518-0
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    covers:    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/augmentor_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -546,7 +610,7 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Denoiseg_notebook.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -567,7 +631,9 @@ application:
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_notebook_2.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -589,7 +655,8 @@ application:
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -611,7 +678,8 @@ application:
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -632,7 +700,7 @@ application:
     authors:
       - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -654,7 +722,11 @@ application:
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png          
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png        
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png    
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -675,7 +747,7 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_CARE_notebook.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -712,6 +784,7 @@ application:
       - Dataset_StarDist_Fluo_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
 
   - id: Notebook_YOLOv2_ZeroCostDL4Mic
     name: YOLOv2 - ZeroCostDL4Mic
@@ -722,7 +795,10 @@ application:
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png    
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -744,7 +820,8 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -766,7 +843,7 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DrMIME_notebook.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -779,15 +856,20 @@ application:
       - Notebook Preview
       
   - id: Notebook_Cellpose_2D_ZeroCostDL4Mic
-    name: Cellpose (2D) - ZeroCostDL4Mic
+    name: Cellpose (2D and 3D) - ZeroCostDL4Mic
     description: Cellpose is a generalist algorithm for cellular segmentation. 
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
-    covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+    covers:    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook.png    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_2.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_4.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_5.png
+
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -802,6 +884,7 @@ application:
       - Dataset_StarDist_Fluo_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
   
   - id: Notebook_RetinaNet_ZeroCostDL4Mic
     name: RetinaNet - ZeroCostDL4Mic
@@ -812,7 +895,8 @@ application:
     authors:
       - Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -834,7 +918,7 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DecoNoising_notebook.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -857,7 +941,11 @@ application:
     authors:
       - Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook.png    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_2.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_3.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_4.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/cellpose_notebook_5.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -878,7 +966,7 @@ application:
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/maskRCNN_notebook.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -899,7 +987,7 @@ application:
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
-      - https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.png
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/QC_notebook.png
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -910,4 +998,60 @@ application:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+
+  - id: Notebook_DFCAN_ZeroCostDL4Mic
+    name: DFCAN - ZeroCostDL4Mic
+    description: Deep Fourier channel attention network (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Qiao, Chang and Li, Di and Guo, Yuting and Liu, Chong and Jiang, Tao and Dai, Qionghai and Li, Dong. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible. 
+    cite:
+      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
+        doi: https://doi.org/10.1038/s41467-021-22518-0
+      - text: "Qiao C, Li D, Guo Y, Liu C, Jiang T, Dai Q, Li D. Evaluation and development of deep neural networks for image super-resolution in optical microscopy. Nat Methods. 2021 Feb;18(2):194-202. doi: 10.1038/s41592-020-01048-5. Epub 2021 Jan 21. PMID: 33479522.
+"
+        doi: https://doi.org/10.1038/s41592-020-01048-5        
+    authors:
+      - Ainhoa Serrano, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DFCAN_notebook.png
+      
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      
+  - id: Notebook_EmbedSeg_2D_ZeroCostDL4Mic
+    name: EmbedSeg (2D) - ZeroCostDL4Mic
+    description: EmbedSeg 2D is a deep-learning method that can be used to segment object from bioimages and was first published by Lalit et al. in 2021, on arXiv. 
+    cite:
+      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
+        doi: https://doi.org/10.1038/s41467-021-22518-0    
+ 
+    authors:
+      - Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team
+    covers:    
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
+
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
+    documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+    tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
+    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
+      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
+
+
+
  
