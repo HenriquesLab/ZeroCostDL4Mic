@@ -5,12 +5,6 @@ Our [**wiki page**][wikiPage] has everything you need to get started.
 
 This project initiated as a collaboration between the [**Jacquemet**][6] and [**Henriques**][5] laboratories, considerably expanding with the help of laboratories spread across the planet. There is a long list of contributors associated with the project acknowledged in our [**wiki page**][wikiPageContributors].
 
-# Want to see a short video demonstration?
-
-| Running a ZeroCostDL4Mic notebook | Example data in ZeroCostDL4Mic | Romain's talk @ Aurox conference | Talk @ SPAOM | NEUBIAS webminar |
-|:-:|:-:|:-:|:-:|:-:|
-| [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZeroCostDL4Mic_SuppVideo1_Running_a_notebook.jpg)](https://youtu.be/TrDuidvO85s) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZeroCostDL4Mic_SuppVideo2_Analysis_of_example_data.jpg)](https://youtu.be/KauKEr0Kkkc) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ScreenShot_AuroxTalk_resized.jpg)](https://youtu.be/rCEbYOnNJp0) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/ZDL4_SPAOM.jpg)](https://www.youtube.com/watch?v=ozffChqtgJw) | [![](https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Wiki_files/NEUBIAS_webminar.png)](https://www.youtube.com/watch?v=dcgU5WKE70I) |
-
 ## How to get help ?
 
 Check out our [**wiki page**][wikiPage] in case you need more information first. 
