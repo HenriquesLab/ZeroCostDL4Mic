@@ -398,7 +398,7 @@ application:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
-      - text: "A. Krull, T. Buchholz and F. Jug, "Noise2Void - Learning Denoising From Single Noisy Images," 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223."
+      - text: "A. Krull, T. Buchholz and F. Jug, Noise2Void Learning Denoising From Single Noisy Images. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223."
         doi: https://doi.org/10.1109/CVPR.2019.00223
         
     authors:
@@ -429,7 +429,7 @@ application:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
 
-      - text: "A. Krull, T. Buchholz and F. Jug, "Noise2Void - Learning Denoising From Single Noisy Images," 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223."
+      - text: "A. Krull, T. Buchholz and F. Jug. Noise2Void Learning Denoising From Single Noisy Images. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223."
         doi: https://doi.org/10.1109/CVPR.2019.00223
                 
     authors:
