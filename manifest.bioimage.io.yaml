@@ -583,7 +583,7 @@ application:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
-      - text: "Elias Nehme, Lucien E. Weiss, Tomer Michaeli, and Yoav Shechtman, "Deep-STORM: super-resolution single-molecule microscopy by deep learning," Optica 5, 458-464 (2018)"
+      - text: "Elias Nehme, Lucien E. Weiss, Tomer Michaeli, and Yoav Shechtman. Deep-STORM: super-resolution single-molecule microscopy by deep learning. Optica 5, 458-464 (2018)"
         doi: https://doi.org/10.1364/OPTICA.5.000458
 
     authors:
@@ -730,7 +730,7 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
-      - text: "Elias Nehme, Lucien E. Weiss, Tomer Michaeli, and Yoav Shechtman, "Deep-STORM: super-resolution single-molecule microscopy by deep learning," Optica 5, 458-464 (2018)"
+      - text: "Elias Nehme, Lucien E. Weiss, Tomer Michaeli, and Yoav Shechtman. Deep-STORM: super-resolution single-molecule microscopy by deep learning. Optica 5, 458-464 (2018)"
         doi: https://doi.org/10.1364/OPTICA.5.000458
 
     authors:
