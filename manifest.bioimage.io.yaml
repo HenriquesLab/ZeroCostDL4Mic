@@ -267,12 +267,19 @@ application:
   - id: Notebook Preview
     source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 
+
+
+
   - id: Notebook_U-Net_2D_ZeroCostDL4Mic
     name: U-Net (2D) - ZeroCostDL4Mic
     description: U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597"
+        doi: https://arxiv.org/abs/1505.04597
+                
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
@@ -289,17 +296,23 @@ application:
     links:
       - Notebook Preview
 
+
+
+
   - id: Notebook_U-Net_3D_ZeroCostDL4Mic
     name: U-Net (3D) - ZeroCostDL4Mic
     description: The 3D U-Net was first introduced by Çiçek et al for learning dense volumetric segmentations from sparsely annotated ground-truth data building upon the original U-Net architecture by Ronneberger et al. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
-      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
+      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"      
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, Olaf Ronneberger. 3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation. https://arxiv.org/abs/1606.06650"
+        doi: https://arxiv.org/abs/1606.06650       
+        
     authors:
       - Daniel Krentzel and the ZeroCostDL4Mic Team
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
-
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -311,12 +324,19 @@ application:
     links:
       - Notebook Preview
 
+
+
+
   - id: Notebook_StarDist_2D_ZeroCostDL4Mic
     name: StarDist (2D) - ZeroCostDL4Mic
     description: StarDist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) single images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30"
+        doi: https://doi.org/10.1007/978-3-030-00934-2_30
+                
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -341,12 +361,18 @@ application:
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
 
+
+
   - id: Notebook_StarDist_3D_ZeroCostDL4Mic
     name: StarDist (3D) - ZeroCostDL4Mic
     description: StarDist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Martin Weigert, Uwe Schmidt, Robert Haase, Ko Sugawara, Gene Myers. Star-convex Polyhedra for 3D Object Detection and Segmentation in Microscopy. 	arXiv. https://arxiv.org/abs/1908.03636"
+        doi: https://arxiv.org/abs/1908.03636
+                
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -362,16 +388,22 @@ application:
     links:
       - Notebook Preview
 
+
+
+
   - id: Notebook_Noise2Void_2D_ZeroCostDL4Mic
     name: Noise2Void (2D) - ZeroCostDL4Mic
     description: Noise2Void 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "A. Krull, T. Buchholz and F. Jug, "Noise2Void - Learning Denoising From Single Noisy Images," 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223."
+        doi: https://doi.org/10.1109/CVPR.2019.00223
+        
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
-    covers:
-    
+    covers:    
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_2D_notebook.png
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V2D_notebook_3.png    
 
@@ -387,12 +419,19 @@ application:
       - Notebook Preview
       - Dataset_Noise2Void_2D_ZeroCostDL4Mic
 
+
+
+
   - id: Notebook_Noise2Void_3D_ZeroCostDL4Mic
     name: Noise2VOID (3D) - ZeroCostDL4Mic
     description: Noise2VOID 3D is deep-learning method that can be used to denoise 3D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+
+      - text: "A. Krull, T. Buchholz and F. Jug, "Noise2Void - Learning Denoising From Single Noisy Images," 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 2124-2132, https://doi.org/10.1109/CVPR.2019.00223."
+        doi: https://doi.org/10.1109/CVPR.2019.00223
+                
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
@@ -412,12 +451,19 @@ application:
       - Notebook Preview
       - Dataset_Noise2Void_3D_ZeroCostDL4Mic
 
+
+
+
   - id: Notebook_CARE_2D_ZeroCostDL4Mic
     name: CARE (2D) - ZeroCostDL4Mic
     description: CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+
+      - text: "Weigert, M., Schmidt, U., Boothe, T. et al. Content-aware image restoration: pushing the limits of fluorescence microscopy. Nat Methods 15, 1090–1097 (2018). https://doi.org/10.1038/s41592-018-0216-7"
+        doi: https://doi.org/10.1038/s41592-018-0216-7        
+        
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
@@ -437,12 +483,21 @@ application:
       - Notebook Preview
       - Dataset_CARE_2D_ZeroCostDL4Mic
 
+
+
+
+
   - id: Notebook_CARE_3D_ZeroCostDL4Mic
     name: CARE (3D) - ZeroCostDL4Mic
     description: CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Weigert, M., Schmidt, U., Boothe, T. et al. Content-aware image restoration: pushing the limits of fluorescence microscopy. Nat Methods 15, 1090–1097 (2018). https://doi.org/10.1038/s41592-018-0216-7"
+        doi: https://doi.org/10.1038/s41592-018-0216-7  
+        
+
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
@@ -460,12 +515,20 @@ application:
       - Notebook Preview
       - Dataset_CARE_3D_ZeroCostDL4Mic
 
+
+
+
+
   - id: Notebook_fnet_3D_ZeroCostDL4Mic
     name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
     description: Label-free Prediction (fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Ounkomol, C., Seshamani, S., Maleckar, M.M. et al. Label-free prediction of three-dimensional fluorescence images from transmitted-light microscopy. Nat Methods 15, 917–920 (2018). https://doi.org/10.1038/s41592-018-0111-2"
+        doi: https://doi.org/10.1038/s41592-018-0111-2
+                
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
@@ -483,12 +546,19 @@ application:
       - Notebook Preview
       - Dataset_fnet_3D_ZeroCostDL4Mic
 
+
+
+
   - id: Notebook_fnet_2D_ZeroCostDL4Mic
     name: Label-free Prediction - fnet - (2D) ZeroCostDL4Mic
     description: Label-free Prediction (fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Ounkomol, C., Seshamani, S., Maleckar, M.M. et al. Label-free prediction of three-dimensional fluorescence images from transmitted-light microscopy. Nat Methods 15, 917–920 (2018). https://doi.org/10.1038/s41592-018-0111-2"
+        doi: https://doi.org/10.1038/s41592-018-0111-2        
+        
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
@@ -512,6 +582,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Elias Nehme, Lucien E. Weiss, Tomer Michaeli, and Yoav Shechtman, "Deep-STORM: super-resolution single-molecule microscopy by deep learning," Optica 5, 458-464 (2018)"
+        doi: https://doi.org/10.1364/OPTICA.5.000458
+
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
     covers:
@@ -537,6 +611,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, Alexei A. Efros. Image-to-Image Translation with Conditional Adversarial Networks. arXiv:1611.07004."
+        doi: https://arxiv.org/abs/1611.07004
+                
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -555,12 +633,19 @@ application:
       - Notebook Preview
       - Dataset_pix2pix_ZeroCostDL4Mic
 
+
+
+
   - id: Notebook_CycleGAN_2D_ZeroCostDL4Mic
     name: CycleGAN (2D) - ZeroCostDL4Mic
     description: CycleGAN is a method that can capture the characteristics of one image domain and figure out how these characteristics could be translated into another image domain, all in the absence of any paired training examples (ie transform a horse into zebra or apples into oranges). While CycleGAN can potentially be used for any type of image-to-image translation, we illustrate that it can be used to predict what a fluorescent label would look like when imaged using another imaging modalities. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Jun-Yan Zhu, Taesung Park, Phillip Isola, Alexei A. Efros. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. arXiv:1703.10593"
+        doi: https://arxiv.org/abs/1703.10593        
+
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -579,12 +664,19 @@ application:
       - Notebook Preview
       - Dataset_CycleGAN_ZeroCostDL4Mic
 
+
+
+
   - id: Notebook_Augmentor_ZeroCostDL4Mic
     name: Augmentor - ZeroCostDL4Mic
     description: Augmentor is a data augmentation library. Data augmentation can improve training progress by amplifying differences in the dataset. This can be useful if the available dataset is small since, in this case, it is possible that a network could quickly learn every example in the dataset (overfitting), without augmentation. Augmentation can be especially valuable when training dataset need to be manually labelled. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Marcus D Bloice, Peter M Roth, Andreas Holzinger, Biomedical image augmentation using Augmentor, Bioinformatics, Volume 35, Issue 21, 1 November 2019, Pages 4522–4524, https://doi.org/10.1093/bioinformatics/btz259"
+        doi: https://doi.org/10.1093/bioinformatics/btz259
+
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:    
@@ -601,12 +693,19 @@ application:
     links:
       - Notebook Preview
 
+
+
+
   - id: Notebook_DenoiSeg_2D_ZeroCostDL4Mic
     name: DenoiSeg (2D) - ZeroCostDL4Mic
     description: DenoiSeg 2D is deep-learning method that can be used to jointly denoise and segment 2D microscopy images. The benefits of using DenoiSeg (compared to other Deep Learning-based segmentation methods) are more prononced when only a few annotated images are available. However, the denoising part requires many images to perform well. All the noisy images don't need to be labeled to train DenoiSeg. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Buchholz TO., Prakash M., Schmidt D., Krull A., Jug F. (2020) DenoiSeg: Joint Denoising and Segmentation. In: Bartoli A., Fusiello A. (eds) Computer Vision – ECCV 2020 Workshops. ECCV 2020. Lecture Notes in Computer Science, vol 12535. Springer, Cham. https://doi.org/10.1007/978-3-030-66415-2_21"
+        doi: https://doi.org/10.1007/978-3-030-66415-2_21
+        
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -622,12 +721,18 @@ application:
     links:
       - Notebook Preview
 
+
+
+
   - id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
     name: Deep-STORM (2D) - ZeroCostDL4Mic - DeepImageJ
     description: Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ and ThunderSTORM plugin.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+      - text: "Elias Nehme, Lucien E. Weiss, Tomer Michaeli, and Yoav Shechtman, "Deep-STORM: super-resolution single-molecule microscopy by deep learning," Optica 5, 458-464 (2018)"
+        doi: https://doi.org/10.1364/OPTICA.5.000458
+
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
@@ -645,6 +750,8 @@ application:
     links:
       - Notebook Preview
       - Dataset_Deep-STORM_ZeroCostDL4Mic
+
+
       
   - id: Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
     name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
@@ -652,6 +759,9 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+      - text: "Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, Olaf Ronneberger. 3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation. https://arxiv.org/abs/1606.06650"
+        doi: https://arxiv.org/abs/1606.06650   
+
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
@@ -675,6 +785,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597"
+        doi: https://arxiv.org/abs/1505.04597
+        
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
@@ -691,12 +805,18 @@ application:
     links:
       - Notebook Preview
 
+
+
+
   - id: Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
     name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
     description: U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+      - text: "Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597"
+        doi: https://arxiv.org/abs/1505.04597
+        
     authors:
       - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic teams
     covers:
@@ -712,6 +832,7 @@ application:
     links:
       - Notebook Preview
 
+
       
   - id: Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
     name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
@@ -719,6 +840,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30"
+        doi: https://doi.org/10.1007/978-3-030-00934-2_30
+        
     authors:
       - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
     covers:
@@ -737,6 +862,8 @@ application:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview      
+
+
       
   - id: Notebook_RCAN_3D_ZeroCostDL4Mic
     name: RCAN (3D) - ZeroCostDL4Mic
@@ -744,6 +871,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Chen, J., Sasaki, H., Lai, H. et al. Three-dimensional residual channel attention networks denoise and sharpen fluorescence microscopy image volumes. Nat Methods 18, 678–687 (2021). https://doi.org/10.1038/s41592-021-01155-x"
+        doi: https://doi.org/10.1038/s41592-021-01155-x        
+        
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -760,12 +891,18 @@ application:
       - Notebook Preview
       - Dataset_CARE_3D_ZeroCostDL4Mic
 
+
+
   - id: Notebook_SplineDist_2D_ZeroCostDL4Mic
     name: SplineDist (2D) - ZeroCostDL4Mic
     description: SplineDist is a neural network inspired by StarDist, capable of performing image instance segmentation. Unlike StarDist, SplineDist uses cubic splines to describe the contour of each object and therefore can potentially segment objects of any shapes. This version is only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Soham Mandal, Virginie Uhlmann. SplineDist: Automated Cell Segmentation With Spline Curves. bioRxiv 2020.10.27.357640; doi: https://doi.org/10.1101/2020.10.27.357640"
+        doi: https://doi.org/10.1101/2020.10.27.357640
+                
     authors:
       - Romain F. Laine and the ZeroCostDL4Mic Team
     covers:
@@ -786,19 +923,23 @@ application:
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
 
+
+
+
   - id: Notebook_YOLOv2_ZeroCostDL4Mic
     name: YOLOv2 - ZeroCostDL4Mic
     description: YOLOv2 is an object detection network developed by Redmon & Farhadi, which identifies objects in images and draws bounding boxes around them. 
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "J. Redmon and A. Farhadi, YOLO9000: Better, Faster, Stronger, 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 6517-6525, doi: 10.1109/CVPR.2017.690."
+        doi: https://doi.org/10.1109/CVPR.2017.690
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
-    
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook.png
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_notebook_2.png    
-
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
@@ -811,12 +952,19 @@ application:
       - Notebook Preview
       - Dataset_YOLOv2_ZeroCostDL4Mic      
 
+
+
+
   - id: Notebook_Detectron2_ZeroCostDL4Mic
     name: Detectron2 - ZeroCostDL4Mic
     description: Detectron2 is an object detection network developed by Facebook AI Research, which identifies objects in images and draws bounding boxes around them. 
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Yuxin Wu and Alexander Kirillov and Francisco Massa and Wan-Yen Lo and Ross Girshick. Detectron2. https://github.com/facebookresearch/detectron2"
+        doi: https://github.com/facebookresearch/detectron2        
+        
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -834,12 +982,18 @@ application:
       - Notebook Preview
       - Dataset_YOLOv2_ZeroCostDL4Mic
 
+
+
   - id: Notebook_DRMIME_ZeroCostDL4Mic
     name: DRMIME - ZeroCostDL4Mic
     description: DRMIME is an network that can be used to register microscopy images (affine and perspective registration). 
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Abhishek Nan, Matthew Tennant, Uriel Rubin, Nilanjan Ray. DRMIME: Differentiable Mutual Information and Matrix Exponential for Multi-Resolution Image Registration. Proceedings of the Third Conference on Medical Imaging with Deep Learning, PMLR 121:527-543, 2020."
+        doi: http://proceedings.mlr.press/v121/nan20a.html
+
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -854,6 +1008,8 @@ application:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+
+
       
   - id: Notebook_Cellpose_2D_ZeroCostDL4Mic
     name: Cellpose (2D and 3D) - ZeroCostDL4Mic
@@ -861,6 +1017,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Stringer, C., Wang, T., Michaelos, M. et al. Cellpose: a generalist algorithm for cellular segmentation. Nat Methods 18, 100–106 (2021). https://doi.org/10.1038/s41592-020-01018-x"
+        doi: https://doi.org/10.1038/s41592-020-01018-x        
+        
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:    
@@ -885,6 +1045,8 @@ application:
       - Dataset_StarDist_brightfield_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
+
+
   
   - id: Notebook_RetinaNet_ZeroCostDL4Mic
     name: RetinaNet - ZeroCostDL4Mic
@@ -892,6 +1054,10 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He, Piotr Dollár. Focal Loss for Dense Object Detection. arXiv:1708.02002"
+        doi: https://arxiv.org/abs/1708.02002        
+        
     authors:
       - Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
     covers:
@@ -909,12 +1075,18 @@ application:
       - Notebook Preview
       - Dataset_YOLOv2_ZeroCostDL4Mic
 
+
+
   - id: Notebook_DecoNoising_2D_ZeroCostDL4Mic
     name: DecoNoising (2D) - ZeroCostDL4Mic
     description: DecoNoising 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Anna S. Goncharova, Alf Honigmann, Florian Jug, Alexander Krull. Improving Blind Spot Denoising for Microscopy. arXiv:2008.08414"
+        doi: https://arxiv.org/abs/2008.08414
+                
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -938,6 +1110,9 @@ application:
     cite:
       - text: "Ouyang W, Le T, Xu H and Lundberg E. Interactive biomedical segmentation tool powered by deep learning and ImJoy [version 1; peer review: 1 approved, 1 approved with reservations]. F1000Research 2021, 10:142 (https://doi.org/10.12688/f1000research.50798.1)"
         doi: https://doi.org/10.12688/f1000research.50798.1
+        
+      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
+        doi: https://doi.org/10.1038/s41467-021-22518-0        
     authors:
       - Romain Laine, Wei Ouyang and the ZeroCostDL4Mic Team
     covers:
@@ -963,6 +1138,11 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick. Mask R-CNN
+. arXiv:1703.06870."
+        doi: https://arxiv.org/abs/1703.06870        
+        
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
     covers:
@@ -977,6 +1157,8 @@ application:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+
+
       
   - id: Notebook_Quality_Control_ZeroCostDL4Mic
     name: Quality Control - ZeroCostDL4Mic
@@ -984,6 +1166,9 @@ application:
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
+      - text: "Laine, R.F., Arganda-Carreras, I., Henriques, R. et al. Avoiding a replication crisis in deep-learning-based bioimage analysis. Nat Methods 18, 1136–1144 (2021). https://doi.org/10.1038/s41592-021-01284-3"
+        doi: https://doi.org/10.1038/s41592-021-01284-3
+
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:
@@ -998,6 +1183,8 @@ application:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+
+
 
   - id: Notebook_DFCAN_ZeroCostDL4Mic
     name: DFCAN - ZeroCostDL4Mic
@@ -1023,14 +1210,19 @@ application:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
+
+
       
   - id: Notebook_EmbedSeg_2D_ZeroCostDL4Mic
     name: EmbedSeg (2D) - ZeroCostDL4Mic
     description: EmbedSeg 2D is a deep-learning method that can be used to segment object from bioimages and was first published by Lalit et al. in 2021, on arXiv. 
     cite:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
-        doi: https://doi.org/10.1038/s41467-021-22518-0    
- 
+        doi: https://doi.org/10.1038/s41467-021-22518-0
+        
+      - text: "Manan Lalit, Pavel Tomancak, Florian Jug. Embedding-based Instance Segmentation in Microscopy. arXiv:2101.10033."
+        doi: https://arxiv.org/abs/2101.10033             
+
     authors:
       - Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team
     covers:    
