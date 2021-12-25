@@ -36,7 +36,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3715492
     tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
-    source: https://doi.org/10.5281/zenodo.3715492
+    download_url: https://doi.org/10.5281/zenodo.3715492
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
 
@@ -50,7 +50,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3713315
     tags: [Noise2Void, denoising, ZeroCostDL4Mic, 2D]
-    source: https://doi.org/10.5281/zenodo.3713315
+    download_url: https://doi.org/10.5281/zenodo.3713315
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/N2V_wiki.png
 
@@ -64,7 +64,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3713326
     tags: [Noise2Void, denoising, ZeroCostDL4Mic, 3D]
-    source: https://doi.org/10.5281/zenodo.3713326
+    download_url: https://doi.org/10.5281/zenodo.3713326
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/N2V_3D_dataset.png
 
@@ -78,7 +78,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3713330
     tags: [CARE, denoising, ZeroCostDL4Mic, 2D]
-    source: https://doi.org/10.5281/zenodo.3713330
+    download_url: https://doi.org/10.5281/zenodo.3713330
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
 
@@ -92,7 +92,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3713337
     tags: [CARE, denoising, ZeroCostDL4Mic, 3D]
-    source: https://doi.org/10.5281/zenodo.3713337
+    download_url: https://doi.org/10.5281/zenodo.3713337
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/CARE_wiki.png
 
@@ -106,7 +106,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3748967
     tags: [fnet, labelling, ZeroCostDL4Mic, 3D]
-    source: https://doi.org/10.5281/zenodo.3748967
+    download_url: https://doi.org/10.5281/zenodo.3748967
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Fnet_exemplary_data_mitochondria.png
 
@@ -120,8 +120,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3959089
     tags: [SMLM, Deep-STORM, ZeroCostDL4Mic, 2D]
-    source: https://doi.org/10.5281/zenodo.3959089
-
+    download_url: https://doi.org/10.5281/zenodo.3959089
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/DeepSTORM_dataset.png
 
@@ -135,8 +134,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3941884
     tags: [CycleGAN, ZeroCostDL4Mic]
-    source: https://doi.org/10.5281/zenodo.3941884
-
+    download_url: https://doi.org/10.5281/zenodo.3941884
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png
 
@@ -150,8 +148,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3941889
     tags: [pix2pix, ZeroCostDL4Mic]
-    source: https://doi.org/10.5281/zenodo.3941889
-
+    download_url: https://doi.org/10.5281/zenodo.3941889
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/pix2pix_dataset.png
 
@@ -165,8 +162,7 @@ dataset:
     documentation: >-
       https://doi.org/10.5281/zenodo.3941908
     tags: [YOLOv2, ZeroCostDL4Mic]
-    source: https://doi.org/10.5281/zenodo.3941908
-
+    download_url: https://doi.org/10.5281/zenodo.3941908
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/yolo_dataset.png
 
@@ -184,9 +180,7 @@ dataset:
     documentation: >-
       https://zenodo.org/record/4034976
     tags: [StarDist, ZeroCostDL4Mic]
-    source: https://zenodo.org/record/4034976
     download_url: https://zenodo.org/record/4034976
-
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png
 
@@ -204,7 +198,6 @@ dataset:
     documentation: >-
       https://zenodo.org/record/4034929
     tags: [StarDist, ZeroCostDL4Mic]
-    source: https://zenodo.org/record/4034929
     download_url: https://zenodo.org/record/4034929
 
     covers:
@@ -223,9 +216,7 @@ dataset:
     documentation: >-
       https://zenodo.org/record/4034939
     tags: [StarDist, ZeroCostDL4Mic]
-    source: https://zenodo.org/record/4034939
     download_url: https://zenodo.org/record/4034939
-
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png
 
@@ -241,9 +232,7 @@ dataset:
     documentation: >-
       https://zenodo.org/record/4811213
     tags: [StarDist, ZeroCostDL4Mic]
-    source: https://zenodo.org/record/4811213
     download_url: https://zenodo.org/record/4811213
-
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/Moreno_dataset_stardist.png
 
@@ -260,9 +249,7 @@ dataset:
     documentation: >-
       https://zenodo.org/record/5750174
     tags: [denoising, CARE, Noise2Void, DecoNoising, ZeroCostDL4Mic]
-    source: https://zenodo.org/record/5750174
     download_url: https://zenodo.org/record/5750174
-
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/NoisyNuclei_dataset.png
 
@@ -278,7 +265,7 @@ dataset:
     authors: [Mia Conduit, Séamus Holden]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
-    source: https://zenodo.org/record/5639253
+    download_url: https://zenodo.org/record/5639253
     covers:
       - https://zenodo.org/api/iiif/v2/8ba101cf-97ac-4e68-9fff-4cc130b5ea81:93b67447-8b0a-4053-a522-9c141623ca6f:A_Multilabel_U-Net_example_B.subtilis.png/full/750,/0/default.png
 
@@ -291,7 +278,7 @@ dataset:
     authors: [Spahn Christoph, Heilemann Mike]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [U-Net, segmentation, DeepBacs, 2D]
-    source: https://zenodo.org/record/5550935
+    download_url: https://zenodo.org/record/5550935
     covers:
       - https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png
 
@@ -304,7 +291,7 @@ dataset:
     authors: [Christoph Spahn, Mike Heilemann, Mia Conduit, Séamus Holden, Pedro Matos Pereira, Mariana Pinho]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [StarDist, segmentation, DeepBacs, 2D]
-    source: https://zenodo.org/record/5551009
+    download_url: https://zenodo.org/record/5551009
     covers:
       - https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png
 
@@ -318,7 +305,7 @@ dataset:
     authors: [Christoph Spahn, Mike Heilemann]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [StarDist, segmentation, DeepBacs, 2D]
-    source: https://zenodo.org/record/5550935
+    download_url: https://zenodo.org/record/5550935
     covers:
       - https://zenodo.org/api/iiif/v2/c6dca42a-62cd-423d-8216-b2ae20dab6a3:790a798b-26b2-425b-b1b6-9545d89daa7d:A_Segmentation_E.coli_large_FoV.png/full/750,/0/default.png
       
@@ -331,7 +318,7 @@ dataset:
     authors: [Mia Conduit, Séamus Holden]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [Noise2Void, denoising, DeepBacs, 2D]
-    source: https://zenodo.org/record/5551135
+    download_url: https://zenodo.org/record/5551135
     covers:
       - https://zenodo.org/api/iiif/v2/effa726a-dcdb-47a5-bd2e-63a4a6648ca7:aad7cd51-d389-4cf3-a84e-2d93d1891f20:B.subtilis_VerCINI_examples.png/full/750,/0/default.png
             
@@ -344,7 +331,7 @@ dataset:
     authors: [Christoph Spahn, Mike Heilemann]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [Noise2Void, CARE, denoising, DeepBacs, 2D]
-    source: https://zenodo.org/record/5551112
+    download_url: https://zenodo.org/record/5551112
     covers:
       - https://zenodo.org/api/iiif/v2/0417c6d1-0fe3-4d48-bc5a-dfaee6398433:532d7c49-5961-4d61-8ba2-a040f2f19cfd:A_E.coli_H-NS_mScarlet_examples.png/full/750,/0/default.png
 
@@ -357,7 +344,7 @@ dataset:
     authors: [Christoph Spahn, Mike Heilemann]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [fnet, CARE, artificial labelling, DeepBacs, 2D]
-    source: https://zenodo.org/record/5551123
+    download_url: https://zenodo.org/record/5551123
     covers:
       - https://zenodo.org/api/iiif/v2/850bd89d-e7ca-4009-80ad-865819df1b6d:c18f2e19-3761-4852-8034-4cefcf7ca318:Artificial_labeling.png/full/750,/0/default.png
 
@@ -370,7 +357,7 @@ dataset:
     authors: [Christoph Spahn, Mike Heilemann]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [YOLOv2, object detection, DeepBacs, 2D]
-    source: https://zenodo.org/record/5551016
+    download_url: https://zenodo.org/record/5551016
     covers:
       - https://zenodo.org/api/iiif/v2/e30f5766-cc61-4a7c-9d36-30681f2dcbc2:677b2046-5d0b-49df-b231-b5470b6fcbc8:A_Object_detection_cell_cycle.png/full/750,/0/default.png
 
@@ -383,7 +370,7 @@ dataset:
     authors: [Christoph Spahn, Mike Heilemann]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [YOLOv2, object detection, DeepBacs, 2D]
-    source: https://zenodo.org/record/5551057
+    download_url: https://zenodo.org/record/5551057
     covers:
       - https://zenodo.org/api/iiif/v2/5b4a4304-ea44-47ce-9c75-4a069bfc9536:e3c27642-4605-42c3-ad3c-1e120917b97e:Antibiotic_profiling_examples.png/full/750,/0/default.png
 
@@ -394,7 +381,7 @@ dataset:
 
 application:
   - id: Notebook Preview
-    source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
+    download_url: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 
 
 
@@ -420,7 +407,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -449,7 +436,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -481,7 +468,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -514,7 +501,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -544,7 +531,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -578,7 +565,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -610,7 +597,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -645,7 +632,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -676,7 +663,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -707,7 +694,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -737,7 +724,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -765,7 +752,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -796,7 +783,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -826,7 +813,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -854,7 +841,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -883,7 +870,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -911,7 +898,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -938,7 +925,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -966,7 +953,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel, ZeroCostDL4Mic, 2D]
-    source: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
+    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -998,7 +985,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1031,7 +1018,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/3D-RCAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1059,7 +1046,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1093,7 +1080,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1125,7 +1112,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1155,7 +1142,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1187,7 +1174,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1220,7 +1207,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1249,7 +1236,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1282,7 +1269,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1308,7 +1295,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1334,7 +1321,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, Quality Control, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1361,7 +1348,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1389,7 +1376,7 @@ application:
         url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic]
-    source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
@@ -1398,7 +1385,3 @@ application:
       - Dataset_StarDist_brightfield_ZeroCostDL4Mic
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
-
-
-
- 
