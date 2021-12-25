@@ -381,10 +381,7 @@ dataset:
 
 application:
   - id: Notebook Preview
-    download_url: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
-
-
-
+    source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 
   - id: Notebook_U-Net_2D_ZeroCostDL4Mic
     name: U-Net (2D) - ZeroCostDL4Mic
