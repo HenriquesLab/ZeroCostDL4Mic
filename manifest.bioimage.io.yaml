@@ -1001,7 +1001,6 @@ application:
     source: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
-    links:
       - Notebook Preview
       - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
       - Dataset_StarDist_Fluo_ZeroCostDL4Mic
