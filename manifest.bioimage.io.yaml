@@ -4,7 +4,7 @@ name: ZeroCost4Mic Collection
 tags: [zero, bioimage.io]
 description: "Resources for BioImgage.IO curated by the ZeroCost4Mic team."
 authors: []
-
+documentation: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
 maintainers: []
 
 cite:
