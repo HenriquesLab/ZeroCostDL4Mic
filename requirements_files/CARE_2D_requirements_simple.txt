@@ -27,7 +27,7 @@ scikit-learn==0.22.2.post1
 sortedcontainers==2.3.0
 tblib==1.7.0
 tensorboard==1.15.0
-tensorflow==1.15.2
+tensorflow==2.5.3
 termcolor==1.1.0
 tifffile==2021.2.26
 toolz==0.11.1
