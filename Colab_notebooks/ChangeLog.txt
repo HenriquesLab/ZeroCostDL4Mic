@@ -7,6 +7,28 @@ https://www.biorxiv.org/content/10.1101/2020.03.20.000133v4
 Latest releases available here:
 https://github.com/HenriquesLab/ZeroCostDL4Mic/releases
 
+—————————————————————————————————————————————————————————
+ZeroCostDL4Mic v1.13
+
+Major changes:
+- added a new export of requirements.txt file with minimal packages, better compatibility with local runtime sessions
+- Beta notebooks: new notebooks available: Detectron2 (object detection), MaskRCNN (object detection and segmentation), DRMIME (image registration), Cellpose (image segmentation) (2D) and DecoNoising (denoising) (2D).
+- Addition of the Interactive segmentation - Cellpose notebook, using Kaibu and ImJoy, big thanks to Wei Ouyang for helping us get this up and running. 
+- Tools: A notebook to perform Quality Control has been added
+- Noise2Void 2D and 3D now use the latest code release based on TensorFlow 2
+- The version check is now done on a per-notebook basis, making release of individual notebooks easier.
+- U-Net 3D imports Keras libraries via TensorFlow.
+- Section 1 and 2 in the notebooks have been swapped for a better flow and improved capabilities for export of requirements.txt
+- Each notebook now includes a version log, that will be individually amended when doing individual notebook releases.
+- Fnet: A 2D notebook was added, the fnet notebooks have an additional cell that creates the data files, Fnet 3D's re-training cell now   has a module to reduce images in the buffer, just as the main training cell (to avoid OOM error).
+- YOLOv2: The repository is now saved in the content folder of colab rather than the users gdrive, consistent with other notebooks , Commented code was removed.
+
++ minor bug fixes
+
+Beta notebooks:
+- model export to BioImage Model Zoo format for DeepImageJ for 2D U-Net, 3D U-Net and Deep-STORM
+- Cellpose notebook now exports PDF during training and QC. Cellpose now trains using Torch. The new Cyto2 model is also available.
+
 
 —————————————————————————————————————————————————————————
 ZeroCostDL4Mic v1.12
