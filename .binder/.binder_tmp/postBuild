@@ -1,0 +1,19 @@
+jupyter labextension uninstall --all
+jupyter labextension install @eddienko/jupyterlab-colabinspired-codecellbtn \
+                @eddienko/jupyterlab-colabinspired-theme-light \
+                imjoy-jupyter-extension \
+                @jupyterlab/toc \
+                @jupyterlab/katex-extension \
+                @jupyterlab/mathjax3-extension \
+                @jupyterlab/katex-extension \
+                @jupyterlab/server-proxy \
+                @epi2melabs/jupyterlab-play-cell-button \
+                @epi2melabs/jupyterlab-code-cell-collapser \
+                jupyterlab-execute-time \
+                @jupyterlab/google-drive \
+                @jupyter-widgets/jupyterlab-manager
+                # dask-labextension \
+                # @jupyterlab/git \
+                # @jupyterlab/apputils \
+                # @jupyterlab/celltags \
+jupyter labextension enable

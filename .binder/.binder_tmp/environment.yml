@@ -1,0 +1,39 @@
+name: gpu-binder
+channels:
+    - nvidia
+    - anaconda
+    - conda-forge
+dependencies:
+#   - tensorflow-gpu
+  - pip
+  - cudatoolkit
+  - python
+  - cudnn
+  - matplotlib
+#   - keras-gpu
+  - cxx-compiler
+  - ipykernel
+  - python
+  - gcc_linux-64
+  - nvcc_linux-64
+  - nccl
+  - cmake
+  - nvidia-ml
+  - cupti
+  - zarr
+#   - torch
+  - tensorflow
+  - nodejs
+  - ipython
+  - jupyter
+  - jupyterlab=2.2.0
+  - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - jupyterlab_widgets
+  - opencv
+  - pip:
+#     - tensorflow
+    - jupyterlab-git
+    - -r requirements.txt
+#     - torch
+

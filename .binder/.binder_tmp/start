@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# # Allow drivers installed by the nvidia-driver-installer to be located
+# export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/nvidia/lib64
+# # Also, utilities like `nvidia-smi` are installed here
+# export PATH=${PATH}:/usr/local/nvidia/bin
+
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CONDA_PREFIX/lib64}:${CONDA_PREFIX}/lib64/lib:/usr/local/nvidia/lib64
+
+# Also, utilities like `nvidia-smi` are installed here
+export PATH=${PATH}:/usr/local/nvidia/bin
+
+
+exec "$@"
