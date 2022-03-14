@@ -9,6 +9,8 @@
 
 ## Binder
 
+    git clone --branch jupyter https://github.com/HenriquesLab/ZeroCostDL4Mic
+
 ## Binder local (repo2docker)
 
 Install [repo2docker](https://github.com/jupyterhub/repo2docker), using conda, pip 
