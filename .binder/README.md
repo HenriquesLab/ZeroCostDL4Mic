@@ -50,6 +50,7 @@ To run a notebook (e.g. StarDist2D)
     jupyter
 
 or 
+    
     jupyter lab
 
 
