@@ -12,9 +12,9 @@ Detectron 2D,1.13
 fnet (2D),1.13.1
 fnet (3D),1.13
 U-Net (2D),1.13
-U-Net (2D) multilabel,1.14
 U-Net (3D),1.13
-U-Net (2D) BioimageIO,1.13
+U-Net (2D) multilabel BioimageIO,1.14
+U-Net (2D) BioimageIO,1.14
 U-Net (3D) BioimageIO,1.14
 Kaibu,1.13.1
 MaskRCNN,1.13
