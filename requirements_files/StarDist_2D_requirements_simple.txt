@@ -20,7 +20,7 @@ multiprocess==0.70.11.1
 numba==0.51.2
 numcodecs==0.7.3
 numexpr==2.7.2
-numpy==1.19.5
+numpy==1.21.0
 oauth2client==4.1.3
 pandas==1.1.5
 portpicker==1.3.1
