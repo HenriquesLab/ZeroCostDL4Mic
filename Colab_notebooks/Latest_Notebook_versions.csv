@@ -12,8 +12,8 @@ Detectron 2D,1.13
 fnet (2D),1.13.1
 fnet (3D),1.13
 U-Net (2D),1.13
-U-Net (2D) multilabel,1.13
 U-Net (3D),1.13
+U-Net (2D) multilabel BioimageIO,1.13
 U-Net (2D) BioimageIO,1.13
 U-Net (3D) BioimageIO,1.13
 Kaibu,1.13.2
@@ -23,7 +23,7 @@ Noise2Void (3D),1.13
 pix2pix,1.13
 SplineDist (2D),1.13.1
 StarDist 2D,1.13
-StarDist 2D BioimageIO,1.13
+StarDist 2D BioimageIO,1.14
 StarDist 3D,1.13
 YOLOv2,1.13
 Quality_control,1.13
