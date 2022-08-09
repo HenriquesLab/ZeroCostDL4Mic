@@ -15,7 +15,7 @@ U-Net (2D),1.13
 U-Net (3D),1.13
 U-Net (2D) multilabel BioimageIO,1.15
 U-Net (2D) BioimageIO,1.15
-U-Net (3D) BioimageIO,1.14
+U-Net (3D) BioimageIO,1.15
 Kaibu,1.13.2
 MaskRCNN,1.13
 Noise2Void (2D),1.13.1
