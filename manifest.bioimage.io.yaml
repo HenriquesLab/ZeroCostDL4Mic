@@ -457,7 +457,7 @@ collection:
         doi: https://arxiv.org/abs/1606.06650       
         
     authors:
-      - Daniel Krentzel and the ZeroCostDL4Mic Team
+      - Daniel Krentzel and Estibaliz Gómez de Mariscal andthe ZeroCostDL4Mic Team
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
     badges:
@@ -921,64 +921,6 @@ collection:
       - Dataset_Deep-STORM_ZeroCostDL4Mic
 
 
-      
-  - type: application
-    id: Notebook_U-Net_3D_ZeroCostDL4Mic_DeepImageJ
-    name: U-Net (3D) - ZeroCostDL4Mic - DeepImageJ
-    description: 3D binary segmentation. The 3D U-Net was first introduced by Çiçek et al for learning dense volumetric segmentations from sparsely annotated ground-truth data building upon the original U-Net architecture by Ronneberger et al. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ.
-    cite:
-      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
-        doi: https://doi.org/10.1038/s41467-021-22518-0
-      - text: "Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, Olaf Ronneberger. 3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation. https://arxiv.org/abs/1606.06650"
-        doi: https://arxiv.org/abs/1606.06650   
-
-    authors:
-      - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
-    covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/3D_Unet_notebook.png
-
-    badges:
-      - label: Open in Colab
-        icon: https://colab.research.google.com/assets/colab-badge.svg
-        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, deepimagej]
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_3D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-      - Notebook Preview
-
-
-  - type: application
-    id: Notebook_U-Net_2D_ZeroCostDL4Mic_DeepImageJ
-    name: U-Net (2D) - ZeroCostDL4Mic - DeepImageJ
-    description: 2D binary segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ.
-    cite:
-      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
-        doi: https://doi.org/10.1038/s41467-021-22518-0
-        
-      - text: "Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597"
-        doi: https://arxiv.org/abs/1505.04597
-        
-    authors:
-      - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
-    covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Unet_notebook.png
-
-    badges:
-      - label: Open in Colab
-        icon: https://colab.research.google.com/assets/colab-badge.svg
-        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-      - Notebook Preview
-
-
-
-
   - type: application
     id: Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
     name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
@@ -997,53 +939,14 @@ collection:
     badges:
       - label: Open in Colab
         icon: https://colab.research.google.com/assets/colab-badge.svg
-        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel, ZeroCostDL4Mic, 2D]
-    download_url: https://github.com/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
+    download_url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
       - Dataset_U-Net_2D_multilabel_DeepBacs
-
-
-      
-  - type: application
-    id: Notebook_StarDist_2D_ZeroCostDL4Mic_DeepImageJ
-    name: StarDist (2D) - ZeroCostDL4Mic - DeepImageJ
-    description: 2D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ and StarDist plugins for ImageJ.
-    cite:
-      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
-        doi: https://doi.org/10.1038/s41467-021-22518-0
-        
-      - text: "Uwe Schmidt, Martin Weigert, Coleman Broaddus, Gene Myers. Cell Detection with Star-Convex Polygons. MICCAI 2018 (2018). https://doi.org/10.1007/978-3-030-00934-2_30"
-        doi: https://doi.org/10.1007/978-3-030-00934-2_30
-        
-    authors:
-      - Estibaliz Gómez de Mariscal and the deepImageJ and the ZeroCostDL4Mic teams
-    covers:
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/2D_Stardist_notebook.png
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png          
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingflo_trackmate.png        
-      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingfluo_trackmate.png    
-
-    badges:
-      - label: Open in Colab
-        icon: https://colab.research.google.com/assets/colab-badge.svg
-        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
-    tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, deepimagej]
-    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/StarDist_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
-    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
-    links:
-      - Notebook Preview
-      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
-      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
-      - Dataset_StarDist_2D_DeepBacs     
-
 
       
   - type: application
