@@ -9,7 +9,7 @@ cloudpickle==1.1.1
 Cython==0.29.32
 dask==2.12.0
 data==0.4
-distributed==1.25.3
+distributed==2021.10.0
 elasticdeform==0.4.9
 entrypoints==0.4
 fasteners==0.17.3

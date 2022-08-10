@@ -12,7 +12,7 @@ configparser==5.2.0
 csbdeep==0.7.2
 Cython==0.29.32
 dask==2.12.0
-distributed==1.25.3
+distributed==2021.10.0
 entrypoints==0.4
 fasteners==0.17.3
 fastrlock==0.8
