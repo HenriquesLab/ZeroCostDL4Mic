@@ -29,7 +29,7 @@ msgpack==1.0.4
 netCDF4==1.6.0
 numcodecs==0.10.2
 numexpr==2.8.3
-numpy==1.21.6
+numpy==1.22.0
 oauth2client==4.1.3
 packaging==21.3
 pandas==1.3.5
