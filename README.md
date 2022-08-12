@@ -1,5 +1,3 @@
-**IMPORTANT NOTE:** Due to the recent update of Google Colab that has stopped supporting TensorFlow 1, some of the notebooks are not working at the moment. We are working on it and hopefully we will solve this in the next days.
-
 # ZeroCostDL4Mic: exploiting Google Colab to develop a free and open-source toolbox for Deep-Learning in microscopy
 
 _**Tl;dr**_: this [**wiki page**][wikiPage] has everything you need to get started.
