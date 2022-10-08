@@ -20,7 +20,7 @@ Noise2Void (2D),1.15
 Noise2Void (3D),1.15
 pix2pix,1.13
 SplineDist (2D),1.14
-StarDist 2D,1.16.3
+StarDist 2D,1.16.4
 StarDist 3D,1.15.1
 YOLOv2,1.13
 Quality_control,1.13
