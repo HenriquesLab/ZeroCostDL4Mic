@@ -8,25 +8,25 @@ dependencies:
   - pip
   - cudatoolkit
   - python
-  - cudnn
+  # - cudnn
   - matplotlib
 #   - keras-gpu
   - cxx-compiler
   - ipykernel
   - python
-  - gcc_linux-64
-  - nvcc_linux-64
-  - nccl
+  # - gcc_linux-64
+  # - nvcc_linux-64
+  # - nccl
   - cmake
   - nvidia-ml
-  - cupti
+  # - cupti
   - zarr
 #   - torch
   - tensorflow
   - nodejs
   - ipython
   - jupyter
-  - jupyterlab=2.2.0
+  - jupyterlab
   - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
   - jupyterlab_widgets
