@@ -25,7 +25,7 @@ scipy==1.4.1
 six==1.15.0
 tblib==1.7.0
 tensorboard==1.15.0
-tensorflow==1.15.2
+tensorflow==2.9.3
 termcolor==1.1.0
 toolz==0.11.1
 tqdm==4.41.1

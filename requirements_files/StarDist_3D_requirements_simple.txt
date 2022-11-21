@@ -36,7 +36,7 @@ sortedcontainers==2.3.0
 stardist==0.6.2
 tblib==1.7.0
 tensorboard==2.4.1
-tensorflow==2.4.1
+tensorflow==2.9.3
 termcolor==1.1.0
 tifffile==2021.2.26
 toolz==0.11.1

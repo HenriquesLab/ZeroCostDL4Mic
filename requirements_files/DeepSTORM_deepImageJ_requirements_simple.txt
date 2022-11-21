@@ -38,7 +38,7 @@ six==1.15.0
 sortedcontainers==2.4.0
 tblib==1.7.0
 tensorboard==1.15.0
-tensorflow==1.15.0
+tensorflow==2.9.3
 termcolor==1.1.0
 threadpoolctl==3.1.0
 tifffile==2021.11.2
