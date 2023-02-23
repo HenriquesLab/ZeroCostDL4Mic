@@ -13,7 +13,7 @@ idna==2.10
 image==1.5.33
 imagecodecs==2021.2.26
 imageio==2.4.1
-joblib==1.0.1
+joblib==1.2.0
 multiprocess==0.70.11.1
 n2v==0.2.1
 numexpr==2.7.2

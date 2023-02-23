@@ -9,7 +9,7 @@ h5py==2.10.0
 httplib2==0.17.4
 image==1.5.33
 imageio==2.4.1
-joblib==1.0.1
+joblib==1.2.0
 multiprocess==0.70.11.1
 numexpr==2.7.2
 numpy==1.19.5

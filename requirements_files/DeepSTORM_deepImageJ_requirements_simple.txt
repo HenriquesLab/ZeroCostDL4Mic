@@ -13,7 +13,7 @@ httplib2==0.17.4
 idna==2.10
 imagecodecs==2021.11.20
 imageio==2.9.0
-joblib==1.1.0
+joblib==1.2.0
 keras==2.9.0
 llvmlite==0.39.0
 numba==0.56.0

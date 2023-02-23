@@ -8,7 +8,7 @@ httplib2==0.17.4
 image==1.5.33
 imageio==2.4.1
 imgaug==0.2.9
-joblib==1.0.1
+joblib==1.2.0
 multiprocess==0.70.11.1
 numpy==1.19.5
 oauth2client==4.1.3

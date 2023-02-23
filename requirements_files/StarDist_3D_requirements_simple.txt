@@ -16,7 +16,7 @@ httplib2==0.17.4
 idna==2.10
 image==1.5.33
 imageio==2.4.1
-joblib==1.0.1
+joblib==1.2.0
 llvmlite==0.34.0
 multiprocess==0.70.11.1
 numba==0.51.2
