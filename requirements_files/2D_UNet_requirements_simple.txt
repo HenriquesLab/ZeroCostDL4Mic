@@ -168,7 +168,7 @@ inflect==2.1.0
 intel-openmp==2023.0.0
 intervaltree==2.1.0
 ipykernel==5.3.4
-ipython==7.9.0
+ipython==8.10.0
 ipython-genutils==0.2.0
 ipython-sql==0.3.9
 ipywidgets==7.7.1
