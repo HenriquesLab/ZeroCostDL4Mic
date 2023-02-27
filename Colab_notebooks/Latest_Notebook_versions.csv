@@ -13,7 +13,7 @@ fnet (2D),1.14
 fnet (3D),1.13
 U-Net (2D),2.0
 U-Net (3D),2.0
-U-Net (2D) multilabel,1.15
+U-Net (2D) multilabel,2.0
 Kaibu,1.13.2
 MaskRCNN,1.13
 Noise2Void (2D),1.15
