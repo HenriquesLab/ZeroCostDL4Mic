@@ -3,7 +3,7 @@ asciitree==0.3.3
 astropy==4.3.1
 astunparse==1.6.3
 atomicwrites==1.4.1
-certifi==2022.6.15
+certifi==2022.12.7
 cftime==1.6.1
 chardet==3.0.4
 click==7.1.2
