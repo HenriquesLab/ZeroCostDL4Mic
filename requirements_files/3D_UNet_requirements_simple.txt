@@ -231,7 +231,7 @@ netCDF4==1.6.2
 networkx==3.0
 nibabel==3.0.2
 nltk==3.7
-notebook==6.3.0
+notebook==6.4.12
 numba==0.56.4
 numcodecs==0.11.0
 numexpr==2.8.4
