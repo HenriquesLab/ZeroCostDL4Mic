@@ -108,7 +108,7 @@ fpdf==1.7.2
 frozenlist==1.3.3
 fsspec==2023.1.0
 funcsigs==1.0.2
-future==0.16.0
+future==0.18.3
 gast==0.4.0
 GDAL==3.3.2
 gdown==4.4.0
