@@ -171,7 +171,7 @@ intervaltree==2.1.0
 ipykernel==5.3.4
 ipython==7.9.0
 ipython-genutils==0.2.0
-ipython-sql==0.3.9
+jupysql==0.6.2
 ipywidgets==7.7.1
 itsdangerous==1.1.0
 jax==0.3.25
