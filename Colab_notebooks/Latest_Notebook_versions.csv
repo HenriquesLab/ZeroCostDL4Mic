@@ -1,28 +1,28 @@
 Notebook,Version
 3D RCAN,1.13.1
-CARE (2D),1.15.1
-CARE (3D),1.15.1
+CARE (2D),1.15
+CARE (3D),1.15
 Cellpose,1.15.5
-CycleGAN,1.13.1
+CycleGAN,1.13
 DecoNoising,1.13.1
-Deep-STORM,1.13.1
+Deep-STORM,1.13
 Deep-STORM BioimageIO,1.13
 DenoiSeg,1.14
 Detectron 2D,1.13
-fnet (2D),1.14.1
-fnet (3D),1.13.1
-U-Net (2D),2.1.1
-U-Net (3D),2.1.1
-U-Net (2D) multilabel,2.1.1
+fnet (2D),1.14
+fnet (3D),1.13
+U-Net (2D),2.1
+U-Net (3D),2.1
+U-Net (2D) multilabel,2.1
 Kaibu,1.13.2
 MaskRCNN,1.13
-Noise2Void (2D),1.15.1
-Noise2Void (3D),1.15.1
-pix2pix,1.15.2
+Noise2Void (2D),1.15
+Noise2Void (3D),1.15
+pix2pix,1.15
 SplineDist (2D),1.14
-StarDist 2D,1.18.1
-StarDist 3D,1.15.3
-YOLOv2,1.13.1
+StarDist 2D,1.18
+StarDist 3D,1.15.2
+YOLOv2,1.13
 Quality_control,1.13
 Augmentor,1.13
 DRMIME,1.13
