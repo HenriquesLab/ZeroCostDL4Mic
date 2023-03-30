@@ -1288,8 +1288,6 @@ collection:
     links:
       - Notebook Preview
 
-
-
   - type: application
     id: Notebook_DFCAN_ZeroCostDL4Mic
     name: DFCAN - ZeroCostDL4Mic
@@ -1312,6 +1310,31 @@ collection:
     documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
     tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/DFCAN_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    links:
+      - Notebook Preview
+
+  - type: application
+    id: WGAN_ZeroCostDL4Mic.ipynb
+    name: WGAN - ZeroCostDL4Mic
+    description: Super-resolution via super-pixelisation. Wasserstein GAN (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Gulrajani I. et al. arXiv 2017. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible. 
+    cite:
+      - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
+        doi: https://doi.org/10.1038/s41467-021-22518-0
+      - text: "Gulrajani, I., Ahmed, F., Arjovsky, M., Dumoulin, V. and Courville, A. Improved Training of Wasserstein GANs. arXiv. 2017 doi: https://doi.org/10.48550/arXiv.1704.00028."
+        doi: https://doi.org/10.48550/arXiv.1704.00028       
+    authors:
+      - Ivan Hidalgo, Estibaliz Gómez de Mariscal, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
+    covers:
+      - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/Images/WGAN_notebook.png
+      
+    badges:
+      - label: Open in Colab
+        icon: https://colab.research.google.com/assets/colab-badge.svg
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Beta%20notebooks/WGAN_ZeroCostDL4Mic.ipynb
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    tags: [colab, notebook, WGAN, Super Resolution, ZeroCostDL4Mic]
+    download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Beta%20notebooks/WGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
