@@ -17,7 +17,7 @@ U-Net (2D) multilabel,2.1
 Kaibu,1.13.2
 MaskRCNN,1.13
 Noise2Void (2D),1.16
-Noise2Void (3D),1.15
+Noise2Void (3D),1.16
 pix2pix,1.15
 SplineDist (2D),1.14
 StarDist 2D,1.18
