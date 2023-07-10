@@ -313,7 +313,7 @@ pysimdjson==3.2.0
 PySocks==1.7.1
 pystan==3.3.0
 pytest==3.6.4
-python-apt==2.0.1
+python-apt==0.7.8
 python-dateutil==2.8.2
 python-louvain==0.16
 python-slugify==8.0.0
