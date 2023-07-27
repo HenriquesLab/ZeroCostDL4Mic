@@ -810,7 +810,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Jun-Yan Zhu, Taesung Park, Phillip Isola, Alexei A. Efros. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. arXiv:1703.10593"
-        doi: https://arxiv.org/abs/1703.10593        
+        url: https://arxiv.org/abs/1703.10593        
 
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
