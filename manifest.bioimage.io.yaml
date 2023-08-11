@@ -413,7 +413,7 @@ collection:
   #------------------------------------- Notebooks ---------------------------------------------
 
   - type: application
-    id: Notebook Preview
+    id: notebook_preview
     source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 
   - type: application
