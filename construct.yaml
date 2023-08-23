@@ -1,0 +1,14 @@
+name: Miniconda
+version: "2.5.5"
+channels:
+  - "http://repo.continuum.io/pkgs/main/"
+environment_file: .binder/environment.yml
+#license_file: EULA.txt
+# welcome_image: photo.png  # [win]
+# Pip dependencies are NOT recommended. If you do need them
+# uncomment the line below and edit `pip-dependencies.sh`.
+#post_install: pip-dependencies.sh
+
+# do not edit below this line
+# ---------------------------
+installer_type: all
