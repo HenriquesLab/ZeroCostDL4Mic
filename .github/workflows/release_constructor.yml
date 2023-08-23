@@ -1,0 +1,48 @@
+
+name: Create Draft Release and Upload Assets
+
+on:
+  create: # This will trigger the workflow when a tag is created
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: true
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+
+    # Upload assets for each OS. Repeat this step for each OS if your previous workflow created multiple artifacts
+    - name: Upload Release Asset (Ubuntu)
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the create release step
+        asset_path: ./dist/main/ubuntu-artifact-name.extension # Change to your file's name and path
+        asset_name: ubuntu-artifact-name.extension # Change to your file's name
+        asset_content_type: application/octet-stream
+
+    - name: Upload Release Asset (MacOS)
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/main/macos-artifact-name.extension
+        asset_name: macos-artifact-name.extension
+        asset_content_type: application/octet-stream
+
+    - name: Upload Release Asset (Windows)
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/main/windows-artifact-name.extension
+        asset_name: windows-artifact-name.extension
+        asset_content_type: application/octet-stream
