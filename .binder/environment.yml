@@ -14,7 +14,8 @@ dependencies:
   - cudatoolkit
   - jupyterlab_widgets
   - ipyfilechooser
-  # - jupyterlab-extensions
+  - constructor
+    # - jupyterlab-extensions
   - nodejs
   # - cuda-driver
   - pip:
