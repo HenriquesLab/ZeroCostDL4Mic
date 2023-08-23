@@ -16,7 +16,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
-          environment-file: environment.yml
+          environment-file: .binder/environment.yml
           python-version: ${{ matrix.python-version }}
       - name: Conda info
         shell: bash -el {0}
