@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "/home/ctr26/miniconda3/envs/dl4mic/bin/python",
+    "python.formatting.provider": "black",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
+

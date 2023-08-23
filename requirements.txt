@@ -1,0 +1,15 @@
+keras
+# tensorflow==1.15.2
+n2v
+wget
+fpdf
+memory_profiler
+numpy
+matplotlib
+tifffile
+pandas
+scipy
+scikit-image
+sklearn
+astropy
+h5py
