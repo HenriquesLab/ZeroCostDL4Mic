@@ -1,0 +1,26 @@
+# name: base
+channels:
+  - conda-forge
+  - anaconda
+  # - hcc
+dependencies:
+  # - beakerx
+  - pip
+  - python
+  - jupyter
+  - jupyterlab=2.2.0
+  - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - cudatoolkit
+  - jupyterlab_widgets
+  - ipyfilechooser
+  - constructor
+    # - jupyterlab-extensions
+  - nodejs
+  # - cuda-driver
+  - pip:
+    - jupyterlab-git
+  #   - -r file:requirements.txt
+# jupyterlab_play_cell_button
+# jlab-enhanced-cell-toolbar
+# imjoy-jupyter-extension
