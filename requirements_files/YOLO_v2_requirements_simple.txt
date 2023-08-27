@@ -12,6 +12,7 @@ joblib==1.0.1
 multiprocess==0.70.11.1
 numpy==1.19.5
 oauth2client==4.1.3
+opencv-python==4.8.0.76
 portpicker==1.3.1
 prettytable==2.0.0
 psutil==5.4.8
