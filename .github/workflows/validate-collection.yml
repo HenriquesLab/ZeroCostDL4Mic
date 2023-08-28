@@ -1,0 +1,16 @@
+name: Validate Collection
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: install bioimageio.spec
+      run: pip install bioimageio.spec lxml
+    - name: validate collection
+      run: bioimageio validate-partner-collection manifest.bioimage.io.yaml
