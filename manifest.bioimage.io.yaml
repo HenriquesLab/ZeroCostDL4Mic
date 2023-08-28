@@ -425,7 +425,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597"
-        doi: https://arxiv.org/abs/1505.04597
+        url: https://arxiv.org/abs/1505.04597
                 
     authors:
       - Romain Laine and the ZeroCostDL4Mic Team
@@ -454,7 +454,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, Olaf Ronneberger. 3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation. https://arxiv.org/abs/1606.06650"
-        doi: https://arxiv.org/abs/1606.06650       
+        url: https://arxiv.org/abs/1606.06650       
         
     authors:
       - Daniel Krentzel and Estibaliz Gómez de Mariscal andthe ZeroCostDL4Mic Team
@@ -521,7 +521,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Martin Weigert, Uwe Schmidt, Robert Haase, Ko Sugawara, Gene Myers. Star-convex Polyhedra for 3D Object Detection and Segmentation in Microscopy. 	arXiv. https://arxiv.org/abs/1908.03636"
-        doi: https://arxiv.org/abs/1908.03636
+        url: https://arxiv.org/abs/1908.03636
                 
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
@@ -778,7 +778,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, Alexei A. Efros. Image-to-Image Translation with Conditional Adversarial Networks. arXiv:1611.07004."
-        doi: https://arxiv.org/abs/1611.07004
+        url: https://arxiv.org/abs/1611.07004
                 
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
@@ -810,7 +810,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Jun-Yan Zhu, Taesung Park, Phillip Isola, Alexei A. Efros. Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. arXiv:1703.10593"
-        doi: https://arxiv.org/abs/1703.10593        
+        url: https://arxiv.org/abs/1703.10593        
 
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
@@ -929,7 +929,7 @@ collection:
       - text: "von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0"
         doi: https://doi.org/10.1038/s41467-021-22518-0
       - text: "Olaf Ronneberger, Philipp Fischer, Thomas Brox. U-Net: Convolutional Networks for Biomedical Image Segmentation. arXiv:1505.04597. https://arxiv.org/abs/1505.04597"
-        doi: https://arxiv.org/abs/1505.04597
+        url: https://arxiv.org/abs/1505.04597
         
     authors:
       - Estibaliz Gómez de Mariscal and the ZeroCostDL4Mic team
@@ -1152,7 +1152,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He, Piotr Dollár. Focal Loss for Dense Object Detection. arXiv:1708.02002"
-        doi: https://arxiv.org/abs/1708.02002        
+        url: https://arxiv.org/abs/1708.02002        
         
     authors:
       - Erlantz Calvo, Ignacio Arganda-Carreras and the ZeroCostDL4Mic Team
@@ -1183,7 +1183,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Anna S. Goncharova, Alf Honigmann, Florian Jug, Alexander Krull. Improving Blind Spot Denoising for Microscopy. arXiv:2008.08414"
-        doi: https://arxiv.org/abs/2008.08414
+        url: https://arxiv.org/abs/2008.08414
                 
     authors:
       - Guillaume Jacquemet and the ZeroCostDL4Mic Team
@@ -1244,7 +1244,7 @@ collection:
         
       - text: "Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick. Mask R-CNN
 . arXiv:1703.06870."
-        doi: https://arxiv.org/abs/1703.06870        
+        url: https://arxiv.org/abs/1703.06870        
         
     authors:
       - Lucas von Chamier and the ZeroCostDL4Mic Team
@@ -1350,7 +1350,7 @@ collection:
         doi: https://doi.org/10.1038/s41467-021-22518-0
         
       - text: "Manan Lalit, Pavel Tomancak, Florian Jug. Embedding-based Instance Segmentation in Microscopy. arXiv:2101.10033."
-        doi: https://arxiv.org/abs/2101.10033             
+        url: https://arxiv.org/abs/2101.10033             
 
     authors:
       - Amin Rezaei, Guillaume Jacquemet and the ZeroCostDL4Mic Team
