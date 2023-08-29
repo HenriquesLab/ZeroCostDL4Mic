@@ -7,6 +7,6 @@ tqdm==4.19.5
 scikit-image==0.17.1
 argschema
 scipy==1.4.1
-torch==1.4.0
+torch==1.13.1
 astropy==3.2.3
 fpdf2==2.7.4
