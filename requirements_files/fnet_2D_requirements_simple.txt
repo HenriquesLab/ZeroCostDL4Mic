@@ -1,5 +1,5 @@
 astropy==3.2.3
-certifi==2020.12.5
+certifi==2023.7.22
 chardet==3.0.4
 fpdf==1.7.2
 gast==0.2.2
