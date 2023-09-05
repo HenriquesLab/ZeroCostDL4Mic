@@ -33,7 +33,7 @@ requests==2.23.0
 rsa==4.9
 scikit-image==0.17.2
 scikit-learn==1.0.2
-scipy==1.7.3
+scipy==1.10.0
 six==1.15.0
 sortedcontainers==2.4.0
 tblib==1.7.0

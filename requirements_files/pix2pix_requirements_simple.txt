@@ -12,7 +12,7 @@ psutil==5.4.8
 py==1.10.0
 scikit-image==0.16.2
 scikit-learn==0.22.2.post1
-scipy==1.4.1
+scipy==1.10.0
 sortedcontainers==2.3.0
 tblib==1.7.0
 tifffile==2021.2.26

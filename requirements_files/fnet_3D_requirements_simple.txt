@@ -6,7 +6,7 @@ tifffile==2019.7.26
 tqdm==4.19.5
 scikit-image==0.17.1
 argschema
-scipy==1.4.1
+scipy==1.10.0
 torch==1.4.0
 astropy==3.2.3
 fpdf2==2.7.4
