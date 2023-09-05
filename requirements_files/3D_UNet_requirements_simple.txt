@@ -15,7 +15,7 @@ matplotlib==3.7.1
 numpy==1.22.4
 pandas==1.5.3
 pip==23.1.2
-requests==2.27.1
+requests==2.31.0
 scikit-image==0.19.3
 scipy==1.10.1
 tensorflow==2.12.0
