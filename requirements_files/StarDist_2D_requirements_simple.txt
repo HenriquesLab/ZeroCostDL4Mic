@@ -1,6 +1,6 @@
 # Requirements for StarDist_2D_ZeroCostDL4Mic.ipynb
 PTable==0.9.2
-Pillow==9.4.0
+Pillow==10.0.1
 astropy==5.2.2
 csbdeep==0.7.4
 fpdf2==2.7.4

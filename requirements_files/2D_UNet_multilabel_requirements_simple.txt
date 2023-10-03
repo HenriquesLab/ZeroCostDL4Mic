@@ -1,6 +1,6 @@
 # Requirements for U_Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
 PTable==0.9.2
-Pillow==8.4.0
+Pillow==10.0.1
 bioimageio.core==0.5.9
 data==0.4
 fpdf2==2.7.4

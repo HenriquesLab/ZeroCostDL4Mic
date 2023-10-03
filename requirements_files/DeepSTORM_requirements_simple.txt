@@ -1,5 +1,5 @@
 # Requirements for Deep_STORM_2D_ZeroCostDL4Mic.ipynb
-Pillow==9.4.0
+Pillow==10.0.1
 astropy==5.2.2
 fpdf2==2.7.4
 google==2.0.3
