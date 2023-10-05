@@ -11,7 +11,7 @@ google==2.0.3
 h5py==2.10.0
 httplib2==0.17.4
 idna==2.10
-imagecodecs==2021.11.20
+imagecodecs==2023.9.18
 imageio==2.9.0
 joblib==1.1.0
 keras==2.9.0
