@@ -5,9 +5,8 @@ channels:
   # - hcc
 dependencies:
   # - beakerx
-  - python=3.7:x
   - pip
-  - python
+  - python=3.8
   - jupyter
   - jupyterlab=2.2.0
   - jupyter_contrib_nbextensions
@@ -18,8 +17,10 @@ dependencies:
   - constructor
     # - jupyterlab-extensions
   - nodejs
+  - tensorflow
   # - cuda-driver
   - pip:
+    - tensorflow-gpu==1.15.0
     - jupyterlab-git
   #   - -r file:requirements.txt
 # jupyterlab_play_cell_button
