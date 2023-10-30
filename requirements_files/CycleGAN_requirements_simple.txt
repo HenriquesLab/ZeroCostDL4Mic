@@ -1,5 +1,6 @@
 # Requirements for CycleGAN_ZeroCostDL4Mic.ipynb
 astropy==5.2.2
+Augmentor==0.2.12
 dominate>=2.4.0, < 2.8.5
 fpdf2==2.7.4
 google==2.0.3
