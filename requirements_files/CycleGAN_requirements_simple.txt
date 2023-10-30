@@ -4,9 +4,11 @@ fpdf2==2.7.4
 google==2.0.3
 imageio==2.25.1
 ipywidgets==8.0.7
+lpips==0.1.4
 matplotlib==3.7.1
 numexpr==2.8.4
 numpy==1.22.4
+opencv-python==4.5.3.56
 pandas==1.5.3
 pathlib==1.0.1
 pip==23.1.2
@@ -15,5 +17,5 @@ scikit-learn==1.2.2
 scipy==1.10.1
 tensorflow==2.12.0
 tifffile==2023.7.10
-torch @ https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp310-cp310-linux_x86_64.whl#sha256=a7a49d459bf4862f64f7bc1a68beccf8881c2fa9f3e0569608e16ba6f85ebf7b
+torch==2.0.1
 tqdm==4.65.0
