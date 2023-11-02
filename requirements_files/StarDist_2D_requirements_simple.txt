@@ -26,3 +26,4 @@ tifffile==2023.7.18
 tqdm==4.65.0
 wget==3.2
 zarr==2.16.0
+bioimageio.core 
