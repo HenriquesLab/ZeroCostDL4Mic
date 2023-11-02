@@ -7,7 +7,6 @@ fpdf2==2.7.4
 future==0.18.3
 google==2.0.3
 h5py==3.8.0
-imagecodecs==2023.7.10
 imageio==2.25.1
 imgaug==0.4.0
 ipywidgets==8.0.7
