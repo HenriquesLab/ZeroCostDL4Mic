@@ -290,6 +290,7 @@ collection:
     cite:
       - text: "Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152"
         doi: https://doi.org/10.1101/2021.11.03.467152
+    authors: [Mia Conduit, Séamus Holden]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [U-Net, multilabel, segmentation, DeepBacs, 2D]
     download_url: https://zenodo.org/record/5639253
@@ -304,7 +305,6 @@ collection:
       - text: "Christoph Spahn, Romain F. Laine, Pedro Matos Pereira, Estibaliz Gómez-de-Mariscal, Lucas von Chamier, Mia Conduit, Mariana Gomes de Pinho, Guillaume Jacquemet, Séamus Holden, Mike Heilemann, Ricardo Henriques DeepBacs: Bacterial image analysis using open-source deep learning approaches. bioRxiv 2021.11.03.467152; doi: https://doi.org/10.1101/2021.11.03.467152"
         doi: https://doi.org/10.1101/2021.11.03.467152
     authors: [Spahn Christoph, Heilemann Mike]
-    authors: [Mia Conduit, Séamus Holden]
     documentation: https://github.com/HenriquesLab/DeepBacs/wiki      
     tags: [U-Net, segmentation, DeepBacs, 2D]
     download_url: https://zenodo.org/record/5550935
