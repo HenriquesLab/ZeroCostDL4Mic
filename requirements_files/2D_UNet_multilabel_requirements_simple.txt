@@ -6,7 +6,6 @@ data==0.4
 fpdf2==2.7.4
 future==0.18.3
 google==2.0.3
-imagecodecs==2023.1.23
 ipywidgets==8.0.7
 matplotlib==3.7.1
 numexpr==2.8.4
