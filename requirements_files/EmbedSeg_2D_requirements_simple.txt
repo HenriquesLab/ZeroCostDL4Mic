@@ -1,0 +1,15 @@
+embedseg
+matplotlib
+numpy
+scipy
+tifffile
+numba
+tqdm
+jupyter
+pandas
+seaborn
+scikit-image
+colorspacious
+pytest
+imagecodecs
+pycocotools
