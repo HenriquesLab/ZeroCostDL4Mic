@@ -11,5 +11,4 @@ seaborn
 scikit-image
 colorspacious
 pytest
-imagecodecs
 pycocotools
