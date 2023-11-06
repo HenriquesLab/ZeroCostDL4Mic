@@ -1,3 +1,11 @@
+wget
+fpdf
+h5py
+torch==2.1.0
+torchvision==0.16.0
+tabulate
+astropy==5.3.4
+scikit-learn==1.3.2
 embedseg
 matplotlib
 numpy
