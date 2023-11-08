@@ -1,0 +1,20 @@
+# Requirements for SplineDist2D_ZeroCostDL4Mic.ipynb
+
+astropy==5.2.1
+csbdeep==0.7.3
+opencv-python==4.7.0.72
+fpdf2==2.7.4
+ipywidgets==8.1.1
+matplotlib==3.5.0
+numpy==1.22.4
+pandas==1.5.3
+pip==21.2.4
+scipy==1.10.1
+scikit-image==0.19.3
+scikit-learn==1.0.1
+splinedist==0.1.2
+tabulate==0.9.0
+tensorflow==2.12.0
+tifffile==2023.2.27
+tqdm==4.65.0
+wget==3.2
