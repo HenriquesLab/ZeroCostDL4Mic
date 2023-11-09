@@ -1,4 +1,4 @@
-# Requirements for 3D-RCAN_ZeroCostDL4Mic.ipynb
+# Requirements for 3D_RCAN_ZeroCostDL4Mic.ipynb
 
 astropy==5.2.1
 fpdf2==2.7.4
