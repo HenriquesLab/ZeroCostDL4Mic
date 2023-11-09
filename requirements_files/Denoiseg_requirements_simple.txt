@@ -1,0 +1,19 @@
+# Requirements for Denoiseg_ZeroCostDL4Mic.ipynb
+
+astropy==5.2.1
+csbdeep==0.7.0
+denoiseg==0.3.0
+fpdf2==2.7.4
+imageio==2.23.0
+ipywidgets==8.1.1
+matplotlib==3.5.0
+numexpr==2.8.4
+numpy==1.22.4
+pandas==1.5.3
+pip==21.2.4
+scipy==1.10.1
+scikit-image==0.19.3
+scikit-learn==1.0.1
+tensorflow==2.12.0
+tifffile==2023.2.27
+wget==3.2
