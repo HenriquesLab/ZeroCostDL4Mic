@@ -11,6 +11,7 @@ DenoiSeg,1.14.1
 Detectron 2D,1.14.1
 fnet (2D),1.14.1
 fnet (3D),1.13.1
+U-Net (1D) for FCS,2.1.2
 U-Net (2D),2.1.1
 U-Net (3D),2.1.2
 U-Net (2D) multilabel,2.1.2
