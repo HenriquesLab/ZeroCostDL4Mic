@@ -1,7 +1,7 @@
 # Requirements for Denoiseg_ZeroCostDL4Mic.ipynb
 
 astropy==5.2.1
-csbdeep==0.7.0
+csbdeep==0.7.2
 denoiseg==0.3.0
 fpdf2==2.7.4
 imageio==2.23.0
