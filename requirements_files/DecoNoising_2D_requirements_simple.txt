@@ -14,4 +14,5 @@ scikit-learn==1.0.1
 tensorflow==2.12.0
 tifffile==2023.2.27
 torch==2.0.0
+torchvision==0.15.1
 wget==3.2
