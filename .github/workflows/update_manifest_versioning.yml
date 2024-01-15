@@ -8,10 +8,11 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: install requirements
+      - name: Install requirements
         run: pip install -r requirements.txt
-      - name: update all the configurations
+      - name: Update the manifest
         run: python3 Tools/update_manifest_versioning.py
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit the changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: GitHub Action - Update manifest versioning
