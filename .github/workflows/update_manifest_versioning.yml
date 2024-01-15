@@ -1,0 +1,17 @@
+name: Update versioning on the manifest
+on:
+  workflow_dispatch:
+
+jobs:
+  update_configuration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: install requirements
+        run: pip install -r requirements.txt
+      - name: update all the configurations
+        run: python3 Tools/update_manifest_versioning.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: GitHub Action - Update manifest versioning
