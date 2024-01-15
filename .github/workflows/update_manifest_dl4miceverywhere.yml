@@ -1,0 +1,30 @@
+name: Update the manifest with DL4MiceEverywhere information
+on:
+  workflow_dispatch:
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone ZeroCostDL4Mic repository
+        uses: actions/checkout@v4
+        with:
+            path: ZeroCostDL4Mic
+        
+      - name: Clone DL4MicEverywhere repository
+        uses: actions/checkout@v4
+        with:
+            repository: HenriquesLab/DL4MicEverywhere
+            path: DL4MicEverywhere
+      - name: Install requirements
+        working-directory: ./ZeroCostDL4Mic
+        run: pip install -r Tools/CI_requirements.txt
+      - name: Update the manifest
+        working-directory: ./ZeroCostDL4Mic
+        run: python3 Tools/update_manifest_dl4miceverywhere.py
+      - name: Commit the changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+            repository: ./ZeroCostDL4Mic
+            commit_message: GitHub Action - Update manifest with DL4MiceEverywhere information
+          

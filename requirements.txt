@@ -26,13 +26,11 @@ multiprocess
 numba
 numpy
 oauth2client
-pandas
 py
 pyasn1
 pydot
 requests
 rsa
-ruamel.yaml==0.17.40
 scikit-image
 scikit-learn
 scipy

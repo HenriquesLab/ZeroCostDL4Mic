@@ -9,7 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Install requirements
-        run: pip install -r requirements.txt
+        run: pip install -r Tools/CI_requirements.txt
       - name: Update the manifest
         run: python3 Tools/update_manifest_versioning.py
       - name: Commit the changes
