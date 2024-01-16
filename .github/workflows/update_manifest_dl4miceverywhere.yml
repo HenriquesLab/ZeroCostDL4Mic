@@ -1,5 +1,9 @@
 name: Update the manifest with DL4MiceEverywhere information
 on:
+  # At 05:30 AM and 05:30 PM of every day
+  schedule:
+    - cron: "30 5 * * *"
+    - cron: "30 17 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,7 +14,6 @@ jobs:
         uses: actions/checkout@v4
         with:
             path: ZeroCostDL4Mic
-        
       - name: Clone DL4MicEverywhere repository
         uses: actions/checkout@v4
         with:
@@ -19,7 +22,10 @@ jobs:
       - name: Install requirements
         working-directory: ./ZeroCostDL4Mic
         run: pip install -r Tools/CI_requirements.txt
-      - name: Update the manifest
+      - name: Update the versioning on the manifest
+        working-directory: ./ZeroCostDL4Mic
+        run: python3 Tools/update_manifest_versioning.py
+      - name: Update the DL4MicEverywhere information on the manifest
         working-directory: ./ZeroCostDL4Mic
         run: python3 Tools/update_manifest_dl4miceverywhere.py
       - name: Commit the changes
