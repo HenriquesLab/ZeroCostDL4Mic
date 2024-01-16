@@ -25,6 +25,8 @@ def main():
             # Check the version based on the ID of the notebook
             notebook_version = all_notebook_versions[all_notebook_versions["Notebook"] == dict_manifest_to_version[element['id']]]['Version'].iloc[0]
             new_element['version'] = notebook_version
+            if 'dl4miceverywhere' not in  element['tags']
+                new_element['tags'].append('dl4miceverywhere')
         
         new_collection.append(new_element)
 
