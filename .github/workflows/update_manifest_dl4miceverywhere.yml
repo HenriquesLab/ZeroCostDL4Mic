@@ -1,9 +1,8 @@
 name: Update the manifest with DL4MiceEverywhere information
 on:
-  # At 05:30 AM and 05:30 PM of every day
+  # At 05:30 AM of every day
   schedule:
     - cron: "30 5 * * *"
-    - cron: "30 17 * * *"
   workflow_dispatch:
 
 jobs:
