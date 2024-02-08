@@ -4,7 +4,7 @@ numpy==1.18.0
 pandas>=0.21.1
 tifffile==2019.7.26
 tqdm==4.19.5
-scikit-image==0.17.1
+scikit-image==0.18.0
 argschema
 scipy==1.4.1
 torch==1.4.0
