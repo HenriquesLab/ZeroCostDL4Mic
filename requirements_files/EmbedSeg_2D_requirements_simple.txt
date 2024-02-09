@@ -1,6 +1,6 @@
+astropy==6.0.0
 torch<=1.9.0
 torchvision<=0.10.0
-numpy==1.20.0
 scikit-learn==1.3.2
 embedseg==0.2.3
 wget
@@ -19,3 +19,4 @@ scikit-image
 colorspacious
 pytest
 pycocotools
+numpy==1.20.0
