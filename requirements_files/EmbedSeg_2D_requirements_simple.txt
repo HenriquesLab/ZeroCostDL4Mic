@@ -1,7 +1,7 @@
 wget
 fpdf
 h5py
-torch<=1.7.*
+torch<1.8
 torchvision==0.8.2
 tabulate
 astropy==4.2
