@@ -1,3 +1,4 @@
+numpy==1.20.0
 astropy==6.0.0
 torch<=1.9.0
 torchvision<=0.10.0
@@ -19,4 +20,4 @@ scikit-image
 colorspacious
 pytest
 pycocotools
-numpy==1.20.0
+
