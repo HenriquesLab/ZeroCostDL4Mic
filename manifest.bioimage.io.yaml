@@ -910,7 +910,7 @@ collection:
     links:
       - Notebook Preview
       - Dataset_pix2pix_ZeroCostDL4Mic
-    version: 1.17.0
+    version: 1.17.1
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
