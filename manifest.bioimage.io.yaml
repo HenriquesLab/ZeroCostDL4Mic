@@ -1649,7 +1649,7 @@ collection:
     config:
       dl4miceverywhere:
         cuda_version: 11.7.1
-        cudnn_version: 8.6.0.163
+        cudnn_version: 8.5.0.96
         description: EmbedSeg_2D_DL4Mic is the conversion of the 2D EmbedSeg from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.0.0
         docker_hub_image: embedseg_2d_zerocostdl4mic-z1.15.0-d2.0.0
