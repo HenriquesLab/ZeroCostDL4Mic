@@ -743,16 +743,16 @@ collection:
     links:
       - Notebook Preview
       - Dataset_CARE_3D_ZeroCostDL4Mic
-    version: 1.15.2
+    version: 1.15.3
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: CARE_3D_DL4Mic is the conversion of the 3D CARE from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.0.0
-        docker_hub_image: care_3d_zerocostdl4mic-z1.15.2-d2.0.0
+        docker_hub_image: care_3d_zerocostdl4mic-z1.15.3-d2.0.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.15.2
+        notebook_version: 1.15.3
         python_version: '3.9'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/CARE_3D_requirements_simple.txt
         sections_to_remove: 1.1. 1.2. 2. 6.2.
