@@ -917,9 +917,9 @@ collection:
         cudnn_version: 8.6.0.163
         description: pix2pix_DL4Mic is the conversion of the pix2pix from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.0.0
-        docker_hub_image: pix2pix_zerocostdl4mic-z1.17.1-d2.0.0
+        docker_hub_image: pix2pix_zerocostdl4mic-z1.17.2-d2.0.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.17.1
+        notebook_version: 1.17.2
         python_version: '3.8'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/pix2pix_requirements_simple.txt
         sections_to_remove: 2. 6.3.
