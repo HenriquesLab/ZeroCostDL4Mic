@@ -7,7 +7,7 @@ def main():
     dict_manifest_to_dl4miceverywhere = {value: key for key, value in dict_dl4miceverywhere_to_manifest.items()}
 
     # Read the information from the manifest
-    with open('manifest.bioimage.io.yaml', 'r') as f:
+    with open('manifest.bioimage.io.yaml', 'r', encoding='utf8') as f:
         yaml = YAML()
         yaml.preserve_quotes = True
         manifest_data = yaml.load(f)
@@ -40,7 +40,7 @@ def main():
     manifest_data['collection'] = new_collection
 
     # Write the new collection
-    with open('manifest.bioimage.io.yaml', 'w') as f:
+    with open('manifest.bioimage.io.yaml', 'w', encoding='utf8') as f:
         yaml = YAML()
         yaml.preserve_quotes = True
         yaml.default_flow_style = False
