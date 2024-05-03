@@ -4,6 +4,7 @@ astropy==5.2.2
 csbdeep==0.7.4
 fpdf2==2.7.4
 future==0.18.3
+h5py==3.10.0
 google==2.0.3
 matplotlib==3.7.1
 memory-profiler==0.61.0

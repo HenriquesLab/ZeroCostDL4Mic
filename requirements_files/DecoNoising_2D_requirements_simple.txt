@@ -2,6 +2,7 @@
 
 astropy==5.2.1
 fpdf2==2.7.4
+h5py==3.10.0
 matplotlib==3.5.0
 numexpr==2.8.4
 numpy==1.22.4

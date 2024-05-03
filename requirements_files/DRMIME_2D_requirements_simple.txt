@@ -2,6 +2,7 @@
 
 astropy==5.2.1
 opencv-python==4.7.0.72
+h5py==3.10.0
 ipython==8.4.0
 ipywidgets==8.1.1
 matplotlib==3.5.0

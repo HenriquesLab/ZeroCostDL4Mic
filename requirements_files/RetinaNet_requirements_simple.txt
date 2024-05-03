@@ -4,6 +4,7 @@ colorama==0.4.6
 opencv-python==4.7.0.72
 fpdf2==2.7.4
 future==0.18.2
+h5py==3.10.0
 imageio==2.23.0
 imgaug==0.4.0
 keras==2.12.0

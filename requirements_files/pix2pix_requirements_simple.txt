@@ -5,6 +5,7 @@ bioimageio.core==0.5.11
 dominate>=2.4.0, < 2.8.5
 fpdf2==2.7.4
 google==2.0.3
+h5py==3.10.0
 imageio==2.25.1
 ipywidgets==8.0.7
 lpips==0.1.4

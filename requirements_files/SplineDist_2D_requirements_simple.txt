@@ -4,6 +4,7 @@ astropy==5.2.1
 csbdeep==0.7.3
 opencv-python==4.7.0.72
 fpdf2==2.7.4
+h5py==3.10.0
 ipywidgets==8.1.1
 matplotlib==3.5.0
 numpy==1.22.4

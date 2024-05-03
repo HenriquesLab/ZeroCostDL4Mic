@@ -4,6 +4,7 @@ cellpose==2.2.3
 folium==0.2.1
 fpdf2==2.7.5
 google==2.0.3
+h5py==3.10.0
 imgaug==0.2.5
 ipywidgets==8.1.0
 matplotlib==3.7.1

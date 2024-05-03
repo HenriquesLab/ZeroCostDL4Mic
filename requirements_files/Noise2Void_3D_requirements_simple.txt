@@ -3,6 +3,7 @@ astropy==5.2.2
 csbdeep==0.7.3
 fpdf2==2.7.4
 google==2.0.3
+h5py==3.10.0
 matplotlib==3.7.1
 memory-profiler==0.61.0
 n2v==0.3.2

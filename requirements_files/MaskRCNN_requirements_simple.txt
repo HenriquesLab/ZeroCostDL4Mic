@@ -1,6 +1,7 @@
 # Requirements for MaskRCNN_ZeroCostDL4Mic.ipynb
 
 fpdf2==2.7.4
+h5py==3.10.0
 imgaug==0.4.0
 ipython==8.4.0
 matplotlib==3.5.0

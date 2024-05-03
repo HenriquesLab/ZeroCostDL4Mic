@@ -1,6 +1,7 @@
 # Requirements for Detectron2_2D_ZeroCostDL4Mic.ipynb
 
 astropy==5.2.1
+h5py==3.10.0
 opencv-python==4.7.0.72
 matplotlib==3.5.0
 numpy==1.22.4

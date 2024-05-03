@@ -4,6 +4,7 @@ astropy==5.2.1
 csbdeep==0.7.2
 denoiseg==0.3.0
 fpdf2==2.7.4
+h5py==3.10.0
 imageio==2.23.0
 ipywidgets==8.1.1
 matplotlib==3.5.0
