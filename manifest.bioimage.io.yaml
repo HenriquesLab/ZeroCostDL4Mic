@@ -441,7 +441,7 @@ collection:
     links:
       - Notebook Preview
       - Dataset_U-Net_2D_DeepBacs
-    version: 2.1.1
+    version: 2.2.1
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
