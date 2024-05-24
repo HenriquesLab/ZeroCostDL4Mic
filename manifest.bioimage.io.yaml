@@ -480,7 +480,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     links:
       - Notebook Preview
-    version: 2.1.3
+    version: 2.2.1
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
