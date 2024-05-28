@@ -529,7 +529,7 @@ collection:
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
       - Dataset_StarDist_2D_DeepBacs
-    version: 1.19.1
+    version: 1.19.3
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
