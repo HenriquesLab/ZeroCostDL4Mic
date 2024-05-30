@@ -1256,16 +1256,16 @@ collection:
       - Dataset_YOLOv2_ZeroCostDL4Mic
       - Dataset_YOLOv2_coli_DeepBacs
       - Dataset_YOLOv2_antibiotic_DeepBacs
-    version: 1.14.1
+    version: 1.15.0
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: Detectron2_2D_DL4Mic is the conversion of the Detectron2 2D notebook from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.0.0
-        docker_hub_image: detectron2_2d_zerocostdl4mic-z1.14.1-d2.0.0
+        docker_hub_image: detectron2_2d_zerocostdl4mic-z1.15.0-d2.0.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.14.1
+        notebook_version: 1.15.0
         python_version: '3.9'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/Detectron2_2D_requirements_simple.txt
         sections_to_remove: 1.2. 2. 6.2.
