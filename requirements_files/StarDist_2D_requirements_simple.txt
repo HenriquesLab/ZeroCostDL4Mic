@@ -29,4 +29,3 @@ wget==3.2
 zarr==2.16.0
 bioimageio.core 
 keras==2.14.0
-h5py==3.9.0
