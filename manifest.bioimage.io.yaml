@@ -1268,7 +1268,7 @@ collection:
         notebook_version: 1.15.0
         python_version: '3.9'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/Detectron2_2D_requirements_simple.txt
-        sections_to_remove: 1.2. 2. 6.2.
+        sections_to_remove: 1.2. 2. 4.2. 6.2.
         ubuntu_version: '22.04'
   - type: application
     id: Notebook_DRMIME_ZeroCostDL4Mic
