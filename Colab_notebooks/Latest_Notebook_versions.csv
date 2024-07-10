@@ -3,12 +3,12 @@ Notebook,Version
 CARE (2D),1.15.2
 CARE (3D),1.15.3
 Cellpose,1.16.3
-CycleGAN,1.13.2
+CycleGAN,1.13.3
 DecoNoising,1.14.1
 Deep-STORM,1.13.3
 Deep-STORM BioimageIO,1.13
 DenoiSeg,1.14.1
-Detectron 2D,1.15.0
+Detectron 2D,1.15.1
 Diffusion_Model,1.12
 fnet (2D),1.14.1
 fnet (3D),1.13.1
@@ -19,7 +19,7 @@ Kaibu,1.13.2
 MaskRCNN,1.14.1
 Noise2Void (2D),1.16.2
 Noise2Void (3D),1.16.2
-pix2pix,1.17.2
+pix2pix,1.17.3
 SplineDist (2D),1.14.1
 StarDist 2D,1.19.3
 StarDist 3D,1.15.3
