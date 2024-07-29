@@ -438,6 +438,7 @@ collection:
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_U-Net_2D_DeepBacs
@@ -478,6 +479,7 @@ collection:
     tags: [colab, notebook, U-Net, segmentation, ZeroCostDL4Mic, 3D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 2.2.1
@@ -521,6 +523,7 @@ collection:
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -566,6 +569,7 @@ collection:
     tags: [colab, notebook, StarDist, segmentation, ZeroCostDL4Mic, 3D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 1.15.3
@@ -607,6 +611,7 @@ collection:
     tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_Noise2Void_2D_ZeroCostDL4Mic
@@ -652,6 +657,7 @@ collection:
     tags: [colab, notebook, Noise2Void, denoising, ZeroCostDL4Mic, 3D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_Noise2Void_3D_ZeroCostDL4Mic
@@ -695,6 +701,7 @@ collection:
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_CARE_2D_ZeroCostDL4Mic
@@ -740,6 +747,7 @@ collection:
     tags: [colab, notebook, CARE, denoising, ZeroCostDL4Mic, 3D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_CARE_3D_ZeroCostDL4Mic
@@ -781,6 +789,7 @@ collection:
     tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 3D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_fnet_3D_ZeroCostDL4Mic
@@ -822,6 +831,7 @@ collection:
     tags: [colab, notebook, fnet, labelling, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/fnet_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_fnet_DeepBacs
@@ -864,6 +874,7 @@ collection:
     tags: [colab, notebook, Deep-STORM, labelling, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_Deep-STORM_ZeroCostDL4Mic
@@ -907,6 +918,7 @@ collection:
     tags: [colab, notebook, pix2pix, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_pix2pix_ZeroCostDL4Mic
@@ -948,6 +960,7 @@ collection:
     tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_CycleGAN_ZeroCostDL4Mic
@@ -989,6 +1002,7 @@ collection:
     tags: [colab, notebook, Augmentor, Data Augmentation, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: '1.13'
@@ -1015,6 +1029,7 @@ collection:
     tags: [colab, notebook, CycleGAN, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 1.14.1
@@ -1055,6 +1070,7 @@ collection:
     tags: [colab, notebook, Deep-STORM, DeepImageJ, ZeroCostDL4Mic, 2D, deepImageJ, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/BioImage.io%20notebooks/Deep-STORM_2D_ZeroCostDL4Mic_BioImageModelZoo_export.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_Deep-STORM_ZeroCostDL4Mic
@@ -1082,6 +1098,7 @@ collection:
     tags: [colab, notebook, u-net, segmentation, semantic-segmentation, multilabel, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_U-Net_2D_multilabel_DeepBacs
@@ -1122,6 +1139,7 @@ collection:
     tags: [colab, notebook, 3D-RCAN, denoising, ZeroCostDL4Mic, 3D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/3D_RCAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_CARE_3D_ZeroCostDL4Mic
@@ -1162,6 +1180,7 @@ collection:
     tags: [colab, notebook, SplineDist, segmentation, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -1208,6 +1227,7 @@ collection:
     tags: [colab, notebook, YOLOv2, object detection, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/YOLOv2_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_YOLOv2_ZeroCostDL4Mic
@@ -1251,6 +1271,7 @@ collection:
     tags: [colab, notebook, Detectron2, object detection, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_YOLOv2_ZeroCostDL4Mic
@@ -1293,6 +1314,7 @@ collection:
     tags: [colab, notebook, DRMIME, image registration, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 1.14.1
@@ -1337,6 +1359,7 @@ collection:
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
@@ -1382,6 +1405,7 @@ collection:
     tags: [colab, notebook, RetinaNet, object detection, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_YOLOv2_ZeroCostDL4Mic
@@ -1424,6 +1448,7 @@ collection:
     tags: [colab, notebook, DecoNoising, denoising, ZeroCostDL4Mic, 2D, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_Noise2Void_2D_ZeroCostDL4Mic
@@ -1470,6 +1495,7 @@ collection:
     tags: [colab, notebook, Cellpose, Segmentation, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
 
@@ -1497,6 +1523,7 @@ collection:
     tags: [colab, notebook, MaskRCNN, object detection, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 1.14.1
@@ -1535,6 +1562,7 @@ collection:
     tags: [colab, notebook, Quality Control, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: '1.13'
@@ -1560,6 +1588,7 @@ collection:
     tags: [colab, notebook, DFCAN, Super Resolution, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DFCAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 1.14.1
@@ -1598,6 +1627,7 @@ collection:
     tags: [colab, notebook, WGAN, Super Resolution, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/WGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
     version: 1.15.1
@@ -1638,6 +1668,7 @@ collection:
     tags: [colab, notebook, EmbedSeg, Segmentation, ZeroCostDL4Mic, dl4miceverywhere]
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
     links:
       - Notebook Preview
       - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
