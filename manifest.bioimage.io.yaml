@@ -532,16 +532,16 @@ collection:
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
       - Dataset_StarDist_2D_DeepBacs
-    version: '1.20'
+    version: '1.20.2'
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: StarDist_2D_DL4Mic is the conversion of the 2D StarDist from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.0.0
-        docker_hub_image: stardist_2d_zerocostdl4mic-z1.20-d2.0.0
+        docker_hub_image: stardist_2d_zerocostdl4mic-z1.20.2-d2.0.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
-        notebook_version: '1.20'
+        notebook_version: 1.20.2
         python_version: '3.10'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/StarDist_2D_requirements_simple.txt
         sections_to_remove: 1.1. 1.2. 2. 6.3.
