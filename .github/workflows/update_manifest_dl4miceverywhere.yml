@@ -1,4 +1,4 @@
-name: Update the manifest with DL4MiceEverywhere information
+name: Update the manifest with DL4MicEverywhere information
 on:
   # At 05:30 AM of every day
   schedule:
@@ -31,5 +31,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
             repository: ./ZeroCostDL4Mic
-            commit_message: GitHub Action - Update manifest with DL4MiceEverywhere information
+            commit_message: GitHub Action - Update manifest with DL4MicEverywhere information
           
