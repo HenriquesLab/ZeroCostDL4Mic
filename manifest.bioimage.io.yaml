@@ -448,8 +448,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: U-Net_2D_DL4Mic is the conversion of the 2D U-Net from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: u-net_2d_zerocostdl4mic-z2.2.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: u-net_2d_zerocostdl4mic-z2.2.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 2.2.1
         python_version: '3.10'
@@ -488,8 +488,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: U-Net_3D_DL4Mic is the conversion of the 3D U-Net from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: u-net_3d_zerocostdl4mic-z2.2.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: u-net_3d_zerocostdl4mic-z2.2.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
         notebook_version: 2.2.1
         python_version: '3.10'
@@ -532,16 +532,16 @@ collection:
       - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
       - Dataset_StarDist_fluo2_ZeroCostDL4Mic
       - Dataset_StarDist_2D_DeepBacs
-    version: '1.20'
+    version: '1.20.2'
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: StarDist_2D_DL4Mic is the conversion of the 2D StarDist from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: stardist_2d_zerocostdl4mic-z1.19.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: stardist_2d_zerocostdl4mic-z1.20.2-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_2D_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.19.3
+        notebook_version: 1.20.2
         python_version: '3.10'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/StarDist_2D_requirements_simple.txt
         sections_to_remove: 1.1. 1.2. 2. 6.3.
@@ -578,8 +578,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: StarDist_3D_DL4Mic is the conversion of the 3D StarDist from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: stardist_3d_zerocostdl4mic-z1.15.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: stardist_3d_zerocostdl4mic-z1.15.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.15.3
         python_version: '3.10'
@@ -624,8 +624,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: Noise2Void_2D_DL4Mic is the conversion of the 2D Noise2Void from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: noise2void_2d_zerocostdl4mic-z1.16.2-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: noise2void_2d_zerocostdl4mic-z1.16.2-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.16.2
         python_version: '3.10'
@@ -667,8 +667,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: Noise2Void_3D_DL4Mic is the conversion of the 3D Noise2Void from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: noise2void_3d_zerocostdl4mic-z1.16.2-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: noise2void_3d_zerocostdl4mic-z1.16.2-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Noise2Void_3D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.16.2
         python_version: '3.10'
@@ -757,8 +757,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: CARE_3D_DL4Mic is the conversion of the 3D CARE from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: care_3d_zerocostdl4mic-z1.15.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: care_3d_zerocostdl4mic-z1.15.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CARE_3D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.15.3
         python_version: '3.9'
@@ -885,8 +885,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: Deep-STORM_2D_DL4Mic is the conversion of the 2D Deep-STORM from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: deep-storm_2d_zerocostdl4mic-z1.13.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: deep-storm_2d_zerocostdl4mic-z1.13.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.13.3
         python_version: '3.10'
@@ -928,8 +928,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: pix2pix_DL4Mic is the conversion of the pix2pix from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: pix2pix_zerocostdl4mic-z1.17.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: pix2pix_zerocostdl4mic-z1.17.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/pix2pix_ZeroCostDL4Mic.ipynb
         notebook_version: 1.17.3
         python_version: '3.8'
@@ -970,8 +970,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: CycleGAN_DL4Mic is the conversion of the CycleGAN from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: cyclegan_zerocostdl4mic-z1.13.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: cyclegan_zerocostdl4mic-z1.13.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
         notebook_version: 1.13.3
         python_version: '3.8'
@@ -1038,8 +1038,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: DenoiSeg_DL4Mic is the conversion of the DenoiSeg notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: denoiseg_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: denoiseg_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1102,16 +1102,16 @@ collection:
     links:
       - Notebook Preview
       - Dataset_U-Net_2D_multilabel_DeepBacs
-    version: 2.1.2
+    version: 2.1.3
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: U-Net_2D_Multilabel_DL4Mic is the conversion of the 2D U-Net Multilabel from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: u-net_2d_multilabel_zerocostdl4mic-z2.1.2-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: u-net_2d_multilabel_zerocostdl4mic-z2.1.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_2D_Multilabel_ZeroCostDL4Mic.ipynb
-        notebook_version: 2.1.2
+        notebook_version: 2.1.3
         python_version: '3.10'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/2D_UNet_multilabel_requirements_simple.txt
         sections_to_remove: 1.1. 1.2. 2. 6.2.
@@ -1149,8 +1149,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: 3D-RCAN_DL4Mic is the conversion of the 3D-RCAN notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: 3d_rcan_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: 3d_rcan_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/3D_RCAN_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1196,8 +1196,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: SplineDist2D_DL4Mic is the conversion of the SplineDist 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: splinedist_2d_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: splinedist_2d_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/SplineDist_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1283,8 +1283,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: Detectron2_2D_DL4Mic is the conversion of the Detectron2 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: detectron2_2d_zerocostdl4mic-z1.15.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: detectron2_2d_zerocostdl4mic-z1.15.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Detectron2_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.15.1
         python_version: '3.9'
@@ -1323,8 +1323,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: DRMIME_2D_DL4Mic is the conversion of the DRMIME 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: drmime_2d_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: drmime_2d_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1373,8 +1373,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: Cellpose_2D_DL4Mic is the conversion of the CellPose 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: cellpose_2d_zerocostdl4mic-z1.16.3-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: cellpose_2d_zerocostdl4mic-z1.16.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Cellpose_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.16.3
         python_version: '3.10'
@@ -1417,8 +1417,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: RetinaNet_DL4Mic is the conversion of the RetinaNet 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: retinanet_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: retinanet_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/RetinaNet_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1461,8 +1461,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: DecoNoising_2D_DL4Mic is the conversion of the DecoNoising 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: deconoising_2d_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: deconoising_2d_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DecoNoising_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1532,8 +1532,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: MaskRCNN_DL4Mic is the conversion of the MaskRCNN notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: maskrcnn_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: maskrcnn_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1597,8 +1597,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: DFCAN_DL4Mic is the conversion of the DFCAN 2D notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: dfcan_zerocostdl4mic-z1.14.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: dfcan_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DFCAN_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.1
         python_version: '3.9'
@@ -1636,8 +1636,8 @@ collection:
         cuda_version: 11.8.0
         cudnn_version: 8.6.0.163
         description: WGAN_DL4Mic is the conversion of the WGAN notebook from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: wgan_zerocostdl4mic-z1.15.1-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: wgan_zerocostdl4mic-z1.15.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/WGAN_ZeroCostDL4Mic.ipynb
         notebook_version: 1.15.1
         python_version: '3.9'
@@ -1682,8 +1682,8 @@ collection:
         cuda_version: 11.7.1
         cudnn_version: 8.5.0.96
         description: EmbedSeg_2D_DL4Mic is the conversion of the 2D EmbedSeg from ZeroCostDL4Mic.
-        dl4miceverywhere_version: 2.0.0
-        docker_hub_image: embedseg_2d_zerocostdl4mic-z1.15.0-d2.0.0
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: embedseg_2d_zerocostdl4mic-z1.15.0-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/EmbedSeg_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.15.0
         python_version: '3.9'
