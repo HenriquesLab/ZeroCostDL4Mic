@@ -1,28 +1,29 @@
 # Requirements for pix2pix_ZeroCostDL4Mic.ipynb
-astropy==5.2.2
+astropy==6.1.7
 Augmentor==0.2.12
-bioimageio.core==0.5.11
-dominate>=2.4.0, < 2.8.5
-fpdf2==2.7.4
-google==2.0.3
-h5py==3.10.0
-imageio==2.25.1
-ipywidgets==8.0.7
+bioimageio.core==0.6.9
+bioimageio.spec==0.5.3.2
+dominate==2.9.1
+fpdf2==2.8.1
+h5py==3.12.1
+imageio==2.36.1
+ipywidgets==7.7.1
 lpips==0.1.4
-matplotlib==3.7.1
-numexpr==2.8.4
-numpy==1.22.4
-opencv-python==4.5.3.56
-pandas==1.5.3
+matplotlib==3.8.0
+numexpr==2.10.2
+numpy==1.26.4
+opencv-python==4.10.0.84
+pandas==2.2.2
 pathlib==1.0.1
-pip==23.1.2
-scikit-image==0.19.3
-scikit-learn==1.2.2
-scipy==1.10.1
-tensorflow==2.12.0
-tifffile==2023.7.10
-torch==2.0.1
-torchvision>=0.5.0, <0.15.5
-tqdm==4.65.0
-visdom>=0.1.8.8, < 0.2.5
-wandb>= 0.15.0, < 0.16
+pydantic==2.9.2
+pip==24.1.2
+scikit-image==0.24.0
+scikit-learn==1.5.2
+scipy==1.13.1
+tifffile==2024.9.20
+torch==2.5.1
+torchvision==0.20.1
+tqdm==4.66.6
+visdom==0.2.4
+wandb==0.18.7
+
