@@ -1,12 +1,10 @@
 name: Update the manifest with DL4MicEverywhere information
+
 on:
-  # At 05:30 AM of every day
-  # schedule:
-    # - cron: "30 5 * * *"
   workflow_call:
     inputs:
       notebook_name: # the variable you can use in place of a matrix
-        description: 'Name of the notebook you want to export. You need to provide the 'id' from manifest.bioimage.io.yaml.'
+        description: 'Name of the notebook you want to export. You need to provide the "id" from manifest.bioimage.io.yaml.'
         type: string
 
 jobs:
