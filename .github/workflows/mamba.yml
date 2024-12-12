@@ -1,5 +1,9 @@
 name: Create Conda Environment
-on: [push]
+on: 
+  # This option is deactivated because it's not working and its consuming resources
+  # push:
+  workflow_dispatch:
+
 jobs:
   conda:
     name: Ex1 (${{ matrix.python-version }}, ${{ matrix.os }})

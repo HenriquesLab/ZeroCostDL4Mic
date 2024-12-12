@@ -1,10 +1,13 @@
 name: Validate Collection
 
 on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+  # These options is deactivated because it's not working and its consuming resources
+  # push:
+  #   branches: [master]
+  # pull_request:
+  #   branches: [master]
+  workflow_dispatch:
+
 jobs:
   run:
     name: Validate manifest.bioimage.io.yaml 
