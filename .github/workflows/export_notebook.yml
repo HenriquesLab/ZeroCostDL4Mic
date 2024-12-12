@@ -1,7 +1,7 @@
-name: Update the manifest with DL4MicEverywhere information
+name: Export the notebook on ZIP file for BioImage.IO.
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       notebook_name: # the variable you can use in place of a matrix
         description: 'Name of the notebook you want to export. You need to provide the "id" from manifest.bioimage.io.yaml.'
