@@ -16,7 +16,7 @@ U-Net (2D),2.2.1
 U-Net (3D),2.2.1
 U-Net (2D) multilabel,2.1.4
 Kaibu,1.13.2
-MaskRCNN,1.14.1
+MaskRCNN,1.14.2
 Noise2Void (2D),1.16.2
 Noise2Void (3D),1.16.2
 pix2pix,1.17.3

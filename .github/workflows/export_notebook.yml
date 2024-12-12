@@ -1,0 +1,30 @@
+name: Update the manifest with DL4MicEverywhere information
+on:
+  # At 05:30 AM of every day
+  # schedule:
+    # - cron: "30 5 * * *"
+  workflow_dispatch:
+    inputs:
+      notebook_name: # the variable you can use in place of a matrix
+        description: 'Name of the notebook you want to export. You need to provide the 'id' from manifest.bioimage.io.yaml.'
+        type: string
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone ZeroCostDL4Mic repository
+        uses: actions/checkout@v4
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - name: Install requirements
+        run: pip install -r Tools/CI_requirements.txt
+      - name: Export the notebook and create a ZIP file with it
+        run: python3 Tools/export_bmz_notebook.py -n "${{ inputs.notebook_name }}" -o "./tmp"
+      - name: Upload exported ZIP file
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ inputs.notebook_name }}.zip'
+          path: './tmp/${{ inputs.notebook_name }}.zip'

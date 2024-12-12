@@ -1,4 +1,7 @@
-name: Update versioning on the manifest
+# Updates the version from all the notebooks on manifest.bioimage.io.yaml 
+#using the versions from Latest_Notebook_versions.csv
+
+name: Update versions on the manifest
 on:
   workflow_dispatch:
 

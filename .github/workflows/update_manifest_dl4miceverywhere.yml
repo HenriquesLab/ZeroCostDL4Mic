@@ -18,6 +18,10 @@ jobs:
         with:
             repository: HenriquesLab/DL4MicEverywhere
             path: DL4MicEverywhere
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
       - name: Install requirements
         working-directory: ./ZeroCostDL4Mic
         run: pip install -r Tools/CI_requirements.txt
