@@ -12,6 +12,7 @@ def bioimageio_upload(resource_id: str, package_url: str, token:str):
 
     # Dispatch the GitHub action for the runner
     ref = repo.get_branch("main")
+    print(f"The worflow 'bioimage-io/collection:stage.yml' is going to be dispatched with resource_id={resource_id} and package_url={package_url}")
     ok = workflow.create_dispatch(
         ref=ref,
         inputs={
@@ -20,7 +21,7 @@ def bioimageio_upload(resource_id: str, package_url: str, token:str):
         },
     )
 
-    # Assert that everithing ran correctly
+    # Assert that everything ran correctly
     assert ok
 
 def main():
