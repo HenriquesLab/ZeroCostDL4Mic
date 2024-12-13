@@ -30,7 +30,7 @@ def main():
     parser.add_argument("-u", "--url", help="URL that points to the resource package ZIP that you want to stage.")
     args = vars(parser.parse_args())
 
-    bioimageio_upload(resource_id=args['id'], package_url=args['urk'])
+    bioimageio_upload(resource_id=args['id'], package_url=args['url'])
 
 if __name__ == "__main__":
     main()

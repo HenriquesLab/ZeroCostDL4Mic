@@ -8,7 +8,7 @@ on:
         type: string
 
 jobs:
-  update-manifest:
+  export-notebook:
     runs-on: ubuntu-latest
     steps:
       - name: Clone ZeroCostDL4Mic repository
