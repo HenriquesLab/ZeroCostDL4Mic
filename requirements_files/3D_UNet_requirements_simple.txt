@@ -14,6 +14,7 @@ orbax-checkpoint==0.3.0
 pandas==2.2.2
 pathlib==1.0.1
 pip==24.1.2
+pydantic==2.9.2
 requests==2.32.3
 scikit-image==0.24.0
 scikit-learn==1.5.2
