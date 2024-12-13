@@ -1,6 +1,6 @@
-from bioimageio.spec._package import save_bioimageio_package_to_stream
-from pydantic import FilePath
-from bioimageio.spec._internal.io import RelativeFilePath
+# from bioimageio.spec._package import save_bioimageio_package_to_stream
+# from pydantic import FilePath
+# from bioimageio.spec._internal.io import RelativeFilePath
 from ruamel.yaml import YAML
 import tempfile
 import zipfile
