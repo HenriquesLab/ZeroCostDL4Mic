@@ -1,15 +1,7 @@
-# from bioimageio.spec._package import save_bioimageio_package_to_stream
-# from pydantic import FilePath
-# from bioimageio.spec._internal.io import RelativeFilePath
-
-import bioimageio.spec
-from bioimageio.spec import load_description
-
-
-from pathlib import Path
-
 from bioimageio.spec import save_bioimageio_package
-
+from bioimageio.spec import load_description
+# import bioimageio.spec
+from pathlib import Path
 
 from ruamel.yaml import YAML
 import tempfile
@@ -85,17 +77,6 @@ def export_bmz_notebook(notebook_id, output_path):
         exported = save_bioimageio_package(
             application_description, output_path=Path(zipfile_path)
         )
-        
-        '''
-        # Create the ZIP file with the rdf, notebook and requirements
-        with zipfile.ZipFile(zipfile_path, 'w') as myzip:
-            # Add the rdf.yaml file
-            myzip.write(rdf_path, arcname=os.path.join(notebook_id, "rdf.yaml"))
-            # Add the notebook
-            myzip.write(notebook_local_path, arcname=os.path.join(notebook_id, notebook_name))
-            # Add the requirements
-            myzip.write(requirements_local_path, arcname=os.path.join(notebook_id, "requirements.txt"))
-        '''
 
         print(f"ZIP file correctly created on: {exported.absolute()}")
 

@@ -1,3 +1,6 @@
+bioimageio.core==0.7.0
+bioimageio.spec==0.5.3.5
 pandas==2.1.4
-ruamel.yaml==0.17.40
+pydantic==2.9.2
 pygithub==2.5.0
+ruamel.yaml==0.17.40
