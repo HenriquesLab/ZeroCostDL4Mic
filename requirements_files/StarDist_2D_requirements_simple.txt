@@ -27,5 +27,7 @@ tifffile==2023.7.18
 tqdm==4.65.0
 wget==3.2
 zarr==2.16.0
-bioimageio.core 
+bioimageio.core==0.7.0
+bioimageio.spec==0.5.3.5
+pydantic==2.9.2
 keras==2.14.0
