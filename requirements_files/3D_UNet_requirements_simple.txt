@@ -1,7 +1,7 @@
 # Requirements for U_Net_3D_ZeroCostDL4Mic.ipynb
 Pillow==11.0.0
-bioimageio.core==0.6.9
-bioimageio.spec==0.5.3.2
+bioimageio.core==0.7.0
+bioimageio.spec==0.5.3.5
 elasticdeform==0.5.0
 fpdf2==2.8.1
 future==1.0.0
