@@ -1,11 +1,17 @@
+from bioimageio.spec._package import save_bioimageio_package_to_stream
+from pydantic import FilePath
+from bioimageio.spec._internal.io import RelativeFilePath
 from ruamel.yaml import YAML
 import tempfile
 import zipfile
 import os
 
 def export_bmz_notebook(notebook_id, output_path):
+
+    zerocostdl4mic_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))
+
     # Read the information from the manifest
-    with open("manifest.bioimage.io.yaml", 'r', encoding='utf8') as f:
+    with open(os.path.join(zerocostdl4mic_path, "manifest.bioimage.io.yaml"), 'r', encoding='utf8') as f:
         yaml = YAML()
         yaml.preserve_quotes = True
         manifest_data = yaml.load(f)
@@ -25,12 +31,12 @@ def export_bmz_notebook(notebook_id, output_path):
     # Get the path to the notebook
     notebook_url = wanted_notebook['config']['dl4miceverywhere']['notebook_url']
     notebook_name = os.path.basename(notebook_url)
-    notebook_local_path = os.path.join("Colab_notebooks", notebook_name)
+    notebook_local_path = os.path.join(zerocostdl4mic_path, "Colab_notebooks", notebook_name)
 
     # Get the path to the requirements
     requirements_url = wanted_notebook['config']['dl4miceverywhere']['requirements_url']
     requirements_name = os.path.basename(requirements_url)
-    requirements_local_path = os.path.join("requirements_files", requirements_name)
+    requirements_local_path = os.path.join(zerocostdl4mic_path, "requirements_files", requirements_name)
 
     # Add these files into the attachments:files:[] on notebook the configuration
     if 'attachments' not in wanted_notebook:
@@ -58,6 +64,12 @@ def export_bmz_notebook(notebook_id, output_path):
         print("The 'rdf.yaml' file was correctly created.")
 
         os.makedirs(output_path, exist_ok=True)
+        '''
+        zipfile_path = save_bioimageio_package_to_stream([FilePath(rdf_path), 
+                                                          FilePath(notebook_local_path), 
+                                                          FilePath(requirements_local_path)])
+        
+        '''
         zipfile_path = os.path.join(output_path, f"{notebook_id}.zip")
         
         # Create the ZIP file with the rdf, notebook and requirements

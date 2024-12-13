@@ -20,7 +20,7 @@ jobs:
       - name: Install requirements
         run: pip install -r Tools/CI_requirements.txt
       - name: Export the notebook and create a ZIP file with it
-        run: python3 Tools/export_bmz_notebook.py -n "${{ inputs.notebook_name }}" -o "./tmp"
+        run: python3 Tools/export_bmz_notebook.py --name "${{ inputs.notebook_name }}" --output "./tmp"
       - name: Upload exported ZIP file
         uses: actions/upload-artifact@v4
         id: artifact-upload-step
@@ -29,3 +29,5 @@ jobs:
           path: './tmp/${{ inputs.notebook_name }}.zip'
       - name: Output artifact URL
         run:  echo 'Artifact URL is ${{ steps.artifact-upload-step.outputs.artifact-url }}'
+      - name: Stage the ZIP file into BioImage.IO
+        run:  python3 Tools/stage_bmz_notebook.py --id "${{ inputs.notebook_name }}" --url ${{ steps.artifact-upload-step.outputs.artifact-url }}'
