@@ -1,9 +1,20 @@
 # from bioimageio.spec._package import save_bioimageio_package_to_stream
 # from pydantic import FilePath
 # from bioimageio.spec._internal.io import RelativeFilePath
+
+import bioimageio.spec
+from bioimageio.spec import load_description
+
+
+from pathlib import Path
+
+from bioimageio.spec import save_bioimageio_package
+
+
 from ruamel.yaml import YAML
 import tempfile
 import zipfile
+import re
 import os
 
 def export_bmz_notebook(notebook_id, output_path):
@@ -40,9 +51,13 @@ def export_bmz_notebook(notebook_id, output_path):
 
     # Add these files into the attachments:files:[] on notebook the configuration
     if 'attachments' not in wanted_notebook:
-        wanted_notebook['attachments'] = {'files': [notebook_name, 'requirements.txt']}
+        wanted_notebook['attachments'] = {'files': [notebook_local_path, requirements_local_path]} #'requirements.txt']}
     else:
-        wanted_notebook['attachments']['files'] = [notebook_name, 'requirements.txt']
+        wanted_notebook['attachments']['files'] = [notebook_local_path, requirements_local_path] #'requirements.txt']
+
+    # Add the bioimageio.spec format version
+    # format_version = re.match(r'^(\d+\.\d+\.\d+)', bioimageio.spec.__version__).group(1)
+    wanted_notebook['format_version'] = "0.2.4" # format_version # Only X.X.X
 
     # Create rdf.yaml file on a temporary folder
     with tempfile.TemporaryDirectory() as tmpdirname:
@@ -64,14 +79,14 @@ def export_bmz_notebook(notebook_id, output_path):
         print("The 'rdf.yaml' file was correctly created.")
 
         os.makedirs(output_path, exist_ok=True)
-        '''
-        zipfile_path = save_bioimageio_package_to_stream([FilePath(rdf_path), 
-                                                          FilePath(notebook_local_path), 
-                                                          FilePath(requirements_local_path)])
-        
-        '''
         zipfile_path = os.path.join(output_path, f"{notebook_id}.zip")
         
+        application_description = load_description(Path(rdf_path))
+        exported = save_bioimageio_package(
+            application_description, output_path=Path(zipfile_path)
+        )
+        
+        '''
         # Create the ZIP file with the rdf, notebook and requirements
         with zipfile.ZipFile(zipfile_path, 'w') as myzip:
             # Add the rdf.yaml file
@@ -80,8 +95,9 @@ def export_bmz_notebook(notebook_id, output_path):
             myzip.write(notebook_local_path, arcname=os.path.join(notebook_id, notebook_name))
             # Add the requirements
             myzip.write(requirements_local_path, arcname=os.path.join(notebook_id, "requirements.txt"))
+        '''
 
-        print(f"ZIP file correctly created on: {zipfile_path}")
+        print(f"ZIP file correctly created on: {exported.absolute()}")
 
 def main():
     import argparse
