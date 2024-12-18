@@ -30,8 +30,8 @@ jobs:
         uses: actions/upload-artifact@v4
         id: artifact-upload-step
         with:
-          name: "${{ inputs.notebook_name }}.zip"
-          path: "./tmp/${{ inputs.notebook_name }}"
+          name: "${{ inputs.notebook_name }}"
+          path: "./tmp/${{ inputs.notebook_name }}.zip"
       - name: Output artifact URL
         run:  echo "Artifact URL is https://nightly.link/HenriquesLab/ZeroCostDL4Mic/actions/runs/${{ github. run_id }}/${{ inputs.notebook_name }}.zip"
       # - name: Stage the ZIP file into BioImage.IO
