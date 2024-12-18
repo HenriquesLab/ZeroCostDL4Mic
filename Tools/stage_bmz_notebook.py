@@ -7,8 +7,11 @@ def bioimageio_upload(resource_id: str, package_url: str): #, token:str):
     g = github.Github(auth=github.Auth.Token(os.environ["GITHUB_PAT"]))
     repo = g.get_repo("bioimage-io/collection")
 
+    print(repo.get_workflows())
+    
     # Get the stage.yaml workflow (CI/GitHub action)
     workflow = repo.get_workflow("stage.yaml")
+
 
     # Dispatch the GitHub action for the runner
     ref = repo.get_branch("main")
