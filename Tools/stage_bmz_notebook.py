@@ -4,9 +4,9 @@ import os
 
 def bioimageio_upload(resource_id: str, package_url: str): #, token:str):
     # Get bioimage-io/collection repodistory
-    g = github.Github(auth=github.Auth.Token(os.environ["GITHUB_PAT"]))
+    g = github.Github(auth=github.Auth.Token(os.environ["PAT_GITHUB"]))
     repo = g.get_repo("bioimage-io/collection")
-    
+
     # Get the stage.yaml workflow (CI/GitHub action)
     workflow = repo.get_workflow("stage.yaml")
 
