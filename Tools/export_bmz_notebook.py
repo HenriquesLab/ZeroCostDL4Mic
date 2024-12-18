@@ -79,6 +79,14 @@ def export_bmz_notebook(notebook_id, output_path):
         )
 
         print(f"ZIP file correctly created on: {exported.absolute()}")
+        from zipfile import ZipFile 
+  
+        # loading the temp.zip and creating a zip object 
+        with ZipFile(exported.absolute(), 'r') as zObject: 
+            # Extracting all the members of the zip into a specific location. 
+            zObject.extractall(path=os.path.join(output_path, f"{notebook_id}_unzipped")) 
+    
+        print(f"Unzipped folder correctly created on: {os.path.join(output_path, f"{notebook_id}_unzipped")}")
 
 def main():
     import argparse
