@@ -6,8 +6,6 @@ def bioimageio_upload(resource_id: str, package_url: str): #, token:str):
     # Get bioimage-io/collection repodistory
     g = github.Github(auth=github.Auth.Token(os.environ["GITHUB_PAT"]))
     repo = g.get_repo("bioimage-io/collection")
-
-    print(repo.get_workflows())
     
     # Get the stage.yaml workflow (CI/GitHub action)
     workflow = repo.get_workflow("stage.yaml")
@@ -15,7 +13,9 @@ def bioimageio_upload(resource_id: str, package_url: str): #, token:str):
 
     # Dispatch the GitHub action for the runner
     ref = repo.get_branch("main")
+
     print(f"The worflow 'bioimage-io/collection:stage.yml' is going to be dispatched with resource_id={resource_id} and package_url={package_url}")
+    
     ok = workflow.create_dispatch(
         ref=ref,
         inputs={
