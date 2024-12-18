@@ -86,7 +86,7 @@ def export_bmz_notebook(notebook_id, output_path):
             # Extracting all the members of the zip into a specific location. 
             zObject.extractall(path=os.path.join(output_path, f"{notebook_id}_unzipped")) 
     
-        print(f"Unzipped folder correctly created on: {os.path.join(output_path, f"{notebook_id}_unzipped")}")
+        print(f"Unzipped folder correctly created on: {os.path.join(output_path, f'{notebook_id}_unzipped')}")
 
 def main():
     import argparse
