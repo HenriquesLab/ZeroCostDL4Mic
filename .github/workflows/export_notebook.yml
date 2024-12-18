@@ -11,9 +11,9 @@ jobs:
   export-notebook:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
-      repository-projects: write
+      contents: read
+      actions: read
+      checks: write
     steps:
       - name: Clone ZeroCostDL4Mic repository
         uses: actions/checkout@v4
