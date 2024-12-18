@@ -34,4 +34,6 @@ jobs:
       - name: Output artifact URL
         run:  echo "Artifact URL is ${{ steps.artifact-upload-step.outputs.artifact-url }}"
       - name: Stage the ZIP file into BioImage.IO
-        run:  python3 Tools/stage_bmz_notebook.py --id "${{ inputs.notebook_name }}" --url "${{ steps.artifact-upload-step.outputs.artifact-url }}" --token "${{ secrets.GITHUB_TOKEN }}"
+        run:  python3 Tools/stage_bmz_notebook.py --id "${{ inputs.notebook_name }}" --url "${{ steps.artifact-upload-step.outputs.artifact-url }}" # --token "${{ secrets.GITHUB_TOKEN }}"
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 

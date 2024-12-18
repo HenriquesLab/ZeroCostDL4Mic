@@ -2,9 +2,9 @@ import argparse
 import github
 import os
 
-def bioimageio_upload(resource_id: str, package_url: str, token:str):
+def bioimageio_upload(resource_id: str, package_url: str): #, token:str):
     # Get bioimage-io/collection repodistory
-    g = github.Github(login_or_token=token)
+    g = github.Github(auth=github.Auth.Token(os.environ["GITHUB_PAT"]))
     repo = g.get_repo("bioimage-io/collection")
 
     # Get the stage.yaml workflow (CI/GitHub action)
@@ -29,10 +29,10 @@ def main():
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-i", "--id", help="ID of the BioImage.IO collection that wou will stage (e.g. 'affable-shark').")
     parser.add_argument("-u", "--url", help="URL that points to the resource package ZIP that you want to stage.")
-    parser.add_argument("-t", "--token", help="GitHub token to authenticate.")
+    # parser.add_argument("-t", "--token", help="GitHub token to authenticate.")
     args = vars(parser.parse_args())
 
-    bioimageio_upload(resource_id=args['id'], package_url=args['url'], token=args['token'])
+    bioimageio_upload(resource_id=args['id'], package_url=args['url']) #, token=args['token'])
 
 if __name__ == "__main__":
     main()
