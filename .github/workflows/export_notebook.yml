@@ -30,11 +30,11 @@ jobs:
         uses: actions/upload-artifact@v4
         id: artifact-upload-step
         with:
-          name: "${{ inputs.notebook_name }}"
+          name: "${{ inputs.notebook_name }}.zip"
           path: "./tmp/${{ inputs.notebook_name }}"
       - name: Output artifact URL
-        run:  echo "Artifact URL is ${{ steps.artifact-upload-step.outputs.artifact-url }}"
-      - name: Stage the ZIP file into BioImage.IO
-        run:  python3 Tools/stage_bmz_notebook.py --id "${{ inputs.notebook_name }}" --url "https://nightly.link/HenriquesLab/ZeroCostDL4Mic/actions/runs/${{ github. run_id }}/${{ inputs.notebook_name }}.zip" # --token "${{ secrets.GITHUB_TOKEN }}"
-        env:
-          PAT_GITHUB: ${{ secrets.PAT_GITHUB }} 
+        run:  echo "Artifact URL is https://nightly.link/HenriquesLab/ZeroCostDL4Mic/actions/runs/${{ github. run_id }}/${{ inputs.notebook_name }}.zip"
+      # - name: Stage the ZIP file into BioImage.IO
+      #   run:  python3 Tools/stage_bmz_notebook.py --id "${{ inputs.notebook_name }}" --url "https://nightly.link/HenriquesLab/ZeroCostDL4Mic/actions/runs/${{ github. run_id }}/${{ inputs.notebook_name }}.zip" # --token "${{ secrets.GITHUB_TOKEN }}"
+      #   env:
+      #     PAT_GITHUB: ${{ secrets.PAT_GITHUB }} 
