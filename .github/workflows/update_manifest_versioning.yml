@@ -7,6 +7,9 @@ on:
 
 jobs:
   update_configuration:
+    name: Update the manifest.bioimage.io.yaml with Colab_notebooks/Latest_Notebook_versions.csv 
+    outputs:
+      matrix: ${{ steps.create_json.outputs.matrix }}
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -14,8 +17,48 @@ jobs:
       - name: Install requirements
         run: pip install -r Tools/CI_requirements.txt
       - name: Update the manifest
-        run: python3 Tools/update_manifest_versioning.py
+        id: updated_notebooks
+        run: |
+          output=$(python3 Tools/update_manifest_versioning.py)
+          echo "$output"
+          echo "value=$output" >> $GITHUB_OUTPUT
+      - if: ${{ steps.updated_notebooks.outputs.value != '' }}
+        name: List and extract all notebook with new version
+        id: create_json
+        run: |
+          echo "Start"
+          files_json="{\"include\":[{\"notebook\":\""
+          echo "$files_json"
+          first=true
+          for file in ${{ steps.updated_notebooks.outputs.value }}; do
+            echo "$file was changed"
+            if [ "$first" = true ]; then
+              files_json+=$file
+              first=false
+            else
+              files_json+="\"},{\"notebook\":\""$file
+            fi
+            echo "$files_json"
+          done
+          files_json+="\"}]}"
+          echo "$files_json"
+          echo "matrix=$files_json" >> $GITHUB_OUTPUT
+          echo "END"
       - name: Commit the changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: GitHub Action - Update manifest versioning
+
+  config_matrix:
+    if: ${{ needs.update_configuration.outputs.matrix != '' }} 
+    name: Call the building and pushing, and possible update configuration
+    needs: update_configuration
+    strategy:
+      # put fail-fast as false if you want to see all results even if one fails,
+      # fail-fast is true by default
+      fail-fast: false
+      matrix: ${{ fromJson(needs.update_configuration.outputs.matrix) }} 
+    uses: ./.github/workflows/export_notebook.yml # calls the one above ^
+    with:
+      notebook_name: ${{ matrix.notebook }}
+    secrets: inherit

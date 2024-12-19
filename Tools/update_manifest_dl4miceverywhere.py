@@ -14,6 +14,9 @@ def main():
     
     dl4miceverywhere_notebooks_path = '../DL4MicEverywhere/notebooks/ZeroCostDL4Mic_notebooks'
 
+    # List that will store the notebooks with the new version
+    updated_notebooks = []
+
     # List where the new collection (with versions updates) will be stored
     new_collection = []
 
@@ -31,9 +34,17 @@ def main():
 
                 if 'config' not in element:
                     new_element['config'] = config_data['config']
+                    actual_version = element['version']
                 else:
                     new_element['config']['dl4miceverywhere'] = config_data['config']['dl4miceverywhere']
+                    actual_version = element['config']['dl4miceverywhere']['notebook_version']
         
+                # Check if the notebook has been updated
+                
+                new_version = config_data['config']['dl4miceverywhere']['notebook_version']
+                if actual_version != new_version:
+                    updated_notebooks.append(config_data['id'])
+
         new_collection.append(new_element)
 
     # Add the new collection to the manifest
@@ -47,6 +58,12 @@ def main():
         yaml.indent(mapping=2, sequence=4, offset=2)
         yaml.width = 10e10
         yaml.dump(manifest_data, f)
+
+    # Print updated notebooks for the CI
+    if len(updated_notebooks) == 0:
+        print('')
+    else:
+        print(' '.join(updated_notebooks))
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:

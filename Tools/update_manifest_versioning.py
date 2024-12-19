@@ -14,6 +14,9 @@ def main():
     # Read the versions of the notebooks
     all_notebook_versions = pd.read_csv('Colab_notebooks/Latest_Notebook_versions.csv', dtype=str)
 
+    # List that will store the notebooks with the new version
+    updated_notebooks = []
+
     # List where the new collection (with versions updates) will be stored
     new_collection = []
 
@@ -24,7 +27,15 @@ def main():
         if element['type'] == 'application' and element['id'] != 'notebook_preview': 
             # Check the version based on the ID of the notebook
             notebook_version = all_notebook_versions[all_notebook_versions["Notebook"] == dict_manifest_to_version[element['id']]]['Version'].iloc[0]
+            
+            actual_version = element['version']
+            new_version = notebook_version
+            if actual_version != new_version:
+                updated_notebooks.append(new_element['id'])
+
+            # Update the version
             new_element['version'] = notebook_version
+            
             if 'dl4miceverywhere' not in  element['tags']:
                 new_element['tags'].append('dl4miceverywhere')
         
@@ -41,6 +52,12 @@ def main():
         yaml.indent(mapping=2, sequence=4, offset=2)
         yaml.width = 10e10
         yaml.dump(manifest_data, f)
+
+    # Print updated notebooks for the CI
+    if len(updated_notebooks) == 0:
+        print('')
+    else:
+        print(' '.join(updated_notebooks))
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
