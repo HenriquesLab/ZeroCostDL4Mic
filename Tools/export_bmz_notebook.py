@@ -51,6 +51,9 @@ def export_bmz_notebook(notebook_id, output_path):
     # format_version = re.match(r'^(\d+\.\d+\.\d+)', bioimageio.spec.__version__).group(1)
     wanted_notebook['format_version'] = "0.2.4" # format_version # Only X.X.X
 
+    # Add the "zero/" collection at the beginning of the id
+    wanted_notebook['id'] = f"zero/{wanted_notebook['id']}"
+
     # Create rdf.yaml file on a temporary folder
     with tempfile.TemporaryDirectory() as tmpdirname:
         print(f"Temporary directory created on: {tmpdirname}")
