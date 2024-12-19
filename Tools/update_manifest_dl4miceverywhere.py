@@ -40,7 +40,6 @@ def main():
                     actual_version = element['config']['dl4miceverywhere']['notebook_version']
         
                 # Check if the notebook has been updated
-                
                 new_version = config_data['config']['dl4miceverywhere']['notebook_version']
                 if actual_version != new_version:
                     updated_notebooks.append(config_data['id'])
