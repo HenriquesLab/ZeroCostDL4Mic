@@ -47,7 +47,7 @@ collection:
     authors: [Johanna Jukkala, Guillaume Jacquemet]
     documentation: >-
       https://doi.org/10.5281/zenodo.3715492
-    tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D]
+    tags: [StarDist, segmentation, ZeroCostDL4Mic, 2D, instance-segmentation]
     download_url: https://doi.org/10.5281/zenodo.3715492
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
