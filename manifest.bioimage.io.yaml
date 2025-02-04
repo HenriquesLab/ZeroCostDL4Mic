@@ -30,6 +30,20 @@ config:
     - dataset
   default_type: application
   url_root: https://raw.githubusercontent.com/oeway/ZeroCostDL4Mic/master
+  docs: https://github.com/HenriquesLab/ZeroCostDL4Mic/wiki
+  contact:
+    - name: Ricardo Henriques
+      email: ricardo.henriquescorreia@utu.fi
+      github: paxcalpt
+      affiliation:
+        - name: UTU
+          url: https://www.utu.fi/en
+    - name: Guillaume Jacquemet
+      email: guillaume.jacquemet@abo.fi
+      github: guijacquemet
+      affiliation:
+      - name: Abo Akademi
+        url: https://www.abo.fi
 
 
   #------------------------------------- ZeroCostDL4Mic Datasets ---------------------------------------------
