@@ -52,7 +52,7 @@ collection:
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
     license: CC-BY-4.0
-  
+
   - type: dataset
     id: Dataset_Noise2Void_2D_ZeroCostDL4Mic
     name: Noise2Void (2D) example training and test dataset - ZeroCostDL4Mic
@@ -164,7 +164,7 @@ collection:
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png
     license: CC-BY-4.0
-    
+
   - type: dataset
     id: Dataset_pix2pix_ZeroCostDL4Mic
     name: pix2pix example training and test dataset - ZeroCostDL4Mic
@@ -235,7 +235,7 @@ collection:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
     license: CC-BY-4.0
-    
+
   - type: dataset
     id: Dataset_StarDist_brightfield2_ZeroCostDL4Mic
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
