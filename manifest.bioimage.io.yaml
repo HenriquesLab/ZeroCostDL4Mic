@@ -1676,3 +1676,45 @@ collection:
         sections_to_remove: 1.0. 1.1. 2.
         ubuntu_version: '22.04'
 
+
+  - type: application
+    id: playful-scarf
+    name: Diffusion model for SMLM - ZeroCostDL4Mic
+    description: Probabilistic diffusion model for the generation of Single Molecule Localisation Microscopy images.
+    cite:
+      - text: 'Saguy Alon, Tav Nahimov, Maia Lehrman, Onit Alalouf, and Yoav Shechtman. This microtubule does not exist: Super-resolution microscopy image generation by a diffusion model. bioRxiv, 2023-07. https://doi.org/10.1101/2023.07.06.548004'
+        url: https://doi.org/10.1101/2023.07.06.548004
+      - text: Nichol, A.Q. and Dhariwal, P., 2021, July. Improved denoising diffusion probabilistic models. In International Conference on Machine Learning (pp. 8162-8171). PMLR.
+        url: https://proceedings.mlr.press/v139/nichol21a.html
+      - doi: https://doi.org/10.1038/s41467-021-22518-0
+        text: von Chamier, L., Laine, R.F., Jukkala, J. et al. Democratising deep learning for microscopy with ZeroCostDL4Mic. Nat Commun 12, 2276 (2021). https://doi.org/10.1038/s41467-021-22518-0
+    authors:
+      - Alon Saguy
+      - Yoav Shechtman
+    covers:
+
+    badges:
+      - icon: https://colab.research.google.com/assets/colab-badge.svg
+        label: Open in Colab
+        url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Diffusion_Model_SMLM_ZeroCostDL4Mic.ipynb
+    documentation: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/BioimageModelZoo/README.md
+    tags: [colab, notebook, diffusion-model, image-generation, smlm, probabilistic-diffusion, ZeroCostDL4Mic, dl4miceverywhere]
+    download_url: https://colab.research.google.com/github/HenriquesLab/ZeroCostDL4Mic/blob/master/Colab_notebooks/Diffusion_Model_SMLM_ZeroCostDL4Mic.ipynb
+    git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
+    license: MIT
+    links:
+      - divine-paella
+    version: 1.12
+    config:
+      dl4miceverywhere:
+        cuda_version: 11.8.0
+        cudnn_version: 8.6.0.163
+        description: Diffusion_SMLM_DL4Mic is the conversion of the Diffusion Model for SMLM from ZeroCostDL4Mic.
+        dl4miceverywhere_version: 2.1.0
+        docker_hub_image: diffusion_model_smlm_zerocostdl4mic-z1.12-d2.1.0
+        notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Diffusion_Model_SMLM_ZeroCostDL4Mic.ipynb
+        notebook_version: 1.12
+        python_version: '3.9'
+        requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/Diffusion_model_SMLM_requirements.txt
+        sections_to_remove: 1.1. 2.
+        ubuntu_version: '22.04'
