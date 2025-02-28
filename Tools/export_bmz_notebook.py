@@ -1,5 +1,5 @@
-from bioimageio.spec import save_bioimageio_package
-from bioimageio.spec import load_description
+from bioimageio.core import export_resource_package as save_bioimageio_package
+from bioimageio.core import load_resource_description as load_description
 # import bioimageio.spec
 from pathlib import Path
 

@@ -38,7 +38,7 @@ collection:
   # see here for the format: https://bioimage.io/#/?show=contribute
   # replace this with your actual dataset
   - type: dataset
-    id: Dataset_StarDist_2D_ZeroCostDL4Mic_2D
+    id: bountiful-moon-cake
     name: StarDist (2D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (SiR-DNA) and masks obtained via manual segmentation
     cite:
@@ -52,9 +52,9 @@ collection:
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/Wiki_files/Stardist_nuclei_masks.png
     license: CC-BY-4.0
-  
+
   - type: dataset
-    id: Dataset_Noise2Void_2D_ZeroCostDL4Mic
+    id: mellow-broccoli
     name: Noise2Void (2D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (paxillin-GFP)
     cite:
@@ -70,7 +70,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_Noise2Void_3D_ZeroCostDL4Mic
+    id: fruity-sushi
     name: Noise2Void (3D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
@@ -86,7 +86,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_CARE_2D_ZeroCostDL4Mic
+    id: chewy-garlic
     name: CARE (2D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
@@ -102,7 +102,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_CARE_3D_ZeroCostDL4Mic
+    id: fluffy-popcorn
     name: CARE (3D) example training and test dataset - ZeroCostDL4Mic
     description: Fluorescence microscopy (Lifeact-RFP)
     cite:
@@ -118,7 +118,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_fnet_3D_ZeroCostDL4Mic
+    id: sweet-doughnut
     name: Label-free prediction (fnet) example training and test dataset - ZeroCostDL4Mic
     description: Confocal microscopy data (TOM20 labeled with Alexa Fluor 594)
     cite:
@@ -134,7 +134,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_Deep-STORM_ZeroCostDL4Mic
+    id: exquisite-curry
     name: Deep-STORM training and example dataset - ZeroCostDL4Mic
     description: Time-series of simulated, randomly distributed single-molecule localization (SMLM) data (Training dataset). Experimental time-series dSTORM acquisition of Glial cells stained with phalloidin for actin (Example dataset).
     cite:
@@ -150,7 +150,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_CycleGAN_ZeroCostDL4Mic
+    id: divine-paella
     name: CycleGAN example training and test dataset - ZeroCostDL4Mic
     description: Unpaired microscopy images (fluorescence) of microtubules (Spinning-disk and SRRF reconstructed images)
     cite:
@@ -164,9 +164,9 @@ collection:
     covers:
       - https://github.com/HenriquesLab/ZeroCostDL4Mic/raw/master/BioimageModelZoo/Images/CycleGAN_dataset.png
     license: CC-BY-4.0
-    
+
   - type: dataset
-    id: Dataset_pix2pix_ZeroCostDL4Mic
+    id: appetizing-eggplant
     name: pix2pix example training and test dataset - ZeroCostDL4Mic
     description: Paired microscopy images (fluorescence) of lifeact-RFP and sir-DNA
     cite:
@@ -182,7 +182,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_YOLOv2_ZeroCostDL4Mic
+    id: splendid-pie
     name: YoloV2 example training and test dataset - ZeroCostDL4Mic
     description: 2D grayscale .png images with corresponding bounding box annotations in .xml  PASCAL Voc format.
     cite:
@@ -198,7 +198,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_StarDist_Fluo_ZeroCostDL4Mic
+    id: appetizing-peach
     name: Combining StarDist and TrackMate example 1 - Breast cancer cell dataset
     description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual segmentation
     cite:
@@ -217,7 +217,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_StarDist_brightfield_ZeroCostDL4Mic
+    id: bitter-hot-dog
     name: Combining StarDist and TrackMate example 2 - T cell dataset
     description: Paired brightfield images of migrating T cells and corresponding masks
     cite:
@@ -235,9 +235,9 @@ collection:
     covers:
       - https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Wiki_files/StarDist_trainingTcells_trackmate.png
     license: CC-BY-4.0
-    
+
   - type: dataset
-    id: Dataset_StarDist_brightfield2_ZeroCostDL4Mic
+    id: savory-cheese
     name: Combining StarDist and TrackMate example 3 - Flow chamber dataset
     description: Paired brightfield images of cancer cells and corresponding masks
     cite:
@@ -256,7 +256,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_StarDist_fluo2_ZeroCostDL4Mic
+    id: rich-burrito
     name: training dataset for automated tracking of MDA-MB-231 and BT20 cells
     description: Fluorescence microscopy of Nuclei (SiR-DNA) and masks obtained via manual segmentation
     cite:
@@ -273,7 +273,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_Noisy_Nuclei_ZeroCostDL4Mic
+    id: nutty-knuckle
     name: Noisy nuclei dataset.
     description: This dataset contains a denoising training and test dataset for deep learning applications. The training dataset comprises 20 paired matching noisy and high signal-to-noise images. The test dataset contains five paired matching noisy and high signal-to-noise images. Images are Fluorescence microscopy (SiR-DNA) images acquired using a spinning disk confocal microscope with a 20x 0.8 NA objective.
     cite:
@@ -292,7 +292,7 @@ collection:
   #------------------------------------- DeepBacs Datasets ---------------------------------------------
 
   - type: dataset
-    id: Dataset_U-Net_2D_multilabel_DeepBacs
+    id: delectable-eggplant
     name: Multi-label U-Net training dataset (Bacillus subtilis) - DeepBacs
     description: Paired bright field images and segmented binary masks of live E. coli cells.
     cite:
@@ -307,7 +307,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_U-Net_2D_DeepBacs
+    id: nutty-burrito
     name: Escherichia coli bright field segmentation dataset - DeepBacs
     description: Paired bright field and segmented mask images of live E. coli cells imaged under bright field.
     cite:
@@ -322,7 +322,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_StarDist_2D_DeepBacs
+    id: rich-cheese
     name: Mixed segmentation dataset - DeepBacs
     description: Mixed training and test images of S. aureus, E. coli and B. subtilis for cell segmentation using StarDist.
     cite:
@@ -337,7 +337,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_SplineDist_2D_DeepBacs
+    id: palatable-curry
     name: Escherichia coli bright field segmentation dataset - DeepBacs
     description: Training and test images of live E. coli cells imaged under bright field for the task of segmentation.
     cite:
@@ -352,7 +352,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_Noise2Void_2D_subtilis_DeepBacs
+    id: luscious-tomato
     name: Bacillus subtilis denoising dataset - DeepBacs
     description: Live-cell time series of vertically aligned B. subtilis cells expressing FtsZ-GFP protein fusion.
     cite:
@@ -367,7 +367,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_CARE_2D_coli_DeepBacs
+    id: velvety-paella
     name: Escherichia coli nucleoid denoising dataset - DeepBacs
     description: Paired training and test images of H-NS-mScarlet-I expressing E. coli cells for image denoising.
     cite:
@@ -382,7 +382,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_fnet_DeepBacs
+    id: resourceful-potato
     name: Artificial labeling of E. coli membranes dataset - DeepBacs
     description: Training and test images of E. coli cells for artificial labeling of membranes in brightfield images using fnet or CARE, as well as trained models for prediction of super-resolution membranes.
     cite:
@@ -397,7 +397,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_YOLOv2_coli_DeepBacs
+    id: indulgent-sandwich
     name: Escherichia coli growth stage object detection dataset - DeepBacs
     description: Training and test images of E. coli cells for object detection and classification.
     cite:
@@ -412,7 +412,7 @@ collection:
     license: CC-BY-4.0
 
   - type: dataset
-    id: Dataset_YOLOv2_antibiotic_DeepBacs
+    id: appealing-popcorn
     name: Escherichia coli antibiotic phenotyping object detection dataset - DeepBacs
     description: Training and test images of E. coli cells treated with different antibiotics for antibiotic phenotyping.
     cite:
@@ -429,11 +429,11 @@ collection:
   #------------------------------------- Notebooks ---------------------------------------------
 
   - type: application
-    id: notebook_preview
+    id: assertive-hiking-boot
     source: https://raw.githubusercontent.com/bioimage-io/nbpreview/master/notebook-preview.imjoy.html
 
   - type: application
-    id: Notebook_U-Net_2D_ZeroCostDL4Mic
+    id: resplendent-ribbon
     name: U-Net (2D) - ZeroCostDL4Mic
     description: 2D binary segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -458,8 +458,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_U-Net_2D_DeepBacs
+      - nutty-burrito
     version: 2.2.1
     config:
       dl4miceverywhere:
@@ -475,7 +474,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_U-Net_3D_ZeroCostDL4Mic
+    id: joyful-top-hat
     name: U-Net (3D) - ZeroCostDL4Mic
     description: 3D binary segmentation. The 3D U-Net was first introduced by Çiçek et al for learning dense volumetric segmentations from sparsely annotated ground-truth data building upon the original U-Net architecture by Ronneberger et al. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -498,8 +497,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 2.2.1
     config:
       dl4miceverywhere:
@@ -515,7 +513,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_StarDist_2D_ZeroCostDL4Mic
+    id: exciting-backpack
     name: StarDist (2D) - ZeroCostDL4Mic
     description: 2D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning method that can be used to segment cell nuclei in 2D (xy) single images or in stacks (xyz). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -543,13 +541,12 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
-      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
-      - Dataset_StarDist_2D_DeepBacs
+      - bountiful-moon-cake
+      - appetizing-peach
+      - bitter-hot-dog
+      - savory-cheese
+      - rich-burrito
+      - rich-cheese
     version: '1.20.2'
     config:
       dl4miceverywhere:
@@ -565,7 +562,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_StarDist_3D_ZeroCostDL4Mic
+    id: cheerful-cap
     name: StarDist (3D) - ZeroCostDL4Mic
     description: 3D instance segmentation of oval objects (ie nuclei). StarDist is a deep-learning method that can be used to segment cell nuclei in 3D (xyz) images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -588,8 +585,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 1.15.3
     config:
       dl4miceverywhere:
@@ -605,7 +601,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Noise2Void_2D_ZeroCostDL4Mic
+    id: brisk-scarf
     name: Noise2Void (2D) - ZeroCostDL4Mic
     description: self-supervised denoising of 2D images. Noise2Void 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -631,11 +627,10 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_Noise2Void_2D_ZeroCostDL4Mic
-      - Dataset_Noise2Void_2D_subtilis_DeepBacs
-      - Dataset_Noisy_Nuclei_ZeroCostDL4Mic
-      - Dataset_CARE_2D_coli_DeepBacs
+      - mellow-broccoli
+      - luscious-tomato
+      - nutty-knuckle
+      - velvety-paella
     version: 1.16.2
     config:
       dl4miceverywhere:
@@ -651,7 +646,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Noise2Void_3D_ZeroCostDL4Mic
+    id: cozy-hiking-boot
     name: Noise2VOID (3D) - ZeroCostDL4Mic
     description: self-supervised denoising of 3D images. Noise2VOID 3D is deep-learning method that can be used to denoise 3D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -677,8 +672,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_Noise2Void_3D_ZeroCostDL4Mic
+      - fruity-sushi
     version: 1.16.2
     config:
       dl4miceverywhere:
@@ -694,7 +688,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_CARE_2D_ZeroCostDL4Mic
+    id: fun-high-heels
     name: CARE (2D) - ZeroCostDL4Mic
     description: Supervised restoration of 2D images. CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -721,11 +715,10 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_CARE_2D_ZeroCostDL4Mic
-      - Dataset_Noisy_Nuclei_ZeroCostDL4Mic
-      - Dataset_CARE_2D_coli_DeepBacs
-      - Dataset_fnet_DeepBacs
+      - chewy-garlic
+      - nutty-knuckle
+      - velvety-paella
+      - resourceful-potato
     version: 1.15.2
     config:
       dl4miceverywhere:
@@ -741,7 +734,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_CARE_3D_ZeroCostDL4Mic
+    id: opalescent-ribbon
     name: CARE (3D) - ZeroCostDL4Mic
     description: Supervised restoration of 3D images. CARE is a neural network capable of image restoration from corrupted bio-images, first published in 2018 by Weigert et al. in Nature Methods. The network allows image denoising and resolution improvement in 2D and 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -767,8 +760,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_CARE_3D_ZeroCostDL4Mic
+      - fluffy-popcorn
     version: 1.15.3
     config:
       dl4miceverywhere:
@@ -784,7 +776,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_fnet_3D_ZeroCostDL4Mic
+    id: authoritative-ballet-shoes
     name: Label-free Prediction - fnet - (3D) ZeroCostDL4Mic
     description: Paired image-to-image translation of 3D images. Label-free Prediction (fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -809,8 +801,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_fnet_3D_ZeroCostDL4Mic
+      - sweet-doughnut
     version: 1.13.1
     config:
       dl4miceverywhere:
@@ -826,7 +817,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_fnet_2D_ZeroCostDL4Mic
+    id: limited-edition-crown
     name: Label-free Prediction - fnet - (2D) ZeroCostDL4Mic
     description: Paired image-to-image translation of 2D images. Label-free Prediction (fnet) is a neural network used to infer the features of cellular structures from brightfield or EM images without coloured labels. The network is trained using paired training images from the same field of view, imaged in a label-free (e.g. brightfield) and labelled condition (e.g. fluorescent protein). When trained, this allows the user to identify certain structures from brightfield images alone. The performance of fnet may depend significantly on the structure at hand. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -851,8 +842,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_fnet_DeepBacs
+      - resourceful-potato
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -868,7 +858,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic
+    id: inspiring-sandal
     name: Deep-STORM (2D) - ZeroCostDL4Mic
     description: Single Molecule Localization Microscopy (SMLM) image reconstruction from high-density emitter data. Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -894,9 +884,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_Deep-STORM_ZeroCostDL4Mic
-
+      - exquisite-curry
     version: 1.13.3
     config:
       dl4miceverywhere:
@@ -912,7 +900,7 @@ collection:
         sections_to_remove: 2. 6.4.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_pix2pix_2D_ZeroCostDL4Mic
+    id: fluid-glasses
     name: pix2pix (2D) - ZeroCostDL4Mic
     description: Paired image-to-image translation of 2D images. pix2pix is a deep-learning method that can be used to translate one type of images into another. While pix2pix can potentially be used for any type of image-to-image translation, we demonstrate that it can be used to predict a fluorescent image from another fluorescent image. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -938,8 +926,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_pix2pix_ZeroCostDL4Mic
+      - appetizing-eggplant
     version: 1.17.4
     config:
       dl4miceverywhere:
@@ -955,7 +942,7 @@ collection:
         sections_to_remove: 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_CycleGAN_2D_ZeroCostDL4Mic
+    id: flattering-bikini
     name: CycleGAN (2D) - ZeroCostDL4Mic
     description: Unpaired image-to-image translation of 2D images. CycleGAN is a method that can capture the characteristics of one image domain and figure out how these characteristics could be translated into another image domain, all in the absence of any paired training examples (ie transform a horse into zebra or apples into oranges). While CycleGAN can potentially be used for any type of image-to-image translation, we illustrate that it can be used to predict what a fluorescent label would look like when imaged using another imaging modalities. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -980,8 +967,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_CycleGAN_ZeroCostDL4Mic
+      - divine-paella
     version: 1.13.3
     config:
       dl4miceverywhere:
@@ -997,7 +983,7 @@ collection:
         sections_to_remove: 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Augmentor_ZeroCostDL4Mic
+    id: light-swimsuit
     name: Augmentor - ZeroCostDL4Mic
     description: Artificially increase the size of your training dataset. Augmentor is a data augmentation library. Data augmentation can improve training progress by amplifying differences in the dataset. This can be useful if the available dataset is small since, in this case, it is possible that a network could quickly learn every example in the dataset (overfitting), without augmentation. Augmentation can be especially valuable when training dataset need to be manually labelled. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -1021,11 +1007,10 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Augmentor_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: '1.13'
   - type: application
-    id: Notebook_DenoiSeg_2D_ZeroCostDL4Mic
+    id: smooth-safety-vest
     name: DenoiSeg (2D) - ZeroCostDL4Mic
     description: Joint denoising and binary segmentation of 2D images. DenoiSeg 2D is deep-learning method that can be used to jointly denoise and segment 2D microscopy images. The benefits of using DenoiSeg (compared to other Deep Learning-based segmentation methods) are more prononced when only a few annotated images are available. However, the denoising part requires many images to perform well. All the noisy images don't need to be labeled to train DenoiSeg. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -1048,8 +1033,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DenoiSeg_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1065,7 +1049,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Deep-STORM_2D_ZeroCostDL4Mic_DeepImageJ
+    id: silky-shorts
     name: Deep-STORM (2D) - ZeroCostDL4Mic - DeepImageJ
     description: Single Molecule Localization Microscopy (SMLM) image reconstruction from high-density emitter data. Deep-STORM is a neural network capable of image reconstruction from high-density single-molecule localization microscopy (SMLM), first published in 2018 by Nehme et al. in Optica. This network allows image reconstruction of 2D super-resolution images, in a supervised training manner. The network is trained using simulated high-density SMLM data for which the ground-truth is available. These simulations are obtained from random distribution of single molecules in a field-of-view and therefore do not imprint structural priors during training. The network output a super-resolution image with increased pixel density (typically upsampling factor of 8 in each dimension). Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these. Networks trained in this notebook can be used in Fiji via deepImageJ and ThunderSTORM plugin.
     cite:
@@ -1090,11 +1074,10 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_Deep-STORM_ZeroCostDL4Mic
+      - exquisite-curry
     version: '1.13'
   - type: application
-    id: Notebook_U-Net_2D_multilabel_ZeroCostDL4Mic
+    id: whimsical-helmet
     name: U-Net (2D) multilabel segmentation - ZeroCostDL4Mic
     description: 2D semantic segmentation. U-Net is an encoder-decoder architecture originally used for image segmentation. The first half of the U-Net architecture is a downsampling convolutional neural network which acts as a feature extractor from input images. The other half upsamples these results and restores an image by combining results from downsampling with the upsampled images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -1118,8 +1101,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_U-Net_2D_multilabel_DeepBacs
+      - delectable-eggplant
     version: 2.1.4
     config:
       dl4miceverywhere:
@@ -1135,7 +1117,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_RCAN_3D_ZeroCostDL4Mic
+    id: striking-necktie
     name: RCAN (3D) - ZeroCostDL4Mic
     description: Supervised restoration of 3D images. RCAN is a neural network capable of image restoration from corrupted bio-images. The network allows image denoising and resolution improvement in 3D images, in a supervised training manner. The function of the network is essentially determined by the set of images provided in the training dataset. For instance, if noisy images are provided as input and high signal-to-noise ratio images are provided as targets, the network will perform denoising. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -1159,8 +1141,7 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_CARE_3D_ZeroCostDL4Mic
+      - fluffy-popcorn
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1176,7 +1157,7 @@ collection:
         sections_to_remove: 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_SplineDist_2D_ZeroCostDL4Mic
+    id: uplifting-backpack
     name: SplineDist (2D) - ZeroCostDL4Mic
     description: Instance segmentation of 2D images. SplineDist is a neural network inspired by StarDist, capable of performing image instance segmentation. Unlike StarDist, SplineDist uses cubic splines to describe the contour of each object and therefore can potentially segment objects of any shapes. This version is only for 2D dataset. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -1200,14 +1181,13 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
-      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
-      - Dataset_StarDist_2D_DeepBacs
-      - Dataset_SplineDist_2D_DeepBacs
+      - bountiful-moon-cake
+      - appetizing-peach
+      - bitter-hot-dog
+      - savory-cheese
+      - rich-burrito
+      - rich-cheese
+      - palatable-curry
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1223,7 +1203,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_YOLOv2_ZeroCostDL4Mic
+    id: bold-shorts
     name: YOLOv2 - ZeroCostDL4Mic
     description: Object detection of 2D images. YOLOv2 is an object detection network developed by Redmon & Farhadi, which identifies objects in images and draws bounding boxes around them.
     cite:
@@ -1247,10 +1227,9 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_YOLOv2_ZeroCostDL4Mic
-      - Dataset_YOLOv2_coli_DeepBacs
-      - Dataset_YOLOv2_antibiotic_DeepBacs
+      - splendid-pie
+      - indulgent-sandwich
+      - appealing-popcorn
     version: '1.13'
     config:
       dl4miceverywhere:
@@ -1266,7 +1245,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Detectron2_ZeroCostDL4Mic
+    id: convenient-t-shirt
     name: Detectron2 - ZeroCostDL4Mic
     description: Object detection of 2D images. Detectron2 is an object detection network developed by Facebook AI Research, which identifies objects in images and draws bounding boxes around them.
     cite:
@@ -1291,10 +1270,9 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_YOLOv2_ZeroCostDL4Mic
-      - Dataset_YOLOv2_coli_DeepBacs
-      - Dataset_YOLOv2_antibiotic_DeepBacs
+      - splendid-pie
+      - indulgent-sandwich
+      - appealing-popcorn
     version: 1.15.1
     config:
       dl4miceverywhere:
@@ -1310,7 +1288,7 @@ collection:
         sections_to_remove: 1.2. 2. 4.2. 6.2.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_DRMIME_ZeroCostDL4Mic
+    id: irresistible-swimsuit
     name: DRMIME - ZeroCostDL4Mic
     description: DRMIME is an network that can be used to register microscopy images (affine and perspective registration).
     cite:
@@ -1333,8 +1311,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DRMIME_2D_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1350,7 +1327,7 @@ collection:
         sections_to_remove: 2. 4.4.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Cellpose_2D_ZeroCostDL4Mic
+    id: polished-t-shirt
     name: Cellpose (2D and 3D) - ZeroCostDL4Mic
     description: Instance segmentation of 2D and 3D images. Cellpose is a generalist algorithm for cellular segmentation.
     cite:
@@ -1379,12 +1356,11 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
-      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
+      - bountiful-moon-cake
+      - appetizing-peach
+      - bitter-hot-dog
+      - savory-cheese
+      - rich-burrito
     version: 1.16.3
     config:
       dl4miceverywhere:
@@ -1400,7 +1376,7 @@ collection:
         sections_to_remove: 1.1. 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_RetinaNet_ZeroCostDL4Mic
+    id: convenient-purse
     name: RetinaNet - ZeroCostDL4Mic
     description: Object detection of 2D images. RetinaNet is a is an object detection network, which identifies objects in images and draws bounding boxes around them.
     cite:
@@ -1425,10 +1401,9 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_YOLOv2_ZeroCostDL4Mic
-      - Dataset_YOLOv2_coli_DeepBacs
-      - Dataset_YOLOv2_antibiotic_DeepBacs
+      - splendid-pie
+      - indulgent-sandwich
+      - appealing-popcorn
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1444,7 +1419,7 @@ collection:
         sections_to_remove: 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_DecoNoising_2D_ZeroCostDL4Mic
+    id: flexible-helmet
     name: DecoNoising (2D) - ZeroCostDL4Mic
     description: Self-supervised denoising of 2D images. DecoNoising 2D is deep-learning method that can be used to denoise 2D microscopy images. By running this notebook, you can train your own network and denoise your images. Note - visit the ZeroCostDL4Mic wiki to check the original publications this network is based on and make sure you cite these.
     cite:
@@ -1468,11 +1443,10 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_Noise2Void_2D_ZeroCostDL4Mic
-      - Dataset_Noise2Void_2D_subtilis_DeepBacs
-      - Dataset_Noisy_Nuclei_ZeroCostDL4Mic
-      - Dataset_CARE_2D_coli_DeepBacs
+      - mellow-broccoli
+      - luscious-tomato
+      - nutty-knuckle
+      - velvety-paella
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1488,7 +1462,7 @@ collection:
         sections_to_remove: 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Interactive_Segmentation_Kaibu_2D_ZeroCostDL4Mic
+    id: timeless-running-shirt
     name: Interactive Segmentation - Kaibu (2D) - ZeroCostDL4Mic
     description: Interactive instance segmentation using Kaibu and Cellpose.
     cite:
@@ -1514,12 +1488,10 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/ZeroCostDL4Mic_Interactive_annotations_Cellpose.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
-
+    links: []
     version: 1.13.2
   - type: application
-    id: Notebook_MaskRCNN_ZeroCostDL4Mic
+    id: regal-ribbon
     name: MaskRCNN - ZeroCostDL4Mic
     description: Instance segmentation of 2D images. MaskRCNN is a is an object detection and segmentation network, which identifies objects in images and draws bounding boxes around them.
     cite:
@@ -1542,8 +1514,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/MaskRCNN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 1.14.2
     config:
       dl4miceverywhere:
@@ -1559,7 +1530,7 @@ collection:
         sections_to_remove: 1.2. 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_Quality_Control_ZeroCostDL4Mic
+    id: lively-t-shirt
     name: Quality Control - ZeroCostDL4Mic
     description: Error mapping and quality metrics estimation.
     cite:
@@ -1581,11 +1552,10 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Tools/Quality_Control_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: '1.13'
   - type: application
-    id: Notebook_DFCAN_ZeroCostDL4Mic
+    id: mesmerizing-shoe
     name: DFCAN - ZeroCostDL4Mic
     description: Super-resolution via super-pixelisation. Deep Fourier channel attention network (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Qiao, Chang and Li, Di and Guo, Yuting and Liu, Chong and Jiang, Tao and Dai, Qionghai and Li, Dong. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible.
     cite:
@@ -1607,8 +1577,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/DFCAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 1.14.1
     config:
       dl4miceverywhere:
@@ -1624,7 +1593,7 @@ collection:
         sections_to_remove: 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: WGAN_ZeroCostDL4Mic.ipynb
+    id: slinky-bikini
     name: WGAN - ZeroCostDL4Mic
     description: Super-resolution via super-pixelisation. Wasserstein GAN (DFCAN) is a network created to transform low-resolution (LR) images to super-resolved (SR) images, published by Gulrajani I. et al. arXiv 2017. The training is done using LR-SR image pairs, taking the LR images as input and obtaining an output as close to SR as posible.
     cite:
@@ -1646,8 +1615,7 @@ collection:
     download_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/WGAN_ZeroCostDL4Mic.ipynb
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
-    links:
-      - Notebook Preview
+    links: []
     version: 1.15.1
     config:
       dl4miceverywhere:
@@ -1663,7 +1631,7 @@ collection:
         sections_to_remove: 2. 6.3.
         ubuntu_version: '22.04'
   - type: application
-    id: Notebook_EmbedSeg_2D_ZeroCostDL4Mic
+    id: smooth-graduation-hat
     name: EmbedSeg (2D) - ZeroCostDL4Mic
     description: Instance segmentation of 2D images. EmbedSeg 2D is a deep-learning method that can be used to segment object from bioimages and was first published by Lalit et al. in 2021, on arXiv.
     cite:
@@ -1688,12 +1656,11 @@ collection:
     git_repo: https://github.com/HenriquesLab/ZeroCostDL4Mic
     license: MIT
     links:
-      - Notebook Preview
-      - Dataset_StarDist_2D_ZeroCostDL4Mic_2D
-      - Dataset_StarDist_Fluo_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield_ZeroCostDL4Mic
-      - Dataset_StarDist_brightfield2_ZeroCostDL4Mic
-      - Dataset_StarDist_fluo2_ZeroCostDL4Mic
+      - bountiful-moon-cake
+      - appetizing-peach
+      - bitter-hot-dog
+      - savory-cheese
+      - rich-burrito
     version: 1.15.0
     config:
       dl4miceverywhere:
@@ -1708,3 +1675,4 @@ collection:
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/EmbedSeg_2D_requirements_simple.txt
         sections_to_remove: 1.0. 1.1. 2.
         ubuntu_version: '22.04'
+
