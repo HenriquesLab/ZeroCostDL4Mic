@@ -5,7 +5,7 @@ CARE (3D),1.15.3
 Cellpose,1.16.3
 CycleGAN,1.13.3
 DecoNoising,1.14.1
-Deep-STORM,1.13.3
+Deep-STORM,1.14.1
 Deep-STORM BioimageIO,1.13
 DenoiSeg,1.14.1
 Detectron 2D,1.15.1
@@ -31,3 +31,4 @@ RetinaNet,1.14.1
 DFCAN 2D,1.14.1
 EmbedSeg 2D,1.15.0
 WGAN 2D,1.15.1
+
