@@ -897,7 +897,7 @@ collection:
       - Notebook Preview
       - Dataset_Deep-STORM_ZeroCostDL4Mic
 
-    version: 1.13.3
+    version: 1.14.1
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
