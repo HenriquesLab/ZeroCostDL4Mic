@@ -909,7 +909,7 @@ collection:
         notebook_version: 1.14.1
         python_version: '3.11'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/DeepSTORM_requirements_simple.txt
-        sections_to_remove: 1.1 2. 6.4.
+        sections_to_remove: 1.1. 2. 6.4.
         ubuntu_version: '22.04'
   - type: application
     id: Notebook_pix2pix_2D_ZeroCostDL4Mic
