@@ -897,7 +897,7 @@ collection:
       - Notebook Preview
       - Dataset_Deep-STORM_ZeroCostDL4Mic
 
-    version: 1.14.1
+    version: 1.14.2
     config:
       dl4miceverywhere:
         cuda_version: 12.2.0
@@ -906,7 +906,7 @@ collection:
         dl4miceverywhere_version: 2.1.0
         docker_hub_image: deep-storm_2d_zerocostdl4mic-z1.14.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.14.1
+        notebook_version: 1.14.2
         python_version: '3.11'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/DeepSTORM_requirements_simple.txt
         sections_to_remove: 1.1. 2. 6.4.
