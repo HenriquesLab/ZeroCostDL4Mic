@@ -904,7 +904,7 @@ collection:
         cudnn_version: 8.9.6.50
         description: Deep-STORM_2D_DL4Mic is the conversion of the 2D Deep-STORM from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.1.0
-        docker_hub_image: deep-storm_2d_zerocostdl4mic-z1.14.1-d2.1.0
+        docker_hub_image: deep-storm_2d_zerocostdl4mic-z1.14.2-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/Deep-STORM_2D_ZeroCostDL4Mic.ipynb
         notebook_version: 1.14.2
         python_version: '3.11'
