@@ -21,7 +21,7 @@ Noise2Void (2D),1.16.2
 Noise2Void (3D),1.16.2
 pix2pix,1.17.5
 SplineDist (2D),1.14.1
-StarDist 2D,1.20.4
+StarDist 2D,1.20.5
 StarDist 3D,1.15.3
 YOLOv2,1.13
 Quality_control,1.13
@@ -30,5 +30,4 @@ DRMIME,1.14.1
 RetinaNet,1.14.1
 DFCAN 2D,1.14.1
 EmbedSeg 2D,1.15.0
-
 WGAN 2D,1.15.1
