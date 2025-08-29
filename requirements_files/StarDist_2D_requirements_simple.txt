@@ -7,6 +7,7 @@ future==1.0.0
 h5py==3.12.1
 ipywidgets==7.7.1
 matplotlib==3.8.0
+numcodecs==0.15.1
 numpy==1.26.4
 opencv-python==4.10.0.84
 pandas==2.2.2
@@ -18,11 +19,11 @@ scikit-learn==1.5.2
 scipy==1.13.1
 stardist==0.9.1
 tabulate==0.9.0
-tensorflow==2.15.0
+tensorflow==2.19.0
 tifffile==2024.9.20
 tqdm==4.66.6
 wget==3.2
 zarr==2.18.3
 bioimageio.core==0.5.11
-keras==2.15.0
+tf-keras==2.19.0
 h5py==3.12.1
