@@ -982,7 +982,7 @@ collection:
     links:
       - Notebook Preview
       - Dataset_CycleGAN_ZeroCostDL4Mic
-    version: 1.13.4
+    version: 1.13.5
     config:
       dl4miceverywhere:
         cuda_version: 11.8.0
