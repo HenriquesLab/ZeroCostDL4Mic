@@ -989,9 +989,9 @@ collection:
         cudnn_version: 8.6.0.163
         description: CycleGAN_DL4Mic is the conversion of the CycleGAN from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.1.0
-        docker_hub_image: cyclegan_zerocostdl4mic-z1.13.4-d2.1.0
+        docker_hub_image: cyclegan_zerocostdl4mic-z1.13.5-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/CycleGAN_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.13.4
+        notebook_version: 1.13.5
         python_version: '3.8'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/CycleGAN_requirements_simple.txt
         sections_to_remove: 2. 6.3.
