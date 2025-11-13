@@ -13,7 +13,7 @@ Diffusion_Model,1.12
 fnet (2D),1.14.1
 fnet (3D),1.13.1
 U-Net (2D),2.2.1
-U-Net (3D),2.2.1
+U-Net (3D),3.1.1
 U-Net (2D) multilabel,2.1.4
 Kaibu,1.13.2
 MaskRCNN,1.14.2
@@ -31,3 +31,4 @@ RetinaNet,1.14.1
 DFCAN 2D,1.14.1
 EmbedSeg 2D,1.15.0
 WGAN 2D,1.15.1
+
