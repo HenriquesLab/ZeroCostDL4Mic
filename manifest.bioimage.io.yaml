@@ -503,8 +503,8 @@ collection:
     version: 3.1.1
     config:
       dl4miceverywhere:
-        cuda_version: 11.8.0
-        cudnn_version: 8.6.0.163
+        cuda_version: 12.2.0
+        cudnn_version: 8.9.6.50
         description: U-Net_3D_DL4Mic is the conversion of the 3D U-Net from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.1.0
         docker_hub_image: u-net_3d_zerocostdl4mic-z2.2.1-d2.1.0
