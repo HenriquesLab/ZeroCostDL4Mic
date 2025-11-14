@@ -14,7 +14,7 @@ pip==25.2
 requests==2.32.4
 scikit-image==0.25.2
 scipy==1.15.3
-tensorflow==2.18.0
+tensorflow==2.19.0
 tifffile==2025.6.11
 tqdm==4.67.1
 zarr==3.1.1
