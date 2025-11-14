@@ -507,12 +507,12 @@ collection:
         cudnn_version: 8.9.6.50
         description: U-Net_3D_DL4Mic is the conversion of the 3D U-Net from ZeroCostDL4Mic.
         dl4miceverywhere_version: 2.1.0
-        docker_hub_image: u-net_3d_zerocostdl4mic-z2.2.1-d2.1.0
+        docker_hub_image: u-net_3d_zerocostdl4mic-z3.1.1-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/U-Net_3D_ZeroCostDL4Mic.ipynb
         notebook_version: 3.1.1
         python_version: '3.11'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/3D_UNet_requirements_simple.txt
-        sections_to_remove: 1.1. 1.2. 2.2. 6.2.
+        sections_to_remove: 1.1. 1.2. 2. 6.2.
         ubuntu_version: '22.04'
   - type: application
     id: Notebook_StarDist_2D_ZeroCostDL4Mic
