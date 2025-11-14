@@ -500,7 +500,7 @@ collection:
     license: MIT
     links:
       - Notebook Preview
-    version: 3.1.1
+    version: 3.1.2
     config:
       dl4miceverywhere:
         cuda_version: 12.2.0
