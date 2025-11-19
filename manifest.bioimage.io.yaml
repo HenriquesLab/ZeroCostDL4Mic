@@ -600,7 +600,7 @@ collection:
         dl4miceverywhere_version: 2.1.0
         docker_hub_image: stardist_3d_zerocostdl4mic-z1.15.3-d2.1.0
         notebook_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/Colab_notebooks/StarDist_3D_ZeroCostDL4Mic.ipynb
-        notebook_version: 1.15.3
+        notebook_version: 1.15.4
         python_version: '3.10'
         requirements_url: https://raw.githubusercontent.com/HenriquesLab/ZeroCostDL4Mic/master/requirements_files/StarDist_3D_requirements_simple.txt
         sections_to_remove: 1.1. 1.2. 2. 6.2.
