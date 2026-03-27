@@ -4,11 +4,11 @@ imageio==2.33.1
 improved_diffusion_for_SMLM==0.3.0
 ipywidgets==8.1.0
 matplotlib==3.8.2
-mpi4py==3.1.4
+mpi4py==3.1.5
 nd2reader==3.3.0
 numpy==1.21.1
 opencv-python==4.5.3.56
-pandas==1.1.5
+pandas==1.5.0
 Pillow==10.2.0
 scikit-image==0.20.0
 tifffile==2023.7.18
