@@ -1,4 +1,5 @@
 numpy==1.22.0
+Augmentor==0.2.12
 astropy==6.0.0
 torch<=1.9.0
 torchvision<=0.10.0
